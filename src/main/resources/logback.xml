@@ -1,0 +1,25 @@
+<configuration>
+    <!-- Define a timestamp for the log filename -->
+    <timestamp key="gameTimestamp" datePattern="yyyyMMdd_HHmmss"/>
+
+    <!-- File Appender: [timestamp]_AI-Splendor.log -->
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>logs/${gameTimestamp}_AI-Splendor.log</file>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Console Appender for live game view -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Logger levels -->
+    <root level="INFO">
+        <appender-ref ref="FILE" />
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>
