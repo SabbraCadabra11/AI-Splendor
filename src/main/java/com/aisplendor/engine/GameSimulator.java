@@ -6,6 +6,7 @@ import com.aisplendor.model.*;
 import com.aisplendor.model.action.AgentResponse;
 import com.aisplendor.model.event.*;
 import com.aisplendor.service.GameEventLogger;
+import com.aisplendor.service.GameLogReader;
 import com.aisplendor.service.OpenRouterService;
 import com.aisplendor.service.PromptService;
 import com.aisplendor.util.GameStateFormatter;
@@ -13,6 +14,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
+import java.nio.file.Path;
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -68,6 +70,58 @@ public class GameSimulator {
         GameState state = setupInitialState();
 
         simulator.run(state, gameId, model0, model1);
+    }
+
+    /**
+     * Resumes an interrupted game from a log file.
+     * 
+     * @param logFile Path to the NDJSON log file to resume from
+     */
+    public static void resumeGame(Path logFile) {
+        String apiKey = System.getenv("OPENROUTER_API_KEY");
+        if (apiKey == null || apiKey.isBlank()) {
+            logger.error("OPENROUTER_API_KEY environment variable is not set.");
+            return;
+        }
+
+        try {
+            GameLogReader reader = new GameLogReader();
+            GameLogReader.ResumeData resumeData = reader.parseLogForResume(logFile);
+
+            logger.info("--- Resuming Game from {} ---", logFile);
+            logger.info("Original Game ID: {}", resumeData.originalGameId());
+            logger.info("Player 0 Model: {}", resumeData.player0Model());
+            logger.info("Player 1 Model: {}", resumeData.player1Model());
+            logger.info("Resuming at Turn {}, Player {}'s turn",
+                    resumeData.resumeState().turnNumber(),
+                    resumeData.resumeState().currentPlayerIndex());
+
+            // Load config for reasoning settings (models are overridden from log)
+            GameConfig config = new GameConfig();
+            ReasoningConfig reasoning0 = config.getPlayerReasoning(0);
+            ReasoningConfig reasoning1 = config.getPlayerReasoning(1);
+            boolean semiAuto = config.isSemiAuto();
+            boolean debugMode = config.isDebugMode();
+
+            // Generate new game ID with resume suffix
+            String newGameId = resumeData.originalGameId() + "_resumed_"
+                    + LocalDateTime.now().format(DateTimeFormatter.ofPattern("HHmmss"));
+
+            GameSimulator simulator = new GameSimulator(
+                    apiKey,
+                    resumeData.player0Model(),
+                    resumeData.player1Model(),
+                    reasoning0,
+                    reasoning1,
+                    semiAuto,
+                    debugMode);
+
+            simulator.run(resumeData.resumeState(), newGameId,
+                    resumeData.player0Model(), resumeData.player1Model());
+
+        } catch (IOException e) {
+            logger.error("Failed to resume game from {}: {}", logFile, e.getMessage());
+        }
     }
 
     private static GameState setupInitialState() {
@@ -149,51 +203,105 @@ public class GameSimulator {
                 String systemPrompt = promptService.getSystemPrompt(currentPlayer.reasoningHistory());
                 OpenRouterService currentLlm = (state.currentPlayerIndex() == 0) ? llmService0 : llmService1;
 
-                final int MAX_RETRIES = 3;
+                final int MAX_LOGIC_RETRIES = 3;
+                final long MAX_NETWORK_WAIT_MS = 10 * 60 * 1000; // 10 minutes for network issues
+                final long INITIAL_BACKOFF_MS = 1000;
+
                 AgentResponse response = null;
                 String lastError = null;
                 boolean validAction = false;
 
-                for (int attempt = 0; attempt < MAX_RETRIES && !validAction; attempt++) {
-                    try {
-                        if (attempt > 0) {
-                            logger.warn("Retry attempt {} for Player {}. Error: {}", attempt, currentPlayer.id(),
-                                    lastError);
-                            // Log retry event
-                            eventLogger.log(new RetryEvent(
-                                    Instant.now(), currentPlayer.id(), attempt, lastError));
-                            String retryPrompt = promptService.getRetryPrompt(lastError);
-                            response = currentLlm.getNextMove(state, systemPrompt + "\n\n" + retryPrompt);
-                        } else {
-                            response = currentLlm.getNextMove(state, systemPrompt);
+                for (int attempt = 0; attempt < MAX_LOGIC_RETRIES && !validAction; attempt++) {
+                    long networkWaitStart = System.currentTimeMillis();
+                    long backoff = INITIAL_BACKOFF_MS;
+
+                    while (!validAction) { // Network retry loop
+                        try {
+                            if (attempt > 0 && backoff == INITIAL_BACKOFF_MS) {
+                                // Only log retry on first network attempt of a new logic retry
+                                logger.warn("Retry attempt {} for Player {}. Error: {}", attempt, currentPlayer.id(),
+                                        lastError);
+                                // Log retry event
+                                eventLogger.log(new RetryEvent(
+                                        Instant.now(), currentPlayer.id(), attempt, lastError));
+                                String retryPrompt = promptService.getRetryPrompt(lastError);
+                                response = currentLlm.getNextMove(state, systemPrompt + "\n\n" + retryPrompt);
+                            } else if (backoff > INITIAL_BACKOFF_MS) {
+                                // Network retry - use same prompt as before
+                                response = currentLlm.getNextMove(state,
+                                        attempt > 0 ? systemPrompt + "\n\n" + promptService.getRetryPrompt(lastError)
+                                                : systemPrompt);
+                            } else {
+                                response = currentLlm.getNextMove(state, systemPrompt);
+                            }
+
+                            logger.info("Reasoning: {}", response.reasoning());
+                            logger.info("Action: {}", response.action());
+
+                            // Log reasoning event
+                            eventLogger.log(new ReasoningEvent(
+                                    Instant.now(), currentPlayer.id(), response.reasoning()));
+
+                            engine.validateAction(state, response.action());
+                            validAction = true;
+
+                            // Log successful action event
+                            eventLogger.log(new ActionEvent(
+                                    Instant.now(), currentPlayer.id(), response.action(), true));
+                        } catch (IllegalArgumentException e) {
+                            lastError = "Invalid action: " + e.getMessage();
+                            break; // Logic error - exit to outer loop for retry
+                        } catch (com.fasterxml.jackson.core.JsonParseException e) {
+                            lastError = "Malformed JSON response: " + e.getOriginalMessage();
+                            break; // Logic error - exit to outer loop for retry
+                        } catch (java.net.SocketTimeoutException | java.net.ConnectException e) {
+                            // Transient network errors - retry with backoff
+                            long elapsed = System.currentTimeMillis() - networkWaitStart;
+                            if (elapsed > MAX_NETWORK_WAIT_MS) {
+                                lastError = "Network timeout after " + (elapsed / 1000) + "s: " + e.getMessage();
+                                break; // Give up, count as logic retry
+                            }
+                            logger.warn("Network error, retrying in {}ms... ({})", backoff, e.getMessage());
+                            try {
+                                Thread.sleep(backoff);
+                            } catch (InterruptedException ie) {
+                                Thread.currentThread().interrupt();
+                                lastError = "Interrupted during network retry";
+                                break;
+                            }
+                            backoff = Math.min(backoff * 2, 30_000); // Cap at 30s
+                            // Stay in network loop
+                        } catch (Exception e) {
+                            // Unknown error - check if it looks like a network issue
+                            String msg = e.getMessage();
+                            if (msg != null && (msg.contains("Connection") || msg.contains("timeout") ||
+                                    msg.contains("UnknownHost") || msg.contains("Network"))) {
+                                long elapsed = System.currentTimeMillis() - networkWaitStart;
+                                if (elapsed > MAX_NETWORK_WAIT_MS) {
+                                    lastError = "Network timeout after " + (elapsed / 1000) + "s: " + msg;
+                                    break;
+                                }
+                                logger.warn("Possible network error, retrying in {}ms... ({})", backoff, msg);
+                                try {
+                                    Thread.sleep(backoff);
+                                } catch (InterruptedException ie) {
+                                    Thread.currentThread().interrupt();
+                                    lastError = "Interrupted during network retry";
+                                    break;
+                                }
+                                backoff = Math.min(backoff * 2, 30_000);
+                            } else {
+                                lastError = "Unexpected error: " + msg;
+                                break; // Unknown error - treat as logic error
+                            }
                         }
-
-                        logger.info("Reasoning: {}", response.reasoning());
-                        logger.info("Action: {}", response.action());
-
-                        // Log reasoning event
-                        eventLogger.log(new ReasoningEvent(
-                                Instant.now(), currentPlayer.id(), response.reasoning()));
-
-                        engine.validateAction(state, response.action());
-                        validAction = true;
-
-                        // Log successful action event
-                        eventLogger.log(new ActionEvent(
-                                Instant.now(), currentPlayer.id(), response.action(), true));
-                    } catch (IllegalArgumentException e) {
-                        lastError = "Invalid action: " + e.getMessage();
-                    } catch (com.fasterxml.jackson.core.JsonParseException e) {
-                        lastError = "Malformed JSON response: " + e.getOriginalMessage();
-                    } catch (Exception e) {
-                        lastError = "API/Parsing error: " + e.getMessage();
                     }
                 }
 
                 if (!validAction) {
                     logger.error(
                             "Player {} failed to provide a valid action after {} retries. Last error: {}. Skipping turn.",
-                            currentPlayer.id(), MAX_RETRIES, lastError);
+                            currentPlayer.id(), MAX_LOGIC_RETRIES, lastError);
                     // Skip turn by manually advancing the game state
                     int nextPlayerIndex = (state.currentPlayerIndex() + 1) % state.players().size();
                     int nextTurn = (nextPlayerIndex == 0) ? state.turnNumber() + 1 : state.turnNumber();
