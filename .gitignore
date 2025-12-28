@@ -45,10 +45,6 @@ dist/
 nbdist/
 .nb-gradle/
 
-# Logs
-logs/
-*.log
-
 # OS generated files
 .DS_Store
 .DS_Store?

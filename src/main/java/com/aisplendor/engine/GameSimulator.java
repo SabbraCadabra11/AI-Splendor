@@ -4,6 +4,8 @@ import com.aisplendor.config.GameConfig;
 import com.aisplendor.config.ReasoningConfig;
 import com.aisplendor.model.*;
 import com.aisplendor.model.action.AgentResponse;
+import com.aisplendor.model.event.*;
+import com.aisplendor.service.GameEventLogger;
 import com.aisplendor.service.OpenRouterService;
 import com.aisplendor.service.PromptService;
 import com.aisplendor.util.GameStateFormatter;
@@ -11,6 +13,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 public class GameSimulator {
@@ -21,14 +26,16 @@ public class GameSimulator {
     private final OpenRouterService llmService1;
     private final PromptService promptService;
     private final boolean semiAuto;
+    private final boolean debugMode;
 
     public GameSimulator(String apiKey, String model0, String model1,
-            ReasoningConfig reasoning0, ReasoningConfig reasoning1, boolean semiAuto) {
+            ReasoningConfig reasoning0, ReasoningConfig reasoning1, boolean semiAuto, boolean debugMode) {
         this.engine = new GameEngine();
-        this.llmService0 = new OpenRouterService(apiKey, model0, reasoning0);
-        this.llmService1 = new OpenRouterService(apiKey, model1, reasoning1);
+        this.llmService0 = new OpenRouterService(apiKey, model0, reasoning0, debugMode);
+        this.llmService1 = new OpenRouterService(apiKey, model1, reasoning1, debugMode);
         this.promptService = new PromptService();
         this.semiAuto = semiAuto;
+        this.debugMode = debugMode;
     }
 
     public static void initializeGame() {
@@ -44,17 +51,23 @@ public class GameSimulator {
         ReasoningConfig reasoning0 = config.getPlayerReasoning(0);
         ReasoningConfig reasoning1 = config.getPlayerReasoning(1);
         boolean semiAuto = config.isSemiAuto();
+        boolean debugMode = config.isDebugMode();
 
         logger.info("Configured Player 0 with: {} (reasoning: {})", model0,
                 reasoning0.enabled() ? reasoning0.effort() : "disabled");
         logger.info("Configured Player 1 with: {} (reasoning: {})", model1,
                 reasoning1.enabled() ? reasoning1.effort() : "disabled");
         logger.info("Semi-Auto Mode: {}", (semiAuto ? "ENABLED" : "DISABLED"));
+        logger.info("Debug Mode: {}", (debugMode ? "ENABLED" : "DISABLED"));
 
-        GameSimulator simulator = new GameSimulator(apiKey, model0, model1, reasoning0, reasoning1, semiAuto);
+        // Generate unique game ID based on timestamp (matches logback format)
+        String gameId = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss"));
+
+        GameSimulator simulator = new GameSimulator(apiKey, model0, model1, reasoning0, reasoning1, semiAuto,
+                debugMode);
         GameState state = setupInitialState();
 
-        simulator.run(state);
+        simulator.run(state, gameId, model0, model1);
     }
 
     private static GameState setupInitialState() {
@@ -94,16 +107,35 @@ public class GameSimulator {
         return new GameState(board, List.of(p1, p2), 0, 1, false, null);
     }
 
-    public void run(GameState initialState) {
+    public void run(GameState initialState, String gameId, String model0, String model1) {
         GameState state = initialState;
         logger.info("--- Game Started ---");
 
-        try {
+        try (GameEventLogger eventLogger = new GameEventLogger(gameId)) {
+            // Log game start event
+            eventLogger.log(new GameStartedEvent(
+                    Instant.now(), gameId, model0, model1, state));
+
             while (!state.isGameOver()) {
                 Player currentPlayer = state.players().get(state.currentPlayerIndex());
                 logger.info(GameStateFormatter.format(state));
                 logger.info("Turn {} - Player {}'s move", state.turnNumber(), currentPlayer.id());
-                logger.info("Points: {}, Tokens: {}", currentPlayer.score(), currentPlayer.tokens().counts());
+                logger.info("Points: {}, Budget: {}", currentPlayer.score(),
+                        GameStateFormatter.formatBudget(currentPlayer));
+
+                // Log turn start event with full state snapshot
+                eventLogger.log(new TurnStartedEvent(
+                        Instant.now(), state.turnNumber(), state.currentPlayerIndex(), state));
+
+                if (debugMode) {
+                    try {
+                        com.fasterxml.jackson.databind.ObjectMapper debugMapper = new com.fasterxml.jackson.databind.ObjectMapper();
+                        logger.info("[DEBUG] Game State JSON:\n{}",
+                                debugMapper.writerWithDefaultPrettyPrinter().writeValueAsString(state));
+                    } catch (Exception e) {
+                        logger.warn("Failed to serialize game state for debug: {}", e.getMessage());
+                    }
+                }
 
                 if (semiAuto) {
                     logger.info("Press Enter to trigger Player {}'s move...", currentPlayer.id());
@@ -127,6 +159,9 @@ public class GameSimulator {
                         if (attempt > 0) {
                             logger.warn("Retry attempt {} for Player {}. Error: {}", attempt, currentPlayer.id(),
                                     lastError);
+                            // Log retry event
+                            eventLogger.log(new RetryEvent(
+                                    Instant.now(), currentPlayer.id(), attempt, lastError));
                             String retryPrompt = promptService.getRetryPrompt(lastError);
                             response = currentLlm.getNextMove(state, systemPrompt + "\n\n" + retryPrompt);
                         } else {
@@ -136,8 +171,16 @@ public class GameSimulator {
                         logger.info("Reasoning: {}", response.reasoning());
                         logger.info("Action: {}", response.action());
 
+                        // Log reasoning event
+                        eventLogger.log(new ReasoningEvent(
+                                Instant.now(), currentPlayer.id(), response.reasoning()));
+
                         engine.validateAction(state, response.action());
                         validAction = true;
+
+                        // Log successful action event
+                        eventLogger.log(new ActionEvent(
+                                Instant.now(), currentPlayer.id(), response.action(), true));
                     } catch (IllegalArgumentException e) {
                         lastError = "Invalid action: " + e.getMessage();
                     } catch (com.fasterxml.jackson.core.JsonParseException e) {
@@ -183,9 +226,23 @@ public class GameSimulator {
             logger.info(GameStateFormatter.format(state));
             logger.info("--- Game Over ---");
             logger.info("Winner: {}", state.winnerReason());
+
+            // Build final scores map
+            Map<Integer, Integer> finalScores = new HashMap<>();
             for (Player p : state.players()) {
                 logger.info("Player {}: {} points", p.id(), p.score());
+                finalScores.put(p.id(), p.score());
             }
+
+            // Determine winner index (null if tie or no clear winner)
+            Integer winnerIndex = state.players().stream()
+                    .max(Comparator.comparingInt(Player::score))
+                    .map(Player::id)
+                    .orElse(null);
+
+            // Log game ended event
+            eventLogger.log(new GameEndedEvent(
+                    Instant.now(), winnerIndex, state.winnerReason(), finalScores));
 
         } catch (Exception e) {
             logger.error("An error occurred during the game simulation:", e);

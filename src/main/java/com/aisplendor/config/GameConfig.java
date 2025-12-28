@@ -31,6 +31,10 @@ public class GameConfig {
         return Boolean.parseBoolean(properties.getProperty("game.semi-auto", "false"));
     }
 
+    public boolean isDebugMode() {
+        return Boolean.parseBoolean(properties.getProperty("game.debug-mode", "false"));
+    }
+
     /**
      * Get reasoning configuration for a specific player.
      * Reads from player{N}.reasoning.enabled, player{N}.reasoning.effort,

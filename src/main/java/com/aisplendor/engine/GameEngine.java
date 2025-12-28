@@ -530,22 +530,39 @@ public class GameEngine {
         List<Player> updatedPlayers = new ArrayList<>(state.players());
         updatedPlayers.set(state.currentPlayerIndex(), updatedPlayer);
 
-        // 2. Check End Game Condition - Game ends INSTANTLY when someone hits 15
-        boolean gameOver = state.isGameOver();
-        String winnerReason = state.winnerReason();
-
-        if (!gameOver && updatedPlayer.score() >= 15) {
-            // Current player just reached 15 - they win immediately
-            gameOver = true;
-            winnerReason = "Player " + updatedPlayer.id() + " won with " + updatedPlayer.score() + " points!";
+        // 2. Check End Game Condition
+        boolean endTriggered = state.isGameOver();
+        if (!endTriggered) {
+            for (Player p : updatedPlayers) {
+                if (p.score() >= 15) {
+                    endTriggered = true;
+                    break;
+                }
+            }
         }
 
-        // Only advance turn if game is still ongoing
-        int nextPlayerIndex = state.currentPlayerIndex();
-        int nextTurn = state.turnNumber();
-        if (!gameOver) {
-            nextPlayerIndex = (state.currentPlayerIndex() + 1) % state.players().size();
-            nextTurn = (nextPlayerIndex == 0) ? state.turnNumber() + 1 : state.turnNumber();
+        int nextPlayerIndex = (state.currentPlayerIndex() + 1) % state.players().size();
+        int nextTurn = (nextPlayerIndex == 0) ? state.turnNumber() + 1 : state.turnNumber();
+
+        boolean isFinalGameOver = endTriggered && nextPlayerIndex == 0;
+        String winnerReason = null;
+        if (isFinalGameOver) {
+            // Determine winner
+            Player p0 = updatedPlayers.get(0);
+            Player p1 = updatedPlayers.get(1);
+            if (p0.score() > p1.score())
+                winnerReason = "Player 0 won on points.";
+            else if (p1.score() > p0.score())
+                winnerReason = "Player 1 won on points.";
+            else {
+                // Tie breaker: fewest cards
+                if (p0.purchasedCards().size() < p1.purchasedCards().size())
+                    winnerReason = "Player 0 won on tie-breaker (fewer cards).";
+                else if (p1.purchasedCards().size() < p0.purchasedCards().size())
+                    winnerReason = "Player 1 won on tie-breaker (fewer cards).";
+                else
+                    winnerReason = "It's a draw!";
+            }
         }
 
         return new GameState(
@@ -553,7 +570,7 @@ public class GameEngine {
                 updatedPlayers,
                 nextPlayerIndex,
                 nextTurn,
-                gameOver,
+                isFinalGameOver,
                 winnerReason);
     }
 }

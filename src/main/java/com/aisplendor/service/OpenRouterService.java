@@ -9,8 +9,12 @@ import com.aisplendor.model.action.GameAction;
 import com.aisplendor.model.action.PurchaseCardAction;
 import com.aisplendor.model.action.ReserveCardAction;
 import com.aisplendor.model.action.TakeTokensAction;
+import com.aisplendor.model.dto.GameStateDTO;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -27,18 +31,21 @@ import java.util.Map;
  * Uses flattened JSON schema for reliable action parameter extraction.
  */
 public class OpenRouterService {
+    private static final Logger logger = LoggerFactory.getLogger(OpenRouterService.class);
 
     private static final String API_URL = "https://openrouter.ai/api/v1/chat/completions";
     private final String apiKey;
     private final String model;
     private final ReasoningConfig reasoningConfig;
+    private final boolean debugMode;
     private final ObjectMapper mapper;
     private final HttpClient httpClient;
 
-    public OpenRouterService(String apiKey, String model, ReasoningConfig reasoningConfig) {
+    public OpenRouterService(String apiKey, String model, ReasoningConfig reasoningConfig, boolean debugMode) {
         this.apiKey = apiKey;
         this.model = model;
         this.reasoningConfig = reasoningConfig;
+        this.debugMode = debugMode;
         this.mapper = new ObjectMapper();
         this.httpClient = HttpClient.newBuilder()
                 .connectTimeout(Duration.ofSeconds(10))
@@ -46,7 +53,9 @@ public class OpenRouterService {
     }
 
     public AgentResponse getNextMove(GameState state, String systemPrompt) throws Exception {
-        String stateJson = mapper.writeValueAsString(state);
+        // Convert to DTO to exclude decks and reasoning history from LLM view
+        GameStateDTO stateDTO = GameStateDTO.fromGameState(state);
+        String stateJson = mapper.writeValueAsString(stateDTO);
 
         // Flattened JSON schema - no nested action object
         Map<String, Object> jsonSchema = Map.of(
@@ -95,6 +104,10 @@ public class OpenRouterService {
         }
 
         String requestJson = mapper.writeValueAsString(requestBody);
+
+        if (debugMode) {
+            logger.info("[DEBUG] OpenRouter Request Body:\n{}", requestJson);
+        }
 
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(API_URL))
