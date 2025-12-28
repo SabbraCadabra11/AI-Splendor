@@ -18,7 +18,9 @@ AI-Splendor implements the complete 2-player variant of the Splendor board game,
 - **Reasoning Configuration**: Enable and tune reasoning effort for supported models
 - **Strict Rule Enforcement**: All moves are validated against official Splendor rules
 - **Structured Output**: Uses JSON schema to ensure reliable action parsing from LLMs
-- **Detailed Logging**: Game actions and LLM reasoning are logged for analysis
+- **Detailed Logging**: Game actions and LLM reasoning are logged in NDJSON format
+- **Game Resume**: Resume interrupted games from log files to avoid lost API costs
+- **Robust Retry Handling**: Automatic retries with exponential backoff for network issues
 
 ## Prerequisites
 
@@ -73,17 +75,24 @@ game.semi-auto=false
 
 ## Usage
 
-Run the game simulator:
+### Start a New Game
 
 ```bash
 mvn exec:java
 ```
 
-Or run directly with:
+### Resume an Interrupted Game
+
+If a game is interrupted (API timeout, crash, etc.), you can resume from the log file:
 
 ```bash
-mvn exec:java -Dexec.mainClass="com.aisplendor.App"
+mvn exec:java -Dexec.args="--resume logs/YYYYMMDD_HHMMSS.json"
 ```
+
+The resumed game will:
+- Use the same models as the original game
+- Continue from the state after the last completed action
+- Create a new log file with suffix `_resumed_HHMMSS`
 
 ## Project Structure
 
@@ -107,6 +116,8 @@ src/main/java/com/aisplendor/
 │   ├── TokenBank.java          # Token collection
 │   └── action/                 # Action types and responses
 ├── service/
+│   ├── GameEventLogger.java    # NDJSON event logging
+│   ├── GameLogReader.java      # Log parsing for resume
 │   ├── OpenRouterService.java  # LLM API client
 │   └── PromptService.java      # Prompt generation
 └── util/
@@ -148,12 +159,16 @@ mvn test -Dtest=GameEngineTest
 
 ## Logs
 
-Game logs are written to the `logs/` directory, containing:
+Game logs are written to the `logs/` directory in two formats:
 
-- Turn-by-turn game state
-- LLM reasoning and decisions
-- Move validation results
-- Final game summary
+- **Human-readable**: `YYYYMMDD_HHMMSS_AI-Splendor.log` - Formatted game state and reasoning
+- **Machine-readable**: `YYYYMMDD_HHMMSS.json` - NDJSON event log for resume/analysis
+
+The JSON log contains:
+- Game start event with model configurations
+- Turn-by-turn state snapshots
+- Player reasoning and actions
+- Game end event with final scores
 
 ## Documentation
 
