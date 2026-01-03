@@ -1,0 +1,1616 @@
+Configured Player 0 with: google/gemini-3-pro-preview (reasoning: high)
+Configured Player 1 with: google/gemini-3-flash-preview (reasoning: high)
+Semi-Auto Mode: DISABLED
+Debug Mode: DISABLED
+--- Game Started ---
+Game event log created: logs\20251231_105047.json
+
+======================================================================================
+TURN 1 | Current Player: gemini-3-pro-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:4 GRN:4 RED:4 BLK:4 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_31] GRN 0pts RED:3                     | [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         |
+    [L1_15] BLU 0pts BLK:3                     | [L1_8] BLK 1pt BLU:4                      
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_52] BLU 3pts BLU:6                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_41] BLK 1pt WHT:3 BLU:2 GRN:2         
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_85] GRN 4pts WHT:3 BLU:6 GRN:3         |
+    [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0) (Current):                   | gemini-3-flash-preview (P1):
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 0
+  Tokens:                                              |   Tokens: 
+  Bonuses: {}                                          |   Bonuses: {}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 1 - Player 0's move
+Points: 0, Budget: {}
+Reasoning: The game is in the opening phase. The available Nobles (N2, N7, N8) heavily favor Green and Red tokens. Card L1_31 provides a Green bonus and costs 3 Red tokens. Acquiring this card is a priority as it establishes a Green gem engine critical for all three visible Nobles. Taking 2 Red tokens is the most efficient move to quickly accumulate the necessary resources to purchase L1_31. Additionally, this action reduces the Red token supply on the board to 2, preventing the opponent from taking a double Red action on their turn.
+Action: TakeTokensAction[tokens={RED=2}, tokensToReturn=null]
+
+======================================================================================
+TURN 1 | Current Player: gemini-3-flash-preview (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:4 GRN:4 RED:2 BLK:4 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_31] GRN 0pts RED:3                     | [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         |
+    [L1_15] BLU 0pts BLK:3                     | [L1_8] BLK 1pt BLU:4                      
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_52] BLU 3pts BLU:6                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_41] BLK 1pt WHT:3 BLU:2 GRN:2         
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_85] GRN 4pts WHT:3 BLU:6 GRN:3         |
+    [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0):                             | gemini-3-flash-preview (P1) (Current):
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 0
+  Tokens: RED:2                                        |   Tokens: 
+  Bonuses: {}                                          |   Bonuses: {}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 1 - Player 1's move
+Points: 0, Budget: {}
+Reasoning: Since it is the first turn and the board is full, the most efficient move is to start accumulating tokens for low-level cards. I will take BLUE, GREEN, and BLACK tokens. These are versatile for the available Level 1 cards, specifically targeting L1_15 (requires BLACK) and L1_8 (requires BLUE), as well as building toward future Tier 2 cards.
+Action: TakeTokensAction[tokens={BLUE=1, GREEN=1, BLACK=1}, tokensToReturn=null]
+
+======================================================================================
+TURN 2 | Current Player: gemini-3-pro-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:3 GRN:3 RED:2 BLK:3 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_31] GRN 0pts RED:3                     | [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         |
+    [L1_15] BLU 0pts BLK:3                     | [L1_8] BLK 1pt BLU:4                      
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_52] BLU 3pts BLU:6                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_41] BLK 1pt WHT:3 BLU:2 GRN:2         
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_85] GRN 4pts WHT:3 BLU:6 GRN:3         |
+    [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0) (Current):                   | gemini-3-flash-preview (P1):
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 0
+  Tokens: RED:2                                        |   Tokens: BLU:1 GRN:1 BLK:1
+  Bonuses: {}                                          |   Bonuses: {}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 2 - Player 0's move
+Points: 0, Budget: {RED=2}
+Reasoning: The primary goal remains acquiring card L1_31 (Green bonus), which is critical for the Green/Red-heavy Nobles N2 and N7. The card costs 3 Red tokens, and I currently hold 2. I need exactly 1 more Red token. A 'Take 2' action on Red is invalid because the board only has 2 Red tokens left (needs 4). Therefore, I must take 3 different tokens. I will take Red to secure the purchase of L1_31 next turn. For the other two colors, I choose Black and White. Black is required for L1_15 and the Red-bonus card L2_65, as well as Noble N7. White is needed for L1_11 and L2_65. This token combination optimizes future flexibility towards visible Level 2 cards while ensuring the immediate purchase of the target Level 1 card.
+Action: TakeTokensAction[tokens={WHITE=1, RED=1, BLACK=1}, tokensToReturn=null]
+
+======================================================================================
+TURN 2 | Current Player: gemini-3-flash-preview (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:3 GRN:3 RED:1 BLK:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_31] GRN 0pts RED:3                     | [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         |
+    [L1_15] BLU 0pts BLK:3                     | [L1_8] BLK 1pt BLU:4                      
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_52] BLU 3pts BLU:6                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_41] BLK 1pt WHT:3 BLU:2 GRN:2         
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_85] GRN 4pts WHT:3 BLU:6 GRN:3         |
+    [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0):                             | gemini-3-flash-preview (P1) (Current):
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 0
+  Tokens: WHT:1 RED:3 BLK:1                            |   Tokens: BLU:1 GRN:1 BLK:1
+  Bonuses: {}                                          |   Bonuses: {}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 2 - Player 1's move
+Points: 0, Budget: {BLU=1, GRN=1, BLK=1}
+Reasoning: I am continuing to gather the necessary tokens to purchase early Level 1 cards. By taking BLUE, GREEN, and BLACK tokens, I move closer to acquiring L1_15 (3 BLACK) and L1_8 (4 BLUE), which are key for establishing my initial bonus engine and securing early prestige points. This selection also keeps me competitive for other Level 1 and Level 2 cards appearing on the board.
+Action: TakeTokensAction[tokens={BLUE=1, GREEN=1, BLACK=1}, tokensToReturn=null]
+
+======================================================================================
+TURN 3 | Current Player: gemini-3-pro-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:2 GRN:2 RED:1 BLK:1 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_31] GRN 0pts RED:3                     | [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         |
+    [L1_15] BLU 0pts BLK:3                     | [L1_8] BLK 1pt BLU:4                      
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_52] BLU 3pts BLU:6                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_41] BLK 1pt WHT:3 BLU:2 GRN:2         
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_85] GRN 4pts WHT:3 BLU:6 GRN:3         |
+    [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0) (Current):                   | gemini-3-flash-preview (P1):
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 0
+  Tokens: WHT:1 RED:3 BLK:1                            |   Tokens: BLU:2 GRN:2 BLK:2
+  Bonuses: {}                                          |   Bonuses: {}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 3 - Player 0's move
+Points: 0, Budget: {WHT=1, RED=3, BLK=1}
+Reasoning: I have successfully accumulated the 3 Red tokens required to purchase card L1_31. This move executes the strategy planned in the previous two turns. By purchasing this card, I gain a permanent Green gem bonus, which is crucial for all three visible Nobles (N2, N7, N8) and helps towards future cards like L1_11. Converting these tokens into a permanent asset is the most efficient use of my turn and resources, officially starting my development engine.
+Action: PurchaseCardAction[cardId=L1_31]
+
+======================================================================================
+TURN 3 | Current Player: gemini-3-flash-preview (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:2 GRN:2 RED:4 BLK:1 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         | [L1_15] BLU 0pts BLK:3                     |
+    [L1_8] BLK 1pt BLU:4                       | [L1_9] BLU 0pts WHT:1 GRN:1 RED:1 BLK:1   
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_52] BLU 3pts BLU:6                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_41] BLK 1pt WHT:3 BLU:2 GRN:2         
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_85] GRN 4pts WHT:3 BLU:6 GRN:3         |
+    [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0):                             | gemini-3-flash-preview (P1) (Current):
+  Score: 0 | Cards: 1                                  |   Score: 0 | Cards: 0
+  Tokens: WHT:1 BLK:1                                  |   Tokens: BLU:2 GRN:2 BLK:2
+  Bonuses: {GRN:1}                                     |   Bonuses: {}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 3 - Player 1's move
+Points: 0, Budget: {BLU=2, GRN=2, BLK=2}
+Reasoning: I currently have 2 BLUE, 2 GREEN, and 2 BLACK tokens (6 total). My primary objective is to acquire L1_15, which costs 3 BLACK tokens, and L1_8, which costs 4 BLUE tokens. There is only 1 BLACK token remaining in the bank, so I must prioritize taking it this turn to prevent my opponent from blocking me. I will also take 1 BLUE and 1 GREEN token. This move increases my total token count to 9, placing me in a strong position to purchase L1_15 on my next turn while also building toward L1_8 and noble requirements.
+Action: TakeTokensAction[tokens={BLUE=1, GREEN=1, BLACK=1}, tokensToReturn=null]
+
+======================================================================================
+TURN 4 | Current Player: gemini-3-pro-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:1 GRN:1 RED:4 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         | [L1_15] BLU 0pts BLK:3                     |
+    [L1_8] BLK 1pt BLU:4                       | [L1_9] BLU 0pts WHT:1 GRN:1 RED:1 BLK:1   
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_52] BLU 3pts BLU:6                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_41] BLK 1pt WHT:3 BLU:2 GRN:2         
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_85] GRN 4pts WHT:3 BLU:6 GRN:3         |
+    [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0) (Current):                   | gemini-3-flash-preview (P1):
+  Score: 0 | Cards: 1                                  |   Score: 0 | Cards: 0
+  Tokens: WHT:1 BLK:1                                  |   Tokens: BLU:3 GRN:3 BLK:3
+  Bonuses: {GRN:1}                                     |   Bonuses: {}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 4 - Player 0's move
+Points: 0, Budget: {WHT=1, GRN=1, BLK=1}
+Reasoning: I currently hold a Green bonus, 1 White token, and 1 Black token. My immediate goal is to purchase card L1_9 (Blue bonus), which has a cost of 1W, 1G, 1R, 1K. After applying my Green bonus, the cost becomes 1W, 1R, 1K. I am missing the Red token. Taking 3 different tokens (White, Green, Red) is the optimal strategy. This grants the specific Red token needed for L1_9 while also securing the last available Green token on the board, which allows me to work towards card L1_11 (cost 1W, 2G, 2R) afterwards. Additionally, reducing the Red token supply to 3 prevents the opponent from taking a double Red action.
+Action: TakeTokensAction[tokens={WHITE=1, GREEN=1, RED=1}, tokensToReturn=null]
+
+======================================================================================
+TURN 4 | Current Player: gemini-3-flash-preview (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:1 RED:3 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         | [L1_15] BLU 0pts BLK:3                     |
+    [L1_8] BLK 1pt BLU:4                       | [L1_9] BLU 0pts WHT:1 GRN:1 RED:1 BLK:1   
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_52] BLU 3pts BLU:6                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_41] BLK 1pt WHT:3 BLU:2 GRN:2         
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_85] GRN 4pts WHT:3 BLU:6 GRN:3         |
+    [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0):                             | gemini-3-flash-preview (P1) (Current):
+  Score: 0 | Cards: 1                                  |   Score: 0 | Cards: 0
+  Tokens: WHT:2 GRN:1 RED:1 BLK:1                      |   Tokens: BLU:3 GRN:3 BLK:3
+  Bonuses: {GRN:1}                                     |   Bonuses: {}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 4 - Player 1's move
+Points: 0, Budget: {BLU=3, GRN=3, BLK=3}
+Reasoning: I have successfully accumulated 3 BLACK tokens, which is the exact cost required to purchase the Level 1 card L1_15. Purchasing L1_15 is my most efficient move because it not only begins my engine but also grants a BLUE bonus. When combined with my current 3 BLUE tokens, this bonus will allow me to purchase L1_8 (which costs 4 BLUE) on a future turn. This strategy effectively secures my path toward my first prestige point while maintaining a healthy token count of 6, leaving room to gather more resources without being forced to return tokens.
+Action: PurchaseCardAction[cardId=L1_15]
+
+======================================================================================
+TURN 5 | Current Player: gemini-3-pro-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:1 RED:3 BLK:3 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         | [L1_8] BLK 1pt BLU:4                       |
+    [L1_9] BLU 0pts WHT:1 GRN:1 RED:1 BLK:1    | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1        
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_52] BLU 3pts BLU:6                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_41] BLK 1pt WHT:3 BLU:2 GRN:2         
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_85] GRN 4pts WHT:3 BLU:6 GRN:3         |
+    [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0) (Current):                   | gemini-3-flash-preview (P1):
+  Score: 0 | Cards: 1                                  |   Score: 0 | Cards: 1
+  Tokens: WHT:2 GRN:1 RED:1 BLK:1                      |   Tokens: BLU:3 GRN:3
+  Bonuses: {GRN:1}                                     |   Bonuses: {BLU:1}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 5 - Player 0's move
+Points: 0, Budget: {WHT=2, GRN=2, RED=1, BLK=1}
+Reasoning: I have successfully gathered the tokens required to purchase card L1_9 (Cost: 1W, 1G, 1R, 1K). With my existing Green bonus covering the Green portion of the cost, I need to pay 1 White, 1 Red, and 1 Black token. I currently hold 2 White, 1 Red, and 1 Black tokens, making this purchase immediately possible. This move executes the strategy from the previous turn, securing a permanent Blue gem. This Blue bonus is a key step toward qualifying for Noble N8 (requires 3 Blue) and building a diverse gem engine to access Level 2 cards. Purchasing now also reduces my token count, allowing me to gather new resources on subsequent turns efficiently.
+Action: PurchaseCardAction[cardId=L1_9]
+
+======================================================================================
+TURN 5 | Current Player: gemini-3-flash-preview (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:1 RED:4 BLK:4 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         | [L1_8] BLK 1pt BLU:4                       |
+    [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         | [L1_22] WHT 0pts BLU:2 BLK:2              
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_52] BLU 3pts BLU:6                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_41] BLK 1pt WHT:3 BLU:2 GRN:2         
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_85] GRN 4pts WHT:3 BLU:6 GRN:3         |
+    [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0):                             | gemini-3-flash-preview (P1) (Current):
+  Score: 0 | Cards: 2                                  |   Score: 0 | Cards: 1
+  Tokens: WHT:1 GRN:1                                  |   Tokens: BLU:3 GRN:3
+  Bonuses: {BLU:1 GRN:1}                               |   Bonuses: {BLU:1}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 5 - Player 1's move
+Points: 0, Budget: {BLU=4, GRN=3}
+Reasoning: I have successfully accumulated 3 BLUE tokens and already possess 1 BLUE bonus from L1_15, giving me the 4 BLUE power required to purchase L1_8. Buying L1_8 is the most efficient move as it grants me my first prestige point and provides a BLACK bonus, which will be useful for future purchases such as L1_22 or higher-level cards requiring BLACK. This purchase leaves me with 3 GREEN tokens and 0 other tokens, positioning me well to start gathering resources for my next target without hitting the token limit.
+Action: PurchaseCardAction[cardId=L1_8]
+
+======================================================================================
+TURN 6 | Current Player: gemini-3-pro-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:4 RED:4 BLK:4 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_22] WHT 0pts BLU:2 BLK:2               | [L1_1] BLK 0pts WHT:1 BLU:1 GRN:1 RED:1   
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_52] BLU 3pts BLU:6                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_41] BLK 1pt WHT:3 BLU:2 GRN:2         
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_85] GRN 4pts WHT:3 BLU:6 GRN:3         |
+    [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0) (Current):                   | gemini-3-flash-preview (P1):
+  Score: 0 | Cards: 2                                  |   Score: 1 | Cards: 2
+  Tokens: WHT:1 GRN:1                                  |   Tokens: GRN:3
+  Bonuses: {BLU:1 GRN:1}                               |   Bonuses: {BLU:1 BLK:1}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 6 - Player 0's move
+Points: 0, Budget: {WHT=1, BLU=1, GRN=2}
+Reasoning: I intend to purchase card L1_11 (Blue bonus) to gain a second Blue gem, which is a key step towards qualifying for Noble N8 (Requires 3 Blue, 3 Green, 3 White). The card costs 1 White, 2 Green, and 2 Red. I currently possess 1 White token and 1 Green token (plus a Green bonus, bringing my Green total to 2, exactly meeting the requirement). I am missing 2 Red tokens. Since there are 4 Red tokens available on the board, I can perform a 'Take 2' action on Red. This is the most efficient way to acquire the necessary resources to purchase L1_11 on my next turn, while effectively utilizing my existing White and Green tokens.
+Action: TakeTokensAction[tokens={RED=2}, tokensToReturn=null]
+
+======================================================================================
+TURN 6 | Current Player: gemini-3-flash-preview (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:4 RED:2 BLK:4 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_22] WHT 0pts BLU:2 BLK:2               | [L1_1] BLK 0pts WHT:1 BLU:1 GRN:1 RED:1   
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_52] BLU 3pts BLU:6                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_41] BLK 1pt WHT:3 BLU:2 GRN:2         
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_85] GRN 4pts WHT:3 BLU:6 GRN:3         |
+    [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0):                             | gemini-3-flash-preview (P1) (Current):
+  Score: 0 | Cards: 2                                  |   Score: 1 | Cards: 2
+  Tokens: WHT:1 GRN:1 RED:2                            |   Tokens: GRN:3
+  Bonuses: {BLU:1 GRN:1}                               |   Bonuses: {BLU:1 BLK:1}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 6 - Player 1's move
+Points: 1, Budget: {BLU=1, GRN=3, BLK=1}
+Reasoning: I currently have 3 GREEN tokens and bonuses in BLUE and BLACK. My next logical step is to acquire more Level 1 cards to strengthen my engine, specifically targeting L1_12 and L1_1. L1_12 requires 3 GREEN and 1 RED (since I have a BLUE bonus), and I already possess the GREEN tokens. L1_1 requires 1 WHITE, 1 GREEN, and 1 RED (since I have a BLUE bonus). By taking WHITE, RED, and BLACK tokens, I ensure I have the RED needed for L1_12 while also gathering resources for L1_1 or future higher-tier cards like L2_41 (which requires WHITE). This move keeps my token count at 6, well within the limit.
+Action: TakeTokensAction[tokens={WHITE=1, RED=1, BLACK=1}, tokensToReturn=null]
+
+======================================================================================
+TURN 7 | Current Player: gemini-3-pro-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:4 RED:1 BLK:3 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_22] WHT 0pts BLU:2 BLK:2               | [L1_1] BLK 0pts WHT:1 BLU:1 GRN:1 RED:1   
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_52] BLU 3pts BLU:6                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_41] BLK 1pt WHT:3 BLU:2 GRN:2         
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_85] GRN 4pts WHT:3 BLU:6 GRN:3         |
+    [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0) (Current):                   | gemini-3-flash-preview (P1):
+  Score: 0 | Cards: 2                                  |   Score: 1 | Cards: 2
+  Tokens: WHT:1 GRN:1 RED:2                            |   Tokens: WHT:1 GRN:3 RED:1 BLK:1
+  Bonuses: {BLU:1 GRN:1}                               |   Bonuses: {BLU:1 BLK:1}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 7 - Player 0's move
+Points: 0, Budget: {WHT=1, BLU=1, GRN=2, RED=2}
+Reasoning: I have successfully accumulated the tokens necessary to purchase card L1_11 (Cost: 1W, 2G, 2R). My current holding of 1 White token, 1 Green token, and 2 Red tokens, combined with my permanent Green gem bonus, provides exactly the gems needed (1 White, 2 Green total, 2 Red). This purchase is strategic as it grants a second Blue bonus, significantly advancing my progress towards Noble N8 (requires 3 Blue, 3 Green, 3 White). Converting these tokens into a permanent asset clears my inventory to gather resources for the next target, likely L1_22 (White bonus) or L1_1 (Black bonus), while maintaining tempo against the opponent.
+Action: PurchaseCardAction[cardId=L1_11]
+
+======================================================================================
+TURN 7 | Current Player: gemini-3-flash-preview (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:4 GRN:1 RED:3 BLK:3 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         | [L1_22] WHT 0pts BLU:2 BLK:2               |
+    [L1_1] BLK 0pts WHT:1 BLU:1 GRN:1 RED:1    | [L1_25] GRN 0pts WHT:1 BLU:1 RED:1 BLK:1  
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_52] BLU 3pts BLU:6                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_41] BLK 1pt WHT:3 BLU:2 GRN:2         
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_85] GRN 4pts WHT:3 BLU:6 GRN:3         |
+    [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0):                             | gemini-3-flash-preview (P1) (Current):
+  Score: 0 | Cards: 3                                  |   Score: 1 | Cards: 2
+  Tokens:                                              |   Tokens: WHT:1 GRN:3 RED:1 BLK:1
+  Bonuses: {BLU:2 GRN:1}                               |   Bonuses: {BLU:1 BLK:1}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 7 - Player 1's move
+Points: 1, Budget: {WHT=1, BLU=1, GRN=3, RED=1, BLK=2}
+Reasoning: I have reached the necessary resource count to purchase the Level 1 card L1_12. My current state includes 1 BLUE bonus, which covers the BLUE cost requirement of the card. I will spend my 3 GREEN tokens and 1 RED token to fulfill the remainder of the cost (3 GREEN, 1 RED). This move is highly efficient as it utilizes the specific token stack I have built up, clears inventory space, and adds a second BLUE bonus to my engine. This strengthens my position for acquiring higher-value Level 2 BLUE cards and progresses my standing toward the N8 noble requirements.
+Action: PurchaseCardAction[cardId=L1_12]
+
+======================================================================================
+TURN 8 | Current Player: gemini-3-pro-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:4 GRN:4 RED:4 BLK:3 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_22] WHT 0pts BLU:2 BLK:2               | [L1_1] BLK 0pts WHT:1 BLU:1 GRN:1 RED:1    |
+    [L1_25] GRN 0pts WHT:1 BLU:1 RED:1 BLK:1   | [L1_21] WHT 0pts RED:2 BLK:1              
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_52] BLU 3pts BLU:6                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_41] BLK 1pt WHT:3 BLU:2 GRN:2         
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_85] GRN 4pts WHT:3 BLU:6 GRN:3         |
+    [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0) (Current):                   | gemini-3-flash-preview (P1):
+  Score: 0 | Cards: 3                                  |   Score: 1 | Cards: 3
+  Tokens:                                              |   Tokens: WHT:1 BLK:1
+  Bonuses: {BLU:2 GRN:1}                               |   Bonuses: {BLU:2 BLK:1}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 8 - Player 0's move
+Points: 0, Budget: {BLU=2, GRN=1}
+Reasoning: I currently have 2 Blue bonuses and 1 Green bonus, with my sights set on Noble N8 (3 White, 3 Green, 3 Blue). Card L1_22 provides a critical White bonus and costs 2 Blue and 2 Black. With my bonuses, it costs me 2 Black tokens. However, my opponent has 2 Blue bonuses, 1 Black bonus, and 1 Black token. Their cost for L1_22 is reduced to just 1 Black token, which they currently possess. They can and likely will purchase this card on their next turn. Since this is the most efficient White bonus available to me, losing it would be a significant setback. Therefore, I will reserve L1_22. This action denies the opponent the card, secures the White bonus for my future use, and grants me a Gold token. In subsequent turns, I plan to collect tokens to purchase L1_1 (Black bonus) and then use the Black bonus and Gold to purchase the reserved L1_22.
+Action: ReserveCardAction[cardId=L1_22, deckLevel=null, tokensToReturn=null]
+
+======================================================================================
+TURN 8 | Current Player: gemini-3-flash-preview (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:4 GRN:4 RED:4 BLK:3 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_1] BLK 0pts WHT:1 BLU:1 GRN:1 RED:1    | [L1_25] GRN 0pts WHT:1 BLU:1 RED:1 BLK:1   |
+    [L1_21] WHT 0pts RED:2 BLK:1               | [L1_3] BLK 0pts WHT:2 BLU:2 RED:1         
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_52] BLU 3pts BLU:6                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_41] BLK 1pt WHT:3 BLU:2 GRN:2         
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_85] GRN 4pts WHT:3 BLU:6 GRN:3         |
+    [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0):                             | gemini-3-flash-preview (P1) (Current):
+  Score: 0 | Cards: 3                                  |   Score: 1 | Cards: 3
+  Tokens: GLD:1                                        |   Tokens: WHT:1 BLK:1
+  Bonuses: {BLU:2 GRN:1}                               |   Bonuses: {BLU:2 BLK:1}
+  Reserved: [L1_22] WHT 0pts BLU:2 BLK:2               |   Reserved: None
+
+======================================================================================
+
+Turn 8 - Player 1's move
+Points: 1, Budget: {WHT=1, BLU=2, BLK=2}
+Reasoning: I currently have a small engine with 2 BLUE bonuses and 1 BLACK bonus. To expand, I need to focus on acquiring more Level 1 cards like L1_25 and L1_1. L1_25 requires 1 WHITE and 1 RED (effectively, after bonuses), and L1_1 requires 1 WHITE, 1 GREEN, and 1 RED. By taking WHITE, GREEN, and RED tokens this turn, I position myself to purchase either of these cards on my next turn, furthering my engine and working toward noble requirements like N8 (WHITE, GREEN, BLUE).
+Action: TakeTokensAction[tokens={WHITE=1, GREEN=1, RED=1}, tokensToReturn=null]
+
+======================================================================================
+TURN 9 | Current Player: gemini-3-pro-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:4 GRN:3 RED:3 BLK:3 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_1] BLK 0pts WHT:1 BLU:1 GRN:1 RED:1    | [L1_25] GRN 0pts WHT:1 BLU:1 RED:1 BLK:1   |
+    [L1_21] WHT 0pts RED:2 BLK:1               | [L1_3] BLK 0pts WHT:2 BLU:2 RED:1         
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_52] BLU 3pts BLU:6                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_41] BLK 1pt WHT:3 BLU:2 GRN:2         
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_85] GRN 4pts WHT:3 BLU:6 GRN:3         |
+    [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0) (Current):                   | gemini-3-flash-preview (P1):
+  Score: 0 | Cards: 3                                  |   Score: 1 | Cards: 3
+  Tokens: GLD:1                                        |   Tokens: WHT:2 GRN:1 RED:1 BLK:1
+  Bonuses: {BLU:2 GRN:1}                               |   Bonuses: {BLU:2 BLK:1}
+  Reserved: [L1_22] WHT 0pts BLU:2 BLK:2               |   Reserved: None
+
+======================================================================================
+
+Turn 9 - Player 0's move
+Points: 0, Budget: {BLU=2, GRN=1, GLD=1}
+Reasoning: I hold a reserved card L1_22 (White bonus), which costs 2 Blue and 2 Black. With 2 Blue bonuses already, I effectively need 2 Black resources. I currently have 1 Gold token and 0 Black tokens. Card L1_1 (Black bonus) is available on the board and costs 1W, 1B, 1G, 1R. My bonuses (2B, 1G) reduce this cost to 1 White and 1 Red. Acquiring L1_1 would provide a permanent Black gem, reducing the cost of my reserved L1_22 to just 1 Black token (payable with a token or Gold). To proceed, I need to gather resources. Since I currently lack White and Red tokens for L1_1, and need Black for L1_22, taking 1 White, 1 Red, and 1 Black token is optimal. Even if the opponent purchases L1_1 before I can, having a Black token and a Gold token will allow me to purchase my reserved L1_22 immediately on the following turn (Cost 2K -> 1K token + 1 Gold).
+Action: TakeTokensAction[tokens={WHITE=1, RED=1, BLACK=1}, tokensToReturn=null]
+
+======================================================================================
+TURN 9 | Current Player: gemini-3-flash-preview (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:1 BLU:4 GRN:3 RED:2 BLK:2 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_1] BLK 0pts WHT:1 BLU:1 GRN:1 RED:1    | [L1_25] GRN 0pts WHT:1 BLU:1 RED:1 BLK:1   |
+    [L1_21] WHT 0pts RED:2 BLK:1               | [L1_3] BLK 0pts WHT:2 BLU:2 RED:1         
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_52] BLU 3pts BLU:6                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_41] BLK 1pt WHT:3 BLU:2 GRN:2         
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_85] GRN 4pts WHT:3 BLU:6 GRN:3         |
+    [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0):                             | gemini-3-flash-preview (P1) (Current):
+  Score: 0 | Cards: 3                                  |   Score: 1 | Cards: 3
+  Tokens: WHT:1 RED:1 BLK:1 GLD:1                      |   Tokens: WHT:2 GRN:1 RED:1 BLK:1
+  Bonuses: {BLU:2 GRN:1}                               |   Bonuses: {BLU:2 BLK:1}
+  Reserved: [L1_22] WHT 0pts BLU:2 BLK:2               |   Reserved: None
+
+======================================================================================
+
+Turn 9 - Player 1's move
+Points: 1, Budget: {WHT=2, BLU=2, GRN=1, RED=1, BLK=2}
+Reasoning: I have enough tokens to purchase the Level 1 card L1_25. The card costs 1 WHITE, 1 BLUE, 1 RED, and 1 BLACK. With my current bonuses of 2 BLUE and 1 BLACK, the net cost is reduced to just 1 WHITE and 1 RED. Since I currently hold 2 WHITE and 1 RED tokens, I can purchase this card immediately. This move is beneficial as it provides a GREEN bonus, which is a key requirement for all three available nobles (N2, N7, and N8) and assists in future purchases like L2_41. This purchase continues to build my engine efficiently while keeping my token count low.
+Action: PurchaseCardAction[cardId=L1_25]
+
+======================================================================================
+TURN 10 | Current Player: gemini-3-pro-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:4 GRN:3 RED:3 BLK:2 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_1] BLK 0pts WHT:1 BLU:1 GRN:1 RED:1    | [L1_21] WHT 0pts RED:2 BLK:1               |
+    [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_26] GRN 0pts WHT:1 BLU:1 RED:1 BLK:2  
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_52] BLU 3pts BLU:6                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_41] BLK 1pt WHT:3 BLU:2 GRN:2         
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_85] GRN 4pts WHT:3 BLU:6 GRN:3         |
+    [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0) (Current):                   | gemini-3-flash-preview (P1):
+  Score: 0 | Cards: 3                                  |   Score: 1 | Cards: 4
+  Tokens: WHT:1 RED:1 BLK:1 GLD:1                      |   Tokens: WHT:1 GRN:1 BLK:1
+  Bonuses: {BLU:2 GRN:1}                               |   Bonuses: {BLU:2 GRN:1 BLK:1}
+  Reserved: [L1_22] WHT 0pts BLU:2 BLK:2               |   Reserved: None
+
+======================================================================================
+
+Turn 10 - Player 0's move
+Points: 0, Budget: {WHT=1, BLU=2, GRN=1, RED=1, BLK=1, GLD=1}
+Reasoning: I have successfully gathered the resources to execute the plan formed in the previous turn. I currently hold 1 White and 1 Red token, and my bonuses (2 Blue, 1 Green) cover the rest of the cost for card L1_1 (Cost: 1W, 1B, 1G, 1R). Purchasing this card now is optimal for several reasons: 1) It secures a visible card from the board, preventing the opponent from interfering. 2) It provides a Black bonus, which will reduce the cost of my reserved card L1_22 (Cost: 2B, 2K) to just 1 Black token. 3) This sequence allows me to purchase L1_22 on the very next turn using my remaining Black token, while allowing me to keep my Gold token for future flexibility. This is far more efficient than spending the Gold token now to buy the reserved card first.
+Action: PurchaseCardAction[cardId=L1_1]
+
+======================================================================================
+TURN 10 | Current Player: gemini-3-flash-preview (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:4 GRN:3 RED:4 BLK:2 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_21] WHT 0pts RED:2 BLK:1               | [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          |
+    [L1_26] GRN 0pts WHT:1 BLU:1 RED:1 BLK:2   | [L1_36] RED 0pts WHT:1 RED:1 BLK:3        
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_52] BLU 3pts BLU:6                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_41] BLK 1pt WHT:3 BLU:2 GRN:2         
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_85] GRN 4pts WHT:3 BLU:6 GRN:3         |
+    [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0):                             | gemini-3-flash-preview (P1) (Current):
+  Score: 0 | Cards: 4                                  |   Score: 1 | Cards: 4
+  Tokens: BLK:1 GLD:1                                  |   Tokens: WHT:1 GRN:1 BLK:1
+  Bonuses: {BLU:2 GRN:1 BLK:1}                         |   Bonuses: {BLU:2 GRN:1 BLK:1}
+  Reserved: [L1_22] WHT 0pts BLU:2 BLK:2               |   Reserved: None
+
+======================================================================================
+
+Turn 10 - Player 1's move
+Points: 1, Budget: {WHT=1, BLU=2, GRN=2, BLK=2}
+Reasoning: I am currently building toward engine expansion and scoring. I have 2 BLUE, 1 GREEN, and 1 BLACK bonuses. Looking at the board, L1_21 (WHITE bonus) and L1_26 (GREEN bonus) are sensible intermediate targets. L1_26 requires 1 WHITE, 1 RED, and 1 BLACK after applying my current bonuses. I already have 1 WHITE and 1 BLACK token, so I specifically need a RED token to afford it. Additionally, L2_41 (1 prestige point) is a strong mid-game target but requires 3 WHITE tokens (net). By taking WHITE, BLUE, and RED tokens this turn, I accumulate the necessary RED for L1_26 and move closer to the WHITE requirement for L2_41, while also starting to collect BLUE for the high-scoring L2_52 (3 prestige points). This move keeps my token count at 6, well within the 10-token limit, and maintains flexibility for the next turn.
+Action: TakeTokensAction[tokens={WHITE=1, BLUE=1, RED=1}, tokensToReturn=null]
+
+======================================================================================
+TURN 11 | Current Player: gemini-3-pro-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:3 GRN:3 RED:3 BLK:2 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_21] WHT 0pts RED:2 BLK:1               | [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          |
+    [L1_26] GRN 0pts WHT:1 BLU:1 RED:1 BLK:2   | [L1_36] RED 0pts WHT:1 RED:1 BLK:3        
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_52] BLU 3pts BLU:6                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_41] BLK 1pt WHT:3 BLU:2 GRN:2         
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_85] GRN 4pts WHT:3 BLU:6 GRN:3         |
+    [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0) (Current):                   | gemini-3-flash-preview (P1):
+  Score: 0 | Cards: 4                                  |   Score: 1 | Cards: 4
+  Tokens: BLK:1 GLD:1                                  |   Tokens: WHT:2 BLU:1 GRN:1 RED:1 BLK:1
+  Bonuses: {BLU:2 GRN:1 BLK:1}                         |   Bonuses: {BLU:2 GRN:1 BLK:1}
+  Reserved: [L1_22] WHT 0pts BLU:2 BLK:2               |   Reserved: None
+
+======================================================================================
+
+Turn 11 - Player 0's move
+Points: 0, Budget: {BLU=2, GRN=1, BLK=2, GLD=1}
+Reasoning: I will purchase my reserved card L1_22 (White bonus). The card requires 2 Blue and 2 Black. My 2 Blue bonuses cover the Blue cost entirely. The remaining 2 Black cost is satisfied by spending my 1 Black token and 1 Gold token. This is the optimal move as it converts my temporary resources into a permanent White gem, which is a critical requirement for Noble N8 (3 White, 3 Green, 3 Blue). This completes the multi-turn plan established when I originally reserved the card.
+Action: PurchaseCardAction[cardId=L1_22]
+
+======================================================================================
+TURN 11 | Current Player: gemini-3-flash-preview (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:3 GRN:3 RED:3 BLK:3 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_21] WHT 0pts RED:2 BLK:1               | [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          |
+    [L1_26] GRN 0pts WHT:1 BLU:1 RED:1 BLK:2   | [L1_36] RED 0pts WHT:1 RED:1 BLK:3        
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_52] BLU 3pts BLU:6                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_41] BLK 1pt WHT:3 BLU:2 GRN:2         
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_85] GRN 4pts WHT:3 BLU:6 GRN:3         |
+    [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0):                             | gemini-3-flash-preview (P1) (Current):
+  Score: 0 | Cards: 5                                  |   Score: 1 | Cards: 4
+  Tokens: GLD:1                                        |   Tokens: WHT:2 BLU:1 GRN:1 RED:1 BLK:1
+  Bonuses: {WHT:1 BLU:2 GRN:1 BLK:1}                   |   Bonuses: {BLU:2 GRN:1 BLK:1}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 11 - Player 1's move
+Points: 1, Budget: {WHT=2, BLU=3, GRN=2, RED=1, BLK=2}
+Reasoning: I have reached the point where I can purchase the Level 1 card L1_26. This card provides a GREEN bonus, which is highly strategic as it is required for all three available nobles: N2 (4 GREEN, 4 RED), N7 (3 BLACK, 3 GREEN, 3 RED), and N8 (3 WHITE, 3 GREEN, 3 BLUE). Additionally, increasing my GREEN bonus to 2 will simplify the acquisition of points-bearing cards like L2_41. The cost for L1_26 is 1 WHITE, 1 BLUE, 1 RED, and 2 BLACK. After applying my current bonuses (2 BLUE, 1 BLACK), the net cost is 1 WHITE, 1 RED, and 1 BLACK. Since I currently hold 2 WHITE, 1 RED, and 1 BLACK tokens, I can afford this purchase while leaving 1 WHITE, 1 BLUE, and 1 GREEN in my inventory for the next turn. This move efficiently builds my engine toward noble eligibility and higher-tier cards.
+Action: PurchaseCardAction[cardId=L1_26]
+
+======================================================================================
+TURN 12 | Current Player: gemini-3-pro-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:3 GRN:3 RED:4 BLK:4 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_21] WHT 0pts RED:2 BLK:1               | [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          |
+    [L1_36] RED 0pts WHT:1 RED:1 BLK:3         | [L1_38] RED 0pts WHT:2 RED:2              
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_52] BLU 3pts BLU:6                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_41] BLK 1pt WHT:3 BLU:2 GRN:2         
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_85] GRN 4pts WHT:3 BLU:6 GRN:3         |
+    [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0) (Current):                   | gemini-3-flash-preview (P1):
+  Score: 0 | Cards: 5                                  |   Score: 1 | Cards: 5
+  Tokens: GLD:1                                        |   Tokens: WHT:1 BLU:1 GRN:1
+  Bonuses: {WHT:1 BLU:2 GRN:1 BLK:1}                   |   Bonuses: {BLU:2 GRN:2 BLK:1}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 12 - Player 0's move
+Points: 0, Budget: {WHT=1, BLU=2, GRN=1, BLK=1, GLD=1}
+Reasoning: My primary goal is to progress towards the Noble N8 (3 White, 3 Green, 3 Blue). I currently have 1 White, 1 Green, and 2 Blue bonuses. I have identified a strong two-turn sequence: 1) Purchase L1_21 (White bonus) to reach 2 White bonuses, and 2) Purchase L2_41 (Black Bonus, 1 Prestige Point) which requires my new White bonus. L1_21 costs 2 Red (net). L2_41 costs 3 White, 2 Blue, 2 Green (net cost after L1_21 purchase: 1 White, 1 Green). By taking 1 White, 1 Green, and 1 Red token now, I will have 1W, 1G, 1R, and 1 Gold. Next turn, I can buy L1_21 paying 1 Red + 1 Gold. The turn after, I can buy L2_41 paying the remaining 1 White + 1 Green. This is more efficient than taking 2 Red tokens now, as it secures the resources for the point-scoring card L2_41 concurrently.
+Action: TakeTokensAction[tokens={WHITE=1, GREEN=1, RED=1}, tokensToReturn=null]
+
+======================================================================================
+TURN 12 | Current Player: gemini-3-flash-preview (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:3 GRN:2 RED:3 BLK:4 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_21] WHT 0pts RED:2 BLK:1               | [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          |
+    [L1_36] RED 0pts WHT:1 RED:1 BLK:3         | [L1_38] RED 0pts WHT:2 RED:2              
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_52] BLU 3pts BLU:6                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_41] BLK 1pt WHT:3 BLU:2 GRN:2         
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_85] GRN 4pts WHT:3 BLU:6 GRN:3         |
+    [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0):                             | gemini-3-flash-preview (P1) (Current):
+  Score: 0 | Cards: 5                                  |   Score: 1 | Cards: 5
+  Tokens: WHT:1 GRN:1 RED:1 GLD:1                      |   Tokens: WHT:1 BLU:1 GRN:1
+  Bonuses: {WHT:1 BLU:2 GRN:1 BLK:1}                   |   Bonuses: {BLU:2 GRN:2 BLK:1}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 12 - Player 1's move
+Points: 1, Budget: {WHT=1, BLU=3, GRN=3, BLK=1}
+Reasoning: I am currently focusing on building towards the N8 noble (3 WHITE, 3 GREEN, 3 BLUE) and scoring points through Level 2 cards. I already have 2 BLUE and 2 GREEN bonuses, so obtaining a WHITE bonus is a high priority. The Level 1 card L1_21 gives a WHITE bonus and costs 2 RED and 1 BLACK. Currently, I have 1 WHITE, 1 BLUE, and 1 GREEN token (total 3). By taking 1 WHITE, 1 RED, and 1 BLACK token this turn, I will have 2 WHITE, 1 BLUE, 1 GREEN, 1 RED, and 1 BLACK (total 6). This move provides the first of the two RED tokens needed for L1_21, the BLACK token for L1_21, and brings me to 2 WHITE tokens, which is a key step toward purchasing L2_41 (1 prestige point, costs 3 WHITE net).
+Action: TakeTokensAction[tokens={WHITE=1, RED=1, BLACK=1}, tokensToReturn=null]
+
+======================================================================================
+TURN 13 | Current Player: gemini-3-pro-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:1 BLU:3 GRN:2 RED:2 BLK:3 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_21] WHT 0pts RED:2 BLK:1               | [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          |
+    [L1_36] RED 0pts WHT:1 RED:1 BLK:3         | [L1_38] RED 0pts WHT:2 RED:2              
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_52] BLU 3pts BLU:6                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_41] BLK 1pt WHT:3 BLU:2 GRN:2         
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_85] GRN 4pts WHT:3 BLU:6 GRN:3         |
+    [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0) (Current):                   | gemini-3-flash-preview (P1):
+  Score: 0 | Cards: 5                                  |   Score: 1 | Cards: 5
+  Tokens: WHT:1 GRN:1 RED:1 GLD:1                      |   Tokens: WHT:2 BLU:1 GRN:1 RED:1 BLK:1
+  Bonuses: {WHT:1 BLU:2 GRN:1 BLK:1}                   |   Bonuses: {BLU:2 GRN:2 BLK:1}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 13 - Player 0's move
+Points: 0, Budget: {WHT=2, BLU=2, GRN=2, RED=1, BLK=1, GLD=1}
+Reasoning: I will execute the first step of the two-turn plan devised in the previous turn by purchasing card L1_21 (White bonus). This card costs 2 Red and 1 Black. My existing Black bonus covers the Black cost entirely. The remaining cost of 2 Red is paid using my 1 Red token and 1 Gold token. This purchase increases my White bonuses to 2, which is essential for my overall goal of Noble N8 (requiring 3 White). Furthermore, paying with Red and Gold leaves me with exactly 1 White and 1 Green token. This is the precise amount needed to purchase my next target, L2_41 (which costs 3 White, 2 Blue, 2 Green), on the very next turn, given my updated bonus spread (2 White, 2 Blue, 1 Green). This efficient sequencing maximizes my engine building speed and secures a point card immediately after.
+Action: PurchaseCardAction[cardId=L1_21]
+
+======================================================================================
+TURN 13 | Current Player: gemini-3-flash-preview (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:1 BLU:3 GRN:2 RED:3 BLK:3 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_36] RED 0pts WHT:1 RED:1 BLK:3         |
+    [L1_38] RED 0pts WHT:2 RED:2               | [L1_19] WHT 0pts BLU:2 GRN:2 BLK:1        
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_52] BLU 3pts BLU:6                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_41] BLK 1pt WHT:3 BLU:2 GRN:2         
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_85] GRN 4pts WHT:3 BLU:6 GRN:3         |
+    [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0):                             | gemini-3-flash-preview (P1) (Current):
+  Score: 0 | Cards: 6                                  |   Score: 1 | Cards: 5
+  Tokens: WHT:1 GRN:1                                  |   Tokens: WHT:2 BLU:1 GRN:1 RED:1 BLK:1
+  Bonuses: {WHT:2 BLU:2 GRN:1 BLK:1}                   |   Bonuses: {BLU:2 GRN:2 BLK:1}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 13 - Player 1's move
+Points: 1, Budget: {WHT=2, BLU=3, GRN=3, RED=1, BLK=2}
+Reasoning: I have identified that the Level 1 card L1_19 provides a WHITE bonus and is currently free for me to purchase. Its cost is 2 BLUE, 2 GREEN, and 1 BLACK, which exactly matches my current bonuses (2 BLUE, 2 GREEN, 1 BLACK). Acquiring this card is a highly efficient move as it expands my engine without depleting my token pool. This WHITE bonus is essential for working towards the N8 noble (3 WHITE, 3 GREEN, 3 BLUE) and reduces the token requirements for point-scoring cards like L2_41 and L2_68 in the future.
+Action: PurchaseCardAction[cardId=L1_19]
+
+======================================================================================
+TURN 14 | Current Player: gemini-3-pro-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:1 BLU:3 GRN:2 RED:3 BLK:3 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_36] RED 0pts WHT:1 RED:1 BLK:3         |
+    [L1_38] RED 0pts WHT:2 RED:2               | [L1_2] BLK 0pts WHT:1 BLU:2 GRN:1 RED:1   
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_52] BLU 3pts BLU:6                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_41] BLK 1pt WHT:3 BLU:2 GRN:2         
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_85] GRN 4pts WHT:3 BLU:6 GRN:3         |
+    [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0) (Current):                   | gemini-3-flash-preview (P1):
+  Score: 0 | Cards: 6                                  |   Score: 1 | Cards: 6
+  Tokens: WHT:1 GRN:1                                  |   Tokens: WHT:2 BLU:1 GRN:1 RED:1 BLK:1
+  Bonuses: {WHT:2 BLU:2 GRN:1 BLK:1}                   |   Bonuses: {WHT:1 BLU:2 GRN:2 BLK:1}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 14 - Player 0's move
+Points: 0, Budget: {WHT=3, BLU=2, GRN=2, BLK=1}
+Reasoning: I will execute the second phase of my plan by purchasing card L2_41. This card costs 3 White, 2 Blue, and 2 Green. My current bonuses (2 White, 2 Blue, 1 Green) reduce the cost to 1 White and 1 Green. I currently possess exactly 1 White token and 1 Green token, allowing for an exact purchase with no wasted resources. This move awards 1 Prestige Point, getting me on the scoreboard, and adds a Black bonus (bringing my Gem count to 2W, 2B, 1G, 2K). Crucially, the opponent also has the resources to buy this card (they hold adequate bonuses and tokens), so purchasing it now secures the point for myself and denies it to them. This action also frees up my token capacity to gather resources for the remaining Noble N8 requirements (Total needed: 3W, 3G, 3B) in future turns.
+Action: PurchaseCardAction[cardId=L2_41]
+
+======================================================================================
+TURN 14 | Current Player: gemini-3-flash-preview (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:3 GRN:3 RED:3 BLK:3 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_36] RED 0pts WHT:1 RED:1 BLK:3         |
+    [L1_38] RED 0pts WHT:2 RED:2               | [L1_2] BLK 0pts WHT:1 BLU:2 GRN:1 RED:1   
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_52] BLU 3pts BLU:6                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_50] BLU 2pts WHT:2 RED:1 BLK:4        
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_85] GRN 4pts WHT:3 BLU:6 GRN:3         |
+    [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0):                             | gemini-3-flash-preview (P1) (Current):
+  Score: 1 | Cards: 7                                  |   Score: 1 | Cards: 6
+  Tokens:                                              |   Tokens: WHT:2 BLU:1 GRN:1 RED:1 BLK:1
+  Bonuses: {WHT:2 BLU:2 GRN:1 BLK:2}                   |   Bonuses: {WHT:1 BLU:2 GRN:2 BLK:1}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 14 - Player 1's move
+Points: 1, Budget: {WHT=3, BLU=3, GRN=3, RED=1, BLK=2}
+Reasoning: I am purchasing the Level 1 card L1_2 because it provides a BLACK bonus for the minimal cost of just one RED token. My current bonuses (1 WHITE, 2 BLUE, 2 GREEN) cover the other resource requirements of its 1 WHITE, 2 BLUE, 1 GREEN, and 1 RED price. This is a highly efficient way to increase my BLACK bonus engine to 2, which is critical for future points-bearing cards like L2_50 and L2_68 and brings me closer to qualifying for the N7 noble (requires 3 BLACK, 3 GREEN, 3 RED).
+Action: PurchaseCardAction[cardId=L1_2]
+
+======================================================================================
+TURN 15 | Current Player: gemini-3-pro-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:3 GRN:3 RED:4 BLK:3 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_36] RED 0pts WHT:1 RED:1 BLK:3         |
+    [L1_38] RED 0pts WHT:2 RED:2               | [L1_14] BLU 0pts GRN:2 BLK:2              
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_52] BLU 3pts BLU:6                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_50] BLU 2pts WHT:2 RED:1 BLK:4        
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_85] GRN 4pts WHT:3 BLU:6 GRN:3         |
+    [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0) (Current):                   | gemini-3-flash-preview (P1):
+  Score: 1 | Cards: 7                                  |   Score: 1 | Cards: 7
+  Tokens:                                              |   Tokens: WHT:2 BLU:1 GRN:1 BLK:1
+  Bonuses: {WHT:2 BLU:2 GRN:1 BLK:2}                   |   Bonuses: {WHT:1 BLU:2 GRN:2 BLK:2}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 15 - Player 0's move
+Points: 1, Budget: {WHT=2, BLU=2, GRN=1, BLK=2}
+Reasoning: I will reserve card L1_14. This move is critical for two reasons: defensive and offensive. First, my opponent currently has the exact bonuses (2 Green, 2 Black) to purchase this card for free (0 cost) on their turn. Since L1_14 provides a Blue bonus and the opponent has 2 Blue bonuses, acquiring it would put them at 3 Blue, fulfilling that requirement for Noble N8. Second, I also require exactly one more Blue bonus to reach the 3 Blue needed for Noble N8 (I have 2 Blue). By reserving this card, I deny it to my opponent and secure the resource for myself. The reservation also grants me a Gold token, which I can use on the very next turn to pay the outstanding cost of the card (1 Green net cost), effectively buying it for 1 Gold.
+Action: ReserveCardAction[cardId=L1_14, deckLevel=null, tokensToReturn=null]
+
+======================================================================================
+TURN 15 | Current Player: gemini-3-flash-preview (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:3 GRN:3 RED:4 BLK:3 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_36] RED 0pts WHT:1 RED:1 BLK:3         |
+    [L1_38] RED 0pts WHT:2 RED:2               | [L1_16] BLU 1pt RED:4                     
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_52] BLU 3pts BLU:6                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_50] BLU 2pts WHT:2 RED:1 BLK:4        
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_85] GRN 4pts WHT:3 BLU:6 GRN:3         |
+    [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0):                             | gemini-3-flash-preview (P1) (Current):
+  Score: 1 | Cards: 7                                  |   Score: 1 | Cards: 7
+  Tokens: GLD:1                                        |   Tokens: WHT:2 BLU:1 GRN:1 BLK:1
+  Bonuses: {WHT:2 BLU:2 GRN:1 BLK:2}                   |   Bonuses: {WHT:1 BLU:2 GRN:2 BLK:2}
+  Reserved: [L1_14] BLU 0pts GRN:2 BLK:2               |   Reserved: None
+
+======================================================================================
+
+Turn 15 - Player 1's move
+Points: 1, Budget: {WHT=3, BLU=3, GRN=3, BLK=3}
+Reasoning: I am currently at 1 point with a bonus engine of 1 WHITE, 2 BLUE, 2 GREEN, and 2 BLACK. To move toward winning, I am targeting the Level 2 card L2_50, which provides 2 prestige points. The cost for L2_50 is 2 WHITE, 1 RED, and 4 BLACK tokens. After factoring in my bonuses, the remaining cost is 1 WHITE, 1 RED, and 2 BLACK tokens. I currently have 2 WHITE and 1 BLACK token. By taking 1 BLUE, 1 RED, and 1 BLACK token this turn, I will have all the necessary resources to purchase L2_50 in the next turn (specifically 2 WHITE, 1 RED, and 2 BLACK tokens). The BLUE token also helps me build toward the N8 noble requirement and the high-scoring L2_52 card. This move keeps my total token count at 8, which is well within the 10-token limit.
+Action: TakeTokensAction[tokens={BLUE=1, RED=1, BLACK=1}, tokensToReturn=null]
+
+======================================================================================
+TURN 16 | Current Player: gemini-3-pro-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:2 GRN:3 RED:3 BLK:2 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_36] RED 0pts WHT:1 RED:1 BLK:3         |
+    [L1_38] RED 0pts WHT:2 RED:2               | [L1_16] BLU 1pt RED:4                     
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_52] BLU 3pts BLU:6                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_50] BLU 2pts WHT:2 RED:1 BLK:4        
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_85] GRN 4pts WHT:3 BLU:6 GRN:3         |
+    [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0) (Current):                   | gemini-3-flash-preview (P1):
+  Score: 1 | Cards: 7                                  |   Score: 1 | Cards: 7
+  Tokens: GLD:1                                        |   Tokens: WHT:2 BLU:2 GRN:1 RED:1 BLK:2
+  Bonuses: {WHT:2 BLU:2 GRN:1 BLK:2}                   |   Bonuses: {WHT:1 BLU:2 GRN:2 BLK:2}
+  Reserved: [L1_14] BLU 0pts GRN:2 BLK:2               |   Reserved: None
+
+======================================================================================
+
+Turn 16 - Player 0's move
+Points: 1, Budget: {WHT=2, BLU=2, GRN=1, BLK=2, GLD=1}
+Reasoning: I will execute the planned purchase of my reserved card L1_14. The card costs 2 Green and 2 Black. My current bonuses include 1 Green and 2 Black, covering the Black cost entirely and reducing the Green cost to 1. I possess 1 Gold token, which I will use to pay this remaining cost. Acquiring this card increases my Blue bonuses to 3, satisfying one of the three requirements for Noble N8 (3 White, 3 Green, 3 Blue). This move follows logically from my previous turn's reservation and efficiently converts my Gold token into a permanent engine piece.
+Action: PurchaseCardAction[cardId=L1_14]
+
+======================================================================================
+TURN 16 | Current Player: gemini-3-flash-preview (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:2 GRN:3 RED:3 BLK:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_36] RED 0pts WHT:1 RED:1 BLK:3         |
+    [L1_38] RED 0pts WHT:2 RED:2               | [L1_16] BLU 1pt RED:4                     
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_52] BLU 3pts BLU:6                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_50] BLU 2pts WHT:2 RED:1 BLK:4        
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_85] GRN 4pts WHT:3 BLU:6 GRN:3         |
+    [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0):                             | gemini-3-flash-preview (P1) (Current):
+  Score: 1 | Cards: 8                                  |   Score: 1 | Cards: 7
+  Tokens:                                              |   Tokens: WHT:2 BLU:2 GRN:1 RED:1 BLK:2
+  Bonuses: {WHT:2 BLU:3 GRN:1 BLK:2}                   |   Bonuses: {WHT:1 BLU:2 GRN:2 BLK:2}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 16 - Player 1's move
+Points: 1, Budget: {WHT=3, BLU=4, GRN=3, RED=1, BLK=4}
+Reasoning: I have reached the point where I can purchase the Level 2 card L2_50, which yields 2 prestige points. Its cost is 2 WHITE, 1 RED, and 4 BLACK. After accounting for my current bonuses (1 WHITE, 2 BLUE, 2 GREEN, 2 BLACK), the net cost is 1 WHITE, 1 RED, and 2 BLACK tokens. Since I currently hold 2 WHITE, 2 BLUE, 1 GREEN, 1 RED, and 2 BLACK tokens, I can afford this card immediately. This purchase increases my score to 3 and adds a BLUE bonus, bringing me to 3 BLUE bonuses—one of the three requirements for the N8 noble (3 WHITE, 3 GREEN, 3 BLUE).
+Action: PurchaseCardAction[cardId=L2_50]
+
+======================================================================================
+TURN 17 | Current Player: gemini-3-pro-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:2 GRN:3 RED:4 BLK:4 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_36] RED 0pts WHT:1 RED:1 BLK:3         |
+    [L1_38] RED 0pts WHT:2 RED:2               | [L1_16] BLU 1pt RED:4                     
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_52] BLU 3pts BLU:6                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_51] BLU 2pts BLU:5                    
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_85] GRN 4pts WHT:3 BLU:6 GRN:3         |
+    [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0) (Current):                   | gemini-3-flash-preview (P1):
+  Score: 1 | Cards: 8                                  |   Score: 3 | Cards: 8
+  Tokens:                                              |   Tokens: WHT:1 BLU:2 GRN:1
+  Bonuses: {WHT:2 BLU:3 GRN:1 BLK:2}                   |   Bonuses: {WHT:1 BLU:3 GRN:2 BLK:2}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 17 - Player 0's move
+Points: 1, Budget: {WHT=2, BLU=3, GRN=1, BLK=2}
+Reasoning: The board lacks White or Green bonuses needed for my primary goal, Noble N8 (3 White, 3 Green, 3 Blue). However, a critical tactical opportunity exists. The opponent possesses 3 Blue bonuses and 2 Blue tokens, giving them exactly the 5 Blue required to purchase 'L2_51' (2 Prestige Points, Blue Bonus). If I do not act, they will purchase this card on their turn, gaining 2 points and a 4th Blue bonus. By reserving L2_51 myself, I deny them these points. Furthermore, this reservation is strategically sound for my own game: I have 3 Blue bonuses. With the Gold token gained from reserving, the net cost to me becomes just 1 Blue token. I can easily acquire this token in a subsequent turn (e.g., taking White/Blue/Red) and purchase the card to gain 2 points myself. This move effectively creates a 4-point swing relative to the opponent while advancing my score.
+Action: ReserveCardAction[cardId=L2_51, deckLevel=null, tokensToReturn=null]
+
+======================================================================================
+TURN 17 | Current Player: gemini-3-flash-preview (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:2 GRN:3 RED:4 BLK:4 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_36] RED 0pts WHT:1 RED:1 BLK:3         |
+    [L1_38] RED 0pts WHT:2 RED:2               | [L1_16] BLU 1pt RED:4                     
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_52] BLU 3pts BLU:6                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_69] RED 2pts BLK:5                    
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_85] GRN 4pts WHT:3 BLU:6 GRN:3         |
+    [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0):                             | gemini-3-flash-preview (P1) (Current):
+  Score: 1 | Cards: 8                                  |   Score: 3 | Cards: 8
+  Tokens: GLD:1                                        |   Tokens: WHT:1 BLU:2 GRN:1
+  Bonuses: {WHT:2 BLU:3 GRN:1 BLK:2}                   |   Bonuses: {WHT:1 BLU:3 GRN:2 BLK:2}
+  Reserved: [L2_51] BLU 2pts BLU:5                     |   Reserved: None
+
+======================================================================================
+
+Turn 17 - Player 1's move
+Points: 3, Budget: {WHT=2, BLU=5, GRN=3, BLK=2}
+Reasoning: I am prioritizing the Level 2 card L2_52, which provides 3 prestige points. It costs 6 BLUE tokens. I currently have 3 BLUE bonuses and 2 BLUE tokens, meaning I need one more BLUE token to afford it. Additionally, I am collecting WHITE and GREEN tokens to progress toward the N8 noble requirement (3 WHITE, 3 GREEN, 3 BLUE). Taking 1 WHITE, 1 BLUE, and 1 GREEN token will bring my token counts to 2 WHITE, 3 BLUE, and 2 GREEN. This move perfectly positions me to purchase L2_52 on my next turn, increasing my score to 6, while also advancing my progress toward the N8 noble. My total token count will be 7, which is well under the 10-token limit.
+Action: TakeTokensAction[tokens={WHITE=1, BLUE=1, GREEN=1}, tokensToReturn=null]
+
+======================================================================================
+TURN 18 | Current Player: gemini-3-pro-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:1 GRN:2 RED:4 BLK:4 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_36] RED 0pts WHT:1 RED:1 BLK:3         |
+    [L1_38] RED 0pts WHT:2 RED:2               | [L1_16] BLU 1pt RED:4                     
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_52] BLU 3pts BLU:6                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_69] RED 2pts BLK:5                    
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_85] GRN 4pts WHT:3 BLU:6 GRN:3         |
+    [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0) (Current):                   | gemini-3-flash-preview (P1):
+  Score: 1 | Cards: 8                                  |   Score: 3 | Cards: 8
+  Tokens: GLD:1                                        |   Tokens: WHT:2 BLU:3 GRN:2
+  Bonuses: {WHT:2 BLU:3 GRN:1 BLK:2}                   |   Bonuses: {WHT:1 BLU:3 GRN:2 BLK:2}
+  Reserved: [L2_51] BLU 2pts BLU:5                     |   Reserved: None
+
+======================================================================================
+
+Turn 18 - Player 0's move
+Points: 1, Budget: {WHT=2, BLU=3, GRN=1, BLK=2, GLD=1}
+Reasoning: The opponent possesses 3 Blue bonuses and 3 Blue tokens, giving them exactly the 6 Blue purchasing power needed to acquire 'L2_52'. This card grants 3 Prestige Points and a Blue bonus. If I do not act, the opponent will inevitably purchase this card on their turn, gaining a significant score advantage. By reserving L2_52, I achieve two goals. First, I deny the opponent these 3 points (defensive). Second, this card synergizes perfectly with my own tableau (offensive). I currently have 3 Blue bonuses. My previously reserved card 'L2_51' provides a 4th Blue bonus. Once I acquire L2_51, I will have 4 Blue bonuses, making the cost of L2_52 (6 Blue) very cheap for me (only 2 tokens). Unlocking this chain involves reserving L2_52 now to gain a Gold token (my 2nd Gold). On the next turn, I can use my 2 Gold tokens to purchase 'L2_51' (Cost 5 Blue, -3 Bonus = 2 Net Cost), securing 2 points and the 4th Blue bonus to setup the purchase of L2_52 later.
+Action: ReserveCardAction[cardId=L2_52, deckLevel=null, tokensToReturn=null]
+
+======================================================================================
+TURN 18 | Current Player: gemini-3-flash-preview (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:1 GRN:2 RED:4 BLK:4 GLD:3
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_36] RED 0pts WHT:1 RED:1 BLK:3         |
+    [L1_38] RED 0pts WHT:2 RED:2               | [L1_16] BLU 1pt RED:4                     
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_65] RED 1pt WHT:2 RED:2 BLK:3          |
+    [L2_69] RED 2pts BLK:5                     | [L2_49] BLU 2pts WHT:5 BLU:3              
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_85] GRN 4pts WHT:3 BLU:6 GRN:3         |
+    [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0):                             | gemini-3-flash-preview (P1) (Current):
+  Score: 1 | Cards: 8                                  |   Score: 3 | Cards: 8
+  Tokens: GLD:2                                        |   Tokens: WHT:2 BLU:3 GRN:2
+  Bonuses: {WHT:2 BLU:3 GRN:1 BLK:2}                   |   Bonuses: {WHT:1 BLU:3 GRN:2 BLK:2}
+  Reserved: [L2_51] BLU 2pts BLU:5                     |   Reserved: None
+            [L2_52] BLU 3pts BLU:6                     | 
+
+======================================================================================
+
+Turn 18 - Player 1's move
+Points: 3, Budget: {WHT=3, BLU=6, GRN=4, BLK=2}
+Reasoning: I have enough tokens and bonuses to purchase the Level 3 card L3_85 immediately. Its cost is 3 WHITE, 6 BLUE, and 3 GREEN. With my current bonuses (1 WHITE, 3 BLUE, 2 GREEN) and tokens (2 WHITE, 3 BLUE, 2 GREEN), the total resources available to me are 3 WHITE, 6 BLUE, and 4 GREEN, which covers the cost perfectly. This purchase will significantly boost my prestige points by 4, bringing my total to 7, and add a GREEN bonus, putting me just one step closer to the N8 noble (3 WHITE, 3 GREEN, 3 BLUE).
+Action: PurchaseCardAction[cardId=L3_85]
+
+======================================================================================
+TURN 19 | Current Player: gemini-3-pro-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:4 GRN:3 RED:4 BLK:4 GLD:3
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_36] RED 0pts WHT:1 RED:1 BLK:3         |
+    [L1_38] RED 0pts WHT:2 RED:2               | [L1_16] BLU 1pt RED:4                     
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_65] RED 1pt WHT:2 RED:2 BLK:3          |
+    [L2_69] RED 2pts BLK:5                     | [L2_49] BLU 2pts WHT:5 BLU:3              
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   |
+    [L3_72] BLK 4pts RED:7                     | [L3_88] RED 4pts GRN:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0) (Current):                   | gemini-3-flash-preview (P1):
+  Score: 1 | Cards: 8                                  |   Score: 7 | Cards: 9
+  Tokens: GLD:2                                        |   Tokens: GRN:1
+  Bonuses: {WHT:2 BLU:3 GRN:1 BLK:2}                   |   Bonuses: {WHT:1 BLU:3 GRN:3 BLK:2}
+  Reserved: [L2_51] BLU 2pts BLU:5                     |   Reserved: None
+            [L2_52] BLU 3pts BLU:6                     | 
+
+======================================================================================
+
+Turn 19 - Player 0's move
+Points: 1, Budget: {WHT=2, BLU=3, GRN=1, BLK=2, GLD=2}
+Reasoning: I will execute the previously planned purchase of my reserved card 'L2_51'. This card costs 5 Blue. My current engine provides 3 Blue bonuses, reducing the cost to a net 2 Blue. I possess 2 Gold tokens, which I will use to satisfy this exact remaining cost. Purchasing this card now achieves three strategic objectives: 1) It immediately awards 2 Prestige Points, advancing my score to 3; 2) It increases my Blue bonus count to 4; 3) It optimizes my next move by reducing the net cost of my other reserved card, 'L2_52' (Cost 6 Blue), to just 2 tokens. This sequence saves a turn compared to collecting tokens first, allowing me to rapidly chain these two high-value cards.
+Action: PurchaseCardAction[cardId=L2_51]
+
+======================================================================================
+TURN 19 | Current Player: gemini-3-flash-preview (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:4 GRN:3 RED:4 BLK:4 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_36] RED 0pts WHT:1 RED:1 BLK:3         |
+    [L1_38] RED 0pts WHT:2 RED:2               | [L1_16] BLU 1pt RED:4                     
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_65] RED 1pt WHT:2 RED:2 BLK:3          |
+    [L2_69] RED 2pts BLK:5                     | [L2_49] BLU 2pts WHT:5 BLU:3              
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   |
+    [L3_72] BLK 4pts RED:7                     | [L3_88] RED 4pts GRN:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0):                             | gemini-3-flash-preview (P1) (Current):
+  Score: 3 | Cards: 9                                  |   Score: 7 | Cards: 9
+  Tokens:                                              |   Tokens: GRN:1
+  Bonuses: {WHT:2 BLU:4 GRN:1 BLK:2}                   |   Bonuses: {WHT:1 BLU:3 GRN:3 BLK:2}
+  Reserved: [L2_52] BLU 3pts BLU:6                     |   Reserved: None
+
+======================================================================================
+
+Turn 19 - Player 1's move
+Points: 7, Budget: {WHT=1, BLU=3, GRN=4, BLK=2}
+Reasoning: I am currently at 7 prestige points with a strong bonus engine of 1 WHITE, 3 BLUE, 3 GREEN, and 2 BLACK. To reach the 15-point goal, I am targeting the Level 2 card L2_69, which provides 2 prestige points and a RED bonus for a cost of 5 BLACK tokens. After factoring in my 2 BLACK bonuses, I only need 3 BLACK tokens. Additionally, I am eyesing Noble N7 (3 BLACK, 3 GREEN, 3 RED), which I can qualify for by obtaining one more BLACK bonus (such as L1_3) and three RED bonuses. Taking 1 WHITE, 1 RED, and 1 BLACK token this turn provides the necessary resources to either purchase L1_3 in the next turn or continue building toward L2_69. This move is efficient and keeps my total token count at 4, well within the limit of 10.
+Action: TakeTokensAction[tokens={WHITE=1, RED=1, BLACK=1}, tokensToReturn=null]
+
+======================================================================================
+TURN 20 | Current Player: gemini-3-pro-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:4 GRN:3 RED:3 BLK:3 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_36] RED 0pts WHT:1 RED:1 BLK:3         |
+    [L1_38] RED 0pts WHT:2 RED:2               | [L1_16] BLU 1pt RED:4                     
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_65] RED 1pt WHT:2 RED:2 BLK:3          |
+    [L2_69] RED 2pts BLK:5                     | [L2_49] BLU 2pts WHT:5 BLU:3              
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   |
+    [L3_72] BLK 4pts RED:7                     | [L3_88] RED 4pts GRN:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0) (Current):                   | gemini-3-flash-preview (P1):
+  Score: 3 | Cards: 9                                  |   Score: 7 | Cards: 9
+  Tokens:                                              |   Tokens: WHT:1 GRN:1 RED:1 BLK:1
+  Bonuses: {WHT:2 BLU:4 GRN:1 BLK:2}                   |   Bonuses: {WHT:1 BLU:3 GRN:3 BLK:2}
+  Reserved: [L2_52] BLU 3pts BLU:6                     |   Reserved: None
+
+======================================================================================
+
+Turn 20 - Player 0's move
+Points: 3, Budget: {WHT=2, BLU=4, GRN=1, BLK=2}
+Reasoning: My immediate priority is to purchase my reserved card 'L2_52', which is worth 3 Prestige Points and provides a Blue bonus. The card costs 6 Blue. My current engine provides 4 Blue bonuses, reducing the net cost to 2 Blue tokens. Because there are 4 Blue tokens available on the board, I am allowed to take 2 Blue tokens in a single action. This is the most efficient move, as it provides exactly the resources needed to purchase 'L2_52' on my very next turn, increasing my score to 6 and my Blue bonus count to 5.
+Action: TakeTokensAction[tokens={BLUE=2}, tokensToReturn=null]
+
+======================================================================================
+TURN 20 | Current Player: gemini-3-flash-preview (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:2 GRN:3 RED:3 BLK:3 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_36] RED 0pts WHT:1 RED:1 BLK:3         |
+    [L1_38] RED 0pts WHT:2 RED:2               | [L1_16] BLU 1pt RED:4                     
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_65] RED 1pt WHT:2 RED:2 BLK:3          |
+    [L2_69] RED 2pts BLK:5                     | [L2_49] BLU 2pts WHT:5 BLU:3              
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   |
+    [L3_72] BLK 4pts RED:7                     | [L3_88] RED 4pts GRN:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0):                             | gemini-3-flash-preview (P1) (Current):
+  Score: 3 | Cards: 9                                  |   Score: 7 | Cards: 9
+  Tokens: BLU:2                                        |   Tokens: WHT:1 GRN:1 RED:1 BLK:1
+  Bonuses: {WHT:2 BLU:4 GRN:1 BLK:2}                   |   Bonuses: {WHT:1 BLU:3 GRN:3 BLK:2}
+  Reserved: [L2_52] BLU 3pts BLU:6                     |   Reserved: None
+
+======================================================================================
+
+Turn 20 - Player 1's move
+Points: 7, Budget: {WHT=2, BLU=3, GRN=4, RED=1, BLK=3}
+Reasoning: I am currently at 7 prestige points and aiming for the 15rd threshold. My immediate strategic goal is to secure Noble N7 (3 BLACK, 3 GREEN, 3 RED), which grants 3 prestige points. I already possess 2 BLACK and 3 GREEN bonuses. By purchasing L1_3, I gain a third BLACK bonus, completing the BLACK and GREEN requirements for N7. The cost for L1_3 is 2 WHITE, 2 BLUE, and 1 RED. With my current bonuses (1 WHITE, 3 BLUE) and tokens (1 WHITE, 1 RED), I can afford this card immediately. This purchase transitions my engine toward acquiring the 3 RED bonuses needed to finish the N7 requirement and brings me closer to high-value RED bonus cards like L2_69.
+Action: PurchaseCardAction[cardId=L1_3]
+
+======================================================================================
+TURN 21 | Current Player: gemini-3-pro-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:2 GRN:3 RED:4 BLK:3 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_36] RED 0pts WHT:1 RED:1 BLK:3         | [L1_38] RED 0pts WHT:2 RED:2               |
+    [L1_16] BLU 1pt RED:4                      | [L1_37] RED 0pts BLU:2 GRN:1              
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_65] RED 1pt WHT:2 RED:2 BLK:3          |
+    [L2_69] RED 2pts BLK:5                     | [L2_49] BLU 2pts WHT:5 BLU:3              
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   |
+    [L3_72] BLK 4pts RED:7                     | [L3_88] RED 4pts GRN:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0) (Current):                   | gemini-3-flash-preview (P1):
+  Score: 3 | Cards: 9                                  |   Score: 7 | Cards: 10
+  Tokens: BLU:2                                        |   Tokens: GRN:1 BLK:1
+  Bonuses: {WHT:2 BLU:4 GRN:1 BLK:2}                   |   Bonuses: {WHT:1 BLU:3 GRN:3 BLK:3}
+  Reserved: [L2_52] BLU 3pts BLU:6                     |   Reserved: None
+
+======================================================================================
+
+Turn 21 - Player 0's move
+Points: 3, Budget: {WHT=2, BLU=6, GRN=1, BLK=2}
+Reasoning: I will execute the planned purchase of my reserved card 'L2_52'. This card costs 6 Blue. My current engine provides 4 Blue bonuses, reducing the net cost to 2 Blue tokens. I possess exactly 2 Blue tokens (collected specifically for this purpose in the previous turn), allowing me to complete this transaction perfectly. This purchase is optimal as it immediately grants 3 Prestige Points, advancing my score to 6, and secures a 5th Blue bonus. This 5th Blue bonus further solidifies my resource dominance in that color, though my next immediate strategic focus will likely shift to acquiring the White and Green cards necessary to unlock Noble N8.
+Action: PurchaseCardAction[cardId=L2_52]
+
+======================================================================================
+TURN 21 | Current Player: gemini-3-flash-preview (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:4 GRN:3 RED:4 BLK:3 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_36] RED 0pts WHT:1 RED:1 BLK:3         | [L1_38] RED 0pts WHT:2 RED:2               |
+    [L1_16] BLU 1pt RED:4                      | [L1_37] RED 0pts BLU:2 GRN:1              
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_65] RED 1pt WHT:2 RED:2 BLK:3          |
+    [L2_69] RED 2pts BLK:5                     | [L2_49] BLU 2pts WHT:5 BLU:3              
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   |
+    [L3_72] BLK 4pts RED:7                     | [L3_88] RED 4pts GRN:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0):                             | gemini-3-flash-preview (P1) (Current):
+  Score: 6 | Cards: 10                                 |   Score: 7 | Cards: 10
+  Tokens:                                              |   Tokens: GRN:1 BLK:1
+  Bonuses: {WHT:2 BLU:5 GRN:1 BLK:2}                   |   Bonuses: {WHT:1 BLU:3 GRN:3 BLK:3}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 21 - Player 1's move
+Points: 7, Budget: {WHT=1, BLU=3, GRN=4, BLK=4}
+Reasoning: I am currently at 7 prestige points and aiming for the 15-point goal by focusing on high-prestige cards and the N7 noble (3 BLACK, 3 GREEN, 3 RED). I already possess the required 3 BLACK and 3 GREEN bonuses. My strategy involves securing three RED bonuses to trigger the noble visit. The most efficient path is to target L2_69 (2 points, RED bonus), L1_37 (0 points, RED bonus), and L1_36 (0 points, RED bonus). L2_69 costs 5 BLACK tokens; with 3 bonuses and 1 token, I need only 1 more BLACK token. L1_37 is free due to my existing BLUE and GREEN bonuses. L1_36 costs 1 WHITE, 1 RED, and 3 BLACK; with 1 WHITE bonus and 3 BLACK bonuses, it will cost me only 1 RED token. By taking 1 WHITE, 1 RED, and 1 BLACK token this turn, I position myself to purchase L2_69 next turn, followed by the free L1_37, and finally L1_36, reaching 12 points and securing the RED requirement for the noble.
+Action: TakeTokensAction[tokens={WHITE=1, RED=1, BLACK=1}, tokensToReturn=null]
+
+======================================================================================
+TURN 22 | Current Player: gemini-3-pro-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:4 GRN:3 RED:3 BLK:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_36] RED 0pts WHT:1 RED:1 BLK:3         | [L1_38] RED 0pts WHT:2 RED:2               |
+    [L1_16] BLU 1pt RED:4                      | [L1_37] RED 0pts BLU:2 GRN:1              
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_65] RED 1pt WHT:2 RED:2 BLK:3          |
+    [L2_69] RED 2pts BLK:5                     | [L2_49] BLU 2pts WHT:5 BLU:3              
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   |
+    [L3_72] BLK 4pts RED:7                     | [L3_88] RED 4pts GRN:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0) (Current):                   | gemini-3-flash-preview (P1):
+  Score: 6 | Cards: 10                                 |   Score: 7 | Cards: 10
+  Tokens:                                              |   Tokens: WHT:1 GRN:1 RED:1 BLK:2
+  Bonuses: {WHT:2 BLU:5 GRN:1 BLK:2}                   |   Bonuses: {WHT:1 BLU:3 GRN:3 BLK:3}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 22 - Player 0's move
+Points: 6, Budget: {WHT=2, BLU=5, GRN=1, BLK=2}
+Reasoning: The opponent possesses 3 Black bonuses and 2 Black tokens, giving them exactly the 5 Black resources required to purchase 'L2_69' (2 Prestige Points, Red Bonus). If I do not act, they will certainly purchase this card on their next turn, advancing to 9 points and gaining a useful Red bonus. By reserving 'L2_69', I deny them these points immediately. This plays into my strategy as well: I currently have 2 Black bonuses. With the Gold token gained from reserving, the card will effectively cost me just 2 more Black tokens (5 Cost - 2 Bonus - 1 Gold). I can acquire these tokens in future turns to secure these 2 points for myself, while searching for the necessary White and Green cards to satisfy Noble N8.
+Action: ReserveCardAction[cardId=L2_69, deckLevel=null, tokensToReturn=null]
+
+======================================================================================
+TURN 22 | Current Player: gemini-3-flash-preview (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:4 GRN:3 RED:3 BLK:2 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_36] RED 0pts WHT:1 RED:1 BLK:3         | [L1_38] RED 0pts WHT:2 RED:2               |
+    [L1_16] BLU 1pt RED:4                      | [L1_37] RED 0pts BLU:2 GRN:1              
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_65] RED 1pt WHT:2 RED:2 BLK:3          |
+    [L2_49] BLU 2pts WHT:5 BLU:3               | [L2_66] RED 1pt BLU:3 RED:2 BLK:3         
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   |
+    [L3_72] BLK 4pts RED:7                     | [L3_88] RED 4pts GRN:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0):                             | gemini-3-flash-preview (P1) (Current):
+  Score: 6 | Cards: 10                                 |   Score: 7 | Cards: 10
+  Tokens: GLD:1                                        |   Tokens: WHT:1 GRN:1 RED:1 BLK:2
+  Bonuses: {WHT:2 BLU:5 GRN:1 BLK:2}                   |   Bonuses: {WHT:1 BLU:3 GRN:3 BLK:3}
+  Reserved: [L2_69] RED 2pts BLK:5                     |   Reserved: None
+
+======================================================================================
+
+Turn 22 - Player 1's move
+Points: 7, Budget: {WHT=2, BLU=3, GRN=4, RED=1, BLK=5}
+Reasoning: I am currently at 7 prestige points and focusing on the N7 noble (3 BLACK, 3 GREEN, 3 RED) which offers 3 points. I already have the 3 BLACK and 3 GREEN bonuses required. To fulfill the RED requirement, I need 3 RED bonuses. Card L1_37 is currently available on the board and provides a RED bonus. Its cost is 2 BLUE and 1 GREEN. Since I already have 3 BLUE bonuses and 3 GREEN bonuses, this card is entirely free for me to purchase. Acquiring this card will bring me to 1 RED bonus, closer to triggering the N7 noble visit, without consuming any of my current tokens.
+Action: PurchaseCardAction[cardId=L1_37]
+
+======================================================================================
+TURN 23 | Current Player: gemini-3-pro-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:4 GRN:3 RED:3 BLK:2 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_36] RED 0pts WHT:1 RED:1 BLK:3         | [L1_38] RED 0pts WHT:2 RED:2               |
+    [L1_16] BLU 1pt RED:4                      | [L1_17] WHT 0pts BLU:1 GRN:1 RED:1 BLK:1  
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_65] RED 1pt WHT:2 RED:2 BLK:3          |
+    [L2_49] BLU 2pts WHT:5 BLU:3               | [L2_66] RED 1pt BLU:3 RED:2 BLK:3         
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   |
+    [L3_72] BLK 4pts RED:7                     | [L3_88] RED 4pts GRN:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0) (Current):                   | gemini-3-flash-preview (P1):
+  Score: 6 | Cards: 10                                 |   Score: 7 | Cards: 11
+  Tokens: GLD:1                                        |   Tokens: WHT:1 GRN:1 RED:1 BLK:2
+  Bonuses: {WHT:2 BLU:5 GRN:1 BLK:2}                   |   Bonuses: {WHT:1 BLU:3 GRN:3 RED:1 BLK:3}
+  Reserved: [L2_69] RED 2pts BLK:5                     |   Reserved: None
+
+======================================================================================
+
+Turn 23 - Player 0's move
+Points: 6, Budget: {WHT=2, BLU=5, GRN=1, BLK=2, GLD=1}
+Reasoning: My primary objective is to purchase the reserved card 'L2_69', which grants 2 Prestige Points and a Red bonus. The card costs 5 Black. I possess 2 Black bonuses and 1 Gold token, leaving a deficiency of 2 Black resources. There are currently 2 Black tokens on the board. Since I can only take 1 Black token per turn (as part of a set of 3 distinct tokens), I must secure one now before they potentially become unavailable. Additionally, I will take 1 White and 1 Green token. These colors are essential for pursuing Noble N8 (which requires White and Green cards) and for potentially purchasing 'L2_49' (which costs White tokens and grants 2 Prestige Points). This move builds my resource pool efficiently towards multiple scoring opportunities.
+Action: TakeTokensAction[tokens={WHITE=1, GREEN=1, BLACK=1}, tokensToReturn=null]
+
+======================================================================================
+TURN 23 | Current Player: gemini-3-flash-preview (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:4 GRN:2 RED:3 BLK:1 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_36] RED 0pts WHT:1 RED:1 BLK:3         | [L1_38] RED 0pts WHT:2 RED:2               |
+    [L1_16] BLU 1pt RED:4                      | [L1_17] WHT 0pts BLU:1 GRN:1 RED:1 BLK:1  
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_65] RED 1pt WHT:2 RED:2 BLK:3          |
+    [L2_49] BLU 2pts WHT:5 BLU:3               | [L2_66] RED 1pt BLU:3 RED:2 BLK:3         
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   |
+    [L3_72] BLK 4pts RED:7                     | [L3_88] RED 4pts GRN:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0):                             | gemini-3-flash-preview (P1) (Current):
+  Score: 6 | Cards: 10                                 |   Score: 7 | Cards: 11
+  Tokens: WHT:1 GRN:1 BLK:1 GLD:1                      |   Tokens: WHT:1 GRN:1 RED:1 BLK:2
+  Bonuses: {WHT:2 BLU:5 GRN:1 BLK:2}                   |   Bonuses: {WHT:1 BLU:3 GRN:3 RED:1 BLK:3}
+  Reserved: [L2_69] RED 2pts BLK:5                     |   Reserved: None
+
+======================================================================================
+
+Turn 23 - Player 1's move
+Points: 7, Budget: {WHT=2, BLU=3, GRN=4, RED=2, BLK=5}
+Reasoning: I am currently at 7 prestige points and aiming for the 15-point goal by securing the Noble N7 (3 BLACK, 3 GREEN, 3 RED), which provides 3 prestige points. I already have 3 BLACK and 3 GREEN bonuses, and 1 RED bonus. To complete the requirement for N7, I need 2 more RED bonuses. The card L1_36 is currently available on the board and provides a RED bonus. Its cost is 1 WHITE, 1 RED, and 3 BLACK. Based on my current bonuses (1 WHITE, 1 RED, 3 BLACK), this card is entirely free for me to purchase. Acquiring L1_36 immediately increases my RED bonus count to 2 without consuming any tokens, leaving me perfectly positioned to acquire the final RED bonus needed for the noble visit in the subsequent turns.
+Action: PurchaseCardAction[cardId=L1_36]
+
+======================================================================================
+TURN 24 | Current Player: gemini-3-pro-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:4 GRN:2 RED:3 BLK:1 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_38] RED 0pts WHT:2 RED:2               | [L1_16] BLU 1pt RED:4                      |
+    [L1_17] WHT 0pts BLU:1 GRN:1 RED:1 BLK:1   | [L1_5] BLK 0pts GRN:2 RED:1               
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_65] RED 1pt WHT:2 RED:2 BLK:3          |
+    [L2_49] BLU 2pts WHT:5 BLU:3               | [L2_66] RED 1pt BLU:3 RED:2 BLK:3         
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   |
+    [L3_72] BLK 4pts RED:7                     | [L3_88] RED 4pts GRN:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0) (Current):                   | gemini-3-flash-preview (P1):
+  Score: 6 | Cards: 10                                 |   Score: 7 | Cards: 12
+  Tokens: WHT:1 GRN:1 BLK:1 GLD:1                      |   Tokens: WHT:1 GRN:1 RED:1 BLK:2
+  Bonuses: {WHT:2 BLU:5 GRN:1 BLK:2}                   |   Bonuses: {WHT:1 BLU:3 GRN:3 RED:2 BLK:3}
+  Reserved: [L2_69] RED 2pts BLK:5                     |   Reserved: None
+
+======================================================================================
+
+Turn 24 - Player 0's move
+Points: 6, Budget: {WHT=3, BLU=5, GRN=2, BLK=3, GLD=1}
+Reasoning: My opponent is poised to trigger Noble N7 (worth 3 points) by purchasing a Red bonus card, bringing their score to 11. Specifically, 'L2_66' is free for them given their bonuses (3 Blue, 2 Red, 3 Black matches the cost perfectly). By reserving 'L2_66', I deny this free acquisition, forcing them to spend a White token to purchase 'L2_65' instead to achieve their noble. While I cannot stop the noble, taxing their token supply slows their progress towards other goals like 'L2_49'. Crucially, the Gold token obtained from this reservation bridges my resource gap for my reserved card 'L2_69'. I currently have 2 Black bonuses, 1 Black token, and 1 Gold against a cost of 5 Black. The new Gold provides the exact 5th resource needed (2 bonus + 1 token + 2 gold) to purchase 'L2_69' and gain 2 points on my next turn.
+Action: ReserveCardAction[cardId=L2_66, deckLevel=null, tokensToReturn=null]
+
+======================================================================================
+TURN 24 | Current Player: gemini-3-flash-preview (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:4 GRN:2 RED:3 BLK:1 GLD:3
+
+[FACE-UP CARDS]
+L1: [L1_38] RED 0pts WHT:2 RED:2               | [L1_16] BLU 1pt RED:4                      |
+    [L1_17] WHT 0pts BLU:1 GRN:1 RED:1 BLK:1   | [L1_5] BLK 0pts GRN:2 RED:1               
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_65] RED 1pt WHT:2 RED:2 BLK:3          |
+    [L2_49] BLU 2pts WHT:5 BLU:3               | [L2_70] RED 3pts RED:6                    
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   |
+    [L3_72] BLK 4pts RED:7                     | [L3_88] RED 4pts GRN:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0):                             | gemini-3-flash-preview (P1) (Current):
+  Score: 6 | Cards: 10                                 |   Score: 7 | Cards: 12
+  Tokens: WHT:1 GRN:1 BLK:1 GLD:2                      |   Tokens: WHT:1 GRN:1 RED:1 BLK:2
+  Bonuses: {WHT:2 BLU:5 GRN:1 BLK:2}                   |   Bonuses: {WHT:1 BLU:3 GRN:3 RED:2 BLK:3}
+  Reserved: [L2_69] RED 2pts BLK:5                     |   Reserved: None
+            [L2_66] RED 1pt BLU:3 RED:2 BLK:3          | 
+
+======================================================================================
+
+Turn 24 - Player 1's move
+Points: 7, Budget: {WHT=2, BLU=3, GRN=4, RED=3, BLK=5}
+Reasoning: I currently have 7 prestige points and require one more RED bonus to trigger a visit from Noble N7 (3 points). I have 1 WHITE, 2 RED, and 3 BLACK bonuses. Card L2_65 provides 1 prestige point and a RED bonus, costing 2 WHITE, 2 RED, and 3 BLACK. After bonus reductions, this card costs only 1 WHITE token. Since I have 1 WHITE token, I can purchase L2_65 immediately. This move will increase my score to 8 (7+1) and kemudian to 11 when N7 visits, putting me within reach of the 15-point goal efficiently.
+Action: PurchaseCardAction[cardId=L2_65]
+
+======================================================================================
+TURN 25 | Current Player: gemini-3-pro-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:4 GRN:2 RED:3 BLK:1 GLD:3
+
+[FACE-UP CARDS]
+L1: [L1_38] RED 0pts WHT:2 RED:2               | [L1_16] BLU 1pt RED:4                      |
+    [L1_17] WHT 0pts BLU:1 GRN:1 RED:1 BLK:1   | [L1_5] BLK 0pts GRN:2 RED:1               
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_49] BLU 2pts WHT:5 BLU:3               |
+    [L2_70] RED 3pts RED:6                     | [L2_61] GRN 2pts WHT:4 BLU:2 BLK:1        
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   |
+    [L3_72] BLK 4pts RED:7                     | [L3_88] RED 4pts GRN:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0) (Current):                   | gemini-3-flash-preview (P1):
+  Score: 6 | Cards: 10                                 |   Score: 11 | Cards: 13
+  Tokens: WHT:1 GRN:1 BLK:1 GLD:2                      |   Tokens: GRN:1 RED:1 BLK:2
+  Bonuses: {WHT:2 BLU:5 GRN:1 BLK:2}                   |   Bonuses: {WHT:1 BLU:3 GRN:3 RED:3 BLK:3}
+  Reserved: [L2_69] RED 2pts BLK:5                     |   Reserved: None
+            [L2_66] RED 1pt BLU:3 RED:2 BLK:3          | 
+
+======================================================================================
+
+Turn 25 - Player 0's move
+Points: 6, Budget: {WHT=3, BLU=5, GRN=2, BLK=3, GLD=2}
+Reasoning: I have identified a superior opportunity to purchase 'L2_61' from the board. This card offers 2 Prestige Points and a Green bonus, which is critical for my pursuit of Noble N8 (requiring 3 White, 3 Green, 3 Blue). My current engine has 2 White, 5 Blue, and 1 Green bonus. 'L2_61' brings me to 2 Green, significantly advancing this goal. The card costs 4 White, 2 Blue, and 1 Black. My bonuses cover the Blue and Black costs and 2 of the White cost, leaving a deficit of 2 White. I have 1 White token and 2 Gold tokens; I will spend 1 White and 1 Gold to complete the purchase. This is more efficient than executing my previous plan to buy the reserved 'L2_69' (Red bonus) because 'L2_61' costs fewer Gold tokens (1 vs 2) and provides a bonus that aligns with the available Nobles, whereas Red does not.
+Action: PurchaseCardAction[cardId=L2_61]
+
+======================================================================================
+TURN 25 | Current Player: gemini-3-flash-preview (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:4 GRN:2 RED:3 BLK:1 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_38] RED 0pts WHT:2 RED:2               | [L1_16] BLU 1pt RED:4                      |
+    [L1_17] WHT 0pts BLU:1 GRN:1 RED:1 BLK:1   | [L1_5] BLK 0pts GRN:2 RED:1               
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_49] BLU 2pts WHT:5 BLU:3               |
+    [L2_70] RED 3pts RED:6                     | [L2_60] GRN 1pt WHT:2 BLU:3 BLK:2         
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   |
+    [L3_72] BLK 4pts RED:7                     | [L3_88] RED 4pts GRN:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0):                             | gemini-3-flash-preview (P1) (Current):
+  Score: 8 | Cards: 11                                 |   Score: 11 | Cards: 13
+  Tokens: GRN:1 BLK:1 GLD:1                            |   Tokens: GRN:1 RED:1 BLK:2
+  Bonuses: {WHT:2 BLU:5 GRN:2 BLK:2}                   |   Bonuses: {WHT:1 BLU:3 GRN:3 RED:3 BLK:3}
+  Reserved: [L2_69] RED 2pts BLK:5                     |   Reserved: None
+            [L2_66] RED 1pt BLU:3 RED:2 BLK:3          | 
+
+======================================================================================
+
+Turn 25 - Player 1's move
+Points: 11, Budget: {WHT=1, BLU=3, GRN=4, RED=4, BLK=5}
+Reasoning: I am currently at 11 prestige points and require 4 more to win. I have the card L2_69 reserved, which provides 2 prestige points and a RED bonus. The cost of L2_69 is 5 BLACK tokens. My current bonuses provide 3 BLACK and I possess 2 BLACK tokens, making the card immediately affordable. Purchasing L2_69 will increase my score to 13 and increase my RED bonuses to 4. This move is strategically optimal because it fulfills the RED requirement for Noble N2 (which requires 4 RED and 4 GREEN). Since I already have 3 GREEN bonuses, I will only need one more GREEN bonus card to trigger a visit from N2 (3 points), which will bring my total to 16 points and secure a victory in subsequent turns.
+Action: PurchaseCardAction[cardId=L2_69]
+Retry attempt 1 for Player 1. Error: Invalid action: Card L2_69 not found on board or in reserved hand.
+Reasoning: I have 11 prestige points and need 4 more to win. My high-value targets are L3_72 (4 points, 7 RED cost) or a combination of L1_16 (1 point, 4 RED cost) and either L2_70 (3 points, 6 RED cost) or L3_79 (3 points, 5 RED cost). All these options require RED tokens beyond my 3 RED bonuses. Currently, I have 1 RED token and need 3 more to buy L3_72, or 1 more to buy L1_16. Since there are only 3 RED tokens on the board, I cannot take two RED tokens in a single turn. Therefore, the most efficient move is to take 3 different tokens including RED. I will take WHITE, BLUE, and RED tokens. This brings my total token count to 7 (1 WHITE, 1 BLUE, 1 GREEN, 2 RED, 2 BLACK), which is safely below the limit of 10. This turn effectively prepares me for a multi-turn win sequence.
+Action: TakeTokensAction[tokens={WHITE=1, BLUE=1, RED=1}, tokensToReturn=null]
+
+======================================================================================
+TURN 26 | Current Player: gemini-3-pro-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:3 GRN:2 RED:2 BLK:1 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_38] RED 0pts WHT:2 RED:2               | [L1_16] BLU 1pt RED:4                      |
+    [L1_17] WHT 0pts BLU:1 GRN:1 RED:1 BLK:1   | [L1_5] BLK 0pts GRN:2 RED:1               
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_49] BLU 2pts WHT:5 BLU:3               |
+    [L2_70] RED 3pts RED:6                     | [L2_60] GRN 1pt WHT:2 BLU:3 BLK:2         
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   |
+    [L3_72] BLK 4pts RED:7                     | [L3_88] RED 4pts GRN:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0) (Current):                   | gemini-3-flash-preview (P1):
+  Score: 8 | Cards: 11                                 |   Score: 11 | Cards: 13
+  Tokens: GRN:1 BLK:1 GLD:1                            |   Tokens: WHT:1 BLU:1 GRN:1 RED:2 BLK:2
+  Bonuses: {WHT:2 BLU:5 GRN:2 BLK:2}                   |   Bonuses: {WHT:1 BLU:3 GRN:3 RED:3 BLK:3}
+  Reserved: [L2_69] RED 2pts BLK:5                     |   Reserved: None
+            [L2_66] RED 1pt BLU:3 RED:2 BLK:3          | 
+
+======================================================================================
+
+Turn 26 - Player 0's move
+Points: 8, Budget: {WHT=2, BLU=5, GRN=3, BLK=3, GLD=1}
+Retry attempt 1 for Player 0. Error: Unexpected error: Cannot invoke "com.fasterxml.jackson.databind.JsonNode.path(String)" because the return value of "com.fasterxml.jackson.databind.JsonNode.get(int)" is null
+Reasoning: I will purchase the card 'L2_60' from the board. This card costs 2 White, 3 Blue, and 2 Black. My current bonuses (2 White, 5 Blue, 2 Black) fully cover this cost, making the purchase completely free of tokens. This action is highly strategic: 1) It grants 1 Prestige Point, moving me to 9. 2) It provides my 3rd Green bonus, which advances me towards Noble N8 (requiring 3 White, 3 Green, 3 Blue). 3) It denies the opponent a card they can afford; if they bought it, they would reach 4 Green bonuses, bringing them dangerously close to Noble N2 (4 Green, 4 Red). Buying this free card now preserves my tokens to reserve 'L2_70' on a subsequent turn if necessary to block the opponent's high-scoring potential.
+Action: PurchaseCardAction[cardId=L2_60]
+
+======================================================================================
+TURN 26 | Current Player: gemini-3-flash-preview (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:3 GRN:2 RED:2 BLK:1 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_38] RED 0pts WHT:2 RED:2               | [L1_16] BLU 1pt RED:4                      |
+    [L1_17] WHT 0pts BLU:1 GRN:1 RED:1 BLK:1   | [L1_5] BLK 0pts GRN:2 RED:1               
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_49] BLU 2pts WHT:5 BLU:3               |
+    [L2_70] RED 3pts RED:6                     | [L2_48] BLU 1pt BLU:2 GRN:3 BLK:3         
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   |
+    [L3_72] BLK 4pts RED:7                     | [L3_88] RED 4pts GRN:7                    
+
+[PLAYERS]
+gemini-3-pro-preview (P0):                             | gemini-3-flash-preview (P1) (Current):
+  Score: 9 | Cards: 12                                 |   Score: 11 | Cards: 13
+  Tokens: GRN:1 BLK:1 GLD:1                            |   Tokens: WHT:1 BLU:1 GRN:1 RED:2 BLK:2
+  Bonuses: {WHT:2 BLU:5 GRN:3 BLK:2}                   |   Bonuses: {WHT:1 BLU:3 GRN:3 RED:3 BLK:3}
+  Reserved: [L2_69] RED 2pts BLK:5                     |   Reserved: None
+            [L2_66] RED 1pt BLU:3 RED:2 BLK:3          | 
+
+======================================================================================
+
+Turn 26 - Player 1's move
+Points: 11, Budget: {WHT=2, BLU=4, GRN=4, RED=5, BLK=5}
+Reasoning: I am currently at 11 resonance points and can reach the 15-point goal in just two turns. My best move is to purchase L3_79, which provides 3 prestige points and a WHITE bonus. The card costs 5 RED tokens, and since I have 3 RED bonuses and 2 RED tokens, I can afford it immediately. This will bring my score to 14. Next turn, I have two paths to victory: I can either purchase L2_48 (1 point) for free, reaching 15 points, or purchase L1_17 (0 points) which would complete the 3 WHITE, 3 BLUE, 3 GREEN bonus requirement for Noble N8, granting 3 points for a total of 17. Both options ensure a win in the next turn.
+Action: PurchaseCardAction[cardId=L3_79]
+
+======================================================================================
+TURN 27 | Current Player: gemini-3-pro-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:3 GRN:2 RED:4 BLK:1 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_38] RED 0pts WHT:2 RED:2               | [L1_16] BLU 1pt RED:4                      |
+    [L1_17] WHT 0pts BLU:1 GRN:1 RED:1 BLK:1   | [L1_5] BLK 0pts GRN:2 RED:1               
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_49] BLU 2pts WHT:5 BLU:3               |
+    [L2_70] RED 3pts RED:6                     | [L2_48] BLU 1pt BLU:2 GRN:3 BLK:3         
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_72] BLK 4pts RED:7                     |
+    [L3_88] RED 4pts GRN:7                     | [L3_71] BLK 3pts WHT:3 BLU:3 GRN:5 RED:3  
+
+[PLAYERS]
+gemini-3-pro-preview (P0) (Current):                   | gemini-3-flash-preview (P1):
+  Score: 9 | Cards: 12                                 |   Score: 14 | Cards: 14
+  Tokens: GRN:1 BLK:1 GLD:1                            |   Tokens: WHT:1 BLU:1 GRN:1 BLK:2
+  Bonuses: {WHT:2 BLU:5 GRN:3 BLK:2}                   |   Bonuses: {WHT:2 BLU:3 GRN:3 RED:3 BLK:3}
+  Reserved: [L2_69] RED 2pts BLK:5                     |   Reserved: None
+            [L2_66] RED 1pt BLU:3 RED:2 BLK:3          | 
+
+======================================================================================
+
+Turn 27 - Player 0's move
+Points: 9, Budget: {WHT=2, BLU=5, GRN=4, BLK=3, GLD=1}
+Reasoning: The opponent is at 14 Prestige Points and possesses the necessary bonuses (3 Blue, 3 Green, 3 Black) to purchase 'L2_48' (1 Point, Cost: 2 Blue, 3 Green, 3 Black) for free. If I do not remove this card from the board, they will undoubtedly purchase it on their next turn, reaching 15 points and winning the game. I must prevent this immediately. Fortunately, I can afford to purchase 'L2_48' myself. The cost is 2 Blue, 3 Green, 3 Black. My bonuses cover the Blue (5) and Green (3) costs entirely. I have 2 Black bonuses, leaving a cost of 1 Black, which I can pay with my single Black token. This defensive move is also productive: it brings my score to 10 and leaves me with 1 Gold token, which I can use next turn to buy 'L1_17' (White bonus) to trigger Noble N8.
+Action: PurchaseCardAction[cardId=L2_48]
+
+======================================================================================
+TURN 27 | Current Player: gemini-3-flash-preview (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:3 GRN:2 RED:4 BLK:2 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_38] RED 0pts WHT:2 RED:2               | [L1_16] BLU 1pt RED:4                      |
+    [L1_17] WHT 0pts BLU:1 GRN:1 RED:1 BLK:1   | [L1_5] BLK 0pts GRN:2 RED:1               
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_49] BLU 2pts WHT:5 BLU:3               |
+    [L2_70] RED 3pts RED:6                     | [L2_63] GRN 2pts GRN:5                    
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_72] BLK 4pts RED:7                     |
+    [L3_88] RED 4pts GRN:7                     | [L3_71] BLK 3pts WHT:3 BLU:3 GRN:5 RED:3  
+
+[PLAYERS]
+gemini-3-pro-preview (P0):                             | gemini-3-flash-preview (P1) (Current):
+  Score: 10 | Cards: 13                                |   Score: 14 | Cards: 14
+  Tokens: GRN:1 GLD:1                                  |   Tokens: WHT:1 BLU:1 GRN:1 BLK:2
+  Bonuses: {WHT:2 BLU:6 GRN:3 BLK:2}                   |   Bonuses: {WHT:2 BLU:3 GRN:3 RED:3 BLK:3}
+  Reserved: [L2_69] RED 2pts BLK:5                     |   Reserved: None
+            [L2_66] RED 1pt BLU:3 RED:2 BLK:3          | 
+
+======================================================================================
+
+Turn 27 - Player 1's move
+Points: 14, Budget: {WHT=3, BLU=4, GRN=4, RED=3, BLK=5}
+Reasoning: I currently have 14 prestige points and need only 1 more to win. My current bonuses are 2 WHITE, 3 BLUE, 3 GREEN, 3 RED, and 3 BLACK. Noble N8 provides 3 prestige points and requires 3 WHITE, 3 BLUE, and 3 GREEN bonuses. Card L1_17 is available on the board, provides a WHITE bonus, and costs 1 BLUE, 1 GREEN, 1 RED, and 1 BLACK. Because my existing bonuses in those colors already meet or exceed the cost, I can purchase L1_17 for free. This acquisition will increase my WHITE bonus total to 3, satisfying the requirement for Noble N8. The resulting 3 points from the noble visit will bring my total score to 17, securing an immediate victory.
+Action: PurchaseCardAction[cardId=L1_17]
+
+======================================================================================
+TURN 28 | Current Player: gemini-3-pro-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:3 GRN:2 RED:4 BLK:2 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_38] RED 0pts WHT:2 RED:2               | [L1_16] BLU 1pt RED:4                      |
+    [L1_5] BLK 0pts GRN:2 RED:1                | [L1_32] GRN 1pt BLK:4                     
+L2: [L2_68] RED 2pts WHT:3 BLK:5               | [L2_49] BLU 2pts WHT:5 BLU:3               |
+    [L2_70] RED 3pts RED:6                     | [L2_63] GRN 2pts GRN:5                    
+L3: [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   | [L3_72] BLK 4pts RED:7                     |
+    [L3_88] RED 4pts GRN:7                     | [L3_71] BLK 3pts WHT:3 BLU:3 GRN:5 RED:3  
+
+[PLAYERS]
+gemini-3-pro-preview (P0) (Current):                   | gemini-3-flash-preview (P1):
+  Score: 10 | Cards: 13                                |   Score: 17 | Cards: 15
+  Tokens: GRN:1 GLD:1                                  |   Tokens: WHT:1 BLU:1 GRN:1 BLK:2
+  Bonuses: {WHT:2 BLU:6 GRN:3 BLK:2}                   |   Bonuses: {WHT:3 BLU:3 GRN:3 RED:3 BLK:3}
+  Reserved: [L2_69] RED 2pts BLK:5                     |   Reserved: None
+            [L2_66] RED 1pt BLU:3 RED:2 BLK:3          | 
+
+======================================================================================
+
+--- Game Over ---
+Winner: Player 1 won on points.
+Player 0: 10 points
+Player 1: 17 points
+Game event log closed: logs\20251231_105047.json

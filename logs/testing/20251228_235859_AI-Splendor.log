@@ -1,0 +1,33 @@
+2025-12-28 23:58:59.904 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Configured Player 0 with: anthropic/claude-haiku-4.5 (reasoning: high)
+2025-12-28 23:58:59.906 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Configured Player 1 with: anthropic/claude-sonnet-4.5 (reasoning: high)
+2025-12-28 23:58:59.906 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Semi-Auto Mode: DISABLED
+2025-12-28 23:58:59.906 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Debug Mode: DISABLED
+2025-12-28 23:59:00.237 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - --- Game Started ---
+2025-12-28 23:59:00.256 [com.aisplendor.App.main()] INFO  c.aisplendor.service.GameEventLogger - Game event log created: logs\20251228_235859.json
+2025-12-28 23:59:00.325 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 1 | Current Player: 0
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:4 GRN:4 RED:4 BLK:4 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_22] WHT 0pts BLU:2 BLK:2               | [L1_31] GRN 0pts RED:3                     |
+    [L1_27] GRN 0pts BLU:1 RED:2 BLK:2         | [L1_33] RED 0pts WHT:1 BLU:1 GRN:1 BLK:1  
+L2: [L2_64] GRN 3pts GRN:6                     | [L2_41] BLK 1pt WHT:3 BLU:2 GRN:2          |
+    [L2_53] WHT 1pt GRN:3 RED:2 BLK:2          | [L2_69] RED 2pts BLK:5                    
+L3: [L3_85] GRN 4pts WHT:3 BLU:6 GRN:3         | [L3_71] BLK 3pts WHT:3 BLU:3 GRN:5 RED:3   |
+    [L3_88] RED 4pts GRN:7                     | [L3_82] WHT 5pts WHT:3 BLK:7              
+
+[PLAYERS]
+Player 0 (Current):                                    | Player 1:
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 0
+  Tokens:                                              |   Tokens: 
+  Bonuses: {}                                          |   Bonuses: {}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+2025-12-28 23:59:00.325 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Turn 1 - Player 0's move
+2025-12-28 23:59:00.325 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {}

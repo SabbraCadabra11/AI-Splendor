@@ -1,0 +1,1586 @@
+2025-12-29 23:53:21.155 [main] INFO  com.aisplendor.engine.GameSimulator - Configured Player 0 with: google/gemini-3-pro (reasoning: high)
+2025-12-29 23:53:21.155 [main] INFO  com.aisplendor.engine.GameSimulator - Configured Player 1 with: openai/gpt-5.2 (reasoning: high)
+2025-12-29 23:53:21.158 [main] INFO  com.aisplendor.engine.GameSimulator - Semi-Auto Mode: DISABLED
+2025-12-29 23:53:21.158 [main] INFO  com.aisplendor.engine.GameSimulator - Debug Mode: DISABLED
+2025-12-29 23:53:21.477 [main] INFO  com.aisplendor.engine.GameSimulator - --- Game Started ---
+2025-12-29 23:53:21.496 [main] INFO  c.aisplendor.service.GameEventLogger - Game event log created: logs\20251229_235321.json
+2025-12-29 23:53:21.549 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 1 | Current Player: gemini-3-pro (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:4 GRN:4 RED:4 BLK:4 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_15] BLU 0pts BLK:3                     |
+    [L1_32] GRN 1pt BLK:4                      | [L1_6] BLK 0pts WHT:2 GRN:2               
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_46] BLK 3pts BLK:6                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_82] WHT 5pts WHT:3 BLK:7              
+
+[PLAYERS]
+gemini-3-pro (P0) (Current):                           | gpt-5.2 (P1):
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 0
+  Tokens:                                              |   Tokens: 
+  Bonuses: {}                                          |   Bonuses: {}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+2025-12-29 23:53:21.549 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 1 - Player 0's move
+2025-12-29 23:53:21.550 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {}
+2025-12-29 23:53:21.964 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 1 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-29 23:53:21.998 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 2 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-29 23:53:22.024 [main] ERROR com.aisplendor.engine.GameSimulator - Player 0 failed to provide a valid action after 3 retries. Last error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}. Skipping turn.
+2025-12-29 23:53:22.025 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 1 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:4 GRN:4 RED:4 BLK:4 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_15] BLU 0pts BLK:3                     |
+    [L1_32] GRN 1pt BLK:4                      | [L1_6] BLK 0pts WHT:2 GRN:2               
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_46] BLK 3pts BLK:6                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_82] WHT 5pts WHT:3 BLK:7              
+
+[PLAYERS]
+gemini-3-pro (P0):                                     | gpt-5.2 (P1) (Current):
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 0
+  Tokens:                                              |   Tokens: 
+  Bonuses: {}                                          |   Bonuses: {}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+2025-12-29 23:53:22.025 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 1 - Player 1's move
+2025-12-29 23:53:22.026 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {}
+2025-12-29 23:54:03.595 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Opening build toward an efficient early engine: the best accessible engine card is L1_6 (BLACK bonus) costing 2W+2G, which also supports later BLACK-heavy point cards (e.g., L2_46) and keeps options open toward nobles (notably N9/N6). Taking WHITE+GREEN now sets up collecting the second WHITE+GREEN next turn; taking BLUE as the 3rd token maintains flexibility toward BLUE-based development/nobles.
+2025-12-29 23:54:03.596 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={WHITE=1, BLUE=1, GREEN=1}, tokensToReturn=null]
+2025-12-29 23:54:03.618 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 2 | Current Player: gemini-3-pro (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:3 GRN:3 RED:4 BLK:4 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_15] BLU 0pts BLK:3                     |
+    [L1_32] GRN 1pt BLK:4                      | [L1_6] BLK 0pts WHT:2 GRN:2               
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_46] BLK 3pts BLK:6                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_82] WHT 5pts WHT:3 BLK:7              
+
+[PLAYERS]
+gemini-3-pro (P0) (Current):                           | gpt-5.2 (P1):
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 0
+  Tokens:                                              |   Tokens: WHT:1 BLU:1 GRN:1
+  Bonuses: {}                                          |   Bonuses: {}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+2025-12-29 23:54:03.618 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 2 - Player 0's move
+2025-12-29 23:54:03.618 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {}
+2025-12-29 23:54:03.679 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 1 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-29 23:54:03.706 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 2 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-29 23:54:03.738 [main] ERROR com.aisplendor.engine.GameSimulator - Player 0 failed to provide a valid action after 3 retries. Last error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}. Skipping turn.
+2025-12-29 23:54:03.740 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 2 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:3 GRN:3 RED:4 BLK:4 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_15] BLU 0pts BLK:3                     |
+    [L1_32] GRN 1pt BLK:4                      | [L1_6] BLK 0pts WHT:2 GRN:2               
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_46] BLK 3pts BLK:6                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_82] WHT 5pts WHT:3 BLK:7              
+
+[PLAYERS]
+gemini-3-pro (P0):                                     | gpt-5.2 (P1) (Current):
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 0
+  Tokens:                                              |   Tokens: WHT:1 BLU:1 GRN:1
+  Bonuses: {}                                          |   Bonuses: {}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+2025-12-29 23:54:03.740 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 2 - Player 1's move
+2025-12-29 23:54:03.741 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=1, BLU=1, GRN=1}
+2025-12-29 23:54:23.428 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: L1_6 is the key early engine piece we identified (cheap, efficient BLACK bonus, and it supports later BLACK-heavy points and noble paths). If we only take tokens now, the opponent can immediately reserve L1_6 on their turn and disrupt our plan. Reserving it now both secures the card and gains a GOLD token (available), giving flexibility to cover any missing color when we go to purchase it soon. Next turn we can take WHITE+GREEN to reach the 2W/2G requirement (with GOLD as insurance) and then purchase L1_6 promptly.
+2025-12-29 23:54:23.428 [main] INFO  com.aisplendor.engine.GameSimulator - Action: ReserveCardAction[cardId=L1_6, deckLevel=null, tokensToReturn=null]
+2025-12-29 23:54:23.436 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 3 | Current Player: gemini-3-pro (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:3 GRN:3 RED:4 BLK:4 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_15] BLU 0pts BLK:3                     |
+    [L1_32] GRN 1pt BLK:4                      | [L1_7] BLK 0pts GRN:3                     
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_46] BLK 3pts BLK:6                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_82] WHT 5pts WHT:3 BLK:7              
+
+[PLAYERS]
+gemini-3-pro (P0) (Current):                           | gpt-5.2 (P1):
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 0
+  Tokens:                                              |   Tokens: WHT:1 BLU:1 GRN:1 GLD:1
+  Bonuses: {}                                          |   Bonuses: {}
+  Reserved: None                                       |   Reserved: [L1_6] BLK 0pts WHT:2 GRN:2
+
+======================================================================================
+
+2025-12-29 23:54:23.436 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 3 - Player 0's move
+2025-12-29 23:54:23.436 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {}
+2025-12-29 23:54:23.468 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 1 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-29 23:54:23.501 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 2 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-29 23:54:23.528 [main] ERROR com.aisplendor.engine.GameSimulator - Player 0 failed to provide a valid action after 3 retries. Last error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}. Skipping turn.
+2025-12-29 23:54:23.529 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 3 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:3 GRN:3 RED:4 BLK:4 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_15] BLU 0pts BLK:3                     |
+    [L1_32] GRN 1pt BLK:4                      | [L1_7] BLK 0pts GRN:3                     
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_46] BLK 3pts BLK:6                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_82] WHT 5pts WHT:3 BLK:7              
+
+[PLAYERS]
+gemini-3-pro (P0):                                     | gpt-5.2 (P1) (Current):
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 0
+  Tokens:                                              |   Tokens: WHT:1 BLU:1 GRN:1 GLD:1
+  Bonuses: {}                                          |   Bonuses: {}
+  Reserved: None                                       |   Reserved: [L1_6] BLK 0pts WHT:2 GRN:2
+
+======================================================================================
+
+2025-12-29 23:54:23.529 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 3 - Player 1's move
+2025-12-29 23:54:23.529 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=1, BLU=1, GRN=1, GLD=1}
+2025-12-29 23:54:34.116 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: We’re set up to purchase our reserved L1_6 (cost 2W+2G). Current tokens are W1+B1+G1+Gold1, so we’re short exactly 1 WHITE and 1 GREEN. Taking 3 different tokens now (WHITE+GREEN plus a flexible third) sets us up to buy L1_6 next turn without needing to burn the gold. RED is a good third pickup because the bank has plenty and it helps keep options open toward mid-tier point cards and noble pathways later. Token total will remain well under 10, so no returns.
+2025-12-29 23:54:34.116 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={WHITE=1, GREEN=1, RED=1}, tokensToReturn=null]
+2025-12-29 23:54:34.117 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 4 | Current Player: gemini-3-pro (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:3 GRN:2 RED:3 BLK:4 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_15] BLU 0pts BLK:3                     |
+    [L1_32] GRN 1pt BLK:4                      | [L1_7] BLK 0pts GRN:3                     
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_46] BLK 3pts BLK:6                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_82] WHT 5pts WHT:3 BLK:7              
+
+[PLAYERS]
+gemini-3-pro (P0) (Current):                           | gpt-5.2 (P1):
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 0
+  Tokens:                                              |   Tokens: WHT:2 BLU:1 GRN:2 RED:1 GLD:1
+  Bonuses: {}                                          |   Bonuses: {}
+  Reserved: None                                       |   Reserved: [L1_6] BLK 0pts WHT:2 GRN:2
+
+======================================================================================
+
+2025-12-29 23:54:34.117 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 4 - Player 0's move
+2025-12-29 23:54:34.118 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {}
+2025-12-29 23:54:34.163 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 1 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-29 23:54:34.190 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 2 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-29 23:54:34.218 [main] ERROR com.aisplendor.engine.GameSimulator - Player 0 failed to provide a valid action after 3 retries. Last error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}. Skipping turn.
+2025-12-29 23:54:34.218 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 4 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:3 GRN:2 RED:3 BLK:4 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_15] BLU 0pts BLK:3                     |
+    [L1_32] GRN 1pt BLK:4                      | [L1_7] BLK 0pts GRN:3                     
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_46] BLK 3pts BLK:6                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_82] WHT 5pts WHT:3 BLK:7              
+
+[PLAYERS]
+gemini-3-pro (P0):                                     | gpt-5.2 (P1) (Current):
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 0
+  Tokens:                                              |   Tokens: WHT:2 BLU:1 GRN:2 RED:1 GLD:1
+  Bonuses: {}                                          |   Bonuses: {}
+  Reserved: None                                       |   Reserved: [L1_6] BLK 0pts WHT:2 GRN:2
+
+======================================================================================
+
+2025-12-29 23:54:34.219 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 4 - Player 1's move
+2025-12-29 23:54:34.219 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=2, BLU=1, GRN=2, RED=1, GLD=1}
+2025-12-29 23:54:41.670 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: We can immediately purchase our reserved L1_6 (cost 2 WHITE + 2 GREEN) using our current tokens (WHITE=2, GREEN=2) without spending GOLD. This converts our early token investment into a permanent BLACK bonus, accelerating toward BLACK-heavy midgame point cards (notably L2_46 / other BLACK-cost cards) while also reducing our token load and keeping flexibility (BLUE/RED/GOLD) for the next pickup.
+2025-12-29 23:54:41.670 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L1_6]
+2025-12-29 23:54:41.677 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 5 | Current Player: gemini-3-pro (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:3 GRN:4 RED:3 BLK:4 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_15] BLU 0pts BLK:3                     |
+    [L1_32] GRN 1pt BLK:4                      | [L1_7] BLK 0pts GRN:3                     
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_46] BLK 3pts BLK:6                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_82] WHT 5pts WHT:3 BLK:7              
+
+[PLAYERS]
+gemini-3-pro (P0) (Current):                           | gpt-5.2 (P1):
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 1
+  Tokens:                                              |   Tokens: BLU:1 RED:1 GLD:1
+  Bonuses: {}                                          |   Bonuses: {BLK:1}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+2025-12-29 23:54:41.677 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 5 - Player 0's move
+2025-12-29 23:54:41.677 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {}
+2025-12-29 23:54:41.703 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 1 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-29 23:54:41.729 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 2 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-29 23:54:41.749 [main] ERROR com.aisplendor.engine.GameSimulator - Player 0 failed to provide a valid action after 3 retries. Last error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}. Skipping turn.
+2025-12-29 23:54:41.753 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 5 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:3 GRN:4 RED:3 BLK:4 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_15] BLU 0pts BLK:3                     |
+    [L1_32] GRN 1pt BLK:4                      | [L1_7] BLK 0pts GRN:3                     
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_46] BLK 3pts BLK:6                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_82] WHT 5pts WHT:3 BLK:7              
+
+[PLAYERS]
+gemini-3-pro (P0):                                     | gpt-5.2 (P1) (Current):
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 1
+  Tokens:                                              |   Tokens: BLU:1 RED:1 GLD:1
+  Bonuses: {}                                          |   Bonuses: {BLK:1}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+2025-12-29 23:54:41.754 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 5 - Player 1's move
+2025-12-29 23:54:41.754 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {BLU=1, RED=1, BLK=1, GLD=1}
+2025-12-29 23:55:06.033 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: We want to accelerate toward BLACK-heavy point cards (notably L2_46) while also progressing toward nobles that require BLUE. The cheapest, high-tempo pickup available is L1_15 (BLUE bonus) which costs 3 BLACK; with our existing BLACK bonus (1), it effectively costs only 2 BLACK tokens. Bank has 4 BLACK available, so taking 2 BLACK now is legal and sets up an immediate purchase of L1_15 next turn without needing to spend GOLD. No token-return needed (we’ll be at 5 total tokens).
+2025-12-29 23:55:06.033 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={BLACK=2}, tokensToReturn=null]
+2025-12-29 23:55:06.033 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 6 | Current Player: gemini-3-pro (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:3 GRN:4 RED:3 BLK:2 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_15] BLU 0pts BLK:3                     |
+    [L1_32] GRN 1pt BLK:4                      | [L1_7] BLK 0pts GRN:3                     
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_46] BLK 3pts BLK:6                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_82] WHT 5pts WHT:3 BLK:7              
+
+[PLAYERS]
+gemini-3-pro (P0) (Current):                           | gpt-5.2 (P1):
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 1
+  Tokens:                                              |   Tokens: BLU:1 RED:1 BLK:2 GLD:1
+  Bonuses: {}                                          |   Bonuses: {BLK:1}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+2025-12-29 23:55:06.033 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 6 - Player 0's move
+2025-12-29 23:55:06.034 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {}
+2025-12-29 23:55:06.086 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 1 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-29 23:55:06.115 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 2 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-29 23:55:06.163 [main] ERROR com.aisplendor.engine.GameSimulator - Player 0 failed to provide a valid action after 3 retries. Last error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}. Skipping turn.
+2025-12-29 23:55:06.163 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 6 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:3 GRN:4 RED:3 BLK:2 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_15] BLU 0pts BLK:3                     |
+    [L1_32] GRN 1pt BLK:4                      | [L1_7] BLK 0pts GRN:3                     
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_46] BLK 3pts BLK:6                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_82] WHT 5pts WHT:3 BLK:7              
+
+[PLAYERS]
+gemini-3-pro (P0):                                     | gpt-5.2 (P1) (Current):
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 1
+  Tokens:                                              |   Tokens: BLU:1 RED:1 BLK:2 GLD:1
+  Bonuses: {}                                          |   Bonuses: {BLK:1}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+2025-12-29 23:55:06.163 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 6 - Player 1's move
+2025-12-29 23:55:06.164 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {BLU=1, RED=1, BLK=3, GLD=1}
+2025-12-29 23:55:23.876 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: We can immediately convert our current 2 BLACK tokens into a permanent BLUE bonus by purchasing L1_15 (cost 3 BLACK). Our existing BLACK bonus reduces the cost by 1, so we only need to pay 2 BLACK tokens, which we have. This is strong tempo (engine growth without spending GOLD) and keeps us well under the 10-token limit for flexible future turns (including setting up to reserve/contest L2_46 soon).
+2025-12-29 23:55:23.876 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L1_15]
+2025-12-29 23:55:23.876 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 7 | Current Player: gemini-3-pro (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:3 GRN:4 RED:3 BLK:4 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_32] GRN 1pt BLK:4                      |
+    [L1_7] BLK 0pts GRN:3                      | [L1_24] WHT 1pt GRN:4                     
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_46] BLK 3pts BLK:6                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_82] WHT 5pts WHT:3 BLK:7              
+
+[PLAYERS]
+gemini-3-pro (P0) (Current):                           | gpt-5.2 (P1):
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 2
+  Tokens:                                              |   Tokens: BLU:1 RED:1 GLD:1
+  Bonuses: {}                                          |   Bonuses: {BLU:1 BLK:1}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+2025-12-29 23:55:23.876 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 7 - Player 0's move
+2025-12-29 23:55:23.876 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {}
+2025-12-29 23:55:23.900 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 1 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-29 23:55:23.934 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 2 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-29 23:55:23.962 [main] ERROR com.aisplendor.engine.GameSimulator - Player 0 failed to provide a valid action after 3 retries. Last error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}. Skipping turn.
+2025-12-29 23:55:23.963 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 7 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:3 GRN:4 RED:3 BLK:4 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_32] GRN 1pt BLK:4                      |
+    [L1_7] BLK 0pts GRN:3                      | [L1_24] WHT 1pt GRN:4                     
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_46] BLK 3pts BLK:6                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_82] WHT 5pts WHT:3 BLK:7              
+
+[PLAYERS]
+gemini-3-pro (P0):                                     | gpt-5.2 (P1) (Current):
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 2
+  Tokens:                                              |   Tokens: BLU:1 RED:1 GLD:1
+  Bonuses: {}                                          |   Bonuses: {BLU:1 BLK:1}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+2025-12-29 23:55:23.963 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 7 - Player 1's move
+2025-12-29 23:55:23.963 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {BLU=2, RED=1, BLK=1, GLD=1}
+2025-12-29 23:55:49.156 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Key midgame payoff on the table is L2_46 (3 prestige for a single-color BLACK cost). With our existing BLACK bonus, it’s an efficient scoring target for us, and it’s also an obvious deny/reserve for the opponent if left available. Reserving it now both secures our 3-point path and grants a GOLD token (bank has GOLD available), increasing flexibility for future purchases while we build BLACK economy.
+2025-12-29 23:55:49.156 [main] INFO  com.aisplendor.engine.GameSimulator - Action: ReserveCardAction[cardId=L2_46, deckLevel=null, tokensToReturn=null]
+2025-12-29 23:55:49.158 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 8 | Current Player: gemini-3-pro (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:3 GRN:4 RED:3 BLK:4 GLD:3
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_32] GRN 1pt BLK:4                      |
+    [L1_7] BLK 0pts GRN:3                      | [L1_24] WHT 1pt GRN:4                     
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_57] WHT 2pts RED:5                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_82] WHT 5pts WHT:3 BLK:7              
+
+[PLAYERS]
+gemini-3-pro (P0) (Current):                           | gpt-5.2 (P1):
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 2
+  Tokens:                                              |   Tokens: BLU:1 RED:1 GLD:2
+  Bonuses: {}                                          |   Bonuses: {BLU:1 BLK:1}
+  Reserved: None                                       |   Reserved: [L2_46] BLK 3pts BLK:6
+
+======================================================================================
+
+2025-12-29 23:55:49.158 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 8 - Player 0's move
+2025-12-29 23:55:49.158 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {}
+2025-12-29 23:55:49.200 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 1 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-29 23:55:49.234 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 2 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-29 23:55:49.267 [main] ERROR com.aisplendor.engine.GameSimulator - Player 0 failed to provide a valid action after 3 retries. Last error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}. Skipping turn.
+2025-12-29 23:55:49.268 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 8 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:3 GRN:4 RED:3 BLK:4 GLD:3
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_32] GRN 1pt BLK:4                      |
+    [L1_7] BLK 0pts GRN:3                      | [L1_24] WHT 1pt GRN:4                     
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_57] WHT 2pts RED:5                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_82] WHT 5pts WHT:3 BLK:7              
+
+[PLAYERS]
+gemini-3-pro (P0):                                     | gpt-5.2 (P1) (Current):
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 2
+  Tokens:                                              |   Tokens: BLU:1 RED:1 GLD:2
+  Bonuses: {}                                          |   Bonuses: {BLU:1 BLK:1}
+  Reserved: None                                       |   Reserved: [L2_46] BLK 3pts BLK:6
+
+======================================================================================
+
+2025-12-29 23:55:49.268 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 8 - Player 1's move
+2025-12-29 23:55:49.268 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {BLU=2, RED=1, BLK=1, GLD=2}
+2025-12-29 23:56:15.094 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Our main scoring plan is the reserved L2_46 (3 points, heavy BLACK). With our existing 1 BLACK bonus, we’ll eventually need 5 BLACK-equivalent to buy it; our 2 GOLD can cover up to 2 of those, so accumulating BLACK tokens is the fastest path. Taking 2 BLACK is legal (4 BLACK available in bank) and also drops the bank’s BLACK supply, making it harder for the opponent to take 2 BLACK on their next turn. This sets up a near-term buy of L1_32 (1 point, BLACK cost) using BLACK + GOLD while we continue building toward L2_46. No token returns needed (we’ll be at 6 tokens total).
+2025-12-29 23:56:15.094 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={BLACK=2}, tokensToReturn=null]
+2025-12-29 23:56:15.095 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 9 | Current Player: gemini-3-pro (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:3 GRN:4 RED:3 BLK:2 GLD:3
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_32] GRN 1pt BLK:4                      |
+    [L1_7] BLK 0pts GRN:3                      | [L1_24] WHT 1pt GRN:4                     
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_57] WHT 2pts RED:5                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_82] WHT 5pts WHT:3 BLK:7              
+
+[PLAYERS]
+gemini-3-pro (P0) (Current):                           | gpt-5.2 (P1):
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 2
+  Tokens:                                              |   Tokens: BLU:1 RED:1 BLK:2 GLD:2
+  Bonuses: {}                                          |   Bonuses: {BLU:1 BLK:1}
+  Reserved: None                                       |   Reserved: [L2_46] BLK 3pts BLK:6
+
+======================================================================================
+
+2025-12-29 23:56:15.095 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 9 - Player 0's move
+2025-12-29 23:56:15.095 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {}
+2025-12-29 23:56:15.124 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 1 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-29 23:56:15.154 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 2 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-29 23:56:15.177 [main] ERROR com.aisplendor.engine.GameSimulator - Player 0 failed to provide a valid action after 3 retries. Last error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}. Skipping turn.
+2025-12-29 23:56:15.177 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 9 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:3 GRN:4 RED:3 BLK:2 GLD:3
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_32] GRN 1pt BLK:4                      |
+    [L1_7] BLK 0pts GRN:3                      | [L1_24] WHT 1pt GRN:4                     
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_57] WHT 2pts RED:5                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_82] WHT 5pts WHT:3 BLK:7              
+
+[PLAYERS]
+gemini-3-pro (P0):                                     | gpt-5.2 (P1) (Current):
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 2
+  Tokens:                                              |   Tokens: BLU:1 RED:1 BLK:2 GLD:2
+  Bonuses: {}                                          |   Bonuses: {BLU:1 BLK:1}
+  Reserved: None                                       |   Reserved: [L2_46] BLK 3pts BLK:6
+
+======================================================================================
+
+2025-12-29 23:56:15.177 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 9 - Player 1's move
+2025-12-29 23:56:15.177 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {BLU=2, RED=1, BLK=3, GLD=2}
+2025-12-29 23:57:15.043 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: We are 1 black-equivalent short of purchasing our reserved L2_46 (cost 6 BLACK, reduced by our 1 BLACK bonus to 5). Currently we have BLACK=2 and GOLD=2 (total 4 toward that 5). Reserving a face-up card gives us +1 GOLD (bank has GOLD available), immediately setting up a clean L2_46 purchase next turn using BLACK 2 + GOLD 3. For the reserve target, L2_55 is a strong, attainable 2-point card that will become even cheaper after we buy L2_46 (its BLACK cost will be fully discounted once we have 2 BLACK bonuses), and it also grants a WHITE bonus toward noble lines (notably N6).
+2025-12-29 23:57:15.043 [main] INFO  com.aisplendor.engine.GameSimulator - Action: ReserveCardAction[cardId=L2_55, deckLevel=null, tokensToReturn=null]
+2025-12-29 23:57:15.047 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 10 | Current Player: gemini-3-pro (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:3 GRN:4 RED:3 BLK:2 GLD:2
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_32] GRN 1pt BLK:4                      |
+    [L1_7] BLK 0pts GRN:3                      | [L1_24] WHT 1pt GRN:4                     
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_57] WHT 2pts RED:5                     | [L2_69] RED 2pts BLK:5                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_82] WHT 5pts WHT:3 BLK:7              
+
+[PLAYERS]
+gemini-3-pro (P0) (Current):                           | gpt-5.2 (P1):
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 2
+  Tokens:                                              |   Tokens: BLU:1 RED:1 BLK:2 GLD:3
+  Bonuses: {}                                          |   Bonuses: {BLU:1 BLK:1}
+  Reserved: None                                       |   Reserved: [L2_46] BLK 3pts BLK:6
+                                                       |             [L2_55] WHT 2pts GRN:1 RED:4 BLK:2
+
+======================================================================================
+
+2025-12-29 23:57:15.047 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 10 - Player 0's move
+2025-12-29 23:57:15.047 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {}
+2025-12-29 23:57:15.234 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 1 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-29 23:57:15.264 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 2 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-29 23:57:15.290 [main] ERROR com.aisplendor.engine.GameSimulator - Player 0 failed to provide a valid action after 3 retries. Last error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}. Skipping turn.
+2025-12-29 23:57:15.292 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 10 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:3 GRN:4 RED:3 BLK:2 GLD:2
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_32] GRN 1pt BLK:4                      |
+    [L1_7] BLK 0pts GRN:3                      | [L1_24] WHT 1pt GRN:4                     
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_57] WHT 2pts RED:5                     | [L2_69] RED 2pts BLK:5                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_82] WHT 5pts WHT:3 BLK:7              
+
+[PLAYERS]
+gemini-3-pro (P0):                                     | gpt-5.2 (P1) (Current):
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 2
+  Tokens:                                              |   Tokens: BLU:1 RED:1 BLK:2 GLD:3
+  Bonuses: {}                                          |   Bonuses: {BLU:1 BLK:1}
+  Reserved: None                                       |   Reserved: [L2_46] BLK 3pts BLK:6
+                                                       |             [L2_55] WHT 2pts GRN:1 RED:4 BLK:2
+
+======================================================================================
+
+2025-12-29 23:57:15.292 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 10 - Player 1's move
+2025-12-29 23:57:15.292 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {BLU=2, RED=1, BLK=3, GLD=3}
+2025-12-29 23:57:34.102 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: We should immediately convert our current token pile into guaranteed prestige: we can purchase our reserved L2_46 (3 points, BLACK bonus). Its cost is 6 BLACK, reduced by our existing BLACK bonus (1) to 5 BLACK-equivalent. We have exactly BLACK=2 + GOLD=3 = 5, so this is a clean buy that scores 3 points now and raises our BLACK bonus to 2, which will also make our other reserved card L2_55 much cheaper (its BLACK cost will be fully discounted). No token-limit issues after spending these tokens.
+2025-12-29 23:57:34.102 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L2_46]
+2025-12-29 23:57:34.103 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 11 | Current Player: gemini-3-pro (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:3 GRN:4 RED:3 BLK:4 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_32] GRN 1pt BLK:4                      |
+    [L1_7] BLK 0pts GRN:3                      | [L1_24] WHT 1pt GRN:4                     
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_57] WHT 2pts RED:5                     | [L2_69] RED 2pts BLK:5                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_82] WHT 5pts WHT:3 BLK:7              
+
+[PLAYERS]
+gemini-3-pro (P0) (Current):                           | gpt-5.2 (P1):
+  Score: 0 | Cards: 0                                  |   Score: 3 | Cards: 3
+  Tokens:                                              |   Tokens: BLU:1 RED:1
+  Bonuses: {}                                          |   Bonuses: {BLU:1 BLK:2}
+  Reserved: None                                       |   Reserved: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2
+
+======================================================================================
+
+2025-12-29 23:57:34.103 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 11 - Player 0's move
+2025-12-29 23:57:34.103 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {}
+2025-12-29 23:57:34.128 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 1 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-29 23:57:34.155 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 2 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-29 23:57:34.186 [main] ERROR com.aisplendor.engine.GameSimulator - Player 0 failed to provide a valid action after 3 retries. Last error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}. Skipping turn.
+2025-12-29 23:57:34.188 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 11 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:3 GRN:4 RED:3 BLK:4 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_32] GRN 1pt BLK:4                      |
+    [L1_7] BLK 0pts GRN:3                      | [L1_24] WHT 1pt GRN:4                     
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_57] WHT 2pts RED:5                     | [L2_69] RED 2pts BLK:5                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_82] WHT 5pts WHT:3 BLK:7              
+
+[PLAYERS]
+gemini-3-pro (P0):                                     | gpt-5.2 (P1) (Current):
+  Score: 0 | Cards: 0                                  |   Score: 3 | Cards: 3
+  Tokens:                                              |   Tokens: BLU:1 RED:1
+  Bonuses: {}                                          |   Bonuses: {BLU:1 BLK:2}
+  Reserved: None                                       |   Reserved: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2
+
+======================================================================================
+
+2025-12-29 23:57:34.188 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 11 - Player 1's move
+2025-12-29 23:57:34.188 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 3, Budget: {BLU=2, RED=1, BLK=2}
+2025-12-29 23:58:41.858 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: We have a strong BLACK engine already (2 BLACK bonuses), so the fastest way to convert turns into points is to stock BLACK tokens for the efficient BLACK-cost prestige cards on the board (notably L1_32 for 1 point at an effective cost of 2 BLACK, and later L2_69 for 2 points at an effective cost of 3 BLACK). The bank has 4 BLACK available, so taking 2 BLACK is legal and also reduces the bank, making it harder for the opponent to grab a 2-BLACK take. We stay well under the 10-token limit and set up an immediate purchase next turn.
+2025-12-29 23:58:41.858 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={BLACK=2}, tokensToReturn=null]
+2025-12-29 23:58:41.858 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 12 | Current Player: gemini-3-pro (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:3 GRN:4 RED:3 BLK:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_32] GRN 1pt BLK:4                      |
+    [L1_7] BLK 0pts GRN:3                      | [L1_24] WHT 1pt GRN:4                     
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_57] WHT 2pts RED:5                     | [L2_69] RED 2pts BLK:5                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_82] WHT 5pts WHT:3 BLK:7              
+
+[PLAYERS]
+gemini-3-pro (P0) (Current):                           | gpt-5.2 (P1):
+  Score: 0 | Cards: 0                                  |   Score: 3 | Cards: 3
+  Tokens:                                              |   Tokens: BLU:1 RED:1 BLK:2
+  Bonuses: {}                                          |   Bonuses: {BLU:1 BLK:2}
+  Reserved: None                                       |   Reserved: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2
+
+======================================================================================
+
+2025-12-29 23:58:41.861 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 12 - Player 0's move
+2025-12-29 23:58:41.861 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {}
+2025-12-29 23:58:41.929 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 1 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-29 23:58:41.952 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 2 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-29 23:58:41.974 [main] ERROR com.aisplendor.engine.GameSimulator - Player 0 failed to provide a valid action after 3 retries. Last error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}. Skipping turn.
+2025-12-29 23:58:41.975 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 12 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:3 GRN:4 RED:3 BLK:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_32] GRN 1pt BLK:4                      |
+    [L1_7] BLK 0pts GRN:3                      | [L1_24] WHT 1pt GRN:4                     
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_57] WHT 2pts RED:5                     | [L2_69] RED 2pts BLK:5                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_82] WHT 5pts WHT:3 BLK:7              
+
+[PLAYERS]
+gemini-3-pro (P0):                                     | gpt-5.2 (P1) (Current):
+  Score: 0 | Cards: 0                                  |   Score: 3 | Cards: 3
+  Tokens:                                              |   Tokens: BLU:1 RED:1 BLK:2
+  Bonuses: {}                                          |   Bonuses: {BLU:1 BLK:2}
+  Reserved: None                                       |   Reserved: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2
+
+======================================================================================
+
+2025-12-29 23:58:41.975 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 12 - Player 1's move
+2025-12-29 23:58:41.975 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 3, Budget: {BLU=2, RED=1, BLK=4}
+2025-12-29 23:59:30.976 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: We have an immediate efficient conversion of tokens into prestige: L1_32 (1 point) costs 4 BLACK, reduced by our 2 BLACK bonuses to an effective cost of 2 BLACK, which we already hold. Buying it scores now (moving to 4 total prestige), adds a GREEN bonus (helpful because it fully discounts the GREEN part of our reserved L2_55), and it also returns our spent BLACK tokens to the bank—raising BLACK supply and enabling stronger future token takes for our next BLACK-cost prestige targets (e.g., L2_69). No token-limit concerns after spending.
+2025-12-29 23:59:30.976 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L1_32]
+2025-12-29 23:59:30.979 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 13 | Current Player: gemini-3-pro (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:3 GRN:4 RED:3 BLK:4 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_7] BLK 0pts GRN:3                      |
+    [L1_24] WHT 1pt GRN:4                      | [L1_9] BLU 0pts WHT:1 GRN:1 RED:1 BLK:1   
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_57] WHT 2pts RED:5                     | [L2_69] RED 2pts BLK:5                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_82] WHT 5pts WHT:3 BLK:7              
+
+[PLAYERS]
+gemini-3-pro (P0) (Current):                           | gpt-5.2 (P1):
+  Score: 0 | Cards: 0                                  |   Score: 4 | Cards: 4
+  Tokens:                                              |   Tokens: BLU:1 RED:1
+  Bonuses: {}                                          |   Bonuses: {BLU:1 GRN:1 BLK:2}
+  Reserved: None                                       |   Reserved: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2
+
+======================================================================================
+
+2025-12-29 23:59:30.979 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 13 - Player 0's move
+2025-12-29 23:59:30.979 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {}
+2025-12-29 23:59:31.037 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 1 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-29 23:59:31.061 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 2 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-29 23:59:31.084 [main] ERROR com.aisplendor.engine.GameSimulator - Player 0 failed to provide a valid action after 3 retries. Last error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}. Skipping turn.
+2025-12-29 23:59:31.085 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 13 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:3 GRN:4 RED:3 BLK:4 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_7] BLK 0pts GRN:3                      |
+    [L1_24] WHT 1pt GRN:4                      | [L1_9] BLU 0pts WHT:1 GRN:1 RED:1 BLK:1   
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_57] WHT 2pts RED:5                     | [L2_69] RED 2pts BLK:5                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_82] WHT 5pts WHT:3 BLK:7              
+
+[PLAYERS]
+gemini-3-pro (P0):                                     | gpt-5.2 (P1) (Current):
+  Score: 0 | Cards: 0                                  |   Score: 4 | Cards: 4
+  Tokens:                                              |   Tokens: BLU:1 RED:1
+  Bonuses: {}                                          |   Bonuses: {BLU:1 GRN:1 BLK:2}
+  Reserved: None                                       |   Reserved: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2
+
+======================================================================================
+
+2025-12-29 23:59:31.085 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 13 - Player 1's move
+2025-12-29 23:59:31.085 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 4, Budget: {BLU=2, GRN=1, RED=1, BLK=2}
+2025-12-30 00:00:22.842 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: We’re still in the conversion-to-points phase, with our best near-term face-up target being L2_69 (2 prestige) because our 2 BLACK bonuses reduce its cost from 5 BLACK to an effective 3 BLACK. Right now we have no BLACK tokens, so the fastest progress is taking 2 BLACK (legal since the bank has 4). This also drops the bank’s BLACK supply to 2, preventing the opponent from taking 2 BLACK on their next turn, which protects our path toward L2_69. Token limit is fine (we go from 2 tokens to 4), so no returns.
+2025-12-30 00:00:22.842 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={BLACK=2}, tokensToReturn=null]
+2025-12-30 00:00:22.842 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 14 | Current Player: gemini-3-pro (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:3 GRN:4 RED:3 BLK:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_7] BLK 0pts GRN:3                      |
+    [L1_24] WHT 1pt GRN:4                      | [L1_9] BLU 0pts WHT:1 GRN:1 RED:1 BLK:1   
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_57] WHT 2pts RED:5                     | [L2_69] RED 2pts BLK:5                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_82] WHT 5pts WHT:3 BLK:7              
+
+[PLAYERS]
+gemini-3-pro (P0) (Current):                           | gpt-5.2 (P1):
+  Score: 0 | Cards: 0                                  |   Score: 4 | Cards: 4
+  Tokens:                                              |   Tokens: BLU:1 RED:1 BLK:2
+  Bonuses: {}                                          |   Bonuses: {BLU:1 GRN:1 BLK:2}
+  Reserved: None                                       |   Reserved: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2
+
+======================================================================================
+
+2025-12-30 00:00:22.843 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 14 - Player 0's move
+2025-12-30 00:00:22.843 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {}
+2025-12-30 00:00:22.908 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 1 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-30 00:00:22.935 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 2 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-30 00:00:22.966 [main] ERROR com.aisplendor.engine.GameSimulator - Player 0 failed to provide a valid action after 3 retries. Last error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}. Skipping turn.
+2025-12-30 00:00:22.967 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 14 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:3 GRN:4 RED:3 BLK:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_7] BLK 0pts GRN:3                      |
+    [L1_24] WHT 1pt GRN:4                      | [L1_9] BLU 0pts WHT:1 GRN:1 RED:1 BLK:1   
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_57] WHT 2pts RED:5                     | [L2_69] RED 2pts BLK:5                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_82] WHT 5pts WHT:3 BLK:7              
+
+[PLAYERS]
+gemini-3-pro (P0):                                     | gpt-5.2 (P1) (Current):
+  Score: 0 | Cards: 0                                  |   Score: 4 | Cards: 4
+  Tokens:                                              |   Tokens: BLU:1 RED:1 BLK:2
+  Bonuses: {}                                          |   Bonuses: {BLU:1 GRN:1 BLK:2}
+  Reserved: None                                       |   Reserved: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2
+
+======================================================================================
+
+2025-12-30 00:00:22.967 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 14 - Player 1's move
+2025-12-30 00:00:22.967 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 4, Budget: {BLU=2, GRN=1, RED=1, BLK=4}
+2025-12-30 00:00:46.918 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: We can’t buy L2_69 this turn, but it’s our best near-term points conversion: it’s worth 2 prestige and, with our 2 BLACK bonuses, will cost only 3 BLACK-equivalent. By reserving L2_69 now we (1) deny the opponent a high-efficiency 2-point card, and (2) gain a GOLD token, which immediately completes the 3 BLACK-equivalent needed next turn (we already hold BLACK=2). This sets up a guaranteed purchase of L2_69 on our next turn without spending a tempo on token collection.
+2025-12-30 00:00:46.918 [main] INFO  com.aisplendor.engine.GameSimulator - Action: ReserveCardAction[cardId=L2_69, deckLevel=null, tokensToReturn=null]
+2025-12-30 00:00:46.920 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 15 | Current Player: gemini-3-pro (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:3 GRN:4 RED:3 BLK:2 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_7] BLK 0pts GRN:3                      |
+    [L1_24] WHT 1pt GRN:4                      | [L1_9] BLU 0pts WHT:1 GRN:1 RED:1 BLK:1   
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_57] WHT 2pts RED:5                     | [L2_43] BLK 2pts BLU:1 GRN:4 RED:2        
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_82] WHT 5pts WHT:3 BLK:7              
+
+[PLAYERS]
+gemini-3-pro (P0) (Current):                           | gpt-5.2 (P1):
+  Score: 0 | Cards: 0                                  |   Score: 4 | Cards: 4
+  Tokens:                                              |   Tokens: BLU:1 RED:1 BLK:2 GLD:1
+  Bonuses: {}                                          |   Bonuses: {BLU:1 GRN:1 BLK:2}
+  Reserved: None                                       |   Reserved: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2
+                                                       |             [L2_69] RED 2pts BLK:5
+
+======================================================================================
+
+2025-12-30 00:00:46.920 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 15 - Player 0's move
+2025-12-30 00:00:46.920 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {}
+2025-12-30 00:00:46.951 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 1 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-30 00:00:46.978 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 2 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-30 00:00:47.013 [main] ERROR com.aisplendor.engine.GameSimulator - Player 0 failed to provide a valid action after 3 retries. Last error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}. Skipping turn.
+2025-12-30 00:00:47.014 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 15 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:3 GRN:4 RED:3 BLK:2 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_7] BLK 0pts GRN:3                      |
+    [L1_24] WHT 1pt GRN:4                      | [L1_9] BLU 0pts WHT:1 GRN:1 RED:1 BLK:1   
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_57] WHT 2pts RED:5                     | [L2_43] BLK 2pts BLU:1 GRN:4 RED:2        
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_82] WHT 5pts WHT:3 BLK:7              
+
+[PLAYERS]
+gemini-3-pro (P0):                                     | gpt-5.2 (P1) (Current):
+  Score: 0 | Cards: 0                                  |   Score: 4 | Cards: 4
+  Tokens:                                              |   Tokens: BLU:1 RED:1 BLK:2 GLD:1
+  Bonuses: {}                                          |   Bonuses: {BLU:1 GRN:1 BLK:2}
+  Reserved: None                                       |   Reserved: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2
+                                                       |             [L2_69] RED 2pts BLK:5
+
+======================================================================================
+
+2025-12-30 00:00:47.014 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 15 - Player 1's move
+2025-12-30 00:00:47.014 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 4, Budget: {BLU=2, GRN=1, RED=1, BLK=4, GLD=1}
+2025-12-30 00:00:57.055 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: We can immediately convert tokens into prestige by purchasing our reserved L2_69. Its cost is 5 BLACK, discounted by our 2 BLACK bonuses to an effective 3 BLACK. We can pay that exactly with BLACK=2 plus GOLD=1, gaining 2 prestige now and adding a RED bonus for future purchases. No token-limit issues and no reason to delay since this is a guaranteed, efficient points gain.
+2025-12-30 00:00:57.055 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L2_69]
+2025-12-30 00:00:57.055 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 16 | Current Player: gemini-3-pro (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:3 GRN:4 RED:3 BLK:4 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_7] BLK 0pts GRN:3                      |
+    [L1_24] WHT 1pt GRN:4                      | [L1_9] BLU 0pts WHT:1 GRN:1 RED:1 BLK:1   
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_57] WHT 2pts RED:5                     | [L2_43] BLK 2pts BLU:1 GRN:4 RED:2        
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_82] WHT 5pts WHT:3 BLK:7              
+
+[PLAYERS]
+gemini-3-pro (P0) (Current):                           | gpt-5.2 (P1):
+  Score: 0 | Cards: 0                                  |   Score: 6 | Cards: 5
+  Tokens:                                              |   Tokens: BLU:1 RED:1
+  Bonuses: {}                                          |   Bonuses: {BLU:1 GRN:1 RED:1 BLK:2}
+  Reserved: None                                       |   Reserved: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2
+
+======================================================================================
+
+2025-12-30 00:00:57.055 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 16 - Player 0's move
+2025-12-30 00:00:57.055 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {}
+2025-12-30 00:00:57.097 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 1 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-30 00:00:57.122 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 2 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-30 00:00:57.153 [main] ERROR com.aisplendor.engine.GameSimulator - Player 0 failed to provide a valid action after 3 retries. Last error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}. Skipping turn.
+2025-12-30 00:00:57.153 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 16 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:3 GRN:4 RED:3 BLK:4 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_7] BLK 0pts GRN:3                      |
+    [L1_24] WHT 1pt GRN:4                      | [L1_9] BLU 0pts WHT:1 GRN:1 RED:1 BLK:1   
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_57] WHT 2pts RED:5                     | [L2_43] BLK 2pts BLU:1 GRN:4 RED:2        
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_82] WHT 5pts WHT:3 BLK:7              
+
+[PLAYERS]
+gemini-3-pro (P0):                                     | gpt-5.2 (P1) (Current):
+  Score: 0 | Cards: 0                                  |   Score: 6 | Cards: 5
+  Tokens:                                              |   Tokens: BLU:1 RED:1
+  Bonuses: {}                                          |   Bonuses: {BLU:1 GRN:1 RED:1 BLK:2}
+  Reserved: None                                       |   Reserved: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2
+
+======================================================================================
+
+2025-12-30 00:00:57.153 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 16 - Player 1's move
+2025-12-30 00:00:57.153 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 6, Budget: {BLU=2, GRN=1, RED=2, BLK=2}
+2025-12-30 00:02:36.861 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: No purchases are currently affordable with our tokens (BLUE=1, RED=1) despite our strong discounts. The best near-term points conversion on the board is L2_43 (2 prestige, BLACK bonus). With our bonuses (BLUE+1, GREEN+1, RED+1), its effective cost becomes GREEN 3 + RED 1 (BLUE is fully discounted). We already have the needed RED 1, so the fastest progress is to take 2 GREEN now (legal since 4 GREEN are available), setting up completion of the 3 GREEN requirement next turn and a purchase shortly after. This also keeps us well under the 10-token limit and advances toward a 3rd BLACK bonus for future high-level cards/noble N6.
+2025-12-30 00:02:36.862 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={GREEN=2}, tokensToReturn=null]
+2025-12-30 00:02:36.863 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 17 | Current Player: gemini-3-pro (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:3 GRN:2 RED:3 BLK:4 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_7] BLK 0pts GRN:3                      |
+    [L1_24] WHT 1pt GRN:4                      | [L1_9] BLU 0pts WHT:1 GRN:1 RED:1 BLK:1   
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_57] WHT 2pts RED:5                     | [L2_43] BLK 2pts BLU:1 GRN:4 RED:2        
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_82] WHT 5pts WHT:3 BLK:7              
+
+[PLAYERS]
+gemini-3-pro (P0) (Current):                           | gpt-5.2 (P1):
+  Score: 0 | Cards: 0                                  |   Score: 6 | Cards: 5
+  Tokens:                                              |   Tokens: BLU:1 GRN:2 RED:1
+  Bonuses: {}                                          |   Bonuses: {BLU:1 GRN:1 RED:1 BLK:2}
+  Reserved: None                                       |   Reserved: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2
+
+======================================================================================
+
+2025-12-30 00:02:36.863 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 17 - Player 0's move
+2025-12-30 00:02:36.863 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {}
+2025-12-30 00:02:36.922 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 1 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-30 00:02:36.945 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 2 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-30 00:02:36.971 [main] ERROR com.aisplendor.engine.GameSimulator - Player 0 failed to provide a valid action after 3 retries. Last error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}. Skipping turn.
+2025-12-30 00:02:36.972 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 17 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:3 GRN:2 RED:3 BLK:4 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_7] BLK 0pts GRN:3                      |
+    [L1_24] WHT 1pt GRN:4                      | [L1_9] BLU 0pts WHT:1 GRN:1 RED:1 BLK:1   
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_57] WHT 2pts RED:5                     | [L2_43] BLK 2pts BLU:1 GRN:4 RED:2        
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_82] WHT 5pts WHT:3 BLK:7              
+
+[PLAYERS]
+gemini-3-pro (P0):                                     | gpt-5.2 (P1) (Current):
+  Score: 0 | Cards: 0                                  |   Score: 6 | Cards: 5
+  Tokens:                                              |   Tokens: BLU:1 GRN:2 RED:1
+  Bonuses: {}                                          |   Bonuses: {BLU:1 GRN:1 RED:1 BLK:2}
+  Reserved: None                                       |   Reserved: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2
+
+======================================================================================
+
+2025-12-30 00:02:36.972 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 17 - Player 1's move
+2025-12-30 00:02:36.972 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 6, Budget: {BLU=2, GRN=3, RED=2, BLK=2}
+2025-12-30 00:03:31.766 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: We want the fastest conversion to prestige. With our bonuses (BLUE+1, GREEN+1, RED+1), L2_43 (2 prestige, BLACK bonus) is the best near-term buy: its effective cost becomes GREEN 3 + RED 1 (BLUE is fully discounted). We currently have GREEN=2 and RED=1, so we only need +1 GREEN to be able to purchase it next turn. Using this turn to take 3 different tokens is optimal: take GREEN to complete the L2_43 requirement, take RED to keep progress toward our reserved L2_55 (needs 3 RED after discounts), and take WHITE as a flexible future requirement (notably for noble N6 and several high-level targets). Token count goes from 4 to 7, so no returns needed.
+2025-12-30 00:03:31.766 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={WHITE=1, GREEN=1, RED=1}, tokensToReturn=null]
+2025-12-30 00:03:31.769 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 18 | Current Player: gemini-3-pro (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:3 GRN:1 RED:2 BLK:4 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_7] BLK 0pts GRN:3                      |
+    [L1_24] WHT 1pt GRN:4                      | [L1_9] BLU 0pts WHT:1 GRN:1 RED:1 BLK:1   
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_57] WHT 2pts RED:5                     | [L2_43] BLK 2pts BLU:1 GRN:4 RED:2        
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_82] WHT 5pts WHT:3 BLK:7              
+
+[PLAYERS]
+gemini-3-pro (P0) (Current):                           | gpt-5.2 (P1):
+  Score: 0 | Cards: 0                                  |   Score: 6 | Cards: 5
+  Tokens:                                              |   Tokens: WHT:1 BLU:1 GRN:3 RED:2
+  Bonuses: {}                                          |   Bonuses: {BLU:1 GRN:1 RED:1 BLK:2}
+  Reserved: None                                       |   Reserved: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2
+
+======================================================================================
+
+2025-12-30 00:03:31.770 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 18 - Player 0's move
+2025-12-30 00:03:31.770 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {}
+2025-12-30 00:03:31.829 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 1 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-30 00:03:31.855 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 2 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-30 00:03:31.877 [main] ERROR com.aisplendor.engine.GameSimulator - Player 0 failed to provide a valid action after 3 retries. Last error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}. Skipping turn.
+2025-12-30 00:03:31.881 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 18 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:3 GRN:1 RED:2 BLK:4 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_7] BLK 0pts GRN:3                      |
+    [L1_24] WHT 1pt GRN:4                      | [L1_9] BLU 0pts WHT:1 GRN:1 RED:1 BLK:1   
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_57] WHT 2pts RED:5                     | [L2_43] BLK 2pts BLU:1 GRN:4 RED:2        
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_82] WHT 5pts WHT:3 BLK:7              
+
+[PLAYERS]
+gemini-3-pro (P0):                                     | gpt-5.2 (P1) (Current):
+  Score: 0 | Cards: 0                                  |   Score: 6 | Cards: 5
+  Tokens:                                              |   Tokens: WHT:1 BLU:1 GRN:3 RED:2
+  Bonuses: {}                                          |   Bonuses: {BLU:1 GRN:1 RED:1 BLK:2}
+  Reserved: None                                       |   Reserved: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2
+
+======================================================================================
+
+2025-12-30 00:03:31.881 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 18 - Player 1's move
+2025-12-30 00:03:31.881 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 6, Budget: {WHT=1, BLU=2, GRN=4, RED=3, BLK=2}
+2025-12-30 00:03:41.393 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: We can immediately convert resources into points by purchasing the face-up Level 2 card L2_43 (2 prestige, BLACK bonus). With our bonuses (BLUE+1, GREEN+1, RED+1), its cost (BLUE 1, GREEN 4, RED 2) discounts to an effective cost of GREEN 3 and RED 1 (BLUE is fully covered). We currently have GREEN=3 and RED=2, so we can pay GREEN 3 + RED 1 exactly, gaining 2 prestige and increasing our BLACK bonus to 3, which also advances us toward noble N6 (requires BLACK 3). No token-limit issues and no need to take tokens instead since this is an efficient points purchase now.
+2025-12-30 00:03:41.393 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L2_43]
+2025-12-30 00:03:41.394 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 19 | Current Player: gemini-3-pro (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:3 GRN:4 RED:3 BLK:4 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_7] BLK 0pts GRN:3                      |
+    [L1_24] WHT 1pt GRN:4                      | [L1_9] BLU 0pts WHT:1 GRN:1 RED:1 BLK:1   
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_57] WHT 2pts RED:5                     | [L2_51] BLU 2pts BLU:5                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_82] WHT 5pts WHT:3 BLK:7              
+
+[PLAYERS]
+gemini-3-pro (P0) (Current):                           | gpt-5.2 (P1):
+  Score: 0 | Cards: 0                                  |   Score: 8 | Cards: 6
+  Tokens:                                              |   Tokens: WHT:1 BLU:1 RED:1
+  Bonuses: {}                                          |   Bonuses: {BLU:1 GRN:1 RED:1 BLK:3}
+  Reserved: None                                       |   Reserved: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2
+
+======================================================================================
+
+2025-12-30 00:03:41.395 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 19 - Player 0's move
+2025-12-30 00:03:41.395 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {}
+2025-12-30 00:03:41.416 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 1 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-30 00:03:41.438 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 2 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-30 00:03:41.465 [main] ERROR com.aisplendor.engine.GameSimulator - Player 0 failed to provide a valid action after 3 retries. Last error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}. Skipping turn.
+2025-12-30 00:03:41.466 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 19 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:3 GRN:4 RED:3 BLK:4 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_7] BLK 0pts GRN:3                      |
+    [L1_24] WHT 1pt GRN:4                      | [L1_9] BLU 0pts WHT:1 GRN:1 RED:1 BLK:1   
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_57] WHT 2pts RED:5                     | [L2_51] BLU 2pts BLU:5                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_82] WHT 5pts WHT:3 BLK:7              
+
+[PLAYERS]
+gemini-3-pro (P0):                                     | gpt-5.2 (P1) (Current):
+  Score: 0 | Cards: 0                                  |   Score: 8 | Cards: 6
+  Tokens:                                              |   Tokens: WHT:1 BLU:1 RED:1
+  Bonuses: {}                                          |   Bonuses: {BLU:1 GRN:1 RED:1 BLK:3}
+  Reserved: None                                       |   Reserved: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2
+
+======================================================================================
+
+2025-12-30 00:03:41.466 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 19 - Player 1's move
+2025-12-30 00:03:41.466 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 8, Budget: {WHT=1, BLU=2, GRN=1, RED=2, BLK=3}
+2025-12-30 00:04:17.732 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Best immediate efficiency play is to purchase L1_9: after our bonuses (GREEN+1, RED+1, BLACK+3), its cost (W1,G1,R1,K1) discounts to only W1, which we have. This converts a token into a permanent BLUE bonus, accelerating future buys (notably blue-heavy lines like L2_51/L3_84) and moving us closer to noble N6 (needs BLUE 3, BLACK 3). No token-limit issues and no better-point purchase is currently affordable this turn.
+2025-12-30 00:04:17.732 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L1_9]
+2025-12-30 00:04:17.733 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 20 | Current Player: gemini-3-pro (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:3 GRN:4 RED:3 BLK:4 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_7] BLK 0pts GRN:3                      |
+    [L1_24] WHT 1pt GRN:4                      | [L1_20] WHT 0pts WHT:3 BLU:1 BLK:1        
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_57] WHT 2pts RED:5                     | [L2_51] BLU 2pts BLU:5                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_82] WHT 5pts WHT:3 BLK:7              
+
+[PLAYERS]
+gemini-3-pro (P0) (Current):                           | gpt-5.2 (P1):
+  Score: 0 | Cards: 0                                  |   Score: 8 | Cards: 7
+  Tokens:                                              |   Tokens: BLU:1 RED:1
+  Bonuses: {}                                          |   Bonuses: {BLU:2 GRN:1 RED:1 BLK:3}
+  Reserved: None                                       |   Reserved: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2
+
+======================================================================================
+
+2025-12-30 00:04:17.733 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 20 - Player 0's move
+2025-12-30 00:04:17.733 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {}
+2025-12-30 00:04:17.794 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 1 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-30 00:04:17.815 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 2 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-30 00:04:17.843 [main] ERROR com.aisplendor.engine.GameSimulator - Player 0 failed to provide a valid action after 3 retries. Last error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}. Skipping turn.
+2025-12-30 00:04:17.843 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 20 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:3 GRN:4 RED:3 BLK:4 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_7] BLK 0pts GRN:3                      |
+    [L1_24] WHT 1pt GRN:4                      | [L1_20] WHT 0pts WHT:3 BLU:1 BLK:1        
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_57] WHT 2pts RED:5                     | [L2_51] BLU 2pts BLU:5                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_82] WHT 5pts WHT:3 BLK:7              
+
+[PLAYERS]
+gemini-3-pro (P0):                                     | gpt-5.2 (P1) (Current):
+  Score: 0 | Cards: 0                                  |   Score: 8 | Cards: 7
+  Tokens:                                              |   Tokens: BLU:1 RED:1
+  Bonuses: {}                                          |   Bonuses: {BLU:2 GRN:1 RED:1 BLK:3}
+  Reserved: None                                       |   Reserved: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2
+
+======================================================================================
+
+2025-12-30 00:04:17.843 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 20 - Player 1's move
+2025-12-30 00:04:17.843 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 8, Budget: {BLU=3, GRN=1, RED=2, BLK=3}
+2025-12-30 00:08:31.263 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: We’re at 8 points and our reserved L2_55 is an efficient +2 points (effective cost is only RED 3 after our bonuses), putting us at 10. The fastest clean finish is then a 5-point Level 3 card; the face-up L3_82 (5 prestige) is ideal because our BLACK bonus=3 heavily discounts it and L2_55 will also add a WHITE bonus to reduce its WHITE requirement.
+
+Key risk: if we don’t secure L3_82 now, the opponent can reserve it on their next turn to block our quickest path to 15. Reserving it ourselves both denies that defense and gives us a GOLD token to help cover the remaining cost later.
+
+So, reserve L3_82 now (legal, face-up), gain 1 GOLD, and next turns we’ll collect RED to buy L2_55, then collect the remaining WHITE/BLACK to buy L3_82 for the win.
+2025-12-30 00:08:31.263 [main] INFO  com.aisplendor.engine.GameSimulator - Action: ReserveCardAction[cardId=L3_82, deckLevel=null, tokensToReturn=null]
+2025-12-30 00:08:31.263 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 21 | Current Player: gemini-3-pro (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:3 GRN:4 RED:3 BLK:4 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_7] BLK 0pts GRN:3                      |
+    [L1_24] WHT 1pt GRN:4                      | [L1_20] WHT 0pts WHT:3 BLU:1 BLK:1        
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_57] WHT 2pts RED:5                     | [L2_51] BLU 2pts BLU:5                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3  
+
+[PLAYERS]
+gemini-3-pro (P0) (Current):                           | gpt-5.2 (P1):
+  Score: 0 | Cards: 0                                  |   Score: 8 | Cards: 7
+  Tokens:                                              |   Tokens: BLU:1 RED:1 GLD:1
+  Bonuses: {}                                          |   Bonuses: {BLU:2 GRN:1 RED:1 BLK:3}
+  Reserved: None                                       |   Reserved: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2
+                                                       |             [L3_82] WHT 5pts WHT:3 BLK:7
+
+======================================================================================
+
+2025-12-30 00:08:31.263 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 21 - Player 0's move
+2025-12-30 00:08:31.263 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {}
+2025-12-30 00:08:31.324 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 1 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-30 00:08:31.352 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 2 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-30 00:08:31.379 [main] ERROR com.aisplendor.engine.GameSimulator - Player 0 failed to provide a valid action after 3 retries. Last error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}. Skipping turn.
+2025-12-30 00:08:31.382 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 21 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:3 GRN:4 RED:3 BLK:4 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_7] BLK 0pts GRN:3                      |
+    [L1_24] WHT 1pt GRN:4                      | [L1_20] WHT 0pts WHT:3 BLU:1 BLK:1        
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_57] WHT 2pts RED:5                     | [L2_51] BLU 2pts BLU:5                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3  
+
+[PLAYERS]
+gemini-3-pro (P0):                                     | gpt-5.2 (P1) (Current):
+  Score: 0 | Cards: 0                                  |   Score: 8 | Cards: 7
+  Tokens:                                              |   Tokens: BLU:1 RED:1 GLD:1
+  Bonuses: {}                                          |   Bonuses: {BLU:2 GRN:1 RED:1 BLK:3}
+  Reserved: None                                       |   Reserved: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2
+                                                       |             [L3_82] WHT 5pts WHT:3 BLK:7
+
+======================================================================================
+
+2025-12-30 00:08:31.382 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 21 - Player 1's move
+2025-12-30 00:08:31.382 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 8, Budget: {BLU=3, GRN=1, RED=2, BLK=3, GLD=1}
+2025-12-30 00:09:05.279 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: We cannot yet purchase our reserved L2_55 (worth 2 points) because after discounts it still costs RED 3, and we currently only have RED 1 + GOLD 1. The fastest line to 15 is still L2_55 (+2, to 10) followed by our reserved L3_82 (+5, to 15). So this turn we should take tokens that (a) let us buy L2_55 next turn and (b) also start stockpiling for L3_82’s needs (WHITE/BLACK). Taking 3 different tokens RED+WHITE+BLACK is legal (all available on the board) and sets our next turn purchase of L2_55 using RED 2 + GOLD 1 to reach the needed RED 3, while keeping useful WHITE/BLACK tokens for L3_82 afterward. No token-limit issues (3 -> 6).
+2025-12-30 00:09:05.279 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={WHITE=1, RED=1, BLACK=1}, tokensToReturn=null]
+2025-12-30 00:09:05.279 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 22 | Current Player: gemini-3-pro (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:3 GRN:4 RED:2 BLK:3 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_7] BLK 0pts GRN:3                      |
+    [L1_24] WHT 1pt GRN:4                      | [L1_20] WHT 0pts WHT:3 BLU:1 BLK:1        
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_57] WHT 2pts RED:5                     | [L2_51] BLU 2pts BLU:5                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3  
+
+[PLAYERS]
+gemini-3-pro (P0) (Current):                           | gpt-5.2 (P1):
+  Score: 0 | Cards: 0                                  |   Score: 8 | Cards: 7
+  Tokens:                                              |   Tokens: WHT:1 BLU:1 RED:2 BLK:1 GLD:1
+  Bonuses: {}                                          |   Bonuses: {BLU:2 GRN:1 RED:1 BLK:3}
+  Reserved: None                                       |   Reserved: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2
+                                                       |             [L3_82] WHT 5pts WHT:3 BLK:7
+
+======================================================================================
+
+2025-12-30 00:09:05.279 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 22 - Player 0's move
+2025-12-30 00:09:05.279 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {}
+2025-12-30 00:09:05.462 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 1 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-30 00:09:05.489 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 2 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-30 00:09:05.522 [main] ERROR com.aisplendor.engine.GameSimulator - Player 0 failed to provide a valid action after 3 retries. Last error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}. Skipping turn.
+2025-12-30 00:09:05.522 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 22 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:3 GRN:4 RED:2 BLK:3 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_7] BLK 0pts GRN:3                      |
+    [L1_24] WHT 1pt GRN:4                      | [L1_20] WHT 0pts WHT:3 BLU:1 BLK:1        
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_57] WHT 2pts RED:5                     | [L2_51] BLU 2pts BLU:5                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3  
+
+[PLAYERS]
+gemini-3-pro (P0):                                     | gpt-5.2 (P1) (Current):
+  Score: 0 | Cards: 0                                  |   Score: 8 | Cards: 7
+  Tokens:                                              |   Tokens: WHT:1 BLU:1 RED:2 BLK:1 GLD:1
+  Bonuses: {}                                          |   Bonuses: {BLU:2 GRN:1 RED:1 BLK:3}
+  Reserved: None                                       |   Reserved: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2
+                                                       |             [L3_82] WHT 5pts WHT:3 BLK:7
+
+======================================================================================
+
+2025-12-30 00:09:05.522 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 22 - Player 1's move
+2025-12-30 00:09:05.522 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 8, Budget: {WHT=1, BLU=3, GRN=1, RED=3, BLK=4, GLD=1}
+2025-12-30 00:09:22.835 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Best tempo is to convert tokens into points immediately. Our reserved L2_55 (2 prestige, WHITE bonus) is purchasable now: its cost (G1,R4,K2) is discounted by our bonuses (G+1,R+1,K+3) to an effective cost of RED 3. We can pay RED 2 + GOLD 1 to cover that, moving from 8 to 10 prestige and gaining a permanent WHITE bonus, which also reduces the remaining cost of our reserved L3_82 (5 points) toward the win line. No token-limit issues.
+2025-12-30 00:09:22.835 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L2_55]
+2025-12-30 00:09:22.836 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 23 | Current Player: gemini-3-pro (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:3 GRN:4 RED:4 BLK:3 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_7] BLK 0pts GRN:3                      |
+    [L1_24] WHT 1pt GRN:4                      | [L1_20] WHT 0pts WHT:3 BLU:1 BLK:1        
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_57] WHT 2pts RED:5                     | [L2_51] BLU 2pts BLU:5                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3  
+
+[PLAYERS]
+gemini-3-pro (P0) (Current):                           | gpt-5.2 (P1):
+  Score: 0 | Cards: 0                                  |   Score: 10 | Cards: 8
+  Tokens:                                              |   Tokens: WHT:1 BLU:1 BLK:1
+  Bonuses: {}                                          |   Bonuses: {WHT:1 BLU:2 GRN:1 RED:1 BLK:3}
+  Reserved: None                                       |   Reserved: [L3_82] WHT 5pts WHT:3 BLK:7
+
+======================================================================================
+
+2025-12-30 00:09:22.836 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 23 - Player 0's move
+2025-12-30 00:09:22.836 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {}
+2025-12-30 00:09:22.859 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 1 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-30 00:09:22.880 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 2 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-30 00:09:22.905 [main] ERROR com.aisplendor.engine.GameSimulator - Player 0 failed to provide a valid action after 3 retries. Last error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}. Skipping turn.
+2025-12-30 00:09:22.905 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 23 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:3 GRN:4 RED:4 BLK:3 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_7] BLK 0pts GRN:3                      |
+    [L1_24] WHT 1pt GRN:4                      | [L1_20] WHT 0pts WHT:3 BLU:1 BLK:1        
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_57] WHT 2pts RED:5                     | [L2_51] BLU 2pts BLU:5                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3  
+
+[PLAYERS]
+gemini-3-pro (P0):                                     | gpt-5.2 (P1) (Current):
+  Score: 0 | Cards: 0                                  |   Score: 10 | Cards: 8
+  Tokens:                                              |   Tokens: WHT:1 BLU:1 BLK:1
+  Bonuses: {}                                          |   Bonuses: {WHT:1 BLU:2 GRN:1 RED:1 BLK:3}
+  Reserved: None                                       |   Reserved: [L3_82] WHT 5pts WHT:3 BLK:7
+
+======================================================================================
+
+2025-12-30 00:09:22.905 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 23 - Player 1's move
+2025-12-30 00:09:22.905 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 10, Budget: {WHT=2, BLU=3, GRN=1, RED=1, BLK=4}
+2025-12-30 00:10:43.784 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: We’re at 10 prestige with L3_82 (5 pts) already reserved as our clear win condition. To buy L3_82 we need to cover cost W3/K7; with our current bonuses (W1, K3) that’s still W2 + K4. The fastest way to reduce the black requirement without spending extra token-take turns is to buy the face-up L1_3 (BLACK bonus): its cost (W2,B2,R1) is discounted by our bonuses (W1,B2,R1) to an effective cost of just W1, which we have. This increases our BLACK bonus to 4, so L3_82 will then require only W2 + K3, making it reachable in two upcoming token-take turns (each taking W+K+1 filler) before purchasing L3_82.
+2025-12-30 00:10:43.784 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L1_3]
+2025-12-30 00:10:43.785 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 24 | Current Player: gemini-3-pro (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:3 GRN:4 RED:4 BLK:3 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_24] WHT 1pt GRN:4                      |
+    [L1_20] WHT 0pts WHT:3 BLU:1 BLK:1         | [L1_10] BLU 0pts WHT:1 GRN:1 RED:2 BLK:1  
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_57] WHT 2pts RED:5                     | [L2_51] BLU 2pts BLU:5                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3  
+
+[PLAYERS]
+gemini-3-pro (P0) (Current):                           | gpt-5.2 (P1):
+  Score: 0 | Cards: 0                                  |   Score: 10 | Cards: 9
+  Tokens:                                              |   Tokens: BLU:1 BLK:1
+  Bonuses: {}                                          |   Bonuses: {WHT:1 BLU:2 GRN:1 RED:1 BLK:4}
+  Reserved: None                                       |   Reserved: [L3_82] WHT 5pts WHT:3 BLK:7
+
+======================================================================================
+
+2025-12-30 00:10:43.785 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 24 - Player 0's move
+2025-12-30 00:10:43.785 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {}
+2025-12-30 00:10:43.845 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 1 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-30 00:10:43.868 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 2 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-30 00:10:43.893 [main] ERROR com.aisplendor.engine.GameSimulator - Player 0 failed to provide a valid action after 3 retries. Last error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}. Skipping turn.
+2025-12-30 00:10:43.894 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 24 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:3 GRN:4 RED:4 BLK:3 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_24] WHT 1pt GRN:4                      |
+    [L1_20] WHT 0pts WHT:3 BLU:1 BLK:1         | [L1_10] BLU 0pts WHT:1 GRN:1 RED:2 BLK:1  
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_57] WHT 2pts RED:5                     | [L2_51] BLU 2pts BLU:5                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3  
+
+[PLAYERS]
+gemini-3-pro (P0):                                     | gpt-5.2 (P1) (Current):
+  Score: 0 | Cards: 0                                  |   Score: 10 | Cards: 9
+  Tokens:                                              |   Tokens: BLU:1 BLK:1
+  Bonuses: {}                                          |   Bonuses: {WHT:1 BLU:2 GRN:1 RED:1 BLK:4}
+  Reserved: None                                       |   Reserved: [L3_82] WHT 5pts WHT:3 BLK:7
+
+======================================================================================
+
+2025-12-30 00:10:43.894 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 24 - Player 1's move
+2025-12-30 00:10:43.894 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 10, Budget: {WHT=1, BLU=3, GRN=1, RED=1, BLK=5}
+2025-12-30 00:12:04.245 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: We’re at 10 prestige with our win-condition L3_82 (5 prestige) already reserved. L3_82 costs W3/K7; after our bonuses (WHITE+1, BLACK+4) the remaining cost is W2 + K3.
+
+Current tokens: BLUE 1, BLACK 1 (2 total). We therefore still need +2 WHITE and +2 BLACK tokens (since we already have 1 BLACK). Because the bank has only 3 BLACK, we cannot take 2 BLACK in one action (needs 4+), so the fastest path is two “take 3 different” turns grabbing WHITE+BLACK each time, then purchase L3_82.
+
+This turn: take WHITE + BLACK + a useful filler (BLUE). No token-limit issues (2 + 3 = 5).
+2025-12-30 00:12:04.245 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={WHITE=1, BLUE=1, BLACK=1}, tokensToReturn=null]
+2025-12-30 00:12:04.247 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 25 | Current Player: gemini-3-pro (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:2 GRN:4 RED:4 BLK:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_24] WHT 1pt GRN:4                      |
+    [L1_20] WHT 0pts WHT:3 BLU:1 BLK:1         | [L1_10] BLU 0pts WHT:1 GRN:1 RED:2 BLK:1  
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_57] WHT 2pts RED:5                     | [L2_51] BLU 2pts BLU:5                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3  
+
+[PLAYERS]
+gemini-3-pro (P0) (Current):                           | gpt-5.2 (P1):
+  Score: 0 | Cards: 0                                  |   Score: 10 | Cards: 9
+  Tokens:                                              |   Tokens: WHT:1 BLU:2 BLK:2
+  Bonuses: {}                                          |   Bonuses: {WHT:1 BLU:2 GRN:1 RED:1 BLK:4}
+  Reserved: None                                       |   Reserved: [L3_82] WHT 5pts WHT:3 BLK:7
+
+======================================================================================
+
+2025-12-30 00:12:04.247 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 25 - Player 0's move
+2025-12-30 00:12:04.247 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {}
+2025-12-30 00:12:04.304 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 1 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-30 00:12:04.331 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 2 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-30 00:12:04.355 [main] ERROR com.aisplendor.engine.GameSimulator - Player 0 failed to provide a valid action after 3 retries. Last error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}. Skipping turn.
+2025-12-30 00:12:04.357 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 25 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:2 GRN:4 RED:4 BLK:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_24] WHT 1pt GRN:4                      |
+    [L1_20] WHT 0pts WHT:3 BLU:1 BLK:1         | [L1_10] BLU 0pts WHT:1 GRN:1 RED:2 BLK:1  
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_57] WHT 2pts RED:5                     | [L2_51] BLU 2pts BLU:5                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3  
+
+[PLAYERS]
+gemini-3-pro (P0):                                     | gpt-5.2 (P1) (Current):
+  Score: 0 | Cards: 0                                  |   Score: 10 | Cards: 9
+  Tokens:                                              |   Tokens: WHT:1 BLU:2 BLK:2
+  Bonuses: {}                                          |   Bonuses: {WHT:1 BLU:2 GRN:1 RED:1 BLK:4}
+  Reserved: None                                       |   Reserved: [L3_82] WHT 5pts WHT:3 BLK:7
+
+======================================================================================
+
+2025-12-30 00:12:04.357 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 25 - Player 1's move
+2025-12-30 00:12:04.357 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 10, Budget: {WHT=2, BLU=4, GRN=1, RED=1, BLK=6}
+2025-12-30 00:12:21.126 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: We’re at 10 prestige with reserved L3_82 (5 pts) as the winning purchase. L3_82 costs W3/Bk7; with our bonuses (WHITE 1, BLACK 4) the remaining cost is W2 + BLACK 3. Current tokens are WHITE 1 and BLACK 2, so we are short exactly +1 WHITE and +1 BLACK. Since the bank has only 2 BLACK, we cannot take 2 BLACK (needs 4+ available), so the optimal move is a 3-different take including WHITE and BLACK plus a harmless filler. Take WHITE + BLACK + RED. This keeps us under the 10-token limit (5 -> 8) and sets up buying L3_82 next turn.
+2025-12-30 00:12:21.126 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={WHITE=1, RED=1, BLACK=1}, tokensToReturn=null]
+2025-12-30 00:12:21.126 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 26 | Current Player: gemini-3-pro (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:2 GRN:4 RED:3 BLK:1 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_24] WHT 1pt GRN:4                      |
+    [L1_20] WHT 0pts WHT:3 BLU:1 BLK:1         | [L1_10] BLU 0pts WHT:1 GRN:1 RED:2 BLK:1  
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_57] WHT 2pts RED:5                     | [L2_51] BLU 2pts BLU:5                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3  
+
+[PLAYERS]
+gemini-3-pro (P0) (Current):                           | gpt-5.2 (P1):
+  Score: 0 | Cards: 0                                  |   Score: 10 | Cards: 9
+  Tokens:                                              |   Tokens: WHT:2 BLU:2 RED:1 BLK:3
+  Bonuses: {}                                          |   Bonuses: {WHT:1 BLU:2 GRN:1 RED:1 BLK:4}
+  Reserved: None                                       |   Reserved: [L3_82] WHT 5pts WHT:3 BLK:7
+
+======================================================================================
+
+2025-12-30 00:12:21.126 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 26 - Player 0's move
+2025-12-30 00:12:21.127 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {}
+2025-12-30 00:12:21.152 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 1 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-30 00:12:21.174 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 2 for Player 0. Error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}
+2025-12-30 00:12:21.199 [main] ERROR com.aisplendor.engine.GameSimulator - Player 0 failed to provide a valid action after 3 retries. Last error: Unexpected error: API request failed with status 400: {"error":{"message":"google/gemini-3-pro is not a valid model ID","code":400},"user_id":"user_37CaaOCvSS1iQHBWq3fr6M3CRSi"}. Skipping turn.
+2025-12-30 00:12:21.201 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 26 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:2 GRN:4 RED:3 BLK:1 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_24] WHT 1pt GRN:4                      |
+    [L1_20] WHT 0pts WHT:3 BLU:1 BLK:1         | [L1_10] BLU 0pts WHT:1 GRN:1 RED:2 BLK:1  
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_57] WHT 2pts RED:5                     | [L2_51] BLU 2pts BLU:5                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3  
+
+[PLAYERS]
+gemini-3-pro (P0):                                     | gpt-5.2 (P1) (Current):
+  Score: 0 | Cards: 0                                  |   Score: 10 | Cards: 9
+  Tokens:                                              |   Tokens: WHT:2 BLU:2 RED:1 BLK:3
+  Bonuses: {}                                          |   Bonuses: {WHT:1 BLU:2 GRN:1 RED:1 BLK:4}
+  Reserved: None                                       |   Reserved: [L3_82] WHT 5pts WHT:3 BLK:7
+
+======================================================================================
+
+2025-12-30 00:12:21.201 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 26 - Player 1's move
+2025-12-30 00:12:21.201 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 10, Budget: {WHT=3, BLU=4, GRN=1, RED=2, BLK=7}
+2025-12-30 00:12:31.585 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Our reserved L3_82 is available to purchase and is the direct winning move. L3_82 costs WHITE 3 and BLACK 7; with our bonuses (WHITE+1, BLACK+4) the remaining cost is WHITE 2 + BLACK 3. Our current tokens include exactly WHITE 2 and BLACK 3, so we can buy it immediately without gold, gaining 5 prestige and moving from 10 to 15 to win. No token-limit issues and no reason to delay.
+2025-12-30 00:12:31.585 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L3_82]
+2025-12-30 00:12:31.585 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 27 | Current Player: gemini-3-pro (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:2 GRN:4 RED:3 BLK:4 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_24] WHT 1pt GRN:4                      |
+    [L1_20] WHT 0pts WHT:3 BLU:1 BLK:1         | [L1_10] BLU 0pts WHT:1 GRN:1 RED:2 BLK:1  
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_57] WHT 2pts RED:5                     | [L2_51] BLU 2pts BLU:5                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_84] GRN 4pts BLU:7                     |
+    [L3_81] WHT 4pts WHT:3 RED:3 BLK:6         | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3  
+
+[PLAYERS]
+gemini-3-pro (P0) (Current):                           | gpt-5.2 (P1):
+  Score: 0 | Cards: 0                                  |   Score: 15 | Cards: 10
+  Tokens:                                              |   Tokens: BLU:2 RED:1
+  Bonuses: {}                                          |   Bonuses: {WHT:2 BLU:2 GRN:1 RED:1 BLK:4}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+2025-12-30 00:12:31.585 [main] INFO  com.aisplendor.engine.GameSimulator - --- Game Over ---
+2025-12-30 00:12:31.585 [main] INFO  com.aisplendor.engine.GameSimulator - Winner: Player 1 won on points.
+2025-12-30 00:12:31.585 [main] INFO  com.aisplendor.engine.GameSimulator - Player 0: 0 points
+2025-12-30 00:12:31.585 [main] INFO  com.aisplendor.engine.GameSimulator - Player 1: 15 points
+2025-12-30 00:12:31.591 [main] INFO  c.aisplendor.service.GameEventLogger - Game event log closed: logs\20251229_235321.json

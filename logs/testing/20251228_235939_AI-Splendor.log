@@ -1,0 +1,2 @@
+2025-12-28 23:59:39.788 [main] INFO  c.aisplendor.service.GameLogReader - Resuming from turn 1 (after last successful action)
+2025-12-28 23:59:39.807 [main] INFO  c.aisplendor.service.GameLogReader - Resuming from turn 1 (last available state)

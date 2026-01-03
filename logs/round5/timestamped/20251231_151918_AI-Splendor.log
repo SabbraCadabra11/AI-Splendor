@@ -1,0 +1,2029 @@
+2025-12-31 15:19:18.181 [main] INFO  com.aisplendor.engine.GameSimulator - Configured Player 0 with: google/gemini-3-flash-preview (reasoning: high)
+2025-12-31 15:19:18.181 [main] INFO  com.aisplendor.engine.GameSimulator - Configured Player 1 with: openai/gpt-5.2 (reasoning: high)
+2025-12-31 15:19:18.181 [main] INFO  com.aisplendor.engine.GameSimulator - Semi-Auto Mode: DISABLED
+2025-12-31 15:19:18.181 [main] INFO  com.aisplendor.engine.GameSimulator - Debug Mode: DISABLED
+2025-12-31 15:19:18.449 [main] INFO  com.aisplendor.engine.GameSimulator - --- Game Started ---
+2025-12-31 15:19:18.465 [main] INFO  c.aisplendor.service.GameEventLogger - Game event log created: logs\20251231_151918.json
+2025-12-31 15:19:18.527 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 1 | Current Player: gemini-3-flash-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:4 GRN:4 RED:4 BLK:4 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_15] BLU 0pts BLK:3                     | [L1_21] WHT 0pts RED:2 BLK:1               |
+    [L1_29] GRN 0pts WHT:2 BLU:1               | [L1_23] WHT 0pts BLU:3                    
+L2: [L2_50] BLU 2pts WHT:2 RED:1 BLK:4         | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         |
+    [L2_58] WHT 3pts WHT:6                     | [L2_68] RED 2pts WHT:3 BLK:5              
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gemini-3-flash-preview (P0) (Current):                 | gpt-5.2 (P1):
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 0
+  Tokens:                                              |   Tokens: 
+  Bonuses: {}                                          |   Bonuses: {}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+2025-12-31 15:19:18.527 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 1 - Player 0's move
+2025-12-31 15:19:18.529 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {}
+2025-12-31 15:19:26.601 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: In the opening turn, I want to build a flexible base of tokens. Checking the Level 1 cards, L1_21 (cost 2 RED, 1 BLACK) and L1_29 (cost 2 WHITE, 1 BLUE) are accessible. Taking WHITE, RED, and BLACK allows me to start preparing for both while keeping my options open for L1_15 (3 BLACK) or future cards. I am taking one of each to avoid hitting the 10-token limit too quickly and to maintain flexibility.
+2025-12-31 15:19:26.601 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={WHITE=1, RED=1, BLACK=1}, tokensToReturn=null]
+2025-12-31 15:19:26.619 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 1 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:4 GRN:4 RED:3 BLK:3 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_15] BLU 0pts BLK:3                     | [L1_21] WHT 0pts RED:2 BLK:1               |
+    [L1_29] GRN 0pts WHT:2 BLU:1               | [L1_23] WHT 0pts BLU:3                    
+L2: [L2_50] BLU 2pts WHT:2 RED:1 BLK:4         | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         |
+    [L2_58] WHT 3pts WHT:6                     | [L2_68] RED 2pts WHT:3 BLK:5              
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gemini-3-flash-preview (P0):                           | gpt-5.2 (P1) (Current):
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 0
+  Tokens: WHT:1 RED:1 BLK:1                            |   Tokens: 
+  Bonuses: {}                                          |   Bonuses: {}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+2025-12-31 15:19:26.619 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 1 - Player 1's move
+2025-12-31 15:19:26.619 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {}
+2025-12-31 15:20:26.127 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Key early denial + fast self-buy setup: L1_29 (GREEN bonus) is the cheapest/most immediately attainable engine card on the board (cost 2W+1B) and Player 0 already has 1 WHITE, so they could realistically buy it quickly. By reserving it now I both deny that line and gain a GOLD token. Next turn I can likely take WHITE+BLUE+any and immediately purchase the reserved L1_29 using GOLD as the second WHITE, giving me an early GREEN bonus toward nobles (notably N8/N9).
+2025-12-31 15:20:26.127 [main] INFO  com.aisplendor.engine.GameSimulator - Action: ReserveCardAction[cardId=L1_29, deckLevel=null, tokensToReturn=null]
+2025-12-31 15:20:26.131 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 2 | Current Player: gemini-3-flash-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:4 GRN:4 RED:3 BLK:3 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_15] BLU 0pts BLK:3                     | [L1_21] WHT 0pts RED:2 BLK:1               |
+    [L1_23] WHT 0pts BLU:3                     | [L1_17] WHT 0pts BLU:1 GRN:1 RED:1 BLK:1  
+L2: [L2_50] BLU 2pts WHT:2 RED:1 BLK:4         | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         |
+    [L2_58] WHT 3pts WHT:6                     | [L2_68] RED 2pts WHT:3 BLK:5              
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gemini-3-flash-preview (P0) (Current):                 | gpt-5.2 (P1):
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 0
+  Tokens: WHT:1 RED:1 BLK:1                            |   Tokens: GLD:1
+  Bonuses: {}                                          |   Bonuses: {}
+  Reserved: None                                       |   Reserved: [L1_29] GRN 0pts WHT:2 BLU:1
+
+======================================================================================
+
+2025-12-31 15:20:26.131 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 2 - Player 0's move
+2025-12-31 15:20:26.134 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=1, RED=1, BLK=1}
+2025-12-31 15:20:36.107 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I am focusing on acquiring a base for my production engine. By taking BLUE, GREEN, and RED tokens this turn, I will have a total of 1 WHITE, 1 BLUE, 1 GREEN, 2 RED, and 1 BLACK. This allows me to purchase either L1_21 (cost 2 RED, 1 BLACK) or L1_17 (cost 1 BLUE, 1 GREEN, 1 RED, 1 BLACK) on the next turn, providing excellent flexibility. Both cards provide a WHITE bonus, which is helpful for several Level 2 cards currently on the board and contributes toward multiple Nobles (N10 and N8).
+2025-12-31 15:20:36.107 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={BLUE=1, GREEN=1, RED=1}, tokensToReturn=null]
+2025-12-31 15:20:36.109 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 2 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:3 GRN:3 RED:2 BLK:3 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_15] BLU 0pts BLK:3                     | [L1_21] WHT 0pts RED:2 BLK:1               |
+    [L1_23] WHT 0pts BLU:3                     | [L1_17] WHT 0pts BLU:1 GRN:1 RED:1 BLK:1  
+L2: [L2_50] BLU 2pts WHT:2 RED:1 BLK:4         | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         |
+    [L2_58] WHT 3pts WHT:6                     | [L2_68] RED 2pts WHT:3 BLK:5              
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gemini-3-flash-preview (P0):                           | gpt-5.2 (P1) (Current):
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 0
+  Tokens: WHT:1 BLU:1 GRN:1 RED:2 BLK:1                |   Tokens: GLD:1
+  Bonuses: {}                                          |   Bonuses: {}
+  Reserved: None                                       |   Reserved: [L1_29] GRN 0pts WHT:2 BLU:1
+
+======================================================================================
+
+2025-12-31 15:20:36.110 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 2 - Player 1's move
+2025-12-31 15:20:36.110 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {GLD=1}
+2025-12-31 15:20:50.356 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I want to purchase my reserved L1_29 (cost 2W+1B) as fast as possible. With my existing 1 GOLD, I only need to collect 1 WHITE and 1 BLUE; GOLD can substitute for the second WHITE. I’ll take WHITE and BLUE now, plus BLACK as the third different color to start flexibility toward other L1 pickups (e.g., L1_15 needing BLACK) without overcommitting scarce RED. Token total will be 4, safely under the 10-token limit.
+2025-12-31 15:20:50.357 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={WHITE=1, BLUE=1, BLACK=1}, tokensToReturn=null]
+2025-12-31 15:20:50.358 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 3 | Current Player: gemini-3-flash-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:2 GRN:3 RED:2 BLK:2 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_15] BLU 0pts BLK:3                     | [L1_21] WHT 0pts RED:2 BLK:1               |
+    [L1_23] WHT 0pts BLU:3                     | [L1_17] WHT 0pts BLU:1 GRN:1 RED:1 BLK:1  
+L2: [L2_50] BLU 2pts WHT:2 RED:1 BLK:4         | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         |
+    [L2_58] WHT 3pts WHT:6                     | [L2_68] RED 2pts WHT:3 BLK:5              
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gemini-3-flash-preview (P0) (Current):                 | gpt-5.2 (P1):
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 0
+  Tokens: WHT:1 BLU:1 GRN:1 RED:2 BLK:1                |   Tokens: WHT:1 BLU:1 BLK:1 GLD:1
+  Bonuses: {}                                          |   Bonuses: {}
+  Reserved: None                                       |   Reserved: [L1_29] GRN 0pts WHT:2 BLU:1
+
+======================================================================================
+
+2025-12-31 15:20:50.358 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 3 - Player 0's move
+2025-12-31 15:20:50.358 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=1, BLU=1, GRN=1, RED=2, BLK=1}
+2025-12-31 15:21:11.805 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I have collected enough tokens to purchase either L1_21 or L1_17. Both cards provide a WHITE bonus, which is a strong strategic choice given that two currently visible Nobles (N10 and N8) and several Level 2 cards (including the 3-point L2_58) require WHITE. I will purchase L1_21 (cost 2 RED, 1 BLACK) because it is more token-efficient than L1_17 (cost 4 tokens total) and leaves me with a diverse set of remaining tokens (1 WHITE, 1 BLUE, 1 GREEN) to pivot toward my next purchase.
+2025-12-31 15:21:11.805 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L1_21]
+2025-12-31 15:21:11.808 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 3 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:2 GRN:3 RED:4 BLK:3 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_15] BLU 0pts BLK:3                     | [L1_23] WHT 0pts BLU:3                     |
+    [L1_17] WHT 0pts BLU:1 GRN:1 RED:1 BLK:1   | [L1_7] BLK 0pts GRN:3                     
+L2: [L2_50] BLU 2pts WHT:2 RED:1 BLK:4         | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         |
+    [L2_58] WHT 3pts WHT:6                     | [L2_68] RED 2pts WHT:3 BLK:5              
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gemini-3-flash-preview (P0):                           | gpt-5.2 (P1) (Current):
+  Score: 0 | Cards: 1                                  |   Score: 0 | Cards: 0
+  Tokens: WHT:1 BLU:1 GRN:1                            |   Tokens: WHT:1 BLU:1 BLK:1 GLD:1
+  Bonuses: {WHT:1}                                     |   Bonuses: {}
+  Reserved: None                                       |   Reserved: [L1_29] GRN 0pts WHT:2 BLU:1
+
+======================================================================================
+
+2025-12-31 15:21:11.808 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 3 - Player 1's move
+2025-12-31 15:21:11.808 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=1, BLU=1, BLK=1, GLD=1}
+2025-12-31 15:21:17.541 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I can immediately buy my reserved L1_29 (cost 2 WHITE + 1 BLUE). With my current tokens (WHITE 1, BLUE 1, GOLD 1), I’ll pay WHITE 1 + BLUE 1 + GOLD 1 (as the second WHITE). This converts my early tempo into a permanent GREEN bonus, advancing my engine toward nobles (notably N8/N9) while keeping token count low for flexibility next turn.
+2025-12-31 15:21:17.541 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L1_29]
+2025-12-31 15:21:17.543 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 4 | Current Player: gemini-3-flash-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:3 GRN:3 RED:4 BLK:3 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_15] BLU 0pts BLK:3                     | [L1_23] WHT 0pts BLU:3                     |
+    [L1_17] WHT 0pts BLU:1 GRN:1 RED:1 BLK:1   | [L1_7] BLK 0pts GRN:3                     
+L2: [L2_50] BLU 2pts WHT:2 RED:1 BLK:4         | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         |
+    [L2_58] WHT 3pts WHT:6                     | [L2_68] RED 2pts WHT:3 BLK:5              
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gemini-3-flash-preview (P0) (Current):                 | gpt-5.2 (P1):
+  Score: 0 | Cards: 1                                  |   Score: 0 | Cards: 1
+  Tokens: WHT:1 BLU:1 GRN:1                            |   Tokens: BLK:1
+  Bonuses: {WHT:1}                                     |   Bonuses: {GRN:1}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+2025-12-31 15:21:17.543 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 4 - Player 0's move
+2025-12-31 15:21:17.543 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=2, BLU=1, GRN=1}
+2025-12-31 15:21:40.635 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I am focusing on acquiring a second WHITE bonus to build my engine and progress toward the N10 and N8 Nobles. I currently have 1 WHITE, 1 BLUE, and 1 GREEN token. By taking 1 BLUE, 1 RED, and 1 BLACK token this turn, I will have the specific combination required (1 BLUE, 1 GREEN, 1 RED, 1 BLACK) to purchase L1_17 next turn. This strategy efficiently expands my production base while keeping my token count well within the limit and setting me up for future high-value WHITE-based Level 2 cards like L2_58.
+2025-12-31 15:21:40.635 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={BLUE=1, RED=1, BLACK=1}, tokensToReturn=null]
+2025-12-31 15:21:40.635 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 4 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:2 GRN:3 RED:3 BLK:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_15] BLU 0pts BLK:3                     | [L1_23] WHT 0pts BLU:3                     |
+    [L1_17] WHT 0pts BLU:1 GRN:1 RED:1 BLK:1   | [L1_7] BLK 0pts GRN:3                     
+L2: [L2_50] BLU 2pts WHT:2 RED:1 BLK:4         | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         |
+    [L2_58] WHT 3pts WHT:6                     | [L2_68] RED 2pts WHT:3 BLK:5              
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gemini-3-flash-preview (P0):                           | gpt-5.2 (P1) (Current):
+  Score: 0 | Cards: 1                                  |   Score: 0 | Cards: 1
+  Tokens: WHT:1 BLU:2 GRN:1 RED:1 BLK:1                |   Tokens: BLK:1
+  Bonuses: {WHT:1}                                     |   Bonuses: {GRN:1}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+2025-12-31 15:21:40.635 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 4 - Player 1's move
+2025-12-31 15:21:40.635 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {GRN=1, BLK=1}
+2025-12-31 15:21:57.711 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: L1_17 is the key immediate-tempo card on the table: Player 0 can already afford it right now (they have B+G+R+K available), so reserving it both denies them a fast WHITE bonus and gives me a GOLD token. It’s also very efficient for me because my existing GREEN bonus reduces its GREEN cost by 1, meaning I’ll be able to buy it soon with just BLUE+RED+BLACK (or GOLD as a substitute), advancing toward nobles (especially N8) while keeping flexibility.
+2025-12-31 15:21:57.711 [main] INFO  com.aisplendor.engine.GameSimulator - Action: ReserveCardAction[cardId=L1_17, deckLevel=null, tokensToReturn=null]
+2025-12-31 15:21:57.712 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 5 | Current Player: gemini-3-flash-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:2 GRN:3 RED:3 BLK:2 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_15] BLU 0pts BLK:3                     | [L1_23] WHT 0pts BLU:3                     |
+    [L1_7] BLK 0pts GRN:3                      | [L1_2] BLK 0pts WHT:1 BLU:2 GRN:1 RED:1   
+L2: [L2_50] BLU 2pts WHT:2 RED:1 BLK:4         | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         |
+    [L2_58] WHT 3pts WHT:6                     | [L2_68] RED 2pts WHT:3 BLK:5              
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gemini-3-flash-preview (P0) (Current):                 | gpt-5.2 (P1):
+  Score: 0 | Cards: 1                                  |   Score: 0 | Cards: 1
+  Tokens: WHT:1 BLU:2 GRN:1 RED:1 BLK:1                |   Tokens: BLK:1 GLD:1
+  Bonuses: {WHT:1}                                     |   Bonuses: {GRN:1}
+  Reserved: None                                       |   Reserved: [L1_17] WHT 0pts BLU:1 GRN:1 RED:1 BLK:1
+
+======================================================================================
+
+2025-12-31 15:21:57.712 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 5 - Player 0's move
+2025-12-31 15:21:57.712 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=2, BLU=2, GRN=1, RED=1, BLK=1}
+2025-12-31 15:22:09.405 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Opponent 1 reserved L1_17, blocking my previous plan to acquire that specific WHITE bonus card. I will pivot by purchasing L1_2 from the board. The card costs 1 WHITE, 2 BLUE, 1 GREEN, and 1 RED. My existing WHITE bonus from L1_21 reduces the cost to 0 WHITE, 2 BLUE, 1 GREEN, and 1 RED tokens. This purchase is a highly efficient use of my current token supply, adds a permanent BLACK bonus to my production engine, and brings me closer to the N10 Noble requirements (3 WHITE, 3 RED, 3 BLACK).
+2025-12-31 15:22:09.405 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L1_2]
+2025-12-31 15:22:09.407 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 5 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:4 GRN:4 RED:4 BLK:2 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_15] BLU 0pts BLK:3                     | [L1_23] WHT 0pts BLU:3                     |
+    [L1_7] BLK 0pts GRN:3                      | [L1_6] BLK 0pts WHT:2 GRN:2               
+L2: [L2_50] BLU 2pts WHT:2 RED:1 BLK:4         | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         |
+    [L2_58] WHT 3pts WHT:6                     | [L2_68] RED 2pts WHT:3 BLK:5              
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gemini-3-flash-preview (P0):                           | gpt-5.2 (P1) (Current):
+  Score: 0 | Cards: 2                                  |   Score: 0 | Cards: 1
+  Tokens: WHT:1 BLK:1                                  |   Tokens: BLK:1 GLD:1
+  Bonuses: {WHT:1 BLK:1}                               |   Bonuses: {GRN:1}
+  Reserved: None                                       |   Reserved: [L1_17] WHT 0pts BLU:1 GRN:1 RED:1 BLK:1
+
+======================================================================================
+
+2025-12-31 15:22:09.407 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 5 - Player 1's move
+2025-12-31 15:22:09.407 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {GRN=1, BLK=1, GLD=1}
+2025-12-31 15:22:44.196 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I can’t purchase anything this turn (including my reserved L1_17), so I should take tokens to enable a strong buy next turn. My reserved L1_17 (WHITE bonus) is efficiently buyable for me because my existing GREEN bonus reduces its cost: instead of B+G+R+K, I effectively need just BLUE 1 + RED 1 + BLACK 1. I already have 1 BLACK token, so taking BLUE + RED + BLACK sets up a clean L1_17 purchase next turn while also grabbing a scarce BLACK token (only 2 in the bank) to constrain the opponent and help my future access to black-heavy midgame cards.
+2025-12-31 15:22:44.196 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={BLUE=1, RED=1, BLACK=1}, tokensToReturn=null]
+2025-12-31 15:22:44.197 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 6 | Current Player: gemini-3-flash-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:3 GRN:4 RED:3 BLK:1 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_15] BLU 0pts BLK:3                     | [L1_23] WHT 0pts BLU:3                     |
+    [L1_7] BLK 0pts GRN:3                      | [L1_6] BLK 0pts WHT:2 GRN:2               
+L2: [L2_50] BLU 2pts WHT:2 RED:1 BLK:4         | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         |
+    [L2_58] WHT 3pts WHT:6                     | [L2_68] RED 2pts WHT:3 BLK:5              
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gemini-3-flash-preview (P0) (Current):                 | gpt-5.2 (P1):
+  Score: 0 | Cards: 2                                  |   Score: 0 | Cards: 1
+  Tokens: WHT:1 BLK:1                                  |   Tokens: BLU:1 RED:1 BLK:2 GLD:1
+  Bonuses: {WHT:1 BLK:1}                               |   Bonuses: {GRN:1}
+  Reserved: None                                       |   Reserved: [L1_17] WHT 0pts BLU:1 GRN:1 RED:1 BLK:1
+
+======================================================================================
+
+2025-12-31 15:22:44.197 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 6 - Player 0's move
+2025-12-31 15:22:44.197 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=2, BLK=2}
+2025-12-31 15:23:11.049 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I am continuing to build my production engine with a long-term goal of qualifying for the N10 Noble (3 WHITE, 3 RED, 3 BLACK). Currently, I have one WHITE and one BLACK bonus. To progress, I will target L1_23 (WHITE bonus), L1_7 (BLACK bonus), or L1_6 (BLACK bonus). These cards will broaden my bonus base towards the Noble requirement. To afford these, I need BLUE and GREEN tokens. I will take 1 WHITE, 1 BLUE, and 1 GREEN token this turn. This keeps my token count low at 5 and provides the flexibility to pursue multiple Level 1 cards on subsequent turns while monitoring the limited token supply on the board.
+2025-12-31 15:23:11.049 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={WHITE=1, BLUE=1, GREEN=1}, tokensToReturn=null]
+2025-12-31 15:23:11.049 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 6 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:2 GRN:3 RED:3 BLK:1 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_15] BLU 0pts BLK:3                     | [L1_23] WHT 0pts BLU:3                     |
+    [L1_7] BLK 0pts GRN:3                      | [L1_6] BLK 0pts WHT:2 GRN:2               
+L2: [L2_50] BLU 2pts WHT:2 RED:1 BLK:4         | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         |
+    [L2_58] WHT 3pts WHT:6                     | [L2_68] RED 2pts WHT:3 BLK:5              
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gemini-3-flash-preview (P0):                           | gpt-5.2 (P1) (Current):
+  Score: 0 | Cards: 2                                  |   Score: 0 | Cards: 1
+  Tokens: WHT:2 BLU:1 GRN:1 BLK:1                      |   Tokens: BLU:1 RED:1 BLK:2 GLD:1
+  Bonuses: {WHT:1 BLK:1}                               |   Bonuses: {GRN:1}
+  Reserved: None                                       |   Reserved: [L1_17] WHT 0pts BLU:1 GRN:1 RED:1 BLK:1
+
+======================================================================================
+
+2025-12-31 15:23:11.049 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 6 - Player 1's move
+2025-12-31 15:23:11.049 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {BLU=1, GRN=1, RED=1, BLK=2, GLD=1}
+2025-12-31 15:23:24.497 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I can purchase my reserved L1_17 now. Its cost is BLUE 1 + GREEN 1 + RED 1 + BLACK 1, and my existing GREEN bonus reduces the GREEN requirement by 1, so I only need to pay BLUE 1 + RED 1 + BLACK 1. I have exactly BLUE 1, RED 1, and BLACK 2 available, so I’ll buy it by paying 1 BLUE, 1 RED, and 1 BLACK (keeping my remaining BLACK and GOLD). This converts tokens into a permanent WHITE bonus, accelerating my path toward nobles (notably N8/N10) and improves future purchasing efficiency.
+2025-12-31 15:23:24.497 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L1_17]
+2025-12-31 15:23:24.499 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 7 | Current Player: gemini-3-flash-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:3 GRN:3 RED:4 BLK:2 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_15] BLU 0pts BLK:3                     | [L1_23] WHT 0pts BLU:3                     |
+    [L1_7] BLK 0pts GRN:3                      | [L1_6] BLK 0pts WHT:2 GRN:2               
+L2: [L2_50] BLU 2pts WHT:2 RED:1 BLK:4         | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         |
+    [L2_58] WHT 3pts WHT:6                     | [L2_68] RED 2pts WHT:3 BLK:5              
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gemini-3-flash-preview (P0) (Current):                 | gpt-5.2 (P1):
+  Score: 0 | Cards: 2                                  |   Score: 0 | Cards: 2
+  Tokens: WHT:2 BLU:1 GRN:1 BLK:1                      |   Tokens: BLK:1 GLD:1
+  Bonuses: {WHT:1 BLK:1}                               |   Bonuses: {WHT:1 GRN:1}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+2025-12-31 15:23:24.499 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 7 - Player 0's move
+2025-12-31 15:23:24.499 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=3, BLU=1, GRN=1, BLK=2}
+2025-12-31 15:23:49.623 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I am currently focusing on expanding my production engine to qualify for the N10 and N8 Nobles. I already have one WHITE and one BLACK bonus. By taking 1 BLUE, 1 GREEN, and 1 BLACK token this turn, I will increase my total token count to 8 (2 WHITE, 2 BLUE, 2 GREEN, 0 RED, 2 BLACK). This set of tokens will allow me to purchase L1_6 (BLACK bonus) or L1_15 (BLUE bonus) on my next turn, further building my engine and moving me toward my strategic target of 15 points. No tokens need to be returned as my total remains within the limit of 10.
+2025-12-31 15:23:49.623 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={BLUE=1, GREEN=1, BLACK=1}, tokensToReturn=null]
+2025-12-31 15:23:49.624 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 7 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:2 GRN:2 RED:4 BLK:1 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_15] BLU 0pts BLK:3                     | [L1_23] WHT 0pts BLU:3                     |
+    [L1_7] BLK 0pts GRN:3                      | [L1_6] BLK 0pts WHT:2 GRN:2               
+L2: [L2_50] BLU 2pts WHT:2 RED:1 BLK:4         | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         |
+    [L2_58] WHT 3pts WHT:6                     | [L2_68] RED 2pts WHT:3 BLK:5              
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gemini-3-flash-preview (P0):                           | gpt-5.2 (P1) (Current):
+  Score: 0 | Cards: 2                                  |   Score: 0 | Cards: 2
+  Tokens: WHT:2 BLU:2 GRN:2 BLK:2                      |   Tokens: BLK:1 GLD:1
+  Bonuses: {WHT:1 BLK:1}                               |   Bonuses: {WHT:1 GRN:1}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+2025-12-31 15:23:49.624 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 7 - Player 1's move
+2025-12-31 15:23:49.624 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=1, GRN=1, BLK=1, GLD=1}
+2025-12-31 15:24:11.457 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Key tactical priority is denying Player 0 the immediate purchase of L1_15 (they effectively already can buy it with their BLACK bonus + 2 BLACK tokens), which would give them a crucial BLUE bonus toward nobles. Reserving L1_15 blocks that line and also gives me +1 GOLD (bank has plenty), letting me buy L1_15 next turn by paying BLACK(1) + GOLD(2) for its 3-BLACK cost. That secures my first BLUE bonus, aligning my engine toward Noble N8 (W3/G3/B3) and N9.
+2025-12-31 15:24:11.457 [main] INFO  com.aisplendor.engine.GameSimulator - Action: ReserveCardAction[cardId=L1_15, deckLevel=null, tokensToReturn=null]
+2025-12-31 15:24:11.461 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 8 | Current Player: gemini-3-flash-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:2 GRN:2 RED:4 BLK:1 GLD:3
+
+[FACE-UP CARDS]
+L1: [L1_23] WHT 0pts BLU:3                     | [L1_7] BLK 0pts GRN:3                      |
+    [L1_6] BLK 0pts WHT:2 GRN:2                | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1        
+L2: [L2_50] BLU 2pts WHT:2 RED:1 BLK:4         | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         |
+    [L2_58] WHT 3pts WHT:6                     | [L2_68] RED 2pts WHT:3 BLK:5              
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gemini-3-flash-preview (P0) (Current):                 | gpt-5.2 (P1):
+  Score: 0 | Cards: 2                                  |   Score: 0 | Cards: 2
+  Tokens: WHT:2 BLU:2 GRN:2 BLK:2                      |   Tokens: BLK:1 GLD:2
+  Bonuses: {WHT:1 BLK:1}                               |   Bonuses: {WHT:1 GRN:1}
+  Reserved: None                                       |   Reserved: [L1_15] BLU 0pts BLK:3
+
+======================================================================================
+
+2025-12-31 15:24:11.461 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 8 - Player 0's move
+2025-12-31 15:24:11.462 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=3, BLU=2, GRN=2, BLK=3}
+2025-12-31 15:24:21.413 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I have enough tokens (2 WHITE and 2 GREEN) to purchase L1_6, especially since my existing WHITE bonus reduces the cost to 1 WHITE and 2 GREEN tokens. Purchasing L1_6 adds a second BLACK bonus to my production engine, bringing me closer to the N10 Noble (3 WHITE, 3 BLACK, 3 RED). Buying a card now also prevents me from hitting the 10-token limit and ensures I am building permanent bonuses rather than just accumulating temporary tokens.
+2025-12-31 15:24:21.413 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L1_6]
+2025-12-31 15:24:21.413 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 8 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:2 GRN:4 RED:4 BLK:1 GLD:3
+
+[FACE-UP CARDS]
+L1: [L1_23] WHT 0pts BLU:3                     | [L1_7] BLK 0pts GRN:3                      |
+    [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         | [L1_5] BLK 0pts GRN:2 RED:1               
+L2: [L2_50] BLU 2pts WHT:2 RED:1 BLK:4         | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         |
+    [L2_58] WHT 3pts WHT:6                     | [L2_68] RED 2pts WHT:3 BLK:5              
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gemini-3-flash-preview (P0):                           | gpt-5.2 (P1) (Current):
+  Score: 0 | Cards: 3                                  |   Score: 0 | Cards: 2
+  Tokens: WHT:1 BLU:2 BLK:2                            |   Tokens: BLK:1 GLD:2
+  Bonuses: {WHT:1 BLK:2}                               |   Bonuses: {WHT:1 GRN:1}
+  Reserved: None                                       |   Reserved: [L1_15] BLU 0pts BLK:3
+
+======================================================================================
+
+2025-12-31 15:24:21.413 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 8 - Player 1's move
+2025-12-31 15:24:21.413 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=1, GRN=1, BLK=1, GLD=2}
+2025-12-31 15:24:30.523 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Best conversion this turn is to purchase my reserved L1_15 (BLUE bonus). It costs 3 BLACK; I can pay with BLACK 1 + GOLD 2 (wilds) exactly, and I have no other meaningful purchases available from the face-up market. This secures my first BLUE bonus toward nobles (especially N8/N9) while reducing my token clutter and keeping tempo.
+2025-12-31 15:24:30.523 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L1_15]
+2025-12-31 15:24:30.523 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 9 | Current Player: gemini-3-flash-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:2 GRN:4 RED:4 BLK:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_23] WHT 0pts BLU:3                     | [L1_7] BLK 0pts GRN:3                      |
+    [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         | [L1_5] BLK 0pts GRN:2 RED:1               
+L2: [L2_50] BLU 2pts WHT:2 RED:1 BLK:4         | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         |
+    [L2_58] WHT 3pts WHT:6                     | [L2_68] RED 2pts WHT:3 BLK:5              
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gemini-3-flash-preview (P0) (Current):                 | gpt-5.2 (P1):
+  Score: 0 | Cards: 3                                  |   Score: 0 | Cards: 3
+  Tokens: WHT:1 BLU:2 BLK:2                            |   Tokens: 
+  Bonuses: {WHT:1 BLK:2}                               |   Bonuses: {WHT:1 BLU:1 GRN:1}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+2025-12-31 15:24:30.523 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 9 - Player 0's move
+2025-12-31 15:24:30.523 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=2, BLU=2, BLK=4}
+2025-12-31 15:25:12.438 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: My current production engine consists of 1 WHITE and 2 BLACK bonuses. My primary objective is to qualify for the N10 noble, which requires 3 WHITE, 3 BLACK, and 3 RED bonuses. To progress, I am targeting L1_23 (WHITE bonus) and L1_5 (BLACK bonus). L1_23 costs 3 BLUE tokens; I currently have 2 BLUE, so taking 1 more this turn will allow me to purchase it next turn. L1_5 costs 2 GREEN and 1 RED token; taking 1 GREEN and 1 RED now builds progress toward that requirement. My total token count will increase from 5 to 8, which is safely below the limit of 10. This move efficiently expands my engine while keeping my options open for future turns.
+2025-12-31 15:25:12.438 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={BLUE=1, GREEN=1, RED=1}, tokensToReturn=null]
+2025-12-31 15:25:12.439 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 9 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:1 GRN:3 RED:3 BLK:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_23] WHT 0pts BLU:3                     | [L1_7] BLK 0pts GRN:3                      |
+    [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         | [L1_5] BLK 0pts GRN:2 RED:1               
+L2: [L2_50] BLU 2pts WHT:2 RED:1 BLK:4         | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         |
+    [L2_58] WHT 3pts WHT:6                     | [L2_68] RED 2pts WHT:3 BLK:5              
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gemini-3-flash-preview (P0):                           | gpt-5.2 (P1) (Current):
+  Score: 0 | Cards: 3                                  |   Score: 0 | Cards: 3
+  Tokens: WHT:1 BLU:3 GRN:1 RED:1 BLK:2                |   Tokens: 
+  Bonuses: {WHT:1 BLK:2}                               |   Bonuses: {WHT:1 BLU:1 GRN:1}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+2025-12-31 15:25:12.439 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 9 - Player 1's move
+2025-12-31 15:25:12.439 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=1, BLU=1, GRN=1}
+2025-12-31 15:26:03.841 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Primary priority is tempo-denial: Player 0 is only 1 WHITE token away from purchasing L2_50 (2 prestige + BLUE bonus), since their 2 BLACK bonuses already reduce its BLACK requirement enough and they already hold the needed RED/BLACK tokens. If they take WHITE next turn, they likely convert immediately into 2 points and accelerate toward nobles (especially N9/N8). Reserving L2_50 removes that imminent scoring line and also grants me a GOLD token, which is valuable flexibility for future buys and helps me eventually acquire this strong 2-point BLUE card myself.
+2025-12-31 15:26:03.841 [main] INFO  com.aisplendor.engine.GameSimulator - Action: ReserveCardAction[cardId=L2_50, deckLevel=null, tokensToReturn=null]
+2025-12-31 15:26:03.843 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 10 | Current Player: gemini-3-flash-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:1 GRN:3 RED:3 BLK:2 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_23] WHT 0pts BLU:3                     | [L1_7] BLK 0pts GRN:3                      |
+    [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         | [L1_5] BLK 0pts GRN:2 RED:1               
+L2: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_58] WHT 3pts WHT:6                     |
+    [L2_68] RED 2pts WHT:3 BLK:5               | [L2_62] GRN 2pts BLU:5 GRN:3              
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gemini-3-flash-preview (P0) (Current):                 | gpt-5.2 (P1):
+  Score: 0 | Cards: 3                                  |   Score: 0 | Cards: 3
+  Tokens: WHT:1 BLU:3 GRN:1 RED:1 BLK:2                |   Tokens: GLD:1
+  Bonuses: {WHT:1 BLK:2}                               |   Bonuses: {WHT:1 BLU:1 GRN:1}
+  Reserved: None                                       |   Reserved: [L2_50] BLU 2pts WHT:2 RED:1 BLK:4
+
+======================================================================================
+
+2025-12-31 15:26:03.843 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 10 - Player 0's move
+2025-12-31 15:26:03.843 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=2, BLU=3, GRN=1, RED=1, BLK=4}
+2025-12-31 15:26:11.277 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I am purchasing L1_23 to increase my WHITE bonus production to 2. I have exactly 3 BLUE tokens, which matches the cost of the card. This purchase is efficient as it converts temporary tokens into a permanent bonus and moves me closer to qualifying for the N10 Noble (which requires 3 WHITE, 3 RED, and 3 BLACK bonuses) and the N8 Noble (3 WHITE, 3 GREEN, 3 BLUE). By spending tokens now, I also maintain a healthy inventory size of 5 tokens, allowing for future flexibility without hitting the 10-token limit.
+2025-12-31 15:26:11.277 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L1_23]
+2025-12-31 15:26:11.277 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 10 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:4 GRN:3 RED:3 BLK:2 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_5] BLK 0pts GRN:2 RED:1                | [L1_39] RED 0pts WHT:3                    
+L2: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_58] WHT 3pts WHT:6                     |
+    [L2_68] RED 2pts WHT:3 BLK:5               | [L2_62] GRN 2pts BLU:5 GRN:3              
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gemini-3-flash-preview (P0):                           | gpt-5.2 (P1) (Current):
+  Score: 0 | Cards: 4                                  |   Score: 0 | Cards: 3
+  Tokens: WHT:1 GRN:1 RED:1 BLK:2                      |   Tokens: GLD:1
+  Bonuses: {WHT:2 BLK:2}                               |   Bonuses: {WHT:1 BLU:1 GRN:1}
+  Reserved: None                                       |   Reserved: [L2_50] BLU 2pts WHT:2 RED:1 BLK:4
+
+======================================================================================
+
+2025-12-31 15:26:11.277 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 10 - Player 1's move
+2025-12-31 15:26:11.277 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=1, BLU=1, GRN=1, GLD=1}
+2025-12-31 15:27:06.761 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I can’t profitably purchase anything yet (including my reserved L2_50), so I should take tokens to set up an efficient engine buy next turn. The best near-term target is L1_5 (BLACK bonus) because with my existing GREEN bonus its cost becomes just GREEN 1 + RED 1, letting me convert a single turn of token-taking into a permanent BLACK discount that will directly reduce the heavy BLACK requirement on my reserved L2_50. While setting that up, I also want to grab a scarce BLACK token (only 2 in the bank) both for future flexibility and mild denial. Taking BLACK+GREEN+RED accomplishes all of this without exceeding the 10-token limit.
+2025-12-31 15:27:06.761 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={GREEN=1, RED=1, BLACK=1}, tokensToReturn=null]
+2025-12-31 15:27:06.761 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 11 | Current Player: gemini-3-flash-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:4 GRN:2 RED:2 BLK:1 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_5] BLK 0pts GRN:2 RED:1                | [L1_39] RED 0pts WHT:3                    
+L2: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_58] WHT 3pts WHT:6                     |
+    [L2_68] RED 2pts WHT:3 BLK:5               | [L2_62] GRN 2pts BLU:5 GRN:3              
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gemini-3-flash-preview (P0) (Current):                 | gpt-5.2 (P1):
+  Score: 0 | Cards: 4                                  |   Score: 0 | Cards: 3
+  Tokens: WHT:1 GRN:1 RED:1 BLK:2                      |   Tokens: GRN:1 RED:1 BLK:1 GLD:1
+  Bonuses: {WHT:2 BLK:2}                               |   Bonuses: {WHT:1 BLU:1 GRN:1}
+  Reserved: None                                       |   Reserved: [L2_50] BLU 2pts WHT:2 RED:1 BLK:4
+
+======================================================================================
+
+2025-12-31 15:27:06.761 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 11 - Player 0's move
+2025-12-31 15:27:06.761 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=3, GRN=1, RED=1, BLK=4}
+2025-12-31 15:27:29.994 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I am purchasing L1_39 to acquire my first RED bonus. This aligns with my primary strategy to qualify for the N10 Noble (3 WHITE, 3 RED, 3 BLACK). Since I already have 2 WHITE bonuses, the cost of 3 WHITE is reduced to only 1 WHITE token, which I currently possess. This is a highly efficient purchase that moves me closer to my strategic goal while only spending a single token.
+2025-12-31 15:27:29.994 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L1_39]
+2025-12-31 15:27:29.997 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 11 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:4 GRN:2 RED:2 BLK:1 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_5] BLK 0pts GRN:2 RED:1                | [L1_3] BLK 0pts WHT:2 BLU:2 RED:1         
+L2: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_58] WHT 3pts WHT:6                     |
+    [L2_68] RED 2pts WHT:3 BLK:5               | [L2_62] GRN 2pts BLU:5 GRN:3              
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gemini-3-flash-preview (P0):                           | gpt-5.2 (P1) (Current):
+  Score: 0 | Cards: 5                                  |   Score: 0 | Cards: 3
+  Tokens: GRN:1 RED:1 BLK:2                            |   Tokens: GRN:1 RED:1 BLK:1 GLD:1
+  Bonuses: {WHT:2 RED:1 BLK:2}                         |   Bonuses: {WHT:1 BLU:1 GRN:1}
+  Reserved: None                                       |   Reserved: [L2_50] BLU 2pts WHT:2 RED:1 BLK:4
+
+======================================================================================
+
+2025-12-31 15:27:29.997 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 11 - Player 1's move
+2025-12-31 15:27:29.997 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=1, BLU=1, GRN=2, RED=1, BLK=1, GLD=1}
+2025-12-31 15:27:56.542 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Best immediate conversion is buying L1_5 (it is face-up and affordable). L1_5 costs GREEN 2 + RED 1; with my existing GREEN bonus (1), the effective cost is GREEN 1 + RED 1, which I can pay exactly with my current tokens. This gains a BLACK bonus, directly reducing the heavy BLACK requirement on my reserved L2_50 and also progresses toward Noble N10 (needs BLACK). It also lowers my token count (avoiding inefficiency) while the opponent has no imminent point purchase to race this turn.
+2025-12-31 15:27:56.543 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L1_5]
+2025-12-31 15:27:56.543 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 12 | Current Player: gemini-3-flash-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:4 GRN:3 RED:3 BLK:1 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_10] BLU 0pts WHT:1 GRN:1 RED:2 BLK:1  
+L2: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_58] WHT 3pts WHT:6                     |
+    [L2_68] RED 2pts WHT:3 BLK:5               | [L2_62] GRN 2pts BLU:5 GRN:3              
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gemini-3-flash-preview (P0) (Current):                 | gpt-5.2 (P1):
+  Score: 0 | Cards: 5                                  |   Score: 0 | Cards: 4
+  Tokens: GRN:1 RED:1 BLK:2                            |   Tokens: BLK:1 GLD:1
+  Bonuses: {WHT:2 RED:1 BLK:2}                         |   Bonuses: {WHT:1 BLU:1 GRN:1 BLK:1}
+  Reserved: None                                       |   Reserved: [L2_50] BLU 2pts WHT:2 RED:1 BLK:4
+
+======================================================================================
+
+2025-12-31 15:27:56.543 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 12 - Player 0's move
+2025-12-31 15:27:56.543 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=2, GRN=1, RED=2, BLK=4}
+2025-12-31 15:28:58.876 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I am focusing on completing the requirements for the N10 Noble (3 WHITE, 3 BLACK, 3 RED). Currently, I have 2 WHITE, 1 RED, and 2 BLACK bonuses. To reach the 3-BLACK requirement, I am targeting card L1_3, which provides a BLACK bonus. L1_3 costs 2 WHITE, 2 BLUE, and 1 RED. Since my existing bonuses already cover the WHITE and RED costs, I only need to acquire 2 BLUE tokens to purchase it. There are currently 4 BLUE tokens available on the board, fulfilling the requirement to take two of the same color. Taking these tokens now will bring my total token count to 6 and allow me to purchase L1_3 next turn, moving me one step closer to 15 points.
+2025-12-31 15:28:58.876 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={BLUE=2}, tokensToReturn=null]
+2025-12-31 15:28:58.876 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 12 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:2 GRN:3 RED:3 BLK:1 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_10] BLU 0pts WHT:1 GRN:1 RED:2 BLK:1  
+L2: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_58] WHT 3pts WHT:6                     |
+    [L2_68] RED 2pts WHT:3 BLK:5               | [L2_62] GRN 2pts BLU:5 GRN:3              
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gemini-3-flash-preview (P0):                           | gpt-5.2 (P1) (Current):
+  Score: 0 | Cards: 5                                  |   Score: 0 | Cards: 4
+  Tokens: BLU:2 GRN:1 RED:1 BLK:2                      |   Tokens: BLK:1 GLD:1
+  Bonuses: {WHT:2 RED:1 BLK:2}                         |   Bonuses: {WHT:1 BLU:1 GRN:1 BLK:1}
+  Reserved: None                                       |   Reserved: [L2_50] BLU 2pts WHT:2 RED:1 BLK:4
+
+======================================================================================
+
+2025-12-31 15:28:58.876 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 12 - Player 1's move
+2025-12-31 15:28:58.876 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=1, BLU=1, GRN=1, BLK=2, GLD=1}
+2025-12-31 15:29:28.175 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: My fastest scoring line is to buy my reserved L2_50 (2 prestige, BLUE bonus). After discounts (W1/BLACK1), its effective cost is WHITE 1 + RED 1 + BLACK 3. Taking WHITE+RED+BLACK this turn sets me up to purchase L2_50 next turn using W1+R1+BLACK2+GOLD1 (as the 3rd BLACK). Additionally, this grabs the last BLACK token from the bank, denying Player 0 the immediate W1+BLACK1 they need to convert into L2_68 (2 prestige) on their next turn.
+2025-12-31 15:29:28.175 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={WHITE=1, RED=1, BLACK=1}, tokensToReturn=null]
+2025-12-31 15:29:28.175 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 13 | Current Player: gemini-3-flash-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:2 GRN:3 RED:2 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_10] BLU 0pts WHT:1 GRN:1 RED:2 BLK:1  
+L2: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_58] WHT 3pts WHT:6                     |
+    [L2_68] RED 2pts WHT:3 BLK:5               | [L2_62] GRN 2pts BLU:5 GRN:3              
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gemini-3-flash-preview (P0) (Current):                 | gpt-5.2 (P1):
+  Score: 0 | Cards: 5                                  |   Score: 0 | Cards: 4
+  Tokens: BLU:2 GRN:1 RED:1 BLK:2                      |   Tokens: WHT:1 RED:1 BLK:2 GLD:1
+  Bonuses: {WHT:2 RED:1 BLK:2}                         |   Bonuses: {WHT:1 BLU:1 GRN:1 BLK:1}
+  Reserved: None                                       |   Reserved: [L2_50] BLU 2pts WHT:2 RED:1 BLK:4
+
+======================================================================================
+
+2025-12-31 15:29:28.175 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 13 - Player 0's move
+2025-12-31 15:29:28.175 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=2, BLU=2, GRN=1, RED=2, BLK=4}
+2025-12-31 15:29:38.201 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I am purchasing L1_3 to obtain my third BLACK bonus. My current bonuses (2 WHITE, 1 RED) already cover the WHITE and RED costs of the card, and I have the 2 BLUE tokens required to satisfy the remaining cost. This purchase completes the BLACK requirement for the N10 Noble (3 WHITE, 3 BLACK, 3 RED). I now need only one more WHITE and two more RED bonuses to qualify for that noble's 3 prestige points. This move efficiently advances my production engine while keeping my token count low.
+2025-12-31 15:29:38.201 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L1_3]
+2025-12-31 15:29:38.201 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 13 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:4 GRN:3 RED:2 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_10] BLU 0pts WHT:1 GRN:1 RED:2 BLK:1   | [L1_22] WHT 0pts BLU:2 BLK:2              
+L2: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_58] WHT 3pts WHT:6                     |
+    [L2_68] RED 2pts WHT:3 BLK:5               | [L2_62] GRN 2pts BLU:5 GRN:3              
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gemini-3-flash-preview (P0):                           | gpt-5.2 (P1) (Current):
+  Score: 0 | Cards: 6                                  |   Score: 0 | Cards: 4
+  Tokens: GRN:1 RED:1 BLK:2                            |   Tokens: WHT:1 RED:1 BLK:2 GLD:1
+  Bonuses: {WHT:2 RED:1 BLK:3}                         |   Bonuses: {WHT:1 BLU:1 GRN:1 BLK:1}
+  Reserved: None                                       |   Reserved: [L2_50] BLU 2pts WHT:2 RED:1 BLK:4
+
+======================================================================================
+
+2025-12-31 15:29:38.201 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 13 - Player 1's move
+2025-12-31 15:29:38.201 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=2, BLU=1, GRN=1, RED=1, BLK=3, GLD=1}
+2025-12-31 15:29:53.764 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I can immediately convert my current tokens into points by purchasing my reserved L2_50 (2 prestige, BLUE bonus). With my bonuses (WHITE 1, BLACK 1), its effective cost is WHITE 1 + RED 1 + BLACK 3. I can pay that exactly using WHITE 1 + RED 1 + BLACK 2 + GOLD 1 (as the 3rd BLACK). This is a clean tempo gain (2 points + stronger BLUE engine) and also clears my token supply without needing any inefficient token-taking/returning.
+2025-12-31 15:29:53.764 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L2_50]
+2025-12-31 15:29:53.764 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 14 | Current Player: gemini-3-flash-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:4 GRN:3 RED:3 BLK:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_10] BLU 0pts WHT:1 GRN:1 RED:2 BLK:1   | [L1_22] WHT 0pts BLU:2 BLK:2              
+L2: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_58] WHT 3pts WHT:6                     |
+    [L2_68] RED 2pts WHT:3 BLK:5               | [L2_62] GRN 2pts BLU:5 GRN:3              
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gemini-3-flash-preview (P0) (Current):                 | gpt-5.2 (P1):
+  Score: 0 | Cards: 6                                  |   Score: 2 | Cards: 5
+  Tokens: GRN:1 RED:1 BLK:2                            |   Tokens: 
+  Bonuses: {WHT:2 RED:1 BLK:3}                         |   Bonuses: {WHT:1 BLU:2 GRN:1 BLK:1}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+2025-12-31 15:29:53.764 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 14 - Player 0's move
+2025-12-31 15:29:53.764 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=2, GRN=1, RED=2, BLK=5}
+2025-12-31 15:30:22.826 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: To complete the N10 noble (3 WHITE, 3 BLACK, 3 RED), I currently need 1 more WHITE bonus and 2 more RED bonuses. I have identified L1_22 as the most accessible WHITE bonus card, which costs 2 BLUE and 2 BLACK. Since I already have 3 BLACK bonuses, those cover the card's black cost, so I only need to acquire 2 BLUE tokens to purchase it. There are 4 BLUE tokens available on the board, satisfying the requirement to take two of the same color. Taking these tokens now will bring my total count to 6 and allow me to purchase L1_22 next turn, which is the fastest path to my next required engine component.
+2025-12-31 15:30:22.826 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={BLUE=2}, tokensToReturn=null]
+2025-12-31 15:30:22.826 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 14 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:2 GRN:3 RED:3 BLK:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_10] BLU 0pts WHT:1 GRN:1 RED:2 BLK:1   | [L1_22] WHT 0pts BLU:2 BLK:2              
+L2: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_58] WHT 3pts WHT:6                     |
+    [L2_68] RED 2pts WHT:3 BLK:5               | [L2_62] GRN 2pts BLU:5 GRN:3              
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gemini-3-flash-preview (P0):                           | gpt-5.2 (P1) (Current):
+  Score: 0 | Cards: 6                                  |   Score: 2 | Cards: 5
+  Tokens: BLU:2 GRN:1 RED:1 BLK:2                      |   Tokens: 
+  Bonuses: {WHT:2 RED:1 BLK:3}                         |   Bonuses: {WHT:1 BLU:2 GRN:1 BLK:1}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+2025-12-31 15:30:22.826 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 14 - Player 1's move
+2025-12-31 15:30:22.826 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 2, Budget: {WHT=1, BLU=2, GRN=1, BLK=1}
+2025-12-31 15:30:55.043 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Player 0 has an immediate, efficient scoring line: with bonuses (WHITE 2, BLACK 3), L2_68 (2 prestige, RED bonus) effectively costs just WHITE 1 + BLACK 2, and they already hold BLACK 2 tokens—so taking a single WHITE token next turn would let them buy it for 2 points and a key RED bonus toward Noble N10. I can’t buy any prestige card this turn (0 tokens), so the best tempo/denial play is to reserve L2_68 now, removing their strongest near-term conversion while also gaining a GOLD token for my own flexibility.
+2025-12-31 15:30:55.043 [main] INFO  com.aisplendor.engine.GameSimulator - Action: ReserveCardAction[cardId=L2_68, deckLevel=null, tokensToReturn=null]
+2025-12-31 15:30:55.043 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 15 | Current Player: gemini-3-flash-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:2 GRN:3 RED:3 BLK:2 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_10] BLU 0pts WHT:1 GRN:1 RED:2 BLK:1   | [L1_22] WHT 0pts BLU:2 BLK:2              
+L2: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_58] WHT 3pts WHT:6                     |
+    [L2_62] GRN 2pts BLU:5 GRN:3               | [L2_41] BLK 1pt WHT:3 BLU:2 GRN:2         
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gemini-3-flash-preview (P0) (Current):                 | gpt-5.2 (P1):
+  Score: 0 | Cards: 6                                  |   Score: 2 | Cards: 5
+  Tokens: BLU:2 GRN:1 RED:1 BLK:2                      |   Tokens: GLD:1
+  Bonuses: {WHT:2 RED:1 BLK:3}                         |   Bonuses: {WHT:1 BLU:2 GRN:1 BLK:1}
+  Reserved: None                                       |   Reserved: [L2_68] RED 2pts WHT:3 BLK:5
+
+======================================================================================
+
+2025-12-31 15:30:55.043 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 15 - Player 0's move
+2025-12-31 15:30:55.043 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=2, BLU=2, GRN=1, RED=2, BLK=5}
+2025-12-31 15:31:19.891 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I am purchasing L1_22 to obtain my third WHITE bonus, which completes the WHITE requirement for the N10 noble (3 WHITE, 3 BLACK, 3 RED). My current 3 BLACK bonuses cover the BLACK cost of the card, so I only need to spend the 2 BLUE tokens I collected in the previous turn. This purchase moves me closer to qualifying for the noble's 3 prestige points, leaving me only 2 RED bonuses short of that goal. This strategy focuses on building a targeted engine to efficiently score points.
+2025-12-31 15:31:19.891 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L1_22]
+2025-12-31 15:31:19.891 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 15 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:4 GRN:3 RED:3 BLK:2 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_10] BLU 0pts WHT:1 GRN:1 RED:2 BLK:1   | [L1_31] GRN 0pts RED:3                    
+L2: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_58] WHT 3pts WHT:6                     |
+    [L2_62] GRN 2pts BLU:5 GRN:3               | [L2_41] BLK 1pt WHT:3 BLU:2 GRN:2         
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gemini-3-flash-preview (P0):                           | gpt-5.2 (P1) (Current):
+  Score: 0 | Cards: 7                                  |   Score: 2 | Cards: 5
+  Tokens: GRN:1 RED:1 BLK:2                            |   Tokens: GLD:1
+  Bonuses: {WHT:3 RED:1 BLK:3}                         |   Bonuses: {WHT:1 BLU:2 GRN:1 BLK:1}
+  Reserved: None                                       |   Reserved: [L2_68] RED 2pts WHT:3 BLK:5
+
+======================================================================================
+
+2025-12-31 15:31:19.891 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 15 - Player 1's move
+2025-12-31 15:31:19.891 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 2, Budget: {WHT=1, BLU=2, GRN=1, BLK=1, GLD=1}
+2025-12-31 15:32:21.773 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I can’t purchase anything with my current tokens (only 1 GOLD) and bonuses, so I should either take tokens to build toward a points buy, or reserve to deny a key opponent conversion while gaining a GOLD. Player 0’s biggest near-term scoring threat on the board is L2_58 (3 prestige, cost WHITE 6): with their WHITE+3 bonuses it effectively costs only WHITE 3, which they can realistically assemble in the next couple turns. By reserving L2_58 now, I remove their cleanest high-point pickup and also gain a GOLD token, improving my flexibility to later purchase my reserved high-cost cards (L2_68 and now L2_58).
+2025-12-31 15:32:21.773 [main] INFO  com.aisplendor.engine.GameSimulator - Action: ReserveCardAction[cardId=L2_58, deckLevel=null, tokensToReturn=null]
+2025-12-31 15:32:21.776 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 16 | Current Player: gemini-3-flash-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:4 GRN:3 RED:3 BLK:2 GLD:3
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_10] BLU 0pts WHT:1 GRN:1 RED:2 BLK:1   | [L1_31] GRN 0pts RED:3                    
+L2: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_41] BLK 1pt WHT:3 BLU:2 GRN:2          | [L2_63] GRN 2pts GRN:5                    
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gemini-3-flash-preview (P0) (Current):                 | gpt-5.2 (P1):
+  Score: 0 | Cards: 7                                  |   Score: 2 | Cards: 5
+  Tokens: GRN:1 RED:1 BLK:2                            |   Tokens: GLD:2
+  Bonuses: {WHT:3 RED:1 BLK:3}                         |   Bonuses: {WHT:1 BLU:2 GRN:1 BLK:1}
+  Reserved: None                                       |   Reserved: [L2_68] RED 2pts WHT:3 BLK:5
+                                                       |             [L2_58] WHT 3pts WHT:6
+
+======================================================================================
+
+2025-12-31 15:32:21.776 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 16 - Player 0's move
+2025-12-31 15:32:21.776 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=3, GRN=1, RED=2, BLK=5}
+2025-12-31 15:33:03.854 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I am purchasing L1_10 to obtain a BLUE bonus. While this does not directly fulfill the RED bonus requirement for the N10 Noble (3 WHITE, 3 RED, 3 BLACK), it is the most efficient move available. My current bonuses (3 WHITE, 1 RED, 3 BLACK) reduce the cost of L1_10 to just 1 GREEN and 1 RED token, both of which I currently possess. By purchasing this card, I am building my engine and cycling the Level 1 deck, which increases the likelihood of a low-cost RED bonus card appearing in the next turn to help me finish the N10 requirement.
+2025-12-31 15:33:03.854 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L1_10]
+2025-12-31 15:33:03.854 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 16 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:4 GRN:4 RED:4 BLK:2 GLD:3
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_31] GRN 0pts RED:3                     | [L1_25] GRN 0pts WHT:1 BLU:1 RED:1 BLK:1  
+L2: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_41] BLK 1pt WHT:3 BLU:2 GRN:2          | [L2_63] GRN 2pts GRN:5                    
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gemini-3-flash-preview (P0):                           | gpt-5.2 (P1) (Current):
+  Score: 0 | Cards: 8                                  |   Score: 2 | Cards: 5
+  Tokens: BLK:2                                        |   Tokens: GLD:2
+  Bonuses: {WHT:3 BLU:1 RED:1 BLK:3}                   |   Bonuses: {WHT:1 BLU:2 GRN:1 BLK:1}
+  Reserved: None                                       |   Reserved: [L2_68] RED 2pts WHT:3 BLK:5
+                                                       |             [L2_58] WHT 3pts WHT:6
+
+======================================================================================
+
+2025-12-31 15:33:03.854 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 16 - Player 1's move
+2025-12-31 15:33:03.854 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 2, Budget: {WHT=1, BLU=2, GRN=1, BLK=1, GLD=2}
+2025-12-31 15:35:14.295 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I can’t purchase any prestige card this turn (only 2 GOLD, no colored tokens). The best near-term conversion on the board is L2_41 (1 prestige, BLACK bonus): with my bonuses (W1, B2, G1, BL1) it effectively costs W2 + G1 (3 total). Taking WHITE+GREEN+RED now gives me W1 and G1 toward that purchase, while the RED token is flexible (it can help start building toward L2_55’s heavy RED cost, or let me cheaply pick up L1_25 next turn since it effectively costs only R1). Next turn I can buy L2_41 by paying W1 + G1 + 1 GOLD (as the second WHITE), keeping tempo toward points and improving my BLACK discount for later high-cost purchases (notably my reserved L2_68).
+2025-12-31 15:35:14.295 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={WHITE=1, GREEN=1, RED=1}, tokensToReturn=null]
+2025-12-31 15:35:14.295 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 17 | Current Player: gemini-3-flash-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:4 GRN:3 RED:3 BLK:2 GLD:3
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_31] GRN 0pts RED:3                     | [L1_25] GRN 0pts WHT:1 BLU:1 RED:1 BLK:1  
+L2: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_41] BLK 1pt WHT:3 BLU:2 GRN:2          | [L2_63] GRN 2pts GRN:5                    
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gemini-3-flash-preview (P0) (Current):                 | gpt-5.2 (P1):
+  Score: 0 | Cards: 8                                  |   Score: 2 | Cards: 5
+  Tokens: BLK:2                                        |   Tokens: WHT:1 GRN:1 RED:1 GLD:2
+  Bonuses: {WHT:3 BLU:1 RED:1 BLK:3}                   |   Bonuses: {WHT:1 BLU:2 GRN:1 BLK:1}
+  Reserved: None                                       |   Reserved: [L2_68] RED 2pts WHT:3 BLK:5
+                                                       |             [L2_58] WHT 3pts WHT:6
+
+======================================================================================
+
+2025-12-31 15:35:14.295 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 17 - Player 0's move
+2025-12-31 15:35:14.297 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=3, BLU=1, RED=1, BLK=5}
+2025-12-31 15:35:42.805 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I will purchase L1_25 because it is currently free for me; my existing bonuses (3 WHITE, 1 BLUE, 1 RED, 3 BLACK) fully cover its cost of 1 WHITE, 1 BLUE, 1 RED, and 1 BLACK. While this card provides a GREEN bonus rather than the RED bonus required for the N10 noble, acquiring it costs no tokens and allows me to cycle the Level 1 deck. This increases the probability that a RED bonus card will be drawn while simultaneously advancing my progress toward the N8 and N9 nobles.
+2025-12-31 15:35:42.805 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L1_25]
+2025-12-31 15:35:42.805 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 17 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:4 GRN:3 RED:3 BLK:2 GLD:3
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_31] GRN 0pts RED:3                     | [L1_1] BLK 0pts WHT:1 BLU:1 GRN:1 RED:1   
+L2: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_41] BLK 1pt WHT:3 BLU:2 GRN:2          | [L2_63] GRN 2pts GRN:5                    
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gemini-3-flash-preview (P0):                           | gpt-5.2 (P1) (Current):
+  Score: 0 | Cards: 9                                  |   Score: 2 | Cards: 5
+  Tokens: BLK:2                                        |   Tokens: WHT:1 GRN:1 RED:1 GLD:2
+  Bonuses: {WHT:3 BLU:1 GRN:1 RED:1 BLK:3}             |   Bonuses: {WHT:1 BLU:2 GRN:1 BLK:1}
+  Reserved: None                                       |   Reserved: [L2_68] RED 2pts WHT:3 BLK:5
+                                                       |             [L2_58] WHT 3pts WHT:6
+
+======================================================================================
+
+2025-12-31 15:35:42.805 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 17 - Player 1's move
+2025-12-31 15:35:42.805 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 2, Budget: {WHT=2, BLU=2, GRN=2, RED=1, BLK=1, GLD=2}
+2025-12-31 15:35:56.519 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: L2_41 (face-up LEVEL_2) is the best immediate points conversion available. With my current bonuses (WHITE 1, BLUE 2, GREEN 1, BLACK 1), its cost (W3 B2 G2) is discounted to just W2 + G1. I can pay that right now using my tokens WHITE 1 + GREEN 1 + 1 GOLD (as the 2nd WHITE), gaining 1 prestige and increasing my BLACK bonus by 1, which helps future expensive purchases like my reserved L2_68. This also keeps tempo while leaving me with RED 1 + GOLD 1 afterward for flexibility.
+2025-12-31 15:35:56.519 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L2_41]
+2025-12-31 15:35:56.519 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 18 | Current Player: gemini-3-flash-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:4 GRN:4 RED:3 BLK:2 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_31] GRN 0pts RED:3                     | [L1_1] BLK 0pts WHT:1 BLU:1 GRN:1 RED:1   
+L2: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_63] GRN 2pts GRN:5                     | [L2_47] BLU 1pt BLU:2 GRN:2 RED:3         
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gemini-3-flash-preview (P0) (Current):                 | gpt-5.2 (P1):
+  Score: 0 | Cards: 9                                  |   Score: 3 | Cards: 6
+  Tokens: BLK:2                                        |   Tokens: RED:1 GLD:1
+  Bonuses: {WHT:3 BLU:1 GRN:1 RED:1 BLK:3}             |   Bonuses: {WHT:1 BLU:2 GRN:1 BLK:2}
+  Reserved: None                                       |   Reserved: [L2_68] RED 2pts WHT:3 BLK:5
+                                                       |             [L2_58] WHT 3pts WHT:6
+
+======================================================================================
+
+2025-12-31 15:35:56.519 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 18 - Player 0's move
+2025-12-31 15:35:56.519 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=3, BLU=1, GRN=1, RED=1, BLK=5}
+2025-12-31 15:36:36.411 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I will purchase L1_1 because it is currently free for me; my existing bonuses (3 WHITE, 1 BLUE, 1 GREEN, 1 RED, and 3 BLACK) fully cover its cost of 1 WHITE, 1 BLUE, 1 GREEN, and 1 RED. While this card provides an additional BLACK bonus that I do not strictly need for the N10 noble (which requires 3 WHITE, 3 BLACK, and 3 RED), acquiring it costs no tokens and allows me to cycle the Level 1 deck. This increases the probability that a RED bonus card will be revealed, which is the final component I need to secure the N10 noble's 3 prestige points.
+2025-12-31 15:36:36.411 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L1_1]
+2025-12-31 15:36:36.411 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 18 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:4 GRN:4 RED:3 BLK:2 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_31] GRN 0pts RED:3                     | [L1_33] RED 0pts WHT:1 BLU:1 GRN:1 BLK:1  
+L2: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_63] GRN 2pts GRN:5                     | [L2_47] BLU 1pt BLU:2 GRN:2 RED:3         
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gemini-3-flash-preview (P0):                           | gpt-5.2 (P1) (Current):
+  Score: 0 | Cards: 10                                 |   Score: 3 | Cards: 6
+  Tokens: BLK:2                                        |   Tokens: RED:1 GLD:1
+  Bonuses: {WHT:3 BLU:1 GRN:1 RED:1 BLK:4}             |   Bonuses: {WHT:1 BLU:2 GRN:1 BLK:2}
+  Reserved: None                                       |   Reserved: [L2_68] RED 2pts WHT:3 BLK:5
+                                                       |             [L2_58] WHT 3pts WHT:6
+
+======================================================================================
+
+2025-12-31 15:36:36.411 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 18 - Player 1's move
+2025-12-31 15:36:36.411 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 3, Budget: {WHT=1, BLU=2, GRN=1, RED=1, BLK=2, GLD=1}
+2025-12-31 15:37:36.199 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Key denial + tempo: L1_33 is currently a free purchase for Player 0 (their bonuses cover W1+B1+G1+BL1), and it would raise their RED bonus toward Noble N10. I can’t convert my current tokens (RED1+GOLD1) into any prestige card this turn, so the best use of the turn is to remove this immediate, zero-cost opponent improvement while also gaining a GOLD (available) to accelerate my own next-point buys (notably building toward L2_55 which effectively costs me only RED). Reserving L1_33 uses my 3rd reserve slot temporarily, but I can buy it later for free and reopen the slot.
+2025-12-31 15:37:36.199 [main] INFO  com.aisplendor.engine.GameSimulator - Action: ReserveCardAction[cardId=L1_33, deckLevel=null, tokensToReturn=null]
+2025-12-31 15:37:36.199 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 19 | Current Player: gemini-3-flash-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:4 GRN:4 RED:3 BLK:2 GLD:3
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_31] GRN 0pts RED:3                     | [L1_16] BLU 1pt RED:4                     
+L2: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_63] GRN 2pts GRN:5                     | [L2_47] BLU 1pt BLU:2 GRN:2 RED:3         
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gemini-3-flash-preview (P0) (Current):                 | gpt-5.2 (P1):
+  Score: 0 | Cards: 10                                 |   Score: 3 | Cards: 6
+  Tokens: BLK:2                                        |   Tokens: RED:1 GLD:2
+  Bonuses: {WHT:3 BLU:1 GRN:1 RED:1 BLK:4}             |   Bonuses: {WHT:1 BLU:2 GRN:1 BLK:2}
+  Reserved: None                                       |   Reserved: [L2_68] RED 2pts WHT:3 BLK:5
+                                                       |             [L2_58] WHT 3pts WHT:6
+                                                       |             [L1_33] RED 0pts WHT:1 BLU:1 GRN:1 BLK:1
+
+======================================================================================
+
+2025-12-31 15:37:36.199 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 19 - Player 0's move
+2025-12-31 15:37:36.204 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=3, BLU=1, GRN=1, RED=1, BLK=6}
+2025-12-31 15:38:08.882 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Since no low-cost RED bonus cards are available to complete the N10 noble requirement (3 WHITE, 3 BLACK, 3 RED), I must pivot towards acquiring enough tokens to buy prestige-point cards currently on the board. Cards like L2_55 (2 points) and L1_16 (1 point) both require multiple RED tokens. Taking RED, BLUE, and GREEN tokens now allows me to build toward these cards or others like L2_47 (1 point) and L3_83 (3 points), while keeping my total token count low at 5.
+2025-12-31 15:38:08.882 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={BLUE=1, GREEN=1, RED=1}, tokensToReturn=null]
+2025-12-31 15:38:08.887 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 19 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:3 GRN:3 RED:2 BLK:2 GLD:3
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_31] GRN 0pts RED:3                     | [L1_16] BLU 1pt RED:4                     
+L2: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_63] GRN 2pts GRN:5                     | [L2_47] BLU 1pt BLU:2 GRN:2 RED:3         
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gemini-3-flash-preview (P0):                           | gpt-5.2 (P1) (Current):
+  Score: 0 | Cards: 10                                 |   Score: 3 | Cards: 6
+  Tokens: BLU:1 GRN:1 RED:1 BLK:2                      |   Tokens: RED:1 GLD:2
+  Bonuses: {WHT:3 BLU:1 GRN:1 RED:1 BLK:4}             |   Bonuses: {WHT:1 BLU:2 GRN:1 BLK:2}
+  Reserved: None                                       |   Reserved: [L2_68] RED 2pts WHT:3 BLK:5
+                                                       |             [L2_58] WHT 3pts WHT:6
+                                                       |             [L1_33] RED 0pts WHT:1 BLU:1 GRN:1 BLK:1
+
+======================================================================================
+
+2025-12-31 15:38:08.887 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 19 - Player 1's move
+2025-12-31 15:38:08.887 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 3, Budget: {WHT=1, BLU=2, GRN=1, RED=1, BLK=2, GLD=2}
+2025-12-31 15:40:16.735 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: My 2 GOLD tokens are best converted into immediate prestige via my reserved L2_58 (3 points, cost 6W). With my current WHITE bonus (1), L2_58 effectively costs 5 WHITE; using 2 GOLD as WHITE means I only need 3 WHITE tokens. The fastest way to reach that is taking 2 WHITE now (WHITE supply is exactly 4, so it’s legal), then next turn taking a 3-different set including WHITE to reach 3 WHITE total, and purchasing L2_58 the following turn for a big +3 point jump. This keeps tempo toward 15 while not spending GOLD on a smaller 2-point line first.
+2025-12-31 15:40:16.735 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={WHITE=2}, tokensToReturn=null]
+2025-12-31 15:40:16.735 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 20 | Current Player: gemini-3-flash-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:3 GRN:3 RED:2 BLK:2 GLD:3
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_31] GRN 0pts RED:3                     | [L1_16] BLU 1pt RED:4                     
+L2: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_63] GRN 2pts GRN:5                     | [L2_47] BLU 1pt BLU:2 GRN:2 RED:3         
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gemini-3-flash-preview (P0) (Current):                 | gpt-5.2 (P1):
+  Score: 0 | Cards: 10                                 |   Score: 3 | Cards: 6
+  Tokens: BLU:1 GRN:1 RED:1 BLK:2                      |   Tokens: WHT:2 RED:1 GLD:2
+  Bonuses: {WHT:3 BLU:1 GRN:1 RED:1 BLK:4}             |   Bonuses: {WHT:1 BLU:2 GRN:1 BLK:2}
+  Reserved: None                                       |   Reserved: [L2_68] RED 2pts WHT:3 BLK:5
+                                                       |             [L2_58] WHT 3pts WHT:6
+                                                       |             [L1_33] RED 0pts WHT:1 BLU:1 GRN:1 BLK:1
+
+======================================================================================
+
+2025-12-31 15:40:16.735 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 20 - Player 0's move
+2025-12-31 15:40:16.735 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=3, BLU=2, GRN=2, RED=2, BLK=6}
+2025-12-31 15:40:28.874 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I have a strong engine in WHITE and BLACK bonuses but am currently stalled on the N10 noble (3 WHITE, 3 BLACK, 3 RED) because no low-cost RED bonus cards are available on the board. To progress, I will pivot to purchasing prestige point cards. By taking one BLUE, one GREEN, and one RED token, I will have enough tokens (2 BLUE, 2 GREEN, 2 RED) to purchase L2_47 for 1 prestige point in the next turn, with my bonuses (1 BLUE, 1 GREEN, 1 RED) covering the rest of its cost (2 BLUE, 2 GREEN, 3 RED). This move also keeps me well within the 10-token limit.
+2025-12-31 15:40:28.874 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={BLUE=1, GREEN=1, RED=1}, tokensToReturn=null]
+2025-12-31 15:40:28.875 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 20 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:2 GRN:2 RED:1 BLK:2 GLD:3
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_31] GRN 0pts RED:3                     | [L1_16] BLU 1pt RED:4                     
+L2: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_63] GRN 2pts GRN:5                     | [L2_47] BLU 1pt BLU:2 GRN:2 RED:3         
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gemini-3-flash-preview (P0):                           | gpt-5.2 (P1) (Current):
+  Score: 0 | Cards: 10                                 |   Score: 3 | Cards: 6
+  Tokens: BLU:2 GRN:2 RED:2 BLK:2                      |   Tokens: WHT:2 RED:1 GLD:2
+  Bonuses: {WHT:3 BLU:1 GRN:1 RED:1 BLK:4}             |   Bonuses: {WHT:1 BLU:2 GRN:1 BLK:2}
+  Reserved: None                                       |   Reserved: [L2_68] RED 2pts WHT:3 BLK:5
+                                                       |             [L2_58] WHT 3pts WHT:6
+                                                       |             [L1_33] RED 0pts WHT:1 BLU:1 GRN:1 BLK:1
+
+======================================================================================
+
+2025-12-31 15:40:28.875 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 20 - Player 1's move
+2025-12-31 15:40:28.875 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 3, Budget: {WHT=3, BLU=2, GRN=1, RED=1, BLK=2, GLD=2}
+2025-12-31 15:41:41.093 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Primary plan is to cash in my reserved L2_58 (3 points) as fast as possible. With my WHITE bonus (1), L2_58 costs 5 WHITE; I already have WHITE 2 + GOLD 2 (=4 WHITE), so taking 1 WHITE now sets up an immediate purchase next turn with WHITE 3 + GOLD 2.
+
+For the other two tokens, I take the last available RED to deny Player 0 the easy next-turn L2_55 pickup (they only need one more RED token to reach the 3 RED payment after discounts), while also advancing my own RED needs. I take BLACK as a useful setup toward buying my reserved L2_68 later (it effectively needs BLACK tokens), and it’s generally flexible with my engine. Token count stays 5+3=8, so no returns needed.
+2025-12-31 15:41:41.093 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={WHITE=1, RED=1, BLACK=1}, tokensToReturn=null]
+2025-12-31 15:41:41.093 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 21 | Current Player: gemini-3-flash-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:1 BLU:2 GRN:2 BLK:1 GLD:3
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_31] GRN 0pts RED:3                     | [L1_16] BLU 1pt RED:4                     
+L2: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_63] GRN 2pts GRN:5                     | [L2_47] BLU 1pt BLU:2 GRN:2 RED:3         
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gemini-3-flash-preview (P0) (Current):                 | gpt-5.2 (P1):
+  Score: 0 | Cards: 10                                 |   Score: 3 | Cards: 6
+  Tokens: BLU:2 GRN:2 RED:2 BLK:2                      |   Tokens: WHT:3 RED:2 BLK:1 GLD:2
+  Bonuses: {WHT:3 BLU:1 GRN:1 RED:1 BLK:4}             |   Bonuses: {WHT:1 BLU:2 GRN:1 BLK:2}
+  Reserved: None                                       |   Reserved: [L2_68] RED 2pts WHT:3 BLK:5
+                                                       |             [L2_58] WHT 3pts WHT:6
+                                                       |             [L1_33] RED 0pts WHT:1 BLU:1 GRN:1 BLK:1
+
+======================================================================================
+
+2025-12-31 15:41:41.093 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 21 - Player 0's move
+2025-12-31 15:41:41.093 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=3, BLU=3, GRN=3, RED=3, BLK=6}
+2025-12-31 15:42:10.480 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I am purchasing L2_47 for 1 prestige point. Based on my current engine (1 BLUE, 1 GREEN, and 1 RED bonus), the cost of the card is reduced from 2 BLUE, 2 GREEN, 3 RED to a net cost of 1 BLUE, 1 GREEN, and 2 RED tokens. I currently possess 2 BLUE, 2 GREEN, and 2 RED tokens, making this card affordable and the most efficient way to begin scoring points. This purchase also increases my BLUE bonus to 2, bringing me closer to the N8 noble requirement (3 WHITE, 3 GREEN, 3 BLUE).
+2025-12-31 15:42:10.480 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L2_47]
+2025-12-31 15:42:10.481 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 21 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:1 BLU:3 GRN:3 RED:2 BLK:1 GLD:3
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_31] GRN 0pts RED:3                     | [L1_16] BLU 1pt RED:4                     
+L2: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_63] GRN 2pts GRN:5                     | [L2_54] WHT 1pt WHT:2 BLU:3 RED:3         
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gemini-3-flash-preview (P0):                           | gpt-5.2 (P1) (Current):
+  Score: 1 | Cards: 11                                 |   Score: 3 | Cards: 6
+  Tokens: BLU:1 GRN:1 BLK:2                            |   Tokens: WHT:3 RED:2 BLK:1 GLD:2
+  Bonuses: {WHT:3 BLU:2 GRN:1 RED:1 BLK:4}             |   Bonuses: {WHT:1 BLU:2 GRN:1 BLK:2}
+  Reserved: None                                       |   Reserved: [L2_68] RED 2pts WHT:3 BLK:5
+                                                       |             [L2_58] WHT 3pts WHT:6
+                                                       |             [L1_33] RED 0pts WHT:1 BLU:1 GRN:1 BLK:1
+
+======================================================================================
+
+2025-12-31 15:42:10.481 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 21 - Player 1's move
+2025-12-31 15:42:10.481 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 3, Budget: {WHT=4, BLU=2, GRN=1, RED=2, BLK=3, GLD=2}
+2025-12-31 15:42:21.862 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Best tempo is to immediately cash in my reserved L2_58 for +3 prestige. With my current WHITE bonus (1), its cost 6W is discounted to 5W. I can pay 5W using my tokens WHITE(3) + GOLD(2) as WHITE, without needing any additional token-taking setup. This jumps my score from 3 to 6 and increases my WHITE bonus, accelerating future high-point buys and noble progress while keeping my token count low (no forced returns).
+2025-12-31 15:42:21.862 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L2_58]
+2025-12-31 15:42:21.862 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 22 | Current Player: gemini-3-flash-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:3 GRN:3 RED:2 BLK:1 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_31] GRN 0pts RED:3                     | [L1_16] BLU 1pt RED:4                     
+L2: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_63] GRN 2pts GRN:5                     | [L2_54] WHT 1pt WHT:2 BLU:3 RED:3         
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gemini-3-flash-preview (P0) (Current):                 | gpt-5.2 (P1):
+  Score: 1 | Cards: 11                                 |   Score: 6 | Cards: 7
+  Tokens: BLU:1 GRN:1 BLK:2                            |   Tokens: RED:2 BLK:1
+  Bonuses: {WHT:3 BLU:2 GRN:1 RED:1 BLK:4}             |   Bonuses: {WHT:2 BLU:2 GRN:1 BLK:2}
+  Reserved: None                                       |   Reserved: [L2_68] RED 2pts WHT:3 BLK:5
+                                                       |             [L1_33] RED 0pts WHT:1 BLU:1 GRN:1 BLK:1
+
+======================================================================================
+
+2025-12-31 15:42:21.862 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 22 - Player 0's move
+2025-12-31 15:42:21.862 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 1, Budget: {WHT=3, BLU=3, GRN=2, RED=1, BLK=6}
+2025-12-31 15:42:53.467 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I am prioritizing the acquisition of tokens required for the prestige-point cards currently on the board, specifically L2_54 (1 point), L2_55 (2 points), and L3_83 (3 points). All these options, as well as the N8, N9, and N10 noble requirements, are currently constrained by the low supply of RED tokens (only 2 available on the board). By taking 1 RED token now, along with 1 BLUE and 1 WHITE token, I am preparing to purchase L2_54 (which requires 1 BLUE and 2 RED tokens net) or the high-value L3_83 (which requires 2 WHITE, 1 BLUE, and 2 RED tokens net). This move keeps my total token count at 7, avoiding the 10-token limit while securing scarce resources.
+2025-12-31 15:42:53.467 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={WHITE=1, BLUE=1, RED=1}, tokensToReturn=null]
+2025-12-31 15:42:53.472 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 22 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:2 GRN:3 RED:1 BLK:1 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_31] GRN 0pts RED:3                     | [L1_16] BLU 1pt RED:4                     
+L2: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_63] GRN 2pts GRN:5                     | [L2_54] WHT 1pt WHT:2 BLU:3 RED:3         
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gemini-3-flash-preview (P0):                           | gpt-5.2 (P1) (Current):
+  Score: 1 | Cards: 11                                 |   Score: 6 | Cards: 7
+  Tokens: WHT:1 BLU:2 GRN:1 RED:1 BLK:2                |   Tokens: RED:2 BLK:1
+  Bonuses: {WHT:3 BLU:2 GRN:1 RED:1 BLK:4}             |   Bonuses: {WHT:2 BLU:2 GRN:1 BLK:2}
+  Reserved: None                                       |   Reserved: [L2_68] RED 2pts WHT:3 BLK:5
+                                                       |             [L1_33] RED 0pts WHT:1 BLU:1 GRN:1 BLK:1
+
+======================================================================================
+
+2025-12-31 15:42:53.472 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 22 - Player 1's move
+2025-12-31 15:42:53.473 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 6, Budget: {WHT=2, BLU=2, GRN=1, RED=2, BLK=3}
+2025-12-31 15:45:24.227 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: No point-scoring purchases are currently affordable (all face-up point cards require more resources), but I can set up a fast +4 points line over the next few turns.
+
+Key near-term objective is buying my reserved L2_68 (2 prestige). With my bonuses (W2, BL2), its cost (W3 BL5) is effectively W1 + BL3. I already have BL1, so taking WHITE + BLACK now gets me to W1 + BL2; then next turn I can reserve a card to gain 1 GOLD, and use that GOLD as the missing BLACK to purchase L2_68.
+
+Taking the last RED token also denies Player 0 immediate progress toward L2_55 (they need multiple RED/gold), while giving me R3 total, which will later let me buy L2_55 efficiently after I gain a RED bonus from L2_68 (dropping L2_55’s effective RED cost to 3).
+
+So: take exactly 3 different tokens: WHITE, BLACK, RED. Token total stays well under 10, so no returns.
+2025-12-31 15:45:24.227 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={WHITE=1, RED=1, BLACK=1}, tokensToReturn=null]
+2025-12-31 15:45:24.227 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 23 | Current Player: gemini-3-flash-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:2 GRN:3 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_31] GRN 0pts RED:3                     | [L1_16] BLU 1pt RED:4                     
+L2: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_63] GRN 2pts GRN:5                     | [L2_54] WHT 1pt WHT:2 BLU:3 RED:3         
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gemini-3-flash-preview (P0) (Current):                 | gpt-5.2 (P1):
+  Score: 1 | Cards: 11                                 |   Score: 6 | Cards: 7
+  Tokens: WHT:1 BLU:2 GRN:1 RED:1 BLK:2                |   Tokens: WHT:1 RED:3 BLK:2
+  Bonuses: {WHT:3 BLU:2 GRN:1 RED:1 BLK:4}             |   Bonuses: {WHT:2 BLU:2 GRN:1 BLK:2}
+  Reserved: None                                       |   Reserved: [L2_68] RED 2pts WHT:3 BLK:5
+                                                       |             [L1_33] RED 0pts WHT:1 BLU:1 GRN:1 BLK:1
+
+======================================================================================
+
+2025-12-31 15:45:24.227 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 23 - Player 0's move
+2025-12-31 15:45:24.227 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 1, Budget: {WHT=4, BLU=4, GRN=2, RED=2, BLK=6}
+2025-12-31 15:46:13.475 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Since there are 0 RED tokens available on the board, I am currently unable to purchase any prestige-point cards, all of which require RED (such as L1_16, L2_54, and L2_55). To progress, I need to acquire GOLD tokens to act as wildcards. Reserving L3_83 is the most strategic move because it is worth 3 points and aligns perfectly with my current engine. My current bonuses (3 WHITE, 2 BLUE, 1 RED, 4 BLACK) reduce the cost of L3_83 (5W, 3B, 3R, 3K) to a net cost of 2 WHITE, 1 BLUE, and 2 RED tokens. I currently hold 1 WHITE, 2 BLUE, and 1 RED token, so by reserving this card and gaining a GOLD token, I will have the equivalent of 2 RED tokens and 2 BLUE tokens. I will then only need to collect one more WHITE token to purchase this 3-point card. This move also keeps my total token count at 8, avoiding the 10-token limit while securing a high-value card.
+2025-12-31 15:46:13.475 [main] INFO  com.aisplendor.engine.GameSimulator - Action: ReserveCardAction[cardId=L3_83, deckLevel=null, tokensToReturn=null]
+2025-12-31 15:46:13.477 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 23 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:2 GRN:3 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_31] GRN 0pts RED:3                     | [L1_16] BLU 1pt RED:4                     
+L2: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_63] GRN 2pts GRN:5                     | [L2_54] WHT 1pt WHT:2 BLU:3 RED:3         
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3        
+
+[PLAYERS]
+gemini-3-flash-preview (P0):                           | gpt-5.2 (P1) (Current):
+  Score: 1 | Cards: 11                                 |   Score: 6 | Cards: 7
+  Tokens: WHT:1 BLU:2 GRN:1 RED:1 BLK:2 GLD:1          |   Tokens: WHT:1 RED:3 BLK:2
+  Bonuses: {WHT:3 BLU:2 GRN:1 RED:1 BLK:4}             |   Bonuses: {WHT:2 BLU:2 GRN:1 BLK:2}
+  Reserved: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   |   Reserved: [L2_68] RED 2pts WHT:3 BLK:5
+                                                       |             [L1_33] RED 0pts WHT:1 BLU:1 GRN:1 BLK:1
+
+======================================================================================
+
+2025-12-31 15:46:13.477 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 23 - Player 1's move
+2025-12-31 15:46:13.477 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 6, Budget: {WHT=3, BLU=2, GRN=1, RED=3, BLK=4}
+2025-12-31 15:46:45.362 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I can’t progress toward buying my reserved L2_68 via token-taking right now because BLACK and RED supplies are both at 0. The best tempo play is to RESERVE a key high-value card while also gaining a GOLD (available) to immediately enable L2_68 next turn (I’ll use GOLD as the missing BLACK: L2_68 effectively costs W1+BL3, and I already have W1+BL2).
+
+Among face-up threats, L3_77 (4 prestige) is notably cheap for Player 0 due to their large BLACK bonus (they can get to an effective cost around W3+B1+BL0), so reserving it is strong denial and slows their point conversion. This also gives me the GOLD I need for L2_68 next turn.
+2025-12-31 15:46:45.362 [main] INFO  com.aisplendor.engine.GameSimulator - Action: ReserveCardAction[cardId=L3_77, deckLevel=null, tokensToReturn=null]
+2025-12-31 15:46:45.363 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 24 | Current Player: gemini-3-flash-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:2 GRN:3 GLD:3
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_31] GRN 0pts RED:3                     | [L1_16] BLU 1pt RED:4                     
+L2: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_63] GRN 2pts GRN:5                     | [L2_54] WHT 1pt WHT:2 BLU:3 RED:3         
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_76] BLU 4pts WHT:7                    
+
+[PLAYERS]
+gemini-3-flash-preview (P0) (Current):                 | gpt-5.2 (P1):
+  Score: 1 | Cards: 11                                 |   Score: 6 | Cards: 7
+  Tokens: WHT:1 BLU:2 GRN:1 RED:1 BLK:2 GLD:1          |   Tokens: WHT:1 RED:3 BLK:2 GLD:1
+  Bonuses: {WHT:3 BLU:2 GRN:1 RED:1 BLK:4}             |   Bonuses: {WHT:2 BLU:2 GRN:1 BLK:2}
+  Reserved: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   |   Reserved: [L2_68] RED 2pts WHT:3 BLK:5
+                                                       |             [L1_33] RED 0pts WHT:1 BLU:1 GRN:1 BLK:1
+                                                       |             [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3
+
+======================================================================================
+
+2025-12-31 15:46:45.363 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 24 - Player 0's move
+2025-12-31 15:46:45.363 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 1, Budget: {WHT=4, BLU=4, GRN=2, RED=2, BLK=6, GLD=1}
+2025-12-31 15:47:22.727 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I am currently blocked from purchasing prestige-point cards because there are no RED tokens available on the board, and all accessible point-bearing cards require RED. My immediate goal is to purchase my reserved card L3_83, which is worth 3 prestige points. Its net cost, after applying my current bonuses (3 WHITE, 2 BLUE, 1 RED, 4 BLACK), is 2 WHITE, 1 BLUE, and 2 RED tokens. Currently, I hold 1 WHITE token, 2 BLUE tokens, 1 RED token, and 1 GOLD token. By reserving L2_55 (worth 2 prestige points), I will acquire a second GOLD token. This collection of tokens (1 WHITE + 1 GOLD to cover the 2 WHITE requirement, and 1 RED + 1 GOLD to cover the 2 RED requirement) will allow me to purchase L3_83 on my next turn. This strategy effectively bypasses the RED token shortage and secures a high-value card.
+2025-12-31 15:47:22.727 [main] INFO  com.aisplendor.engine.GameSimulator - Action: ReserveCardAction[cardId=L2_55, deckLevel=null, tokensToReturn=null]
+2025-12-31 15:47:22.727 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 24 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:2 GRN:3 GLD:2
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_31] GRN 0pts RED:3                     | [L1_16] BLU 1pt RED:4                     
+L2: [L2_62] GRN 2pts BLU:5 GRN:3               | [L2_63] GRN 2pts GRN:5                     |
+    [L2_54] WHT 1pt WHT:2 BLU:3 RED:3          | [L2_48] BLU 1pt BLU:2 GRN:3 BLK:3         
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_76] BLU 4pts WHT:7                    
+
+[PLAYERS]
+gemini-3-flash-preview (P0):                           | gpt-5.2 (P1) (Current):
+  Score: 1 | Cards: 11                                 |   Score: 6 | Cards: 7
+  Tokens: WHT:1 BLU:2 GRN:1 RED:1 BLK:2 GLD:2          |   Tokens: WHT:1 RED:3 BLK:2 GLD:1
+  Bonuses: {WHT:3 BLU:2 GRN:1 RED:1 BLK:4}             |   Bonuses: {WHT:2 BLU:2 GRN:1 BLK:2}
+  Reserved: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   |   Reserved: [L2_68] RED 2pts WHT:3 BLK:5
+            [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         |             [L1_33] RED 0pts WHT:1 BLU:1 GRN:1 BLK:1
+                                                       |             [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3
+
+======================================================================================
+
+2025-12-31 15:47:22.727 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 24 - Player 1's move
+2025-12-31 15:47:22.727 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 6, Budget: {WHT=3, BLU=2, GRN=1, RED=3, BLK=4, GLD=1}
+2025-12-31 15:47:51.857 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Best tempo is to immediately purchase my reserved L2_68 for +2 prestige and a RED bonus. Its cost is (WHITE 3, BLACK 5); with my bonuses (WHITE 2, BLACK 2) it discounts to needing WHITE 1 + BLACK 3. I can pay that right now using my tokens WHITE(1) + BLACK(2) + GOLD(1 as BLACK). This converts tokens into points efficiently, increases my engine with a RED bonus, and keeps my token count low for future flexible token-taking.
+2025-12-31 15:47:51.857 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L2_68]
+2025-12-31 15:47:51.858 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 25 | Current Player: gemini-3-flash-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:2 GRN:3 BLK:2 GLD:3
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_31] GRN 0pts RED:3                     | [L1_16] BLU 1pt RED:4                     
+L2: [L2_62] GRN 2pts BLU:5 GRN:3               | [L2_63] GRN 2pts GRN:5                     |
+    [L2_54] WHT 1pt WHT:2 BLU:3 RED:3          | [L2_48] BLU 1pt BLU:2 GRN:3 BLK:3         
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_76] BLU 4pts WHT:7                    
+
+[PLAYERS]
+gemini-3-flash-preview (P0) (Current):                 | gpt-5.2 (P1):
+  Score: 1 | Cards: 11                                 |   Score: 8 | Cards: 8
+  Tokens: WHT:1 BLU:2 GRN:1 RED:1 BLK:2 GLD:2          |   Tokens: RED:3
+  Bonuses: {WHT:3 BLU:2 GRN:1 RED:1 BLK:4}             |   Bonuses: {WHT:2 BLU:2 GRN:1 RED:1 BLK:2}
+  Reserved: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   |   Reserved: [L1_33] RED 0pts WHT:1 BLU:1 GRN:1 BLK:1
+            [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         |             [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3
+
+======================================================================================
+
+2025-12-31 15:47:51.858 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 25 - Player 0's move
+2025-12-31 15:47:51.858 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 1, Budget: {WHT=4, BLU=4, GRN=2, RED=2, BLK=6, GLD=2}
+2025-12-31 15:48:27.518 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I have successfully accumulated the necessary tokens and GOLD wildcards to purchase my reserved card L3_83, which is worth 3 prestige points. After accounting for my current bonuses (3 WHITE, 2 BLUE, 1 RED, 4 BLACK), the net cost of the card is reduced to 2 WHITE, 1 BLUE, and 2 RED tokens. By using my available tokens (1 WHITE, 2 BLUE, 1 RED) and applying both GOLD tokens as wildcards for the remaining WHITE and RED requirements, I can complete the purchase immediately. This move increases my total prestige points to 4 and adds a GREEN bonus to my engine, which is a critical step towards meeting the N8 noble requirement (3 WHITE, 3 GREEN, 3 BLUE).
+2025-12-31 15:48:27.518 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L3_83]
+2025-12-31 15:48:27.519 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 25 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:3 GRN:3 RED:1 BLK:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_31] GRN 0pts RED:3                     | [L1_16] BLU 1pt RED:4                     
+L2: [L2_62] GRN 2pts BLU:5 GRN:3               | [L2_63] GRN 2pts GRN:5                     |
+    [L2_54] WHT 1pt WHT:2 BLU:3 RED:3          | [L2_48] BLU 1pt BLU:2 GRN:3 BLK:3         
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_76] BLU 4pts WHT:7                    
+
+[PLAYERS]
+gemini-3-flash-preview (P0):                           | gpt-5.2 (P1) (Current):
+  Score: 4 | Cards: 12                                 |   Score: 8 | Cards: 8
+  Tokens: BLU:1 GRN:1 BLK:2                            |   Tokens: RED:3
+  Bonuses: {WHT:3 BLU:2 GRN:2 RED:1 BLK:4}             |   Bonuses: {WHT:2 BLU:2 GRN:1 RED:1 BLK:2}
+  Reserved: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         |   Reserved: [L1_33] RED 0pts WHT:1 BLU:1 GRN:1 BLK:1
+                                                       |             [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3
+
+======================================================================================
+
+2025-12-31 15:48:27.519 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 25 - Player 1's move
+2025-12-31 15:48:27.519 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 8, Budget: {WHT=2, BLU=2, GRN=1, RED=4, BLK=2}
+2025-12-31 15:49:48.428 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I should convert my current RED-heavy hand (RED=3) into immediate prestige, since RED supply on the board is scarce (only 1 available) and I don’t want to sit on awkward tokens. The only affordable point card right now is L1_16 (1 prestige, BLUE bonus). With my RED bonus (1), its cost RED4 discounts to RED3, exactly matching my tokens.
+
+Buying L1_16 advances my score to 9, increases my BLUE bonus to 3 (which directly reduces the BLUE portion of my reserved L3_77’s cost down to 0), and keeps my token count low for flexible collection next turn toward L3_77 and potential noble N8 (needs BLUE3, which this helps lock in).
+2025-12-31 15:49:48.429 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L1_16]
+2025-12-31 15:49:48.431 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 26 | Current Player: gemini-3-flash-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:3 GRN:3 RED:4 BLK:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_31] GRN 0pts RED:3                     | [L1_36] RED 0pts WHT:1 RED:1 BLK:3        
+L2: [L2_62] GRN 2pts BLU:5 GRN:3               | [L2_63] GRN 2pts GRN:5                     |
+    [L2_54] WHT 1pt WHT:2 BLU:3 RED:3          | [L2_48] BLU 1pt BLU:2 GRN:3 BLK:3         
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_76] BLU 4pts WHT:7                    
+
+[PLAYERS]
+gemini-3-flash-preview (P0) (Current):                 | gpt-5.2 (P1):
+  Score: 4 | Cards: 12                                 |   Score: 9 | Cards: 9
+  Tokens: BLU:1 GRN:1 BLK:2                            |   Tokens: 
+  Bonuses: {WHT:3 BLU:2 GRN:2 RED:1 BLK:4}             |   Bonuses: {WHT:2 BLU:3 GRN:1 RED:1 BLK:2}
+  Reserved: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         |   Reserved: [L1_33] RED 0pts WHT:1 BLU:1 GRN:1 BLK:1
+                                                       |             [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3
+
+======================================================================================
+
+2025-12-31 15:49:48.431 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 26 - Player 0's move
+2025-12-31 15:49:48.431 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 4, Budget: {WHT=3, BLU=3, GRN=3, RED=1, BLK=6}
+2025-12-31 15:50:33.177 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I am purchasing L2_48, which is worth 1 prestige point. Its cost is 2 BLUE, 3 GREEN, and 3 BLACK. With my current bonuses (3 WHITE, 2 BLUE, 2 GREEN, 1 RED, 4 BLACK), the net cost is only 1 GREEN token. I currently possess 1 GREEN token, making it affordable. This purchase increases my score to 5 and brings my BLUE bonus total to 3. This is a vital strategic step because it satisfies the BLUE requirement for noble N8 (3 WHITE, 3 GREEN, 3 BLUE) and noble N9 (3 BLUE, 3 GREEN, 3 RED), meaning I am now only one GREEN bonus away from N8's 3 prestige points.
+2025-12-31 15:50:33.177 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L2_48]
+2025-12-31 15:50:33.177 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 26 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:3 GRN:4 RED:4 BLK:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_31] GRN 0pts RED:3                     | [L1_36] RED 0pts WHT:1 RED:1 BLK:3        
+L2: [L2_62] GRN 2pts BLU:5 GRN:3               | [L2_63] GRN 2pts GRN:5                     |
+    [L2_54] WHT 1pt WHT:2 BLU:3 RED:3          | [L2_53] WHT 1pt GRN:3 RED:2 BLK:2         
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_76] BLU 4pts WHT:7                    
+
+[PLAYERS]
+gemini-3-flash-preview (P0):                           | gpt-5.2 (P1) (Current):
+  Score: 5 | Cards: 13                                 |   Score: 9 | Cards: 9
+  Tokens: BLU:1 BLK:2                                  |   Tokens: 
+  Bonuses: {WHT:3 BLU:3 GRN:2 RED:1 BLK:4}             |   Bonuses: {WHT:2 BLU:3 GRN:1 RED:1 BLK:2}
+  Reserved: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         |   Reserved: [L1_33] RED 0pts WHT:1 BLU:1 GRN:1 BLK:1
+                                                       |             [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3
+
+======================================================================================
+
+2025-12-31 15:50:33.177 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 26 - Player 1's move
+2025-12-31 15:50:33.177 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 9, Budget: {WHT=2, BLU=3, GRN=1, RED=1, BLK=2}
+2025-12-31 15:52:53.362 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Primary win line is still to buy my reserved L3_77 (+4) to reach 13, then convert into a final +2 (ideally L2_62) to hit 15. To accelerate L3_77, my immediate bottleneck is collecting WHITE efficiently.
+
+WHITE is currently at 4 in the bank, so I can legally take 2 WHITE in one action (best tempo vs taking 1 WHITE as part of a 3-color grab). This starts me toward the ~4 WHITE + 1 BLACK I’ll need for L3_77 (after discounts from my bonuses), while staying far under the 10-token cap and not forcing any returns.
+2025-12-31 15:52:53.362 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={WHITE=2}, tokensToReturn=null]
+2025-12-31 15:52:53.363 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 27 | Current Player: gemini-3-flash-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:3 GRN:4 RED:4 BLK:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_31] GRN 0pts RED:3                     | [L1_36] RED 0pts WHT:1 RED:1 BLK:3        
+L2: [L2_62] GRN 2pts BLU:5 GRN:3               | [L2_63] GRN 2pts GRN:5                     |
+    [L2_54] WHT 1pt WHT:2 BLU:3 RED:3          | [L2_53] WHT 1pt GRN:3 RED:2 BLK:2         
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_76] BLU 4pts WHT:7                    
+
+[PLAYERS]
+gemini-3-flash-preview (P0) (Current):                 | gpt-5.2 (P1):
+  Score: 5 | Cards: 13                                 |   Score: 9 | Cards: 9
+  Tokens: BLU:1 BLK:2                                  |   Tokens: WHT:2
+  Bonuses: {WHT:3 BLU:3 GRN:2 RED:1 BLK:4}             |   Bonuses: {WHT:2 BLU:3 GRN:1 RED:1 BLK:2}
+  Reserved: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         |   Reserved: [L1_33] RED 0pts WHT:1 BLU:1 GRN:1 BLK:1
+                                                       |             [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3
+
+======================================================================================
+
+2025-12-31 15:52:53.363 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 27 - Player 0's move
+2025-12-31 15:52:53.363 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 5, Budget: {WHT=3, BLU=4, GRN=2, RED=1, BLK=6}
+2025-12-31 15:53:41.519 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I am currently at 5 points with a strong engine of 3 WHITE, 3 BLUE, 2 GREEN, 1 RED, and 4 BLACK bonuses. I am strategically positioned to reach the 3-point N8 noble (3 WHITE, 3 GREEN, 3 BLUE) by acquiring one more GREEN bonus. The most efficient card for this is L2_62, which is worth 2 prestige points and provides a GREEN bonus. Its cost of 5 BLUE and 3 GREEN is reduced by my current bonuses to a net cost of 2 BLUE and 1 GREEN tokens. Since I already possess 1 BLUE token, taking 1 BLUE, 1 GREEN, and 1 RED token this turn will provide the necessary resources to purchase L2_62 on my next turn. This strategy will increase my score by 5 points (2 from the card, 3 from the noble) in just two turns.
+2025-12-31 15:53:41.520 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={BLUE=1, GREEN=1, RED=1}, tokensToReturn=null]
+2025-12-31 15:53:41.521 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 27 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:2 GRN:3 RED:3 BLK:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_31] GRN 0pts RED:3                     | [L1_36] RED 0pts WHT:1 RED:1 BLK:3        
+L2: [L2_62] GRN 2pts BLU:5 GRN:3               | [L2_63] GRN 2pts GRN:5                     |
+    [L2_54] WHT 1pt WHT:2 BLU:3 RED:3          | [L2_53] WHT 1pt GRN:3 RED:2 BLK:2         
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_76] BLU 4pts WHT:7                    
+
+[PLAYERS]
+gemini-3-flash-preview (P0):                           | gpt-5.2 (P1) (Current):
+  Score: 5 | Cards: 13                                 |   Score: 9 | Cards: 9
+  Tokens: BLU:2 GRN:1 RED:1 BLK:2                      |   Tokens: WHT:2
+  Bonuses: {WHT:3 BLU:3 GRN:2 RED:1 BLK:4}             |   Bonuses: {WHT:2 BLU:3 GRN:1 RED:1 BLK:2}
+  Reserved: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         |   Reserved: [L1_33] RED 0pts WHT:1 BLU:1 GRN:1 BLK:1
+                                                       |             [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3
+
+======================================================================================
+
+2025-12-31 15:53:41.522 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 27 - Player 1's move
+2025-12-31 15:53:41.522 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 9, Budget: {WHT=4, BLU=3, GRN=1, RED=1, BLK=2}
+2025-12-31 15:56:26.725 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Main win line is still L3_77 (+4) to reach 13, then a +2-point closer (ideally L2_62) to hit 15.
+
+For L3_77, after my bonuses (WHITE2, BLUE3, BLACK2) I effectively need WHITE4 + BLACK1 (blue cost is fully discounted). I currently have WHITE2, so the immediate bottleneck is collecting scarce WHITE while also securing the needed BLACK.
+
+Taking WHITE + BLACK now directly advances the L3_77 purchase, and taking BLUE as the third color starts progress toward L2_62 (needs BLUE2 + GREEN2 after discounts). WHITE and BLUE are also relatively low in the bank, so grabbing them now is good both for tempo and to reduce opponent options.
+
+Token count goes from 2 to 5, under the 10-token cap, so no returns.
+2025-12-31 15:56:26.725 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={WHITE=1, BLUE=1, BLACK=1}, tokensToReturn=null]
+2025-12-31 15:56:26.726 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 28 | Current Player: gemini-3-flash-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:1 BLU:1 GRN:3 RED:3 BLK:1 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_31] GRN 0pts RED:3                     | [L1_36] RED 0pts WHT:1 RED:1 BLK:3        
+L2: [L2_62] GRN 2pts BLU:5 GRN:3               | [L2_63] GRN 2pts GRN:5                     |
+    [L2_54] WHT 1pt WHT:2 BLU:3 RED:3          | [L2_53] WHT 1pt GRN:3 RED:2 BLK:2         
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_76] BLU 4pts WHT:7                    
+
+[PLAYERS]
+gemini-3-flash-preview (P0) (Current):                 | gpt-5.2 (P1):
+  Score: 5 | Cards: 13                                 |   Score: 9 | Cards: 9
+  Tokens: BLU:2 GRN:1 RED:1 BLK:2                      |   Tokens: WHT:3 BLU:1 BLK:1
+  Bonuses: {WHT:3 BLU:3 GRN:2 RED:1 BLK:4}             |   Bonuses: {WHT:2 BLU:3 GRN:1 RED:1 BLK:2}
+  Reserved: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         |   Reserved: [L1_33] RED 0pts WHT:1 BLU:1 GRN:1 BLK:1
+                                                       |             [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3
+
+======================================================================================
+
+2025-12-31 15:56:26.726 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 28 - Player 0's move
+2025-12-31 15:56:26.726 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 5, Budget: {WHT=3, BLU=5, GRN=3, RED=2, BLK=6}
+2025-12-31 15:56:52.390 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I can now purchase card L2_62 from the board. Its cost is 5 BLUE and 3 GREEN tokens. After applying my current bonuses (3 BLUE and 2 GREEN), the net cost is reduced to 2 BLUE and 1 GREEN tokens. I currently possess these exact tokens. Purchasing L2_62 provides 2 prestige points and a GREEN bonus. Adding this GREEN bonus to my existing engine (3 WHITE, 3 BLUE, 2 GREEN) brings my totals to 3 WHITE, 3 BLUE, and 3 GREEN. This satisfies the requirements for noble N8 (3 WHITE, 3 BLUE, 3 GREEN), granting me an additional 3 prestige points. This single turn will increase my total score from 5 to 10 points, significantly closing the gap with my opponent.
+2025-12-31 15:56:52.390 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L2_62]
+2025-12-31 15:56:52.391 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 28 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:1 BLU:3 GRN:4 RED:3 BLK:1 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_31] GRN 0pts RED:3                     | [L1_36] RED 0pts WHT:1 RED:1 BLK:3        
+L2: [L2_63] GRN 2pts GRN:5                     | [L2_54] WHT 1pt WHT:2 BLU:3 RED:3          |
+    [L2_53] WHT 1pt GRN:3 RED:2 BLK:2          | [L2_61] GRN 2pts WHT:4 BLU:2 BLK:1        
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_76] BLU 4pts WHT:7                    
+
+[PLAYERS]
+gemini-3-flash-preview (P0):                           | gpt-5.2 (P1) (Current):
+  Score: 10 | Cards: 14                                |   Score: 9 | Cards: 9
+  Tokens: RED:1 BLK:2                                  |   Tokens: WHT:3 BLU:1 BLK:1
+  Bonuses: {WHT:3 BLU:3 GRN:3 RED:1 BLK:4}             |   Bonuses: {WHT:2 BLU:3 GRN:1 RED:1 BLK:2}
+  Reserved: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         |   Reserved: [L1_33] RED 0pts WHT:1 BLU:1 GRN:1 BLK:1
+                                                       |             [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3
+
+======================================================================================
+
+2025-12-31 15:56:52.391 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 28 - Player 1's move
+2025-12-31 15:56:52.391 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 9, Budget: {WHT=5, BLU=4, GRN=1, RED=1, BLK=3}
+2025-12-31 15:58:03.526 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I’m one WHITE short of purchasing my reserved L3_77. With my bonuses (WHITE2, BLUE3, BLACK2), L3_77 effectively costs WHITE4 + BLACK1 (the BLUE cost is fully discounted). I currently have WHITE3 + BLACK1, so taking the last available WHITE now guarantees I can buy L3_77 next turn and jump from 9 to 13 prestige.
+
+Since I must take exactly 3 different tokens (WHITE bank is only 1, so I can’t take 2 WHITE), I’ll pair WHITE with GREEN and RED. This slightly constrains Player 0’s ability to accelerate toward green/red-heavy high-point cards (notably L3_90), while keeping me under the 10-token limit (5 + 3 = 8).
+2025-12-31 15:58:03.526 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={WHITE=1, GREEN=1, RED=1}, tokensToReturn=null]
+2025-12-31 15:58:03.527 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 29 | Current Player: gemini-3-flash-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+BLU:3 GRN:3 RED:2 BLK:1 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_31] GRN 0pts RED:3                     | [L1_36] RED 0pts WHT:1 RED:1 BLK:3        
+L2: [L2_63] GRN 2pts GRN:5                     | [L2_54] WHT 1pt WHT:2 BLU:3 RED:3          |
+    [L2_53] WHT 1pt GRN:3 RED:2 BLK:2          | [L2_61] GRN 2pts WHT:4 BLU:2 BLK:1        
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_76] BLU 4pts WHT:7                    
+
+[PLAYERS]
+gemini-3-flash-preview (P0) (Current):                 | gpt-5.2 (P1):
+  Score: 10 | Cards: 14                                |   Score: 9 | Cards: 9
+  Tokens: RED:1 BLK:2                                  |   Tokens: WHT:4 BLU:1 GRN:1 RED:1 BLK:1
+  Bonuses: {WHT:3 BLU:3 GRN:3 RED:1 BLK:4}             |   Bonuses: {WHT:2 BLU:3 GRN:1 RED:1 BLK:2}
+  Reserved: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         |   Reserved: [L1_33] RED 0pts WHT:1 BLU:1 GRN:1 BLK:1
+                                                       |             [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3
+
+======================================================================================
+
+2025-12-31 15:58:03.527 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 29 - Player 0's move
+2025-12-31 15:58:03.527 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 10, Budget: {WHT=3, BLU=3, GRN=3, RED=2, BLK=6}
+2025-12-31 15:59:50.869 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I am purchasing the card L1_36 from the board. This card is currently free for me because its cost of 1 WHITE, 1 RED, and 3 BLACK tokens is entirely covered by my current bonuses (3 WHITE, 1 RED, and 4 BLACK). Acquiring L1_36 is a strategic engine-building move that adds a second RED bonus to my collection without depleting any of my three current tokens (1 RED, 2 BLACK). This second RED bonus brings me significantly closer to meeting the requirements for both noble N9 and noble N10, which each provide 3 prestige points and require 3 RED bonuses. By securing this card now, I pave a clear path to reach 15 points through noble visits and subsequent point-bearing card purchases.
+2025-12-31 15:59:50.869 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L1_36]
+2025-12-31 15:59:50.869 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 29 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+BLU:3 GRN:3 RED:2 BLK:1 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_31] GRN 0pts RED:3                     | [L1_32] GRN 1pt BLK:4                     
+L2: [L2_63] GRN 2pts GRN:5                     | [L2_54] WHT 1pt WHT:2 BLU:3 RED:3          |
+    [L2_53] WHT 1pt GRN:3 RED:2 BLK:2          | [L2_61] GRN 2pts WHT:4 BLU:2 BLK:1        
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_76] BLU 4pts WHT:7                    
+
+[PLAYERS]
+gemini-3-flash-preview (P0):                           | gpt-5.2 (P1) (Current):
+  Score: 10 | Cards: 15                                |   Score: 9 | Cards: 9
+  Tokens: RED:1 BLK:2                                  |   Tokens: WHT:4 BLU:1 GRN:1 RED:1 BLK:1
+  Bonuses: {WHT:3 BLU:3 GRN:3 RED:2 BLK:4}             |   Bonuses: {WHT:2 BLU:3 GRN:1 RED:1 BLK:2}
+  Reserved: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         |   Reserved: [L1_33] RED 0pts WHT:1 BLU:1 GRN:1 BLK:1
+                                                       |             [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3
+
+======================================================================================
+
+2025-12-31 15:59:50.869 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 29 - Player 1's move
+2025-12-31 15:59:50.870 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 9, Budget: {WHT=6, BLU=4, GRN=2, RED=2, BLK=3}
+2025-12-31 16:00:20.241 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Purchase my reserved L3_77 now for the biggest immediate tempo swing: +4 prestige takes me from 9 to 13 and adds a BLUE bonus (further strengthening my engine). With my current bonuses (WHITE2, BLUE3, BLACK2), L3_77’s cost (WHITE6, BLUE3, BLACK3) discounts to WHITE4 + BLACK1, exactly matching my tokens (WHITE4, BLACK1). This converts my token pile into points efficiently, drops me well under the 10-token cap, and sets up a quick finish with a 2-point card next.
+2025-12-31 16:00:20.241 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L3_77]
+2025-12-31 16:00:20.241 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 30 | Current Player: gemini-3-flash-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:3 GRN:3 RED:2 BLK:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_31] GRN 0pts RED:3                     | [L1_32] GRN 1pt BLK:4                     
+L2: [L2_63] GRN 2pts GRN:5                     | [L2_54] WHT 1pt WHT:2 BLU:3 RED:3          |
+    [L2_53] WHT 1pt GRN:3 RED:2 BLK:2          | [L2_61] GRN 2pts WHT:4 BLU:2 BLK:1        
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_76] BLU 4pts WHT:7                    
+
+[PLAYERS]
+gemini-3-flash-preview (P0) (Current):                 | gpt-5.2 (P1):
+  Score: 10 | Cards: 15                                |   Score: 13 | Cards: 10
+  Tokens: RED:1 BLK:2                                  |   Tokens: BLU:1 GRN:1 RED:1
+  Bonuses: {WHT:3 BLU:3 GRN:3 RED:2 BLK:4}             |   Bonuses: {WHT:2 BLU:4 GRN:1 RED:1 BLK:2}
+  Reserved: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         |   Reserved: [L1_33] RED 0pts WHT:1 BLU:1 GRN:1 BLK:1
+
+======================================================================================
+
+2025-12-31 16:00:20.241 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 30 - Player 0's move
+2025-12-31 16:00:20.241 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 10, Budget: {WHT=3, BLU=3, GRN=3, RED=3, BLK=6}
+2025-12-31 16:00:30.665 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I am purchasing L1_31 from the board to acquire my third RED bonus. With two RED bonuses already and one RED token in my possession, the card's cost of three RED is fully covered. Adding this third RED bonus immediately satisfies the conditions for two nobles: N9 (3 BLUE, 3 GREEN, 3 RED) and N10 (3 WHITE, 3 BLACK, 3 RED). While I can only receive one noble visit per turn, claiming N9 now will bring my score to 13, and N10 will visit on my next turn, bringing my total to 16 and securing the win.
+2025-12-31 16:00:30.665 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L1_31]
+2025-12-31 16:00:30.666 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 30 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:3 GRN:3 RED:3 BLK:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_32] GRN 1pt BLK:4                      | [L1_18] WHT 0pts BLU:1 GRN:2 RED:1 BLK:1  
+L2: [L2_63] GRN 2pts GRN:5                     | [L2_54] WHT 1pt WHT:2 BLU:3 RED:3          |
+    [L2_53] WHT 1pt GRN:3 RED:2 BLK:2          | [L2_61] GRN 2pts WHT:4 BLU:2 BLK:1        
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_76] BLU 4pts WHT:7                    
+
+[PLAYERS]
+gemini-3-flash-preview (P0):                           | gpt-5.2 (P1) (Current):
+  Score: 10 | Cards: 16                                |   Score: 13 | Cards: 10
+  Tokens: BLK:2                                        |   Tokens: BLU:1 GRN:1 RED:1
+  Bonuses: {WHT:3 BLU:3 GRN:4 RED:2 BLK:4}             |   Bonuses: {WHT:2 BLU:4 GRN:1 RED:1 BLK:2}
+  Reserved: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         |   Reserved: [L1_33] RED 0pts WHT:1 BLU:1 GRN:1 BLK:1
+
+======================================================================================
+
+2025-12-31 16:00:30.666 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 30 - Player 1's move
+2025-12-31 16:00:30.666 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 13, Budget: {WHT=2, BLU=5, GRN=2, RED=2, BLK=2}
+2025-12-31 16:03:33.634 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I’m at 13 prestige and the cleanest immediate win condition on the board is L2_61 (2 prestige). With my current bonuses (WHITE2, BLUE4, BLACK2), L2_61’s cost (WHITE4, BLUE2, BLACK1) discounts down to exactly 2 WHITE. 
+
+So the highest-tempo play is to take 2 WHITE now (legal since WHITE=4 in the bank), setting up a potential winning purchase of L2_61 next turn. This also forces Player 0 to spend their next turn reserving L2_61 (or lose immediately), which is still good for me because it costs them tempo.
+
+Token count goes from 3 to 5, staying under the 10-token cap, so no returns are needed.
+2025-12-31 16:03:33.635 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={WHITE=2}, tokensToReturn=null]
+2025-12-31 16:03:33.635 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 31 | Current Player: gemini-3-flash-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:3 GRN:3 RED:3 BLK:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_32] GRN 1pt BLK:4                      | [L1_18] WHT 0pts BLU:1 GRN:2 RED:1 BLK:1  
+L2: [L2_63] GRN 2pts GRN:5                     | [L2_54] WHT 1pt WHT:2 BLU:3 RED:3          |
+    [L2_53] WHT 1pt GRN:3 RED:2 BLK:2          | [L2_61] GRN 2pts WHT:4 BLU:2 BLK:1        
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_76] BLU 4pts WHT:7                    
+
+[PLAYERS]
+gemini-3-flash-preview (P0) (Current):                 | gpt-5.2 (P1):
+  Score: 10 | Cards: 16                                |   Score: 13 | Cards: 10
+  Tokens: BLK:2                                        |   Tokens: WHT:2 BLU:1 GRN:1 RED:1
+  Bonuses: {WHT:3 BLU:3 GRN:4 RED:2 BLK:4}             |   Bonuses: {WHT:2 BLU:4 GRN:1 RED:1 BLK:2}
+  Reserved: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         |   Reserved: [L1_33] RED 0pts WHT:1 BLU:1 GRN:1 BLK:1
+
+======================================================================================
+
+2025-12-31 16:03:33.635 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 31 - Player 0's move
+2025-12-31 16:03:33.635 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 10, Budget: {WHT=3, BLU=3, GRN=4, RED=2, BLK=6}
+2025-12-31 16:04:48.385 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: The opponent currently has 13 prestige points and can win this turn by purchasing card L2_61 (2 points). L2_61 costs 4 WHITE, 2 BLUE, and 1 BLACK. The opponent has 2 WHITE bonuses and 2 WHITE tokens, 4 BLUE bonuses, and 2 BLACK bonuses, covering the entire cost. To prevent an immediate loss, I must block this move. I cannot purchase L2_61 myself as I lack WHITE tokens, so I will reserve it. Reserving L2_61 grants me 1 GOLD token, which I will use toward purchasing L3_90 (5 points). L3_90 also provides the 3rd RED bonus I need to activate back-to-back noble visits from N9 and N10, eventually leading to 21 points and victory.
+2025-12-31 16:04:48.385 [main] INFO  com.aisplendor.engine.GameSimulator - Action: ReserveCardAction[cardId=L2_61, deckLevel=null, tokensToReturn=null]
+2025-12-31 16:04:48.385 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 31 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:3 GRN:3 RED:3 BLK:2 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_32] GRN 1pt BLK:4                      | [L1_18] WHT 0pts BLU:1 GRN:2 RED:1 BLK:1  
+L2: [L2_63] GRN 2pts GRN:5                     | [L2_54] WHT 1pt WHT:2 BLU:3 RED:3          |
+    [L2_53] WHT 1pt GRN:3 RED:2 BLK:2          | [L2_70] RED 3pts RED:6                    
+L3: [L3_90] RED 5pts GRN:7 RED:3               | [L3_72] BLK 4pts RED:7                     |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_76] BLU 4pts WHT:7                    
+
+[PLAYERS]
+gemini-3-flash-preview (P0):                           | gpt-5.2 (P1) (Current):
+  Score: 10 | Cards: 16                                |   Score: 13 | Cards: 10
+  Tokens: BLK:2 GLD:1                                  |   Tokens: WHT:2 BLU:1 GRN:1 RED:1
+  Bonuses: {WHT:3 BLU:3 GRN:4 RED:2 BLK:4}             |   Bonuses: {WHT:2 BLU:4 GRN:1 RED:1 BLK:2}
+  Reserved: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         |   Reserved: [L1_33] RED 0pts WHT:1 BLU:1 GRN:1 BLK:1
+            [L2_61] GRN 2pts WHT:4 BLU:2 BLK:1         | 
+
+======================================================================================
+
+2025-12-31 16:04:48.385 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 31 - Player 1's move
+2025-12-31 16:04:48.385 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 13, Budget: {WHT=4, BLU=5, GRN=2, RED=2, BLK=2}
+2025-12-31 16:07:33.429 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I’m at 13 points, but my previous immediate 2-point finish (L2_61) is no longer available to me because Player 0 has it reserved. Meanwhile Player 0 is at 10 points with strong discounts and a GOLD, and the face-up L3_90 (5 points) is their clearest fast win (they can reach the discounted cost quickly and hit 15 in just a few turns).
+
+So the highest-priority move is to reserve L3_90 right now to remove that immediate 5-point win condition from Player 0, while also gaining a GOLD token for flexibility in my own upcoming purchases. This doesn’t risk the 10-token cap (I go from 5 to 6 tokens).
+2025-12-31 16:07:33.429 [main] INFO  com.aisplendor.engine.GameSimulator - Action: ReserveCardAction[cardId=L3_90, deckLevel=null, tokensToReturn=null]
+2025-12-31 16:07:33.429 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 32 | Current Player: gemini-3-flash-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:3 GRN:3 RED:3 BLK:2 GLD:3
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_32] GRN 1pt BLK:4                      | [L1_18] WHT 0pts BLU:1 GRN:2 RED:1 BLK:1  
+L2: [L2_63] GRN 2pts GRN:5                     | [L2_54] WHT 1pt WHT:2 BLU:3 RED:3          |
+    [L2_53] WHT 1pt GRN:3 RED:2 BLK:2          | [L2_70] RED 3pts RED:6                    
+L3: [L3_72] BLK 4pts RED:7                     | [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         |
+    [L3_76] BLU 4pts WHT:7                     | [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5  
+
+[PLAYERS]
+gemini-3-flash-preview (P0) (Current):                 | gpt-5.2 (P1):
+  Score: 10 | Cards: 16                                |   Score: 13 | Cards: 10
+  Tokens: BLK:2 GLD:1                                  |   Tokens: WHT:2 BLU:1 GRN:1 RED:1 GLD:1
+  Bonuses: {WHT:3 BLU:3 GRN:4 RED:2 BLK:4}             |   Bonuses: {WHT:2 BLU:4 GRN:1 RED:1 BLK:2}
+  Reserved: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         |   Reserved: [L1_33] RED 0pts WHT:1 BLU:1 GRN:1 BLK:1
+            [L2_61] GRN 2pts WHT:4 BLU:2 BLK:1         |             [L3_90] RED 5pts GRN:7 RED:3
+
+======================================================================================
+
+2025-12-31 16:07:33.429 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 32 - Player 0's move
+2025-12-31 16:07:33.429 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 10, Budget: {WHT=3, BLU=3, GRN=4, RED=2, BLK=6, GLD=1}
+2025-12-31 16:08:48.264 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I am currently at 10 prestige points and need 5 more to reach the target of 15. The most efficient way to achieve this is to purchase high-value cards that my current engine already supports. Card L3_75 is available on the board and is worth 3 prestige points. Its cost is 3 WHITE, 3 GREEN, 3 RED, and 5 BLACK. With my current bonuses (3 WHITE, 4 GREEN, 2 RED, and 4 BLACK), the net cost is reduced to 1 RED and 1 BLACK token. I currently possess 2 BLACK tokens and 1 GOLD token, allowing me to purchase this card immediately. This move will bring my total score to 13, matching the opponent. From there, I will only need 2 more points, which I can obtain by purchasing my reserved card L2_61 (worth 2 points) as soon as I acquire one WHITE token.
+2025-12-31 16:08:48.264 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L3_75]
+2025-12-31 16:08:48.264 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 32 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:3 GRN:3 RED:3 BLK:3 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_32] GRN 1pt BLK:4                      | [L1_18] WHT 0pts BLU:1 GRN:2 RED:1 BLK:1  
+L2: [L2_63] GRN 2pts GRN:5                     | [L2_54] WHT 1pt WHT:2 BLU:3 RED:3          |
+    [L2_53] WHT 1pt GRN:3 RED:2 BLK:2          | [L2_70] RED 3pts RED:6                    
+L3: [L3_72] BLK 4pts RED:7                     | [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         |
+    [L3_76] BLU 4pts WHT:7                     | [L3_71] BLK 3pts WHT:3 BLU:3 GRN:5 RED:3  
+
+[PLAYERS]
+gemini-3-flash-preview (P0):                           | gpt-5.2 (P1) (Current):
+  Score: 13 | Cards: 17                                |   Score: 13 | Cards: 10
+  Tokens: BLK:1                                        |   Tokens: WHT:2 BLU:1 GRN:1 RED:1 GLD:1
+  Bonuses: {WHT:3 BLU:4 GRN:4 RED:2 BLK:4}             |   Bonuses: {WHT:2 BLU:4 GRN:1 RED:1 BLK:2}
+  Reserved: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         |   Reserved: [L1_33] RED 0pts WHT:1 BLU:1 GRN:1 BLK:1
+            [L2_61] GRN 2pts WHT:4 BLU:2 BLK:1         |             [L3_90] RED 5pts GRN:7 RED:3
+
+======================================================================================
+
+2025-12-31 16:08:48.264 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 32 - Player 1's move
+2025-12-31 16:08:48.264 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 13, Budget: {WHT=4, BLU=5, GRN=2, RED=2, BLK=2, GLD=1}
+2025-12-31 16:12:20.068 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Both players are at 13, and Player 0 can plausibly reach 15 soon via their reserved 2-point cards (L2_61 or L2_55) after a quick gold reserve/tokens. I can’t reach 15 on my next turn with the current face-up 2-point options, so the best counter is to secure a guaranteed higher-scoring finish.
+
+Reserving L3_76 (4 prestige, only WHITE cost) is the cleanest: it’s the easiest L3 for me to fund (I already have WHITE tokens + GOLD, and reserving also gives me +1 GOLD). This both removes a strong 4-point option from the board and sets me up to buy it shortly; if Player 0 hits 15 first, I can still overtake with this 4-point purchase.
+
+Token check: I currently have 6 tokens; reserving will give me 1 GOLD (available), going to 7 ≤ 10, so no returns.
+2025-12-31 16:12:20.068 [main] INFO  com.aisplendor.engine.GameSimulator - Action: ReserveCardAction[cardId=L3_76, deckLevel=null, tokensToReturn=null]
+2025-12-31 16:12:20.068 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 33 | Current Player: gemini-3-flash-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:3 GRN:3 RED:3 BLK:3 GLD:3
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_32] GRN 1pt BLK:4                      | [L1_18] WHT 0pts BLU:1 GRN:2 RED:1 BLK:1  
+L2: [L2_63] GRN 2pts GRN:5                     | [L2_54] WHT 1pt WHT:2 BLU:3 RED:3          |
+    [L2_53] WHT 1pt GRN:3 RED:2 BLK:2          | [L2_70] RED 3pts RED:6                    
+L3: [L3_72] BLK 4pts RED:7                     | [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         |
+    [L3_71] BLK 3pts WHT:3 BLU:3 GRN:5 RED:3   | [L3_89] RED 4pts BLU:3 GRN:6 RED:3        
+
+[PLAYERS]
+gemini-3-flash-preview (P0) (Current):                 | gpt-5.2 (P1):
+  Score: 13 | Cards: 17                                |   Score: 13 | Cards: 10
+  Tokens: BLK:1                                        |   Tokens: WHT:2 BLU:1 GRN:1 RED:1 GLD:2
+  Bonuses: {WHT:3 BLU:4 GRN:4 RED:2 BLK:4}             |   Bonuses: {WHT:2 BLU:4 GRN:1 RED:1 BLK:2}
+  Reserved: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         |   Reserved: [L1_33] RED 0pts WHT:1 BLU:1 GRN:1 BLK:1
+            [L2_61] GRN 2pts WHT:4 BLU:2 BLK:1         |             [L3_90] RED 5pts GRN:7 RED:3
+                                                       |             [L3_76] BLU 4pts WHT:7
+
+======================================================================================
+
+2025-12-31 16:12:20.068 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 33 - Player 0's move
+2025-12-31 16:12:20.068 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 13, Budget: {WHT=3, BLU=4, GRN=4, RED=2, BLK=5}
+2025-12-31 16:13:08.482 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I will purchase card L2_53 from the board. Its cost (3 GREEN, 2 RED, 2 BLACK) is entirely covered by my current bonuses (4 GREEN, 2 RED, 4 BLACK), making it free of any token cost. This move increases my prestige points from 13 to 14 and adds a 4th WHITE bonus to my engine. With this 4th WHITE bonus, my reserved card L2_61 (which costs 4 WHITE, 2 BLUE, 1 BLACK) will become free to purchase on my next turn, as I already possess 4 BLUE and 4 BLACK bonuses. This strategy guarantees a win with 16 prestige points in two turns, and since the card I need for the final step is already in my hand, the opponent cannot block me.
+2025-12-31 16:13:08.482 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L2_53]
+2025-12-31 16:13:08.482 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 33 | Current Player: gpt-5.2 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:3 GRN:3 RED:3 BLK:3 GLD:3
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_32] GRN 1pt BLK:4                      | [L1_18] WHT 0pts BLU:1 GRN:2 RED:1 BLK:1  
+L2: [L2_63] GRN 2pts GRN:5                     | [L2_54] WHT 1pt WHT:2 BLU:3 RED:3          |
+    [L2_70] RED 3pts RED:6                     | [L2_52] BLU 3pts BLU:6                    
+L3: [L3_72] BLK 4pts RED:7                     | [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         |
+    [L3_71] BLK 3pts WHT:3 BLU:3 GRN:5 RED:3   | [L3_89] RED 4pts BLU:3 GRN:6 RED:3        
+
+[PLAYERS]
+gemini-3-flash-preview (P0):                           | gpt-5.2 (P1) (Current):
+  Score: 14 | Cards: 18                                |   Score: 13 | Cards: 10
+  Tokens: BLK:1                                        |   Tokens: WHT:2 BLU:1 GRN:1 RED:1 GLD:2
+  Bonuses: {WHT:4 BLU:4 GRN:4 RED:2 BLK:4}             |   Bonuses: {WHT:2 BLU:4 GRN:1 RED:1 BLK:2}
+  Reserved: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         |   Reserved: [L1_33] RED 0pts WHT:1 BLU:1 GRN:1 BLK:1
+            [L2_61] GRN 2pts WHT:4 BLU:2 BLK:1         |             [L3_90] RED 5pts GRN:7 RED:3
+                                                       |             [L3_76] BLU 4pts WHT:7
+
+======================================================================================
+
+2025-12-31 16:13:08.482 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 33 - Player 1's move
+2025-12-31 16:13:08.482 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 13, Budget: {WHT=4, BLU=5, GRN=2, RED=2, BLK=2, GLD=2}
+2025-12-31 16:13:40.649 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Player 0 is at 14 and has reserved L2_61 which is effectively free with their massive bonuses, so they can hit 16 on their next turn. I should therefore cross 15+ immediately and ideally land on 16 to at least tie their likely finish.
+
+The best available purchase is face-up L2_52 (3 prestige). Its cost is BLUE6, and with my BLUE4 bonus it costs only 2 BLUE. I can pay that using my 1 BLUE token plus 1 GOLD wildcard, gaining +3 points to go from 13 → 16 and adding a BLUE bonus. This also leaves me with fewer purchased cards than Player 0, which is favorable in a points tie at end-of-round.
+2025-12-31 16:13:40.649 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L2_52]
+2025-12-31 16:13:40.655 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 34 | Current Player: gemini-3-flash-preview (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:4 GRN:3 RED:3 BLK:3 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_7] BLK 0pts GRN:3                      | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_32] GRN 1pt BLK:4                      | [L1_18] WHT 0pts BLU:1 GRN:2 RED:1 BLK:1  
+L2: [L2_63] GRN 2pts GRN:5                     | [L2_54] WHT 1pt WHT:2 BLU:3 RED:3          |
+    [L2_70] RED 3pts RED:6                     | [L2_56] WHT 2pts RED:5 BLK:3              
+L3: [L3_72] BLK 4pts RED:7                     | [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         |
+    [L3_71] BLK 3pts WHT:3 BLU:3 GRN:5 RED:3   | [L3_89] RED 4pts BLU:3 GRN:6 RED:3        
+
+[PLAYERS]
+gemini-3-flash-preview (P0) (Current):                 | gpt-5.2 (P1):
+  Score: 14 | Cards: 18                                |   Score: 16 | Cards: 11
+  Tokens: BLK:1                                        |   Tokens: WHT:2 GRN:1 RED:1 GLD:1
+  Bonuses: {WHT:4 BLU:4 GRN:4 RED:2 BLK:4}             |   Bonuses: {WHT:2 BLU:5 GRN:1 RED:1 BLK:2}
+  Reserved: [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         |   Reserved: [L1_33] RED 0pts WHT:1 BLU:1 GRN:1 BLK:1
+            [L2_61] GRN 2pts WHT:4 BLU:2 BLK:1         |             [L3_90] RED 5pts GRN:7 RED:3
+                                                       |             [L3_76] BLU 4pts WHT:7
+
+======================================================================================
+
+2025-12-31 16:13:40.655 [main] INFO  com.aisplendor.engine.GameSimulator - --- Game Over ---
+2025-12-31 16:13:40.655 [main] INFO  com.aisplendor.engine.GameSimulator - Winner: Player 1 won on points.
+2025-12-31 16:13:40.655 [main] INFO  com.aisplendor.engine.GameSimulator - Player 0: 14 points
+2025-12-31 16:13:40.655 [main] INFO  com.aisplendor.engine.GameSimulator - Player 1: 16 points
+2025-12-31 16:13:40.656 [main] INFO  c.aisplendor.service.GameEventLogger - Game event log closed: logs\20251231_151918.json

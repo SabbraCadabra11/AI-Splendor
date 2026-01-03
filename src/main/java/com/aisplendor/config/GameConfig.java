@@ -1,12 +1,19 @@
 package com.aisplendor.config;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.Properties;
 
 public class GameConfig {
     private final Properties properties = new Properties();
 
+    /**
+     * Load configuration from the default classpath resource
+     * (application.properties).
+     */
     public GameConfig() {
         try (InputStream input = getClass().getClassLoader().getResourceAsStream("application.properties")) {
             if (input == null) {
@@ -15,6 +22,24 @@ public class GameConfig {
             }
             properties.load(input);
         } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    /**
+     * Load configuration from an external file path.
+     * 
+     * @param propertiesFile Path to the properties file
+     */
+    public GameConfig(Path propertiesFile) {
+        if (propertiesFile == null || !Files.exists(propertiesFile)) {
+            System.err.println("Warning: Properties file not found: " + propertiesFile + ", using defaults.");
+            return;
+        }
+        try (InputStream input = new FileInputStream(propertiesFile.toFile())) {
+            properties.load(input);
+        } catch (IOException ex) {
+            System.err.println("Error loading properties file: " + propertiesFile);
             ex.printStackTrace();
         }
     }

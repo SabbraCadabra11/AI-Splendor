@@ -1,0 +1,1738 @@
+Configured Player 0 with: openai/gpt-oss-20b (reasoning: high)
+Configured Player 1 with: z-ai/glm-4.7 (reasoning: high)
+Semi-Auto Mode: DISABLED
+Debug Mode: DISABLED
+--- Game Started ---
+Game event log created: logs\20251231_010722.json
+
+======================================================================================
+TURN 1 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:4 GRN:4 RED:4 BLK:4 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_35] RED 0pts WHT:2 GRN:1 BLK:2         | [L1_38] RED 0pts WHT:2 RED:2               |
+    [L1_18] WHT 0pts BLU:1 GRN:2 RED:1 BLK:1   | [L1_25] GRN 0pts WHT:1 BLU:1 RED:1 BLK:1  
+L2: [L2_42] BLK 1pt WHT:3 GRN:3 BLK:2          | [L2_52] BLU 3pts BLU:6                     |
+    [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_63] GRN 2pts GRN:5                    
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_82] WHT 5pts WHT:3 BLK:7               |
+    [L3_80] WHT 4pts BLK:7                     | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | glm-4.7 (P1):
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 0
+  Tokens:                                              |   Tokens: 
+  Bonuses: {}                                          |   Bonuses: {}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 1 - Player 0's move
+Points: 0, Budget: {}
+Reasoning: I have no tokens yet and cannot purchase a card. The optimal first move is to take 3 different tokens. I choose 1 white, 1 blue, 1 green, because they are available (4 each) and are needed for lower‑level cards. This gives a balanced token base for future purchases and keeps token count ≤10.
+Action: TakeTokensAction[tokens={WHITE=1, BLUE=1, GREEN=1}, tokensToReturn=null]
+
+======================================================================================
+TURN 1 | Current Player: glm-4.7 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:3 GRN:3 RED:4 BLK:4 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_35] RED 0pts WHT:2 GRN:1 BLK:2         | [L1_38] RED 0pts WHT:2 RED:2               |
+    [L1_18] WHT 0pts BLU:1 GRN:2 RED:1 BLK:1   | [L1_25] GRN 0pts WHT:1 BLU:1 RED:1 BLK:1  
+L2: [L2_42] BLK 1pt WHT:3 GRN:3 BLK:2          | [L2_52] BLU 3pts BLU:6                     |
+    [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_63] GRN 2pts GRN:5                    
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_82] WHT 5pts WHT:3 BLK:7               |
+    [L3_80] WHT 4pts BLK:7                     | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | glm-4.7 (P1) (Current):
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 0
+  Tokens: WHT:1 BLU:1 GRN:1                            |   Tokens: 
+  Bonuses: {}                                          |   Bonuses: {}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 1 - Player 1's move
+Points: 0, Budget: {}
+Reasoning: I am Player 1 and it is turn 1. Both players have 0 points and 0 bonuses. My opponent took WHITE, BLUE, and GREEN on their turn. The board has ample tokens of all colors. I should take 3 different colors to build a balanced starting hand. Taking RED and BLACK is strategic because there are two Level 1 cards available that provide RED bonuses (L1_35, L1_38) and one that provides BLACK (L2_42), plus they are needed for the available nobles. I will take WHITE, RED, and BLACK to give me flexibility and prevent my opponent from easily buying cards that require WHITE.
+Action: TakeTokensAction[tokens={WHITE=1, RED=1, BLACK=1}, tokensToReturn=null]
+
+======================================================================================
+TURN 2 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:3 GRN:3 RED:3 BLK:3 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_35] RED 0pts WHT:2 GRN:1 BLK:2         | [L1_38] RED 0pts WHT:2 RED:2               |
+    [L1_18] WHT 0pts BLU:1 GRN:2 RED:1 BLK:1   | [L1_25] GRN 0pts WHT:1 BLU:1 RED:1 BLK:1  
+L2: [L2_42] BLK 1pt WHT:3 GRN:3 BLK:2          | [L2_52] BLU 3pts BLU:6                     |
+    [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_63] GRN 2pts GRN:5                    
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_82] WHT 5pts WHT:3 BLK:7               |
+    [L3_80] WHT 4pts BLK:7                     | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | glm-4.7 (P1):
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 0
+  Tokens: WHT:1 BLU:1 GRN:1                            |   Tokens: WHT:1 RED:1 BLK:1
+  Bonuses: {}                                          |   Bonuses: {}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 2 - Player 0's move
+Points: 0, Budget: {WHT=1, BLU=1, GRN=1}
+Reasoning: I currently have three tokens: 1 WHITE, 1 BLUE, 1 GREEN. No Level‑1 card is affordable yet. The cheapest card I can acquire next turn is L1_25, which costs 1 WHITE, 1 BLUE, 1 RED, 1 BLACK and provides a GREEN bonus. I need an additional RED and BLACK token, and an extra GREEN token so that after the purchase I still have a GREEN token left to use later. The board has at least one RED, one BLACK, and one GREEN token available, so I can take 3 different tokens of those three colors. This move brings me one turn away from buying L1_25, securing a GREEN bonus that will reduce the cost of future purchases.
+Action: TakeTokensAction[tokens={GREEN=1, RED=1, BLACK=1}, tokensToReturn=null]
+
+======================================================================================
+TURN 2 | Current Player: glm-4.7 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:3 GRN:2 RED:2 BLK:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_35] RED 0pts WHT:2 GRN:1 BLK:2         | [L1_38] RED 0pts WHT:2 RED:2               |
+    [L1_18] WHT 0pts BLU:1 GRN:2 RED:1 BLK:1   | [L1_25] GRN 0pts WHT:1 BLU:1 RED:1 BLK:1  
+L2: [L2_42] BLK 1pt WHT:3 GRN:3 BLK:2          | [L2_52] BLU 3pts BLU:6                     |
+    [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_63] GRN 2pts GRN:5                    
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_82] WHT 5pts WHT:3 BLK:7               |
+    [L3_80] WHT 4pts BLK:7                     | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | glm-4.7 (P1) (Current):
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 0
+  Tokens: WHT:1 BLU:1 GRN:2 RED:1 BLK:1                |   Tokens: WHT:1 RED:1 BLK:1
+  Bonuses: {}                                          |   Bonuses: {}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 2 - Player 1's move
+Points: 0, Budget: {WHT=1, RED=1, BLK=1}
+Reasoning: I currently have 1 White, 1 Red, and 1 Black token. I cannot afford any visible card this turn. My goal is to acquire a Level 1 card on my next turn. The most strategic target is L1_38 (Red bonus, 0 pts) because it costs 2 White and 2 Red, and I already have 1 of each. By taking 1 White and 1 Red, I will have the exact cost (plus 1 Black and 1 Green leftover) to purchase L1_38 immediately next turn. For the third token, I will take Green. The opponent has 2 Green tokens and the board only has 2 remaining. Taking a Green token limits their Green economy and potential path to the Green noble or L1_18. Taking White, Red, and Green gives me a strong hand to execute my purchase next turn while slightly disrupting the opponent.
+Action: TakeTokensAction[tokens={WHITE=1, GREEN=1, RED=1}, tokensToReturn=null]
+
+======================================================================================
+TURN 3 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:1 BLU:3 GRN:1 RED:1 BLK:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_35] RED 0pts WHT:2 GRN:1 BLK:2         | [L1_38] RED 0pts WHT:2 RED:2               |
+    [L1_18] WHT 0pts BLU:1 GRN:2 RED:1 BLK:1   | [L1_25] GRN 0pts WHT:1 BLU:1 RED:1 BLK:1  
+L2: [L2_42] BLK 1pt WHT:3 GRN:3 BLK:2          | [L2_52] BLU 3pts BLU:6                     |
+    [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_63] GRN 2pts GRN:5                    
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_82] WHT 5pts WHT:3 BLK:7               |
+    [L3_80] WHT 4pts BLK:7                     | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | glm-4.7 (P1):
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 0
+  Tokens: WHT:1 BLU:1 GRN:2 RED:1 BLK:1                |   Tokens: WHT:2 GRN:1 RED:2 BLK:1
+  Bonuses: {}                                          |   Bonuses: {}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 3 - Player 0's move
+Points: 0, Budget: {WHT=1, BLU=1, GRN=2, RED=1, BLK=1}
+Reasoning: I have 6 tokens (1 white, 1 blue, 2 green, 1 red, 1 black).  I check which face‑up level‑1 cards I can afford:
+- L1_18 needs 1 blue, 2 green, 1 red, 1 black – I have all those.
+- L1_25 needs 1 white, 1 blue, 1 red, 1 black – I also have those.
+- L1_35 and L1_38 cost more than I can pay.
+
+Between L1_18 and L1_25, I choose L1_18 because its bonus (white) is more broadly useful: many higher‑level cards, including the prestige‑heavy level‑3 cards, require a white gem.  Adding a white bonus will lower the cost of those cards more than a green bonus would.  The opponent, having 2 white and 2 red tokens, can buy L1_38 for a red bonus, which also helps him.  With the white bonus and a future red bonus (from L1_35), I can target costly cards such as L2_42, L3_87, and eventually the 3‑point nobles that require white.  Therefore I purchase L1_18, spending my tokens and gaining a white bonus, which sets up a strong token‑saving strategy for the later turns.  This gives me a clear advantage and keeps my token count at 0 for the next turn to take new tokens efficiently.
+Action: PurchaseCardAction[cardId=L1_18]
+
+======================================================================================
+TURN 3 | Current Player: glm-4.7 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:1 BLU:4 GRN:3 RED:2 BLK:3 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_35] RED 0pts WHT:2 GRN:1 BLK:2         | [L1_38] RED 0pts WHT:2 RED:2               |
+    [L1_25] GRN 0pts WHT:1 BLU:1 RED:1 BLK:1   | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1        
+L2: [L2_42] BLK 1pt WHT:3 GRN:3 BLK:2          | [L2_52] BLU 3pts BLU:6                     |
+    [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_63] GRN 2pts GRN:5                    
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_82] WHT 5pts WHT:3 BLK:7               |
+    [L3_80] WHT 4pts BLK:7                     | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | glm-4.7 (P1) (Current):
+  Score: 0 | Cards: 1                                  |   Score: 0 | Cards: 0
+  Tokens: WHT:1                                        |   Tokens: WHT:2 GRN:1 RED:2 BLK:1
+  Bonuses: {WHT:1}                                     |   Bonuses: {}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 3 - Player 1's move
+Points: 0, Budget: {WHT=2, GRN=1, RED=2, BLK=1}
+Reasoning: I have exactly 2 White and 2 Red tokens. Card L1_38 is available on the board and costs exactly 2 White and 2 Red. Purchasing this card gives me a Red bonus, which is essential for Noble N10 and future Red cards. This move gets me my first development, frees up my token capacity (dropping from 6 to 2), and aligns with my previous plan.
+Action: PurchaseCardAction[cardId=L1_38]
+
+======================================================================================
+TURN 4 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:4 GRN:3 RED:4 BLK:3 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_35] RED 0pts WHT:2 GRN:1 BLK:2         | [L1_25] GRN 0pts WHT:1 BLU:1 RED:1 BLK:1   |
+    [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         | [L1_37] RED 0pts BLU:2 GRN:1              
+L2: [L2_42] BLK 1pt WHT:3 GRN:3 BLK:2          | [L2_52] BLU 3pts BLU:6                     |
+    [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_63] GRN 2pts GRN:5                    
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_82] WHT 5pts WHT:3 BLK:7               |
+    [L3_80] WHT 4pts BLK:7                     | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | glm-4.7 (P1):
+  Score: 0 | Cards: 1                                  |   Score: 0 | Cards: 1
+  Tokens: WHT:1                                        |   Tokens: GRN:1 BLK:1
+  Bonuses: {WHT:1}                                     |   Bonuses: {RED:1}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 4 - Player 0's move
+Points: 0, Budget: {WHT=2}
+Reasoning: After acquiring 1 white token from the previous turn, I have no tokens left that would allow me to purchase a card. The only face‑up card I could afford after a single token draw is L1_25, which costs one white, one blue, one red, and one black token. The board still has at least one of each of these colors available (blue and red are plentiful, black is sufficient). By taking one token of each of these three colors I will hold four tokens total—well under the 10‑token limit—and will be positioned to buy L1_25 on my next turn. This card grants a green bonus, which is valuable for future purchases (e.g. L2_55, L2_42). No other card can be bought immediately with a different token combination, making this the most efficient move to push toward the 15‑prestige target. I will not need to return any tokens this turn.
+Action: TakeTokensAction[tokens={BLUE=1, RED=1, BLACK=1}, tokensToReturn=null]
+
+======================================================================================
+TURN 4 | Current Player: glm-4.7 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:3 GRN:3 RED:3 BLK:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_35] RED 0pts WHT:2 GRN:1 BLK:2         | [L1_25] GRN 0pts WHT:1 BLU:1 RED:1 BLK:1   |
+    [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         | [L1_37] RED 0pts BLU:2 GRN:1              
+L2: [L2_42] BLK 1pt WHT:3 GRN:3 BLK:2          | [L2_52] BLU 3pts BLU:6                     |
+    [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_63] GRN 2pts GRN:5                    
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_82] WHT 5pts WHT:3 BLK:7               |
+    [L3_80] WHT 4pts BLK:7                     | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | glm-4.7 (P1) (Current):
+  Score: 0 | Cards: 1                                  |   Score: 0 | Cards: 1
+  Tokens: WHT:1 BLU:1 RED:1 BLK:1                      |   Tokens: GRN:1 BLK:1
+  Bonuses: {WHT:1}                                     |   Bonuses: {RED:1}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 4 - Player 1's move
+Points: 0, Budget: {GRN=1, RED=1, BLK=1}
+Reasoning: I cannot afford any cards this turn. My opponent has the tokens to purchase L1_25, L1_35, L1_37, or L1_12 immediately. By taking 1 Blue, 1 White, and 1 Black, I effectively block them from purchasing any of the visible Level 1 cards, as all require at least one of these colors. Strategically, this move sets me up to purchase L1_37 (Red bonus) on my next turn. I currently have 1 Green and will have 1 Blue after this take; taking 2 Blue tokens next turn will give me the 2 Blue and 1 Green needed for L1_37. Securing a second Red bonus will complete the Red requirement (3/3) for Noble N10, while holding White and Black tokens advances my progress towards the other noble requirements.
+Action: TakeTokensAction[tokens={WHITE=1, BLUE=1, BLACK=1}, tokensToReturn=null]
+
+======================================================================================
+TURN 5 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:2 GRN:3 RED:3 BLK:1 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_35] RED 0pts WHT:2 GRN:1 BLK:2         | [L1_25] GRN 0pts WHT:1 BLU:1 RED:1 BLK:1   |
+    [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         | [L1_37] RED 0pts BLU:2 GRN:1              
+L2: [L2_42] BLK 1pt WHT:3 GRN:3 BLK:2          | [L2_52] BLU 3pts BLU:6                     |
+    [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_63] GRN 2pts GRN:5                    
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_82] WHT 5pts WHT:3 BLK:7               |
+    [L3_80] WHT 4pts BLK:7                     | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | glm-4.7 (P1):
+  Score: 0 | Cards: 1                                  |   Score: 0 | Cards: 1
+  Tokens: WHT:1 BLU:1 RED:1 BLK:1                      |   Tokens: WHT:1 BLU:1 GRN:1 BLK:2
+  Bonuses: {WHT:1}                                     |   Bonuses: {RED:1}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 5 - Player 0's move
+Points: 0, Budget: {WHT=2, BLU=1, RED=1, BLK=1}
+Reasoning: First, I review the current game state.
+
+### My Current Resources
+- Tokens: 1 WHITE, 1 BLUE, 1 GREEN, 1 RED, 1 BLACK (total 5)
+- Bonus gems: 1 WHITE
+- No prestige points yet.
+- No cards reserved.
+
+### Board Overview
+Face‑up cards:
+- Level 1: L1_35 (cost W2 G1 B2), L1_25 (cost W1 B1 R1 B1), L1_12 (cost B1 G3 R1), L1_37 (cost B2 G1)
+- Level 2: L2_42, L2_52, L2_55, L2_63
+- Level 3: L3_77, L3_82, L3_80, L3_87
+Available tokens on board: 2W,2B,3G,3R,1B,5GOLD.
+
+### What can I buy immediately?
+With my tokens I can afford:
+- L1_25 (requires 1 W,1 B,1 R,1 B)
+- L1_37 (requires 2 B,1 G)
+I could also consider buying a Level‑2 card if I had gold, but I have none.
+
+Since L1_25 yields a GREEN bonus, that will help me tackle future Level‑2 card costs involving green.
+
+### Token Management
+I currently hold 5 tokens.  The turn limit allows a maximum of 10 tokens, so I can safely take 3 or 2 tokens.
+
+I should keep in mind the strategy: to have a 5‑token base before buying L1_25, I need to add one red and one black token to reach the required stack.
+
+#### Option 1 – Take 3 distinct tokens
+Take one RED, one BLACK, and one GREEN. After the take, my totals will be:
+- White 1, Blue 1, Green 2, Red 2, Black 2 (total 7).  This keeps good balance and maintains the ability to buy L1_25 next turn.
+
+#### Option 2 – Take 2 tokens of the same color
+Not viable, due to the black token only having 1 on the board.
+
+Thus the optimal move is to take 3 different tokens, specifically 1 RED, 1 BLACK, and 1 GREEN.
+
+No other action (purchase or reserve) is better because I cannot afford any card other than L1_25 or L1_37, and I want to stay nimble with tokens rather than waste a turn reserving.
+
+### Final Decision
+Take 1 RED, 1 BLACK, and 1 GREEN, which will give me 7 tokens and allow me to buy L1_25 on the next turn. I will not return any tokens because I have room below the 10‑token limit.
+
+Action: TakeTokensAction[tokens={GREEN=1, RED=1, BLACK=1}, tokensToReturn=null]
+
+======================================================================================
+TURN 5 | Current Player: glm-4.7 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:2 GRN:2 RED:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_35] RED 0pts WHT:2 GRN:1 BLK:2         | [L1_25] GRN 0pts WHT:1 BLU:1 RED:1 BLK:1   |
+    [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         | [L1_37] RED 0pts BLU:2 GRN:1              
+L2: [L2_42] BLK 1pt WHT:3 GRN:3 BLK:2          | [L2_52] BLU 3pts BLU:6                     |
+    [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_63] GRN 2pts GRN:5                    
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_82] WHT 5pts WHT:3 BLK:7               |
+    [L3_80] WHT 4pts BLK:7                     | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | glm-4.7 (P1) (Current):
+  Score: 0 | Cards: 1                                  |   Score: 0 | Cards: 1
+  Tokens: WHT:1 BLU:1 GRN:1 RED:2 BLK:2                |   Tokens: WHT:1 BLU:1 GRN:1 BLK:2
+  Bonuses: {WHT:1}                                     |   Bonuses: {RED:1}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 5 - Player 1's move
+Points: 0, Budget: {WHT=1, BLU=1, GRN=1, RED=1, BLK=2}
+Reasoning: I currently have 5 tokens (1 White, 1 Blue, 1 Green, 2 Black) and cannot afford any cards. The most critical threat is my opponent taking 2 White tokens to purchase L1_35 (Cost: 2 White, 1 Green, 2 Black). If they do, they efficiently dump their 2 Black tokens and gain a Red bonus. To prevent this, I must take the 2 White tokens from the board myself. This blocks L1_35 for my opponent this turn. With White removed, my opponent is forced to target L1_37 (Cost: 2 Blue, 1 Green), which requires them to take 2 Blue tokens. While they will gain a Red bonus from L1_37, they will be stuck with their 2 Black tokens (0 available on board), burdening their economy. On my next turn, with the 2 White tokens I just took, I will have exactly 3 White, 1 Green, and 2 Black tokens, allowing me to purchase L1_35 immediately, gaining my second Red bonus and efficiently shedding my own Black tokens.
+Action: TakeTokensAction[tokens={WHITE=2}, tokensToReturn=null]
+Retry attempt 1 for Player 1. Error: Invalid action: Cannot take 2 WHITE tokens: only 2 available (need 4).
+Reasoning: The previous attempt failed because I tried to take a Black token, but the board supply is 0. I must take 3 different colors from the available pool (White, Blue, Green, Red), as I cannot take 2 of the same color (supply < 4). My current hand is 1 White, 1 Blue, 1 Green, 2 Black. I aim to buy a Red bonus card next turn to progress toward Noble N10. L1_35 (Cost: 2 White, 1 Green, 2 Black) gives a Red bonus and allows me to efficiently spend my 2 Black tokens, which are scarce (0 on board). To afford L1_35 next turn, I need 1 more White token. I will also take 1 Blue and 1 Green. Taking Blue blocks the opponent, who needs it for L1_25 and L1_37, and taking Green prepares for future purchases. This brings my total to 8 tokens and sets up the purchase of L1_35.
+Action: TakeTokensAction[tokens={WHITE=1, BLUE=1, GREEN=1}, tokensToReturn=null]
+
+======================================================================================
+TURN 6 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:1 BLU:1 GRN:1 RED:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_35] RED 0pts WHT:2 GRN:1 BLK:2         | [L1_25] GRN 0pts WHT:1 BLU:1 RED:1 BLK:1   |
+    [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         | [L1_37] RED 0pts BLU:2 GRN:1              
+L2: [L2_42] BLK 1pt WHT:3 GRN:3 BLK:2          | [L2_52] BLU 3pts BLU:6                     |
+    [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_63] GRN 2pts GRN:5                    
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_82] WHT 5pts WHT:3 BLK:7               |
+    [L3_80] WHT 4pts BLK:7                     | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | glm-4.7 (P1):
+  Score: 0 | Cards: 1                                  |   Score: 0 | Cards: 1
+  Tokens: WHT:1 BLU:1 GRN:1 RED:2 BLK:2                |   Tokens: WHT:2 BLU:2 GRN:2 BLK:2
+  Bonuses: {WHT:1}                                     |   Bonuses: {RED:1}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 6 - Player 0's move
+Points: 0, Budget: {WHT=2, BLU=1, GRN=1, RED=2, BLK=2}
+Reasoning: I read the current board and tokens. The opponent has acted to reserve or buy a near‑sparse white–red combos. After we end the -- ... (0..)
+Action: TakeTokensAction[tokens={BLUE=345}, tokensToReturn={BLUE=1000, RED=33, BLACK=2}]
+Retry attempt 1 for Player 0. Error: Invalid action: Invalid token count. Must take 3 different or 2 matching tokens.
+Reasoning: I currently possess the necessary tokens to purchase L1_25 (needs 1 blue, 1 red, 1 black; the white requirement is waived due to my existing white bonus).  Buying L1_25 will grant me a GREEN bonus, complementing my existing WHITE bonus and setting up a path toward acquiring a BLUE bonus with L1_12.  This sequence (L1_25 → L1_12) will give me all three primary bonuses early, dramatically reducing future card costs and accelerating my prestige accumulation.  No other board card is affordable or more strategically valuable at this turn.
+Action: PurchaseCardAction[cardId=L1_25]
+
+======================================================================================
+TURN 6 | Current Player: glm-4.7 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:1 BLU:2 GRN:1 RED:3 BLK:1 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_35] RED 0pts WHT:2 GRN:1 BLK:2         | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_37] RED 0pts BLU:2 GRN:1               | [L1_17] WHT 0pts BLU:1 GRN:1 RED:1 BLK:1  
+L2: [L2_42] BLK 1pt WHT:3 GRN:3 BLK:2          | [L2_52] BLU 3pts BLU:6                     |
+    [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_63] GRN 2pts GRN:5                    
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_82] WHT 5pts WHT:3 BLK:7               |
+    [L3_80] WHT 4pts BLK:7                     | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | glm-4.7 (P1) (Current):
+  Score: 0 | Cards: 2                                  |   Score: 0 | Cards: 1
+  Tokens: WHT:1 GRN:1 RED:1 BLK:1                      |   Tokens: WHT:2 BLU:2 GRN:2 BLK:2
+  Bonuses: {WHT:1 GRN:1}                               |   Bonuses: {RED:1}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 6 - Player 1's move
+Points: 0, Budget: {WHT=2, BLU=2, GRN=2, RED=1, BLK=2}
+Reasoning: I can currently afford both L1_35 and L1_37, both of which provide a Red bonus to progress towards Noble N10. While my previous plan targeted L1_35, purchasing L1_37 is strategically superior. L1_35 costs 2 White, 1 Green, and 2 Black, which would deplete my scarce White and Black tokens (supply is only 1 on board). L1_37 costs 2 Blue and 1 Green, leaving me with 2 White, 1 Green, and 2 Black. Holding onto the White and Black tokens allows me to pursue Nobles N10 and N3 more effectively and puts me in a strong position to purchase L2_42 (Black bonus, 1 pt) on the next turn, requiring only 1 more White and 2 Green. Thus, buying L1_37 preserves critical resources and accelerates my engine development.
+Action: PurchaseCardAction[cardId=L1_37]
+
+======================================================================================
+TURN 7 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:1 BLU:4 GRN:2 RED:3 BLK:1 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_35] RED 0pts WHT:2 GRN:1 BLK:2         | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_17] WHT 0pts BLU:1 GRN:1 RED:1 BLK:1   | [L1_36] RED 0pts WHT:1 RED:1 BLK:3        
+L2: [L2_42] BLK 1pt WHT:3 GRN:3 BLK:2          | [L2_52] BLU 3pts BLU:6                     |
+    [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_63] GRN 2pts GRN:5                    
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_82] WHT 5pts WHT:3 BLK:7               |
+    [L3_80] WHT 4pts BLK:7                     | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | glm-4.7 (P1):
+  Score: 0 | Cards: 2                                  |   Score: 0 | Cards: 2
+  Tokens: WHT:1 GRN:1 RED:1 BLK:1                      |   Tokens: WHT:2 GRN:1 BLK:2
+  Bonuses: {WHT:1 GRN:1}                               |   Bonuses: {RED:2}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 7 - Player 0's move
+Points: 0, Budget: {WHT=2, GRN=2, RED=1, BLK=1}
+Reasoning: I have 5 tokens and bonuses of one WHITE and one GREEN. I need more tokens to buy a card that gives a BLUE bonus to diversify my bonuses. Taking one BLUE, one GREEN, and one BLACK token will keep my total under 10 and give me exactly the tokens needed to afford the face‑up Level‑1 card L1_12 on the next turn (cost after bonuses: B1, G2, R1). L1_12 also provides a BLUE bonus, which is valuable for future Level‑2 and Level‑3 cards. No other token combination allows an immediate purchase, so this is the most efficient move.
+Action: TakeTokensAction[tokens={BLUE=1, GREEN=1, BLACK=1}, tokensToReturn=null]
+
+======================================================================================
+TURN 7 | Current Player: glm-4.7 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:1 BLU:3 GRN:1 RED:3 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_35] RED 0pts WHT:2 GRN:1 BLK:2         | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_17] WHT 0pts BLU:1 GRN:1 RED:1 BLK:1   | [L1_36] RED 0pts WHT:1 RED:1 BLK:3        
+L2: [L2_42] BLK 1pt WHT:3 GRN:3 BLK:2          | [L2_52] BLU 3pts BLU:6                     |
+    [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_63] GRN 2pts GRN:5                    
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_82] WHT 5pts WHT:3 BLK:7               |
+    [L3_80] WHT 4pts BLK:7                     | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | glm-4.7 (P1) (Current):
+  Score: 0 | Cards: 2                                  |   Score: 0 | Cards: 2
+  Tokens: WHT:1 BLU:1 GRN:2 RED:1 BLK:2                |   Tokens: WHT:2 GRN:1 BLK:2
+  Bonuses: {WHT:1 GRN:1}                               |   Bonuses: {RED:2}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 7 - Player 1's move
+Points: 0, Budget: {WHT=2, GRN=1, RED=2, BLK=2}
+Reasoning: I currently have 2 White, 1 Green, and 2 Black tokens. Card L1_35 is available and costs exactly this combination. Purchasing L1_35 provides a Red bonus, bringing my total Red bonuses to 3. This completes the Red requirement for Noble N10 (3 Red, 3 White, 3 Black). Additionally, this purchase reduces my token count from 5 to 0, clearing my hand capacity. This allows me to take 3 new tokens next turn, which I can use to pursue the White and Black bonuses needed to complete the Noble. While I lose the specific White and Black tokens I was holding, keeping them wasn't enabling an immediate high-value purchase due to scarce Green supply for L2_42. Clearing the hand provides the best tempo and strategic flexibility.
+Action: PurchaseCardAction[cardId=L1_35]
+
+======================================================================================
+TURN 8 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:3 GRN:2 RED:3 BLK:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         | [L1_17] WHT 0pts BLU:1 GRN:1 RED:1 BLK:1   |
+    [L1_36] RED 0pts WHT:1 RED:1 BLK:3         | [L1_31] GRN 0pts RED:3                    
+L2: [L2_42] BLK 1pt WHT:3 GRN:3 BLK:2          | [L2_52] BLU 3pts BLU:6                     |
+    [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_63] GRN 2pts GRN:5                    
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_82] WHT 5pts WHT:3 BLK:7               |
+    [L3_80] WHT 4pts BLK:7                     | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | glm-4.7 (P1):
+  Score: 0 | Cards: 2                                  |   Score: 0 | Cards: 3
+  Tokens: WHT:1 BLU:1 GRN:2 RED:1 BLK:2                |   Tokens: 
+  Bonuses: {WHT:1 GRN:1}                               |   Bonuses: {RED:3}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 8 - Player 0's move
+Points: 0, Budget: {WHT=2, BLU=1, GRN=3, RED=1, BLK=2}
+Reasoning: Our current resources are 1WHITE,1BLUE,2GREEN,1RED,2BLACK tokens and bonuses WHITE=1, GREEN=1. The only level‑2 card we can afford after a token turn is L2_42, which costs 2WHITE, 2GREEN and 2BLACK. We only have one white token, so we need one more. Taking 3 distinct tokens, specifically 1WHITE, 1BLUE, 1GREEN, will give us the missing white token while keeping our total token count at 10 and providing extra tokens that may be useful for future purchases or for a subsequent turn that can buy L2_42, which will grant a BLACK bonus for later cards.
+Action: TakeTokensAction[tokens={WHITE=1, BLUE=1, GREEN=1}, tokensToReturn=null]
+
+======================================================================================
+TURN 8 | Current Player: glm-4.7 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:2 GRN:1 RED:3 BLK:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         | [L1_17] WHT 0pts BLU:1 GRN:1 RED:1 BLK:1   |
+    [L1_36] RED 0pts WHT:1 RED:1 BLK:3         | [L1_31] GRN 0pts RED:3                    
+L2: [L2_42] BLK 1pt WHT:3 GRN:3 BLK:2          | [L2_52] BLU 3pts BLU:6                     |
+    [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_63] GRN 2pts GRN:5                    
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_82] WHT 5pts WHT:3 BLK:7               |
+    [L3_80] WHT 4pts BLK:7                     | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | glm-4.7 (P1) (Current):
+  Score: 0 | Cards: 2                                  |   Score: 0 | Cards: 3
+  Tokens: WHT:2 BLU:2 GRN:3 RED:1 BLK:2                |   Tokens: 
+  Bonuses: {WHT:1 GRN:1}                               |   Bonuses: {RED:3}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 8 - Player 1's move
+Points: 0, Budget: {RED=3}
+Reasoning: I have 0 tokens and aim to acquire a White bonus to progress towards Noble N10 (3 Red, 3 White, 3 Black), for which I already have 3 Red bonuses. Card L1_17 provides a White bonus and costs 1 Blue, 1 Green, 1 Red, 1 Black. With my 3 Red bonuses, the effective cost is 1 Blue, 1 Green, 1 Black. Taking 1 White, 1 Black, and 1 Green secures the Black and Green components needed for L1_17, and starts my White collection. Taking the last Green token (supply 1) also denies the opponent a scarce resource and prepares for future Green costs. This sets up a potential purchase of L1_17 next turn.
+Action: TakeTokensAction[tokens={WHITE=1, GREEN=1, BLACK=1}, tokensToReturn=null]
+
+======================================================================================
+TURN 9 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:1 BLU:2 RED:3 BLK:1 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         | [L1_17] WHT 0pts BLU:1 GRN:1 RED:1 BLK:1   |
+    [L1_36] RED 0pts WHT:1 RED:1 BLK:3         | [L1_31] GRN 0pts RED:3                    
+L2: [L2_42] BLK 1pt WHT:3 GRN:3 BLK:2          | [L2_52] BLU 3pts BLU:6                     |
+    [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_63] GRN 2pts GRN:5                    
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_82] WHT 5pts WHT:3 BLK:7               |
+    [L3_80] WHT 4pts BLK:7                     | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | glm-4.7 (P1):
+  Score: 0 | Cards: 2                                  |   Score: 0 | Cards: 3
+  Tokens: WHT:2 BLU:2 GRN:3 RED:1 BLK:2                |   Tokens: WHT:1 GRN:1 BLK:1
+  Bonuses: {WHT:1 GRN:1}                               |   Bonuses: {RED:3}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 9 - Player 0's move
+Points: 0, Budget: {WHT=3, BLU=2, GRN=4, RED=1, BLK=2}
+Retry attempt 1 for Player 0. Error: Invalid action: Unknown action type: 
+Reasoning: I have 10 tokens: 2 WHITE, 2 BLUE, 3 GREEN, 1 RED, 2 BLACK. My bonuses are 1 WHITE and 1 GREEN. The face‑up Level‑1 card L1_12 costs BLUE:1, GREEN:3, RED:1. Accounting for my GREEN bonus, the effective cost is BLUE:1, GREEN:2, RED:1. I have exactly that combination of tokens (2 BLUE, 3 GREEN, 1 RED). After paying I will have 6 tokens left and gain a BLUE bonus. This bonus is highly valuable because many later cards, especially Level‑2 and 3 cards, require blue tokens. Buying L1_12 now is the most efficient move to build my bonus engine and sets up for future purchases while immediately reducing my token inventory. No other card is affordable or more strategically beneficial at this turn.
+Action: PurchaseCardAction[cardId=L1_12]
+
+======================================================================================
+TURN 9 | Current Player: glm-4.7 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:1 BLU:3 GRN:2 RED:4 BLK:1 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_17] WHT 0pts BLU:1 GRN:1 RED:1 BLK:1   | [L1_36] RED 0pts WHT:1 RED:1 BLK:3         |
+    [L1_31] GRN 0pts RED:3                     | [L1_3] BLK 0pts WHT:2 BLU:2 RED:1         
+L2: [L2_42] BLK 1pt WHT:3 GRN:3 BLK:2          | [L2_52] BLU 3pts BLU:6                     |
+    [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_63] GRN 2pts GRN:5                    
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_82] WHT 5pts WHT:3 BLK:7               |
+    [L3_80] WHT 4pts BLK:7                     | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | glm-4.7 (P1) (Current):
+  Score: 0 | Cards: 3                                  |   Score: 0 | Cards: 3
+  Tokens: WHT:2 BLU:1 GRN:1 BLK:2                      |   Tokens: WHT:1 GRN:1 BLK:1
+  Bonuses: {WHT:1 BLU:1 GRN:1}                         |   Bonuses: {RED:3}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 9 - Player 1's move
+Points: 0, Budget: {WHT=1, GRN=1, RED=3, BLK=1}
+Reasoning: My current strategy focuses on acquiring White and Black bonuses to claim Noble N10 (3 Red, 3 White, 3 Black) or N3 (4 White, 4 Black), as I already have 3 Red bonuses. I am targeting L1_17 (White bonus), which effectively costs 1 Blue, 1 Green, and 1 Black with my Red discount. I currently hold 1 Green and 1 Black, so I need 1 Blue to purchase it next turn. Furthermore, the next target after L1_17 is likely L1_3 (Black bonus, 0 pts), which costs 2 White and 2 Blue. White and Black tokens are scarce on the board (only 1 of each available). By taking 1 White, 1 Blue, and 1 Black, I secure the Blue needed for L1_17, lock up the scarce White token needed for L1_3, and deny the opponent the last Black token (preventing them from buying L1_36). This move optimally sets up my next two purchases while blocking the opponent.
+Action: TakeTokensAction[tokens={WHITE=1, BLUE=1, BLACK=1}, tokensToReturn=null]
+
+======================================================================================
+TURN 10 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+BLU:2 GRN:2 RED:4 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_17] WHT 0pts BLU:1 GRN:1 RED:1 BLK:1   | [L1_36] RED 0pts WHT:1 RED:1 BLK:3         |
+    [L1_31] GRN 0pts RED:3                     | [L1_3] BLK 0pts WHT:2 BLU:2 RED:1         
+L2: [L2_42] BLK 1pt WHT:3 GRN:3 BLK:2          | [L2_52] BLU 3pts BLU:6                     |
+    [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_63] GRN 2pts GRN:5                    
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_82] WHT 5pts WHT:3 BLK:7               |
+    [L3_80] WHT 4pts BLK:7                     | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | glm-4.7 (P1):
+  Score: 0 | Cards: 3                                  |   Score: 0 | Cards: 3
+  Tokens: WHT:2 BLU:1 GRN:1 BLK:2                      |   Tokens: WHT:2 BLU:1 GRN:1 BLK:2
+  Bonuses: {WHT:1 BLU:1 GRN:1}                         |   Bonuses: {RED:3}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 10 - Player 0's move
+Points: 0, Budget: {WHT=3, BLU=2, GRN=2, BLK=2}
+Reasoning: I am currently holding one white, one blue, one green, zero reds, and two blacks – a total of six tokens. I have one white, one blue, and one green bonus gem, but I lack a black bonus. The remaining Face‑Up cards on the table are all Level‑1 cards; the only one I could purchase immediately is the face‑up Level‑1 card L1_3, which costs two white, two blue, and one red gem. If I want to buy that card I need a red gem which I do not possess yet. I could take three different coloured tokens – one red, one blue, one green – but that would only give me one more red token. The prestige card L2_55 is a better long‑term objective; it costs green 1, red 4, and black 2 and gives two prestige points. I have a red token supply of four on the board, and by taking two red tokens I start building the four‑red requirement while keeping my token count below the 10‑token limit. In addition I keep my current white, blue, and green tokens and black tokens untouched, preserving the possibility of a future L1_3 purchase or other high‑prestige cards. Thus, taking two red tokens is the most efficient use of my action right now.
+Action: TakeTokensAction[tokens={RED=2}, tokensToReturn=null]
+
+======================================================================================
+TURN 10 | Current Player: glm-4.7 (P1)
+======================================================================================
+
+[BOARD BANK]
+BLU:2 GRN:2 RED:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_17] WHT 0pts BLU:1 GRN:1 RED:1 BLK:1   | [L1_36] RED 0pts WHT:1 RED:1 BLK:3         |
+    [L1_31] GRN 0pts RED:3                     | [L1_3] BLK 0pts WHT:2 BLU:2 RED:1         
+L2: [L2_42] BLK 1pt WHT:3 GRN:3 BLK:2          | [L2_52] BLU 3pts BLU:6                     |
+    [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_63] GRN 2pts GRN:5                    
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_82] WHT 5pts WHT:3 BLK:7               |
+    [L3_80] WHT 4pts BLK:7                     | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | glm-4.7 (P1) (Current):
+  Score: 0 | Cards: 3                                  |   Score: 0 | Cards: 3
+  Tokens: WHT:2 BLU:1 GRN:1 RED:2 BLK:2                |   Tokens: WHT:2 BLU:1 GRN:1 BLK:2
+  Bonuses: {WHT:1 BLU:1 GRN:1}                         |   Bonuses: {RED:3}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 10 - Player 1's move
+Points: 0, Budget: {WHT=2, BLU=1, GRN=1, RED=3, BLK=2}
+Reasoning: I am Player 1 with 3 Red bonuses and 6 tokens (2 White, 1 Blue, 1 Green, 2 Black). My goal is Noble N10 (3 Red, 3 White, 3 Black). I am targeting L1_17 (White bonus), which has an effective cost of 1 Blue, 1 Green, 1 Black after applying my Red discounts. I currently hold exactly those tokens (1 Blue, 1 Green, 1 Black). Purchasing L1_17 immediately grants me a White bonus (now 1/3 for N10) and leaves me with 2 White and 1 Black tokens (3 total). This is much more efficient than taking tokens, which would leave me with 9 tokens and likely force a discard later. This purchase puts me in a strong position to acquire a Black bonus next turn to further progress toward the Noble.
+Action: PurchaseCardAction[cardId=L1_17]
+
+======================================================================================
+TURN 11 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+BLU:3 GRN:3 RED:2 BLK:1 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_36] RED 0pts WHT:1 RED:1 BLK:3         | [L1_31] GRN 0pts RED:3                     |
+    [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_34] RED 0pts WHT:2 BLU:1 GRN:1 BLK:1  
+L2: [L2_42] BLK 1pt WHT:3 GRN:3 BLK:2          | [L2_52] BLU 3pts BLU:6                     |
+    [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_63] GRN 2pts GRN:5                    
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_82] WHT 5pts WHT:3 BLK:7               |
+    [L3_80] WHT 4pts BLK:7                     | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | glm-4.7 (P1):
+  Score: 0 | Cards: 3                                  |   Score: 0 | Cards: 4
+  Tokens: WHT:2 BLU:1 GRN:1 RED:2 BLK:2                |   Tokens: WHT:2 BLK:1
+  Bonuses: {WHT:1 BLU:1 GRN:1}                         |   Bonuses: {WHT:1 RED:3}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 11 - Player 0's move
+Points: 0, Budget: {WHT=3, BLU=2, GRN=2, RED=2, BLK=2}
+Reasoning: I currently have 2 WHITE, 1 BLUE, 1 GREEN, 2 RED, and 2 BLACK tokens, and bonuses WHITE = 1, BLUE = 1, GREEN = 1. The only Level‑1 card I can immediately buy that gives a new, useful bonus is L1_34, costing 1 WHITE + 1 BLUE. This removes those tokens but leaves me with 1 WHITE, 0 BLUE, 1 GREEN, 2 RED, and 2 BLACK tokens, still under 10. Purchasing L1_34 supplies a RED bonus; together with the existing bonuses it lets me buy L2_55 (2 prestige points, gives a WHITE bonus) in the next two turns: I’ll take 1 RED, 1 BLUE, and 1 GREEN on the next turn (bringing my token count to 9), then buy L2_55 on the following turn. This path yields 2 prestige points in 3 turns, faster than any other affordable card on the board. Other options such as buying L1_3 would require extra turns to accumulate the necessary RED tokens for a high‑point card, and taking tokens immediately would force me to return one token because my total would exceed 10. Therefore, buying L1_34 now is the most efficient move.
+Action: PurchaseCardAction[cardId=L1_34]
+
+======================================================================================
+TURN 11 | Current Player: glm-4.7 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:1 BLU:3 GRN:3 RED:2 BLK:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_36] RED 0pts WHT:1 RED:1 BLK:3         | [L1_31] GRN 0pts RED:3                     |
+    [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_40] RED 1pt WHT:4                     
+L2: [L2_42] BLK 1pt WHT:3 GRN:3 BLK:2          | [L2_52] BLU 3pts BLU:6                     |
+    [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_63] GRN 2pts GRN:5                    
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_82] WHT 5pts WHT:3 BLK:7               |
+    [L3_80] WHT 4pts BLK:7                     | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | glm-4.7 (P1) (Current):
+  Score: 0 | Cards: 4                                  |   Score: 0 | Cards: 4
+  Tokens: WHT:1 BLU:1 GRN:1 RED:2 BLK:1                |   Tokens: WHT:2 BLK:1
+  Bonuses: {WHT:1 BLU:1 GRN:1 RED:1}                   |   Bonuses: {WHT:1 RED:3}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 11 - Player 1's move
+Points: 0, Budget: {WHT=3, RED=3, BLK=1}
+Reasoning: I currently have 2 White and 1 Black token. I need to acquire more bonuses for Noble N10 (3 White, 3 Black) and start scoring points. I have two viable paths: take 2 Blue to buy L1_3 (Black bonus) next turn, or take Green, Red, and Black to buy L2_55 (White bonus, 2 points) next turn. Buying L2_55 gives me 2 points immediately compared to 0 for L1_3, which accelerates my progress to 15 prestige points. Both paths eventually lead to the same bonus configuration (1 Black, 2 White), but L2_55 provides the points earlier. Taking Green, Red, and Black provides the exact resources needed (1 Green, 1 Red, 1 Black) to afford L2_55's effective cost of 1G, 1R, 2B (Red cost discounted by my 3 Red bonuses). This move keeps my token count at 6, well within the limit, and sets up a strong purchase next turn.
+Action: TakeTokensAction[tokens={GREEN=1, RED=1, BLACK=1}, tokensToReturn=null]
+
+======================================================================================
+TURN 12 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:1 BLU:3 GRN:2 RED:1 BLK:1 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_36] RED 0pts WHT:1 RED:1 BLK:3         | [L1_31] GRN 0pts RED:3                     |
+    [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_40] RED 1pt WHT:4                     
+L2: [L2_42] BLK 1pt WHT:3 GRN:3 BLK:2          | [L2_52] BLU 3pts BLU:6                     |
+    [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_63] GRN 2pts GRN:5                    
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_82] WHT 5pts WHT:3 BLK:7               |
+    [L3_80] WHT 4pts BLK:7                     | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | glm-4.7 (P1):
+  Score: 0 | Cards: 4                                  |   Score: 0 | Cards: 4
+  Tokens: WHT:1 BLU:1 GRN:1 RED:2 BLK:1                |   Tokens: WHT:2 GRN:1 RED:1 BLK:2
+  Bonuses: {WHT:1 BLU:1 GRN:1 RED:1}                   |   Bonuses: {WHT:1 RED:3}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 12 - Player 0's move
+Points: 0, Budget: {WHT=2, BLU=2, GRN=2, RED=3, BLK=1}
+Retry attempt 1 for Player 0. Error: Invalid action: Unknown action type: 
+Reasoning: We currently hold 6 tokens and have bonuses W1,B1,G1,R1. Our most efficient next step is to acquire the token set needed to purchase a high‑value prestige card on the following turn. The Level‑2 card L2_55 costs 3 RED and 2 BLACK (after bonus reductions). We already have 2 RED and 1 BLACK tokens, and there is 1 RED and 1 BLACK token on the board. Taking one RED and one BLACK token, plus a third token of an unneeded color (GREEN) satisfies the TAKE_TOKENS rule, keeps our total below 10, and leaves us with exactly the tokens required to buy L2_55 next turn. No other card can be bought immediately for prestige, and reserving a card would not give us the needed RED/BLACK tokens. Thus the best current action is to take a RED, a BLACK, and a GREEN token.
+Action: TakeTokensAction[tokens={GREEN=1, RED=1}, tokensToReturn=null]
+Retry attempt 2 for Player 0. Error: Invalid action: For taking 2 tokens, they must be of the same color.
+Reasoning: I currently hold 6 tokens: 1 white, 1 blue, 1 green, 2 red, 1 black, and 4 bonuses (one each of white, blue, green, red). Only L2_55 can be bought after adding 3 specific tokens: it costs 4 red + 1 green + 2 black, and my bonuses reduce the requirement to 3 red + 2 black tokens. I already have 2 red and 1 black, so I need exactly one more red and one more black. Taking a third token of a different color will set up this purchase for the next turn and will leave me with extra tokens for future builds. I chose RED, BLACK, and BLUE because BLUE is a scarce resource; acquiring one now will help me build toward the high‑prestige Level‑2 card L2_52 later. This move positions me to buy L2_55 in the next turn, securing 2 prestige points and an additional white bonus, while staying within the 10‑token limit and preserving a token stack for future turns.
+Action: TakeTokensAction[tokens={BLUE=1, RED=1, BLACK=1}, tokensToReturn=null]
+
+======================================================================================
+TURN 12 | Current Player: glm-4.7 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:1 BLU:2 GRN:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_36] RED 0pts WHT:1 RED:1 BLK:3         | [L1_31] GRN 0pts RED:3                     |
+    [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_40] RED 1pt WHT:4                     
+L2: [L2_42] BLK 1pt WHT:3 GRN:3 BLK:2          | [L2_52] BLU 3pts BLU:6                     |
+    [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_63] GRN 2pts GRN:5                    
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_82] WHT 5pts WHT:3 BLK:7               |
+    [L3_80] WHT 4pts BLK:7                     | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | glm-4.7 (P1) (Current):
+  Score: 0 | Cards: 4                                  |   Score: 0 | Cards: 4
+  Tokens: WHT:1 BLU:2 GRN:1 RED:3 BLK:2                |   Tokens: WHT:2 GRN:1 RED:1 BLK:2
+  Bonuses: {WHT:1 BLU:1 GRN:1 RED:1}                   |   Bonuses: {WHT:1 RED:3}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 12 - Player 1's move
+Points: 0, Budget: {WHT=3, GRN=1, RED=4, BLK=2}
+Reasoning: I can purchase L2_55 immediately using my available tokens. The card costs 1 Green, 4 Red, and 2 Black. With my 3 Red bonuses, the Red cost is fully covered, leaving an effective cost of 1 Green, 1 Red, and 2 Black. My current hand (2 White, 1 Green, 1 Red, 2 Black) matches these requirements exactly. Purchasing this card grants 2 prestige points and increases my White bonus count to 2. This accelerates my score to 2 points and leaves me with 2 White tokens, setting up a potential play for the Black bonus card L1_3 on the following turn.
+Action: PurchaseCardAction[cardId=L2_55]
+
+======================================================================================
+TURN 13 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:1 BLU:2 GRN:3 RED:1 BLK:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_36] RED 0pts WHT:1 RED:1 BLK:3         | [L1_31] GRN 0pts RED:3                     |
+    [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_40] RED 1pt WHT:4                     
+L2: [L2_42] BLK 1pt WHT:3 GRN:3 BLK:2          | [L2_52] BLU 3pts BLU:6                     |
+    [L2_63] GRN 2pts GRN:5                     | [L2_46] BLK 3pts BLK:6                    
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_82] WHT 5pts WHT:3 BLK:7               |
+    [L3_80] WHT 4pts BLK:7                     | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | glm-4.7 (P1):
+  Score: 0 | Cards: 4                                  |   Score: 2 | Cards: 5
+  Tokens: WHT:1 BLU:2 GRN:1 RED:3 BLK:2                |   Tokens: WHT:2
+  Bonuses: {WHT:1 BLU:1 GRN:1 RED:1}                   |   Bonuses: {WHT:2 RED:3}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 13 - Player 0's move
+Points: 0, Budget: {WHT=2, BLU=3, GRN=2, RED=4, BLK=2}
+Reasoning: 'L2_42' is the most feasible high‑prestige card to acquire next turn.  It requires 2 WHITE, 2 GREEN and 1 BLACK after bonuses.  We already have one white and one green token, but need one more of each.  Taking one WHITE and one GREEN token and one BLACK token (all distinct) will give us the missing tokens while keeping total tokens at 10 by returning twenty tokens.  This sets us up to buy L2_42 on our next turn, earning 1 prestige point and a new BLACK bonus.','take_WHITE':1,'take_GREEN':1,'take_BLUE':0,'return_BLUE':0,'return_BLACK':0,'take_BLACK':1} ??? Wait. I need JSON. Let's produce correct JSON now. Done. But must include all fields. Also check property order? Not necessary. Let's produce final with correct formatting. Ensure all fields present. Ensure 
+Action: TakeTokensAction[tokens={WHITE=1, GREEN=1, BLACK=1}, tokensToReturn={RED=2}]
+
+======================================================================================
+TURN 13 | Current Player: glm-4.7 (P1)
+======================================================================================
+
+[BOARD BANK]
+BLU:2 GRN:2 RED:3 BLK:1 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_36] RED 0pts WHT:1 RED:1 BLK:3         | [L1_31] GRN 0pts RED:3                     |
+    [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_40] RED 1pt WHT:4                     
+L2: [L2_42] BLK 1pt WHT:3 GRN:3 BLK:2          | [L2_52] BLU 3pts BLU:6                     |
+    [L2_63] GRN 2pts GRN:5                     | [L2_46] BLK 3pts BLK:6                    
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_82] WHT 5pts WHT:3 BLK:7               |
+    [L3_80] WHT 4pts BLK:7                     | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | glm-4.7 (P1) (Current):
+  Score: 0 | Cards: 4                                  |   Score: 2 | Cards: 5
+  Tokens: WHT:2 BLU:2 GRN:2 RED:1 BLK:3                |   Tokens: WHT:2
+  Bonuses: {WHT:1 BLU:1 GRN:1 RED:1}                   |   Bonuses: {WHT:2 RED:3}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 13 - Player 1's move
+Points: 2, Budget: {WHT=4, RED=3}
+Reasoning: I am targeting Noble N10 (3 Red, 3 White, 3 Black) and currently have 3 Red and 2 White bonuses. To acquire the necessary Black bonuses, the most efficient card available is L1_3 (Black bonus, 0 pts), which costs 2 White, 2 Blue, and 1 Red. With my 2 White and 3 Red bonuses, the effective cost is reduced to 2 Blue tokens. The board currently has exactly 2 Blue tokens. Taking these two Blue tokens allows me to purchase L1_3 on the next turn, securing my first Black bonus and progressing directly toward the Noble. Taking tokens is superior to reserving or buying low-utility cards right now, as it accelerates my engine.
+Action: TakeTokensAction[tokens={BLUE=2}, tokensToReturn=null]
+Retry attempt 1 for Player 1. Error: Invalid action: Cannot take 2 BLUE tokens: only 2 available (need 4).
+Reasoning: I currently have 2 White tokens and 0 points. My goal is to acquire the Black bonus card L1_3 to progress towards Noble N10 (3 Red, 3 White, 3 Black). L1_3 costs 2 White and 2 Blue (the Red cost is covered by my 3 Red bonuses). I have the 2 White tokens required, but I need 2 Blue tokens. The board has 2 Blue tokens available, but I can only take 1 per turn. I will take 1 Blue token to begin accumulating the cost. I will also take 1 Green token (needed for the next Black bonus card, L2_42) and 1 Black token (the board supply is only 1, so taking it denies the opponent and secures a scarce resource for the high Black cost of L2_42). This move leaves me with 5 tokens (2 White, 1 Blue, 1 Green, 1 Black), setting me up to take the second Blue token next turn and purchase L1_3.
+Action: TakeTokensAction[tokens={BLUE=1, GREEN=1, BLACK=1}, tokensToReturn=null]
+
+======================================================================================
+TURN 14 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+BLU:1 GRN:1 RED:3 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_36] RED 0pts WHT:1 RED:1 BLK:3         | [L1_31] GRN 0pts RED:3                     |
+    [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_40] RED 1pt WHT:4                     
+L2: [L2_42] BLK 1pt WHT:3 GRN:3 BLK:2          | [L2_52] BLU 3pts BLU:6                     |
+    [L2_63] GRN 2pts GRN:5                     | [L2_46] BLK 3pts BLK:6                    
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_82] WHT 5pts WHT:3 BLK:7               |
+    [L3_80] WHT 4pts BLK:7                     | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | glm-4.7 (P1):
+  Score: 0 | Cards: 4                                  |   Score: 2 | Cards: 5
+  Tokens: WHT:2 BLU:2 GRN:2 RED:1 BLK:3                |   Tokens: WHT:2 BLU:1 GRN:1 BLK:1
+  Bonuses: {WHT:1 BLU:1 GRN:1 RED:1}                   |   Bonuses: {WHT:2 RED:3}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 14 - Player 0's move
+Points: 0, Budget: {WHT=3, BLU=3, GRN=3, RED=2, BLK=3}
+Reasoning: We can purchase L2_42 with our current tokens. It costs 3 WHITE, 3 GREEN, 2 BLACK. With our bonuses of 1 each for WHITE and GREEN, the effective cost is 2 WHITE, 2 GREEN, 2 BLACK. We have exactly these tokens, so we can buy it. It gives us 1 prestige point and a new BLACK bonus, which helps future purchases.
+Action: PurchaseCardAction[cardId=L2_42]
+
+======================================================================================
+TURN 14 | Current Player: glm-4.7 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:1 GRN:3 RED:3 BLK:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_36] RED 0pts WHT:1 RED:1 BLK:3         | [L1_31] GRN 0pts RED:3                     |
+    [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_40] RED 1pt WHT:4                     
+L2: [L2_52] BLU 3pts BLU:6                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_46] BLK 3pts BLK:6                     | [L2_41] BLK 1pt WHT:3 BLU:2 GRN:2         
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_82] WHT 5pts WHT:3 BLK:7               |
+    [L3_80] WHT 4pts BLK:7                     | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | glm-4.7 (P1) (Current):
+  Score: 1 | Cards: 5                                  |   Score: 2 | Cards: 5
+  Tokens: BLU:2 RED:1 BLK:1                            |   Tokens: WHT:2 BLU:1 GRN:1 BLK:1
+  Bonuses: {WHT:1 BLU:1 GRN:1 RED:1 BLK:1}             |   Bonuses: {WHT:2 RED:3}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 14 - Player 1's move
+Points: 2, Budget: {WHT=4, BLU=1, GRN=1, RED=3, BLK=1}
+Reasoning: I currently have 5 tokens: 2 White, 1 Blue, 1 Green, 1 Black. My primary strategic goal is to acquire the Black bonus card L1_3 to progress towards Noble N10 (3 Red, 3 White, 3 Black). L1_3 has a net cost of 2 Blue tokens (White and Red costs are covered by my existing bonuses). I currently hold 1 Blue token, and the board has exactly 1 Blue token available. I must take this Blue token to purchase L1_3 next turn. Since I must take exactly 3 tokens of different colors (cannot take 2 Blue as only 1 is available), I will also take 1 Green and 1 Black token. Green and Black are required for the subsequent target card L2_42 (Black bonus, 1 pt) and taking them now denies these resources to my opponent, who needs them for Nobles N4 and N10. This move will leave me with 2 White, 2 Blue, 2 Green, 2 Black (8 tokens), allowing me to purchase L1_3 immediately on my next turn.
+Action: TakeTokensAction[tokens={BLUE=1, GREEN=1, BLACK=1}, tokensToReturn=null]
+
+======================================================================================
+TURN 15 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 GRN:2 RED:3 BLK:1 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_36] RED 0pts WHT:1 RED:1 BLK:3         | [L1_31] GRN 0pts RED:3                     |
+    [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_40] RED 1pt WHT:4                     
+L2: [L2_52] BLU 3pts BLU:6                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_46] BLK 3pts BLK:6                     | [L2_41] BLK 1pt WHT:3 BLU:2 GRN:2         
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_82] WHT 5pts WHT:3 BLK:7               |
+    [L3_80] WHT 4pts BLK:7                     | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | glm-4.7 (P1):
+  Score: 1 | Cards: 5                                  |   Score: 2 | Cards: 5
+  Tokens: BLU:2 RED:1 BLK:1                            |   Tokens: WHT:2 BLU:2 GRN:2 BLK:2
+  Bonuses: {WHT:1 BLU:1 GRN:1 RED:1 BLK:1}             |   Bonuses: {WHT:2 RED:3}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 15 - Player 0's move
+Points: 1, Budget: {WHT=1, BLU=3, GRN=1, RED=2, BLK=2}
+Reasoning: ...
+Action: TakeTokensAction[tokens={WHITE=1, GREEN=1, RED=1}, tokensToReturn=null]
+
+======================================================================================
+TURN 15 | Current Player: glm-4.7 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:1 GRN:1 RED:2 BLK:1 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_36] RED 0pts WHT:1 RED:1 BLK:3         | [L1_31] GRN 0pts RED:3                     |
+    [L1_3] BLK 0pts WHT:2 BLU:2 RED:1          | [L1_40] RED 1pt WHT:4                     
+L2: [L2_52] BLU 3pts BLU:6                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_46] BLK 3pts BLK:6                     | [L2_41] BLK 1pt WHT:3 BLU:2 GRN:2         
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_82] WHT 5pts WHT:3 BLK:7               |
+    [L3_80] WHT 4pts BLK:7                     | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | glm-4.7 (P1) (Current):
+  Score: 1 | Cards: 5                                  |   Score: 2 | Cards: 5
+  Tokens: WHT:1 BLU:2 GRN:1 RED:2 BLK:1                |   Tokens: WHT:2 BLU:2 GRN:2 BLK:2
+  Bonuses: {WHT:1 BLU:1 GRN:1 RED:1 BLK:1}             |   Bonuses: {WHT:2 RED:3}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 15 - Player 1's move
+Points: 2, Budget: {WHT=4, BLU=2, GRN=2, RED=3, BLK=2}
+Reasoning: I currently hold 8 tokens (2 White, 2 Blue, 2 Green, 2 Black) and have 2 White bonuses and 3 Red bonuses. My primary target is L1_3, which provides a Black bonus. The cost of L1_3 is 2 White, 2 Blue, 1 Red. My 2 White bonuses cover the White cost, and my 3 Red bonuses cover the Red cost. Therefore, the effective cost is just 2 Blue tokens. I have exactly 2 Blue tokens in my hand. Purchasing L1_3 this turn is the optimal move because it secures the Black bonus needed for Noble N10 without needing to take more tokens or wait. This purchase will bring my score to 2 and leave me with 2 White, 0 Blue, 2 Green, 2 Black tokens (6 total). This clears my hand of Blue tokens, allowing me to take fresh tokens next turn and continue building toward N10 (now needing 3 Black, 1 more White).
+Action: PurchaseCardAction[cardId=L1_3]
+
+======================================================================================
+TURN 16 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:1 BLU:2 GRN:1 RED:2 BLK:1 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_36] RED 0pts WHT:1 RED:1 BLK:3         | [L1_31] GRN 0pts RED:3                     |
+    [L1_40] RED 1pt WHT:4                      | [L1_5] BLK 0pts GRN:2 RED:1               
+L2: [L2_52] BLU 3pts BLU:6                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_46] BLK 3pts BLK:6                     | [L2_41] BLK 1pt WHT:3 BLU:2 GRN:2         
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_82] WHT 5pts WHT:3 BLK:7               |
+    [L3_80] WHT 4pts BLK:7                     | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | glm-4.7 (P1):
+  Score: 1 | Cards: 5                                  |   Score: 2 | Cards: 6
+  Tokens: WHT:1 BLU:2 GRN:1 RED:2 BLK:1                |   Tokens: WHT:2 GRN:2 BLK:2
+  Bonuses: {WHT:1 BLU:1 GRN:1 RED:1 BLK:1}             |   Bonuses: {WHT:2 RED:3 BLK:1}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 16 - Player 0's move
+Points: 1, Budget: {WHT=2, BLU=3, GRN=2, RED=3, BLK=2}
+Reasoning: I currently have 7 tokens (1 white, 2 blue, 1 green, 2 red, 1 black) and 5 bonuses (white=1, blue=1, green=1, red=1, black=1). The opponent can potentially buy the Level‑2 prestige card L2_55 on the next turn, which costs 4 red, 1 green, 2 black after bonuses, requiring 3 red tokens. If I do nothing, the opponent can still take a red token from the board to acquire those 3 red tokens, enabling them to buy L2_55 and gain 2 prestige points. By taking a red token now, I remove the only red token available on the board, effectively preventing the opponent from getting the necessary red tokens for L2_55. In addition, by taking a red token and two other tokens (blue and white), I bring my total token count to 10 (W=2, B=3, G=1, R=3, K=1) so that I can buy L2_55 on my next turn using the 3 red tokens, 1 green token, and 1 black token I already have. This action both blocks the opponent from the high‑prestige L2_55 and sets me up to acquire 2 prestige points in the subsequent turn. No token count would exceed the maximum allowed, and all chosen tokens are available on the board. Hence, taking one token each of RED, BLUE, and WHITE is the optimal move.
+Action: TakeTokensAction[tokens={WHITE=1, BLUE=1, RED=1}, tokensToReturn=null]
+
+======================================================================================
+TURN 16 | Current Player: glm-4.7 (P1)
+======================================================================================
+
+[BOARD BANK]
+BLU:1 GRN:1 RED:1 BLK:1 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_36] RED 0pts WHT:1 RED:1 BLK:3         | [L1_31] GRN 0pts RED:3                     |
+    [L1_40] RED 1pt WHT:4                      | [L1_5] BLK 0pts GRN:2 RED:1               
+L2: [L2_52] BLU 3pts BLU:6                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_46] BLK 3pts BLK:6                     | [L2_41] BLK 1pt WHT:3 BLU:2 GRN:2         
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_82] WHT 5pts WHT:3 BLK:7               |
+    [L3_80] WHT 4pts BLK:7                     | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | glm-4.7 (P1) (Current):
+  Score: 1 | Cards: 5                                  |   Score: 2 | Cards: 6
+  Tokens: WHT:2 BLU:3 GRN:1 RED:3 BLK:1                |   Tokens: WHT:2 GRN:2 BLK:2
+  Bonuses: {WHT:1 BLU:1 GRN:1 RED:1 BLK:1}             |   Bonuses: {WHT:2 RED:3 BLK:1}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 16 - Player 1's move
+Points: 2, Budget: {WHT=4, GRN=2, RED=3, BLK=3}
+Reasoning: I will purchase L1_5. The card costs 2 Green and 1 Red. With my 1 Green and 3 Red bonuses, the net cost is just 1 Green token. This purchase grants me a Black bonus, which is critical for reaching Noble N10 (3 White, 3 Red, 3 Black). I currently have 2 White and 3 Red bonuses, so acquiring Black bonuses is my top priority. Buying this card denies it to the opponent, who has the resources (1 Green token and bonuses) to purchase it themselves. This move leaves me with 5 tokens (2 White, 1 Green, 2 Black), well under the 10-token limit, allowing me to take 3 tokens on the next turn to continue building my economy or pursuing the remaining cards needed for the noble.
+Action: PurchaseCardAction[cardId=L1_5]
+
+======================================================================================
+TURN 17 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+BLU:1 GRN:3 RED:1 BLK:1 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_36] RED 0pts WHT:1 RED:1 BLK:3         | [L1_31] GRN 0pts RED:3                     |
+    [L1_40] RED 1pt WHT:4                      | [L1_15] BLU 0pts BLK:3                    
+L2: [L2_52] BLU 3pts BLU:6                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_46] BLK 3pts BLK:6                     | [L2_41] BLK 1pt WHT:3 BLU:2 GRN:2         
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_82] WHT 5pts WHT:3 BLK:7               |
+    [L3_80] WHT 4pts BLK:7                     | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | glm-4.7 (P1):
+  Score: 1 | Cards: 5                                  |   Score: 2 | Cards: 7
+  Tokens: WHT:2 BLU:3 GRN:1 RED:3 BLK:1                |   Tokens: WHT:2 BLK:2
+  Bonuses: {WHT:1 BLU:1 GRN:1 RED:1 BLK:1}             |   Bonuses: {WHT:2 RED:3 BLK:2}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 17 - Player 0's move
+Points: 1, Budget: {WHT=3, BLU=4, GRN=2, RED=4, BLK=2}
+Retry attempt 1 for Player 0. Error: Malformed JSON response: Unexpected character ('<' (code 60)): was expecting comma to separate Object entries
+Reasoning: I have 10 tokens and can buy any card that is affordable without exceeding token limits. The only face‑up card that gives prestige and is pay‑able with my current bonuses and tokens is L2_41: its cost is 3 WHITE, 2 BLUE, 2 GREEN, and my bonuses of one each reduce that to 2 WHITE, 1 BLUE, 1 GREEN. I have 2 white, 3 blue, and 1 green tokens, so I can pay 4 tokens and stay within the limit. Buying L2_41 yields 1 prestige point and an additional BLACK bonus, bringing my total score to 2 and my black bonus to 2, which is useful for future purchases or a noble. Taking tokens would require me to return some now and does not immediately increase my score, and reserving a card would waste a turn. Therefore I choose to purchase L2_41.
+Action: PurchaseCardAction[cardId=L2_41]
+
+======================================================================================
+TURN 17 | Current Player: glm-4.7 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:2 GRN:4 RED:1 BLK:1 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_36] RED 0pts WHT:1 RED:1 BLK:3         | [L1_31] GRN 0pts RED:3                     |
+    [L1_40] RED 1pt WHT:4                      | [L1_15] BLU 0pts BLK:3                    
+L2: [L2_52] BLU 3pts BLU:6                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_46] BLK 3pts BLK:6                     | [L2_54] WHT 1pt WHT:2 BLU:3 RED:3         
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_82] WHT 5pts WHT:3 BLK:7               |
+    [L3_80] WHT 4pts BLK:7                     | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | glm-4.7 (P1) (Current):
+  Score: 2 | Cards: 6                                  |   Score: 2 | Cards: 7
+  Tokens: BLU:2 RED:3 BLK:1                            |   Tokens: WHT:2 BLK:2
+  Bonuses: {WHT:1 BLU:1 GRN:1 RED:1 BLK:2}             |   Bonuses: {WHT:2 RED:3 BLK:2}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 17 - Player 1's move
+Points: 2, Budget: {WHT=4, RED=3, BLK=4}
+Reasoning: I currently have 2 White, 2 Black tokens and bonuses of 2 White, 3 Red, 2 Black. My goal is Noble N10 (3 White, 3 Red, 3 Black), requiring 1 more White and 1 more Black bonus. There are no affordable White or Black bonus cards on the board; the only Black bonus card (L2_46) costs 6 Black, which I cannot afford yet (have 2 bonus + 2 tokens, need 4 tokens, only 1 on board). Therefore, I must take tokens to build resources and deny my opponent. The board has only 1 Black token, which is critical for N10. Taking it denies my opponent, who also needs Black. I will also take 1 White token (need for N10) and 1 Blue token (scarce resource, denies opponent who has high Blue bonus/tokens). This brings my total tokens to 7 (3 White, 3 Black, 1 Blue), positioning me to buy a key card if one becomes available.
+Action: TakeTokensAction[tokens={WHITE=1, BLUE=1, BLACK=1}, tokensToReturn=null]
+
+======================================================================================
+TURN 18 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:1 BLU:1 GRN:4 RED:1 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_36] RED 0pts WHT:1 RED:1 BLK:3         | [L1_31] GRN 0pts RED:3                     |
+    [L1_40] RED 1pt WHT:4                      | [L1_15] BLU 0pts BLK:3                    
+L2: [L2_52] BLU 3pts BLU:6                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_46] BLK 3pts BLK:6                     | [L2_54] WHT 1pt WHT:2 BLU:3 RED:3         
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_82] WHT 5pts WHT:3 BLK:7               |
+    [L3_80] WHT 4pts BLK:7                     | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | glm-4.7 (P1):
+  Score: 2 | Cards: 6                                  |   Score: 2 | Cards: 7
+  Tokens: BLU:2 RED:3 BLK:1                            |   Tokens: WHT:3 BLU:1 BLK:3
+  Bonuses: {WHT:1 BLU:1 GRN:1 RED:1 BLK:2}             |   Bonuses: {WHT:2 RED:3 BLK:2}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 18 - Player 0's move
+Points: 2, Budget: {WHT=1, BLU=3, GRN=1, RED=4, BLK=3}
+Reasoning: Current token inventory is 0 WHITE, 2 BLUE, 0 GREEN, 3 RED, 1 BLACK. With bonuses of WHITE=1, BLUE=1, GREEN=1, RED=1, BLACK=2, the only prestige card we can afford on the next turn is L2_54, which costs 2 WHITE, 3 BLUE, 3 RED after bonuses (effective cost 1 WHITE, 2 BLUE, 2 RED). We lack a WHITE token. The board has 1 WHITE token available. Taking that token (and two additional distinct tokens to satisfy the rule) will bring our token count to 9, enabling the purchase of L2_54 next turn. Other prestige cards such as L1_40 are unavailable because we have no WHITE tokens; buying a bonus card now would delay acquiring prestige and doesn’t block opponent. Taking 3 distinct tokens (WHITE, BLUE, GREEN) does not exceed the token limit and leaves a balanced token distribution for future moves. Therefore, the optimal move is to take one token of each of WHITE, BLUE, and GREEN.
+Action: TakeTokensAction[tokens={WHITE=1, BLUE=1, GREEN=1}, tokensToReturn=null]
+
+======================================================================================
+TURN 18 | Current Player: glm-4.7 (P1)
+======================================================================================
+
+[BOARD BANK]
+GRN:3 RED:1 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_36] RED 0pts WHT:1 RED:1 BLK:3         | [L1_31] GRN 0pts RED:3                     |
+    [L1_40] RED 1pt WHT:4                      | [L1_15] BLU 0pts BLK:3                    
+L2: [L2_52] BLU 3pts BLU:6                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_46] BLK 3pts BLK:6                     | [L2_54] WHT 1pt WHT:2 BLU:3 RED:3         
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_82] WHT 5pts WHT:3 BLK:7               |
+    [L3_80] WHT 4pts BLK:7                     | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | glm-4.7 (P1) (Current):
+  Score: 2 | Cards: 6                                  |   Score: 2 | Cards: 7
+  Tokens: WHT:1 BLU:3 GRN:1 RED:3 BLK:1                |   Tokens: WHT:3 BLU:1 BLK:3
+  Bonuses: {WHT:1 BLU:1 GRN:1 RED:1 BLK:2}             |   Bonuses: {WHT:2 RED:3 BLK:2}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+Turn 18 - Player 1's move
+Points: 2, Budget: {WHT=5, BLU=1, RED=3, BLK=5}
+Reasoning: I cannot take any tokens from the board because only 2 colors are available (Green with 3, Red with 1), which violates the rules for taking tokens (need 3 distinct or 2 of same with 4+ supply). Purchasing the available low-value cards (L1_31, L1_40, L1_15) provides minimal strategic benefit or redundant bonuses. Therefore, the optimal move is to reserve the high-value Level 3 card L3_82 (5 points). This secures a strong card that fits my strategy (White bonus), provides me with a Gold token to alleviate the shortage of Blue/Black tokens, and denies the opponent a significant asset. With 2 White bonuses and 3 White/3 Black tokens, I am on a path to afford L3_82 (needs 3W, 7B) soon, especially with the Wild Gold token.
+Action: ReserveCardAction[cardId=L3_82, deckLevel=null, tokensToReturn=null]
+
+======================================================================================
+TURN 19 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+GRN:3 RED:1 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_36] RED 0pts WHT:1 RED:1 BLK:3         | [L1_31] GRN 0pts RED:3                     |
+    [L1_40] RED 1pt WHT:4                      | [L1_15] BLU 0pts BLK:3                    
+L2: [L2_52] BLU 3pts BLU:6                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_46] BLK 3pts BLK:6                     | [L2_54] WHT 1pt WHT:2 BLU:3 RED:3         
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_80] WHT 4pts BLK:7                     |
+    [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3   | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | glm-4.7 (P1):
+  Score: 2 | Cards: 6                                  |   Score: 2 | Cards: 7
+  Tokens: WHT:1 BLU:3 GRN:1 RED:3 BLK:1                |   Tokens: WHT:3 BLU:1 BLK:3 GLD:1
+  Bonuses: {WHT:1 BLU:1 GRN:1 RED:1 BLK:2}             |   Bonuses: {WHT:2 RED:3 BLK:2}
+  Reserved: None                                       |   Reserved: [L3_82] WHT 5pts WHT:3 BLK:7
+
+======================================================================================
+
+Turn 19 - Player 0's move
+Points: 2, Budget: {WHT=2, BLU=4, GRN=2, RED=4, BLK=3}
+Reasoning: We have 3 red tokens and 3 black tokens left, but only a few tokens of other colors. The only card we can afford with a gold token is the prestige card L2_54 (W2,B3,R3 cost, bonus WHITE). Reserving L2_54 gives us a gold token, enabling us to buy L2_54 on the next turn for a 1 prestige point and a white bonus, while preserving our red tokens for that purchase. Buying other face‑up cards would consume all the red tokens, making L2_54 unaffordable. No other card provides a better immediate payoff or future advantage under the current token limits, so reserving L2_54 is the most efficient move toward reaching 15 prestige points and keeping options open.
+Action: ReserveCardAction[cardId=L2_54, deckLevel=null, tokensToReturn=null]
+
+======================================================================================
+TURN 19 | Current Player: glm-4.7 (P1)
+======================================================================================
+
+[BOARD BANK]
+GRN:3 RED:1 GLD:3
+
+[FACE-UP CARDS]
+L1: [L1_36] RED 0pts WHT:1 RED:1 BLK:3         | [L1_31] GRN 0pts RED:3                     |
+    [L1_40] RED 1pt WHT:4                      | [L1_15] BLU 0pts BLK:3                    
+L2: [L2_52] BLU 3pts BLU:6                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_46] BLK 3pts BLK:6                     | [L2_67] RED 2pts WHT:1 BLU:4 GRN:2        
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_80] WHT 4pts BLK:7                     |
+    [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3   | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | glm-4.7 (P1) (Current):
+  Score: 2 | Cards: 6                                  |   Score: 2 | Cards: 7
+  Tokens: WHT:1 BLU:3 GRN:1 RED:3 BLK:1 GLD:1          |   Tokens: WHT:3 BLU:1 BLK:3 GLD:1
+  Bonuses: {WHT:1 BLU:1 GRN:1 RED:1 BLK:2}             |   Bonuses: {WHT:2 RED:3 BLK:2}
+  Reserved: [L2_54] WHT 1pt WHT:2 BLU:3 RED:3          |   Reserved: [L3_82] WHT 5pts WHT:3 BLK:7
+
+======================================================================================
+
+Turn 19 - Player 1's move
+Points: 2, Budget: {WHT=5, BLU=1, RED=3, BLK=5, GLD=1}
+Reasoning: I have the opportunity to purchase the Level 2 Black bonus card L2_46. The cost is 6 Black. I currently have 2 Black bonuses, 3 Black tokens, and 1 Gold token. By using my 2 bonuses, 3 Black tokens, and 1 Gold token, I can afford the card exactly (2+3+1=6). This purchase will increase my score from 2 to 5 points and grant me a third Black bonus. This completes the Black and Red requirements for Noble N10 (needs 3W, 3R, 3B), leaving me only 1 White bonus short of fulfilling it. After the purchase, I will have 4 tokens remaining (3 White, 1 Blue), keeping my hand flexible for future turns. This move is far superior to taking tokens (impossible due to board state) or buying free low-value cards.
+Action: PurchaseCardAction[cardId=L2_46]
+
+======================================================================================
+TURN 20 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+GRN:3 RED:1 BLK:3 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_36] RED 0pts WHT:1 RED:1 BLK:3         | [L1_31] GRN 0pts RED:3                     |
+    [L1_40] RED 1pt WHT:4                      | [L1_15] BLU 0pts BLK:3                    
+L2: [L2_52] BLU 3pts BLU:6                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_67] RED 2pts WHT:1 BLU:4 GRN:2         | [L2_65] RED 1pt WHT:2 RED:2 BLK:3         
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_80] WHT 4pts BLK:7                     |
+    [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3   | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | glm-4.7 (P1):
+  Score: 2 | Cards: 6                                  |   Score: 5 | Cards: 8
+  Tokens: WHT:1 BLU:3 GRN:1 RED:3 BLK:1 GLD:1          |   Tokens: WHT:3 BLU:1
+  Bonuses: {WHT:1 BLU:1 GRN:1 RED:1 BLK:2}             |   Bonuses: {WHT:2 RED:3 BLK:3}
+  Reserved: [L2_54] WHT 1pt WHT:2 BLU:3 RED:3          |   Reserved: [L3_82] WHT 5pts WHT:3 BLK:7
+
+======================================================================================
+
+Turn 20 - Player 0's move
+Points: 2, Budget: {WHT=2, BLU=4, GRN=2, RED=4, BLK=3, GLD=1}
+Retry attempt 1 for Player 0. Error: Malformed JSON response: Unexpected character ('<' (code 60)): was expecting a colon to separate field name and value
+Reasoning: I currently hold 10 tokens (1 white, 3 blue, 1 green, 3 red, 1 black, 1 gold) and 5 bonuses (white=1, blue=1, green=1, red=1, black=2). The available face‑up cards that offer prestige are L1_40 (1 point, needs 4 white tokens), L2_52 (3 points, needs 5 blue tokens), L2_63 (2 points, needs 4 green tokens), L2_67 (2 points, needs 3 blue and 1 green tokens), and L2_65 (1 point, needs 1 white, 1 red, 1 black tokens). Given my existing bonuses, I can afford L2_67 with only 3 blue and 1 green tokens and zero white tokens, which would give me 2 prestige points and an additional RED bonus. This is the highest immediate prestige gain. I cannot buy L1_40 because I lack enough white tokens, and L2_52 or L2_63 are untouchable due to the lack of blue or green tokens. Purchasing L2_67 is the optimal move this turn, improving my bonus profile for future purchases while securing 2 points.
+Action: PurchaseCardAction[cardId=L2_67]
+
+======================================================================================
+TURN 20 | Current Player: glm-4.7 (P1)
+======================================================================================
+
+[BOARD BANK]
+BLU:3 GRN:4 RED:1 BLK:3 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_36] RED 0pts WHT:1 RED:1 BLK:3         | [L1_31] GRN 0pts RED:3                     |
+    [L1_40] RED 1pt WHT:4                      | [L1_15] BLU 0pts BLK:3                    
+L2: [L2_52] BLU 3pts BLU:6                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_57] WHT 2pts RED:5                    
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_80] WHT 4pts BLK:7                     |
+    [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3   | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | glm-4.7 (P1) (Current):
+  Score: 4 | Cards: 7                                  |   Score: 5 | Cards: 8
+  Tokens: WHT:1 RED:3 BLK:1 GLD:1                      |   Tokens: WHT:3 BLU:1
+  Bonuses: {WHT:1 BLU:1 GRN:1 RED:2 BLK:2}             |   Bonuses: {WHT:2 RED:3 BLK:3}
+  Reserved: [L2_54] WHT 1pt WHT:2 BLU:3 RED:3          |   Reserved: [L3_82] WHT 5pts WHT:3 BLK:7
+
+======================================================================================
+
+Turn 20 - Player 1's move
+Points: 5, Budget: {WHT=5, BLU=1, RED=3, BLK=3}
+Reasoning: I currently have 5 points and bonuses of 2 White, 3 Red, and 3 Black. My tokens are 3 White, 1 Blue. My goal is to reach 15 points, ideally securing Noble N10 (needs 1 more White bonus) or purchasing my reserved Level 3 card L3_82 (5 points, needs 7 Black total). The visible Level 2 card L2_65 offers 1 prestige point and a Red bonus. Its cost is 2 White, 2 Red, and 3 Black. My existing bonuses (2 White, 3 Red, 3 Black) cover this cost completely, meaning the card is effectively free to purchase. Acquiring this free point increases my score to 6 and maintains my token count at 4, well below the limit. Although a Red bonus is not my primary need, securing a point without spending resources is an efficient gain. Other options like taking tokens would not yield points this turn, and the only card providing the needed White bonus (L2_57) is affordable by my opponent this turn, so I cannot rely on it being available later. Therefore, purchasing the free point card is the best move.
+Action: PurchaseCardAction[cardId=L2_65]
+
+======================================================================================
+TURN 21 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+BLU:3 GRN:4 RED:1 BLK:3 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_36] RED 0pts WHT:1 RED:1 BLK:3         | [L1_31] GRN 0pts RED:3                     |
+    [L1_40] RED 1pt WHT:4                      | [L1_15] BLU 0pts BLK:3                    
+L2: [L2_52] BLU 3pts BLU:6                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_57] WHT 2pts RED:5                     | [L2_53] WHT 1pt GRN:3 RED:2 BLK:2         
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_80] WHT 4pts BLK:7                     |
+    [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3   | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | glm-4.7 (P1):
+  Score: 4 | Cards: 7                                  |   Score: 6 | Cards: 9
+  Tokens: WHT:1 RED:3 BLK:1 GLD:1                      |   Tokens: WHT:3 BLU:1
+  Bonuses: {WHT:1 BLU:1 GRN:1 RED:2 BLK:2}             |   Bonuses: {WHT:2 RED:4 BLK:3}
+  Reserved: [L2_54] WHT 1pt WHT:2 BLU:3 RED:3          |   Reserved: [L3_82] WHT 5pts WHT:3 BLK:7
+
+======================================================================================
+
+Turn 21 - Player 0's move
+Points: 4, Budget: {WHT=2, BLU=1, GRN=1, RED=5, BLK=3, GLD=1}
+Reasoning: We can only afford one prestige card at this point: L2_57. It costs 5 red, of which we have a bonus of 2 red, so we need 3 red tokens, which we have in full. Buying L2_57 gains us 2 prestige points and a WHITE bonus, which will reduce the cost of future cards and help us accumulate prestige faster. No other face‑up card is affordable with our current tokens and bonuses. Thus purchasing L2_57 is the optimal move. No tokens are taken or returned on this turn.
+Action: PurchaseCardAction[cardId=L2_57]
+
+======================================================================================
+TURN 21 | Current Player: glm-4.7 (P1)
+======================================================================================
+
+[BOARD BANK]
+BLU:3 GRN:4 RED:4 BLK:3 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_36] RED 0pts WHT:1 RED:1 BLK:3         | [L1_31] GRN 0pts RED:3                     |
+    [L1_40] RED 1pt WHT:4                      | [L1_15] BLU 0pts BLK:3                    
+L2: [L2_52] BLU 3pts BLU:6                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_53] WHT 1pt GRN:3 RED:2 BLK:2          | [L2_45] BLK 2pts WHT:5                    
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_80] WHT 4pts BLK:7                     |
+    [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3   | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | glm-4.7 (P1) (Current):
+  Score: 6 | Cards: 8                                  |   Score: 6 | Cards: 9
+  Tokens: WHT:1 BLK:1 GLD:1                            |   Tokens: WHT:3 BLU:1
+  Bonuses: {WHT:2 BLU:1 GRN:1 RED:2 BLK:2}             |   Bonuses: {WHT:2 RED:4 BLK:3}
+  Reserved: [L2_54] WHT 1pt WHT:2 BLU:3 RED:3          |   Reserved: [L3_82] WHT 5pts WHT:3 BLK:7
+
+======================================================================================
+
+Turn 21 - Player 1's move
+Points: 6, Budget: {WHT=5, BLU=1, RED=4, BLK=3}
+Reasoning: I analyze the board to find the best move towards reaching 15 points. I currently have 6 points and bonuses of 2 White, 4 Red, 3 Black. My reserved card L3_82 (5 points, cost: 3 White, 7 Black) is my path to victory, but I need more Black resources (currently have 0 tokens). The board has 3 Black tokens available. Taking 3 Black tokens is impossible (need 4+ to take 2 of same color, or 3 different colors; I cannot take just 1 Black). I can take 1 Black plus 2 other colors. Checking affordable cards: L1_36 costs 1 White, 1 Red, 3 Black. My bonuses (2W, 4R, 3B) cover this completely (0 net cost). It provides a Red bonus. Buying this free card gives me 1 point (score 7), reduces my token burden (I have 4 tokens, spend 0 net), and might deny a small card to the opponent. While Red is redundant, the free point is progress. Taking tokens (e.g., 1 Black, 1 Green, 1 Blue) leaves me with 7 tokens, no points gained this turn. Given the race to 15, gaining a free point is more efficient than banking tokens, especially since I have 4 tokens and don't want to hit 10. Therefore, I will purchase L1_36.
+Action: PurchaseCardAction[cardId=L1_36]
+
+======================================================================================
+TURN 22 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+BLU:3 GRN:4 RED:4 BLK:3 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_31] GRN 0pts RED:3                     | [L1_40] RED 1pt WHT:4                      |
+    [L1_15] BLU 0pts BLK:3                     | [L1_24] WHT 1pt GRN:4                     
+L2: [L2_52] BLU 3pts BLU:6                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_53] WHT 1pt GRN:3 RED:2 BLK:2          | [L2_45] BLK 2pts WHT:5                    
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_80] WHT 4pts BLK:7                     |
+    [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3   | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | glm-4.7 (P1):
+  Score: 6 | Cards: 8                                  |   Score: 6 | Cards: 10
+  Tokens: WHT:1 BLK:1 GLD:1                            |   Tokens: WHT:3 BLU:1
+  Bonuses: {WHT:2 BLU:1 GRN:1 RED:2 BLK:2}             |   Bonuses: {WHT:2 RED:5 BLK:3}
+  Reserved: [L2_54] WHT 1pt WHT:2 BLU:3 RED:3          |   Reserved: [L3_82] WHT 5pts WHT:3 BLK:7
+
+======================================================================================
+
+Turn 22 - Player 0's move
+Points: 6, Budget: {WHT=3, BLU=1, GRN=1, RED=2, BLK=3, GLD=1}
+Reasoning: We have 3 tokens (1 white, 1 black, 1 gold) and bonuses WHITE=2, RED=2, BLACK=2, BLUE=1, GREEN=1. The only face‑up card that we can afford without taking additional tokens is L1_40 (PRESTIGE 1). Its cost is 4 WHITE; after our 2‑white bonus we need 2 more white tokens. We have one white token and one gold token, which can be used as a substitute. By buying L1_40 we gain 1 prestige and a RED bonus, which will lower the cost of future cards involving red and sets us up for a possible N10 noble. No other card yields prestige with our current tokens, and buying L1_15 would give no prestige. Therefore a PURCHASE_CARD of L1_40 is the optimal move. Since the purchase does not involve taking tokens, all TAKE_* and RETURN_* fields are zero.
+Action: PurchaseCardAction[cardId=L1_40]
+
+======================================================================================
+TURN 22 | Current Player: glm-4.7 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:1 BLU:3 GRN:4 RED:4 BLK:3 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_31] GRN 0pts RED:3                     | [L1_15] BLU 0pts BLK:3                     |
+    [L1_24] WHT 1pt GRN:4                      | [L1_32] GRN 1pt BLK:4                     
+L2: [L2_52] BLU 3pts BLU:6                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_53] WHT 1pt GRN:3 RED:2 BLK:2          | [L2_45] BLK 2pts WHT:5                    
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_80] WHT 4pts BLK:7                     |
+    [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3   | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | glm-4.7 (P1) (Current):
+  Score: 7 | Cards: 9                                  |   Score: 6 | Cards: 10
+  Tokens: BLK:1                                        |   Tokens: WHT:3 BLU:1
+  Bonuses: {WHT:2 BLU:1 GRN:1 RED:3 BLK:2}             |   Bonuses: {WHT:2 RED:5 BLK:3}
+  Reserved: [L2_54] WHT 1pt WHT:2 BLU:3 RED:3          |   Reserved: [L3_82] WHT 5pts WHT:3 BLK:7
+
+======================================================================================
+
+Turn 22 - Player 1's move
+Points: 6, Budget: {WHT=5, BLU=1, RED=5, BLK=3}
+Reasoning: I analyze the board for the most efficient path to 15 points. I currently have 6 points and bonuses of 2 White, 5 Red, 3 Black. I hold 3 White tokens and 1 Blue token. My opponent has 7 points. To take the lead and build my engine, I will purchase Level 2 card L2_45. It costs 5 White. I can pay for it using my 2 White bonuses and 3 White tokens. This purchase gives me 2 prestige points (bringing my total to 8, taking the lead), grants me a 4th Black bonus (crucial for reducing the cost of my reserved 5-point card L3_82), and reduces my token count from 4 to 1, keeping me well under the limit. This is a high-value move that converts idle tokens into points and necessary discounts. Other options like buying free 0-point cards or taking tokens (which yields 0 points) are inferior given the race against the opponent.
+Action: PurchaseCardAction[cardId=L2_45]
+
+======================================================================================
+TURN 23 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:3 GRN:4 RED:4 BLK:3 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_31] GRN 0pts RED:3                     | [L1_15] BLU 0pts BLK:3                     |
+    [L1_24] WHT 1pt GRN:4                      | [L1_32] GRN 1pt BLK:4                     
+L2: [L2_52] BLU 3pts BLU:6                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_53] WHT 1pt GRN:3 RED:2 BLK:2          | [L2_58] WHT 3pts WHT:6                    
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_80] WHT 4pts BLK:7                     |
+    [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3   | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | glm-4.7 (P1):
+  Score: 7 | Cards: 9                                  |   Score: 8 | Cards: 11
+  Tokens: BLK:1                                        |   Tokens: BLU:1
+  Bonuses: {WHT:2 BLU:1 GRN:1 RED:3 BLK:2}             |   Bonuses: {WHT:2 RED:5 BLK:4}
+  Reserved: [L2_54] WHT 1pt WHT:2 BLU:3 RED:3          |   Reserved: [L3_82] WHT 5pts WHT:3 BLK:7
+
+======================================================================================
+
+Turn 23 - Player 0's move
+Points: 7, Budget: {WHT=2, BLU=1, GRN=1, RED=3, BLK=3}
+Reasoning: We currently hold a single black token and a set of bonuses (WHITE 2, BLUE 1, GREEN 1, RED 3, BLACK 2). The face‑up card L2_53 requires 3 GREEN, 2 RED, and 2 BLACK tokens. Our bonuses negate the RED and BLACK requirements and reduce the GREEN requirement to 3‑1=2. Therefore we can purchase L2_53 with exactly two green tokens and no other tokens. The board has four green gems available, allowing us to take two green gems in one turn. Taking two green tokens will bring our token count to 3 (black + 2 green) and sets us up to buy L2_53 on the next turn, granting 1 prestige and a white bonus. No other card can be bought immediately, and no other token strategy yields a faster path to prestige. Hence the optimal action is to take two green tokens.
+Action: TakeTokensAction[tokens={GREEN=2}, tokensToReturn=null]
+
+======================================================================================
+TURN 23 | Current Player: glm-4.7 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:3 GRN:2 RED:4 BLK:3 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_31] GRN 0pts RED:3                     | [L1_15] BLU 0pts BLK:3                     |
+    [L1_24] WHT 1pt GRN:4                      | [L1_32] GRN 1pt BLK:4                     
+L2: [L2_52] BLU 3pts BLU:6                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_53] WHT 1pt GRN:3 RED:2 BLK:2          | [L2_58] WHT 3pts WHT:6                    
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_80] WHT 4pts BLK:7                     |
+    [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3   | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | glm-4.7 (P1) (Current):
+  Score: 7 | Cards: 9                                  |   Score: 8 | Cards: 11
+  Tokens: GRN:2 BLK:1                                  |   Tokens: BLU:1
+  Bonuses: {WHT:2 BLU:1 GRN:1 RED:3 BLK:2}             |   Bonuses: {WHT:2 RED:5 BLK:4}
+  Reserved: [L2_54] WHT 1pt WHT:2 BLU:3 RED:3          |   Reserved: [L3_82] WHT 5pts WHT:3 BLK:7
+
+======================================================================================
+
+Turn 23 - Player 1's move
+Points: 8, Budget: {WHT=2, BLU=1, RED=5, BLK=4}
+Reasoning: I analyze the board for the most efficient path to 15 points. I currently have 8 points and bonuses of 2 White, 5 Red, and 4 Black. My primary strategic goal is to secure Noble N10 (needs 1 White bonus) using my reserved card L2_54 (costs 3 Blue tokens). I currently hold 1 Blue token. The Level 1 card L1_32 provides 1 prestige point and costs 4 Black. Since I have 4 Black bonuses, the card is effectively free to purchase. Acquiring this free point increases my score to 9 and maintains my token count at 1 Blue. This sets up my next turn perfectly: I can take 2 Blue tokens and 1 other color, then purchase L2_54 on the following turn to claim the Noble (+3 points) and reach a total of 13 points. Taking tokens now would delay this point gain and keep me at 8 points. Therefore, purchasing the free card is the optimal move.
+Action: PurchaseCardAction[cardId=L1_32]
+
+======================================================================================
+TURN 24 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:3 GRN:2 RED:4 BLK:3 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_31] GRN 0pts RED:3                     | [L1_15] BLU 0pts BLK:3                     |
+    [L1_24] WHT 1pt GRN:4                      | [L1_11] BLU 0pts WHT:1 GRN:2 RED:2        
+L2: [L2_52] BLU 3pts BLU:6                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_53] WHT 1pt GRN:3 RED:2 BLK:2          | [L2_58] WHT 3pts WHT:6                    
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_80] WHT 4pts BLK:7                     |
+    [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3   | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | glm-4.7 (P1):
+  Score: 7 | Cards: 9                                  |   Score: 9 | Cards: 12
+  Tokens: GRN:2 BLK:1                                  |   Tokens: BLU:1
+  Bonuses: {WHT:2 BLU:1 GRN:1 RED:3 BLK:2}             |   Bonuses: {WHT:2 GRN:1 RED:5 BLK:4}
+  Reserved: [L2_54] WHT 1pt WHT:2 BLU:3 RED:3          |   Reserved: [L3_82] WHT 5pts WHT:3 BLK:7
+
+======================================================================================
+
+Turn 24 - Player 0's move
+Points: 7, Budget: {WHT=2, BLU=1, GRN=3, RED=3, BLK=3}
+Reasoning: We are at 7 prestige points and we need 8 more to reach 15. The fastest 8‑point path uses the 4‑prestige card L3_77, the 3‑prestige card L2_58 and the 1‑prestige card L1_24. L3_77 requires 3 white, 2 blue, 1 black tokens – the 3 white can be provided by taking all 4 white gems on the board over three turns (2 in the first turn, 1 each in the second and third). We already have 1 black token, and can take the 2 blue tokens from the board over the second and third turns. L2_58 needs 2 white tokens plus a gold token; we will reserve one card on the fourth turn to receive our first gold token. After the third turn we already have 4 white, 3 blue and 2 black tokens. With one gold we can buy L3_77 first (3W+2B+1BL), leaving 1 white, 1 blue, 1 black and the gold in hand. The remaining white token plus the gold let us buy L2_58 (2W+gold). Finally we use the three green tokens we started with (2 in hand + 1 taken on the fifth turn) to buy L1_24. This sequence takes exactly 7 turns from now (3 token turns, 1 reserve, 3 purchases). Therefore the optimal move this turn is to take the two white tokens and one blue token.
+Action: TakeTokensAction[tokens={WHITE=2, BLUE=1}, tokensToReturn=null]
+Retry attempt 1 for Player 0. Error: Invalid action: For taking 3 tokens, they must be of 3 different colors.
+Reasoning: I currently have 7 prestige points and can afford the card L2_53, which requires 3 green, 2 red, and 2 black tokens. With my bonuses (WHITE 2, BLUE 1, GREEN 1, RED 3, BLACK 2) the token requirements reduce to just 2 green tokens. I possess exactly those green tokens, and the purchase gives me 1 prestige point and a white bonus, bringing my score to 8. No other visible card offers prestige that I can buy without taking additional tokens, so purchasing L2_53 is the most efficient action to move toward the 15‑point goal.
+Action: PurchaseCardAction[cardId=L2_53]
+
+======================================================================================
+TURN 24 | Current Player: glm-4.7 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:3 GRN:4 RED:4 BLK:3 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_31] GRN 0pts RED:3                     | [L1_15] BLU 0pts BLK:3                     |
+    [L1_24] WHT 1pt GRN:4                      | [L1_11] BLU 0pts WHT:1 GRN:2 RED:2        
+L2: [L2_52] BLU 3pts BLU:6                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_58] WHT 3pts WHT:6                     | [L2_43] BLK 2pts BLU:1 GRN:4 RED:2        
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_80] WHT 4pts BLK:7                     |
+    [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3   | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | glm-4.7 (P1) (Current):
+  Score: 8 | Cards: 10                                 |   Score: 9 | Cards: 12
+  Tokens: BLK:1                                        |   Tokens: BLU:1
+  Bonuses: {WHT:3 BLU:1 GRN:1 RED:3 BLK:2}             |   Bonuses: {WHT:2 GRN:1 RED:5 BLK:4}
+  Reserved: [L2_54] WHT 1pt WHT:2 BLU:3 RED:3          |   Reserved: [L3_82] WHT 5pts WHT:3 BLK:7
+
+======================================================================================
+
+Turn 24 - Player 1's move
+Points: 9, Budget: {WHT=2, BLU=1, GRN=1, RED=5, BLK=4}
+Reasoning: I have 9 points and bonuses of 2 White, 1 Green, 5 Red, and 4 Black. I hold 1 Black token. My goal is to reach 15 points. I have identified a winning path via Level 3 card L3_80 (4 points, White bonus). The cost is 7 Black. With my 4 Black bonuses, I need 3 Black tokens. I currently have 1, so I need 2 more. The board has 3 Black tokens available. Taking 1 Black token this turn leaves 2, which is enough for me to secure the final one next turn even if the opponent takes one (they cannot take 2 from a stack of 2). By taking 1 Black, 1 White, and 1 Green, I accumulate the necessary resources while keeping my token count low (4 total) and flexible. On the next turn, I can take the final Black token and purchase L3_80. This will give me 4 points (score 13) and the White bonus, which fulfills the requirement for Noble N10 (needs 3 White, I have 2), adding 3 more points for a total of 16 and the win.
+Action: TakeTokensAction[tokens={WHITE=1, GREEN=1, BLACK=1}, tokensToReturn=null]
+
+======================================================================================
+TURN 25 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:3 GRN:3 RED:4 BLK:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_31] GRN 0pts RED:3                     | [L1_15] BLU 0pts BLK:3                     |
+    [L1_24] WHT 1pt GRN:4                      | [L1_11] BLU 0pts WHT:1 GRN:2 RED:2        
+L2: [L2_52] BLU 3pts BLU:6                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_58] WHT 3pts WHT:6                     | [L2_43] BLK 2pts BLU:1 GRN:4 RED:2        
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_80] WHT 4pts BLK:7                     |
+    [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3   | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | glm-4.7 (P1):
+  Score: 8 | Cards: 10                                 |   Score: 9 | Cards: 12
+  Tokens: BLK:1                                        |   Tokens: WHT:1 BLU:1 GRN:1 BLK:1
+  Bonuses: {WHT:3 BLU:1 GRN:1 RED:3 BLK:2}             |   Bonuses: {WHT:2 GRN:1 RED:5 BLK:4}
+  Reserved: [L2_54] WHT 1pt WHT:2 BLU:3 RED:3          |   Reserved: [L3_82] WHT 5pts WHT:3 BLK:7
+
+======================================================================================
+
+Turn 25 - Player 0's move
+Points: 8, Budget: {WHT=3, BLU=1, GRN=1, RED=3, BLK=3}
+Reasoning: We currently have only one black token and no gold tokens. All face‑up cards except L1_31 require at least one token that we do not possess. L1_31 is free, giving an additional GREEN bonus without spending any tokens. Purchasing it enhances our bonus profile and sets up a chain of free purchases (L1_11 for a BLUE bonus and later L2_41 for a BLACK bonus), unlocking the N10 noble and on the way to 15 prestige points. Therefore the optimal immediate action is to buy L1_31.
+Action: PurchaseCardAction[cardId=L1_31]
+
+======================================================================================
+TURN 25 | Current Player: glm-4.7 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:3 GRN:3 RED:4 BLK:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_15] BLU 0pts BLK:3                     | [L1_24] WHT 1pt GRN:4                      |
+    [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         | [L1_39] RED 0pts WHT:3                    
+L2: [L2_52] BLU 3pts BLU:6                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_58] WHT 3pts WHT:6                     | [L2_43] BLK 2pts BLU:1 GRN:4 RED:2        
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_80] WHT 4pts BLK:7                     |
+    [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3   | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | glm-4.7 (P1) (Current):
+  Score: 8 | Cards: 11                                 |   Score: 9 | Cards: 12
+  Tokens: BLK:1                                        |   Tokens: WHT:1 BLU:1 GRN:1 BLK:1
+  Bonuses: {WHT:3 BLU:1 GRN:2 RED:3 BLK:2}             |   Bonuses: {WHT:2 GRN:1 RED:5 BLK:4}
+  Reserved: [L2_54] WHT 1pt WHT:2 BLU:3 RED:3          |   Reserved: [L3_82] WHT 5pts WHT:3 BLK:7
+
+======================================================================================
+
+Turn 25 - Player 1's move
+Points: 9, Budget: {WHT=3, BLU=1, GRN=2, RED=5, BLK=5}
+Reasoning: I have 9 points and need 6 more to win. My best path is purchasing Level 3 card L3_80 (4 points, cost 7 Black). With 4 Black bonuses, I need 3 Black tokens. I currently have 1 Black token, so I need 2 more. The board only has 2 Black tokens available, so I cannot take 2 at once (requires 4+ in stack). I must take 3 different colors. Taking 1 Black gets me to 2 total, and I will rely on the board replenishing or opponent returns to get the 3rd next turn. I will also take 1 Blue and 1 Green. This strategy accomplishes two things: 1) accumulates the necessary Black resources; 2) hoards Blue and Green tokens, which are critical for my opponent's reserved card L2_54 (needs 3 Blue) and the visible L2_43 (needs 4 Green), slowing them down. This move keeps my total tokens at 7, well under the 10 limit, and positions me to purchase L3_80 next turn (or the turn after) to trigger Noble N10 and win.
+Action: TakeTokensAction[tokens={BLUE=1, GREEN=1, BLACK=1}, tokensToReturn=null]
+
+======================================================================================
+TURN 26 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:2 GRN:2 RED:4 BLK:1 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_15] BLU 0pts BLK:3                     | [L1_24] WHT 1pt GRN:4                      |
+    [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         | [L1_39] RED 0pts WHT:3                    
+L2: [L2_52] BLU 3pts BLU:6                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_58] WHT 3pts WHT:6                     | [L2_43] BLK 2pts BLU:1 GRN:4 RED:2        
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_80] WHT 4pts BLK:7                     |
+    [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3   | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | glm-4.7 (P1):
+  Score: 8 | Cards: 11                                 |   Score: 9 | Cards: 12
+  Tokens: BLK:1                                        |   Tokens: WHT:1 BLU:2 GRN:2 BLK:2
+  Bonuses: {WHT:3 BLU:1 GRN:2 RED:3 BLK:2}             |   Bonuses: {WHT:2 GRN:1 RED:5 BLK:4}
+  Reserved: [L2_54] WHT 1pt WHT:2 BLU:3 RED:3          |   Reserved: [L3_82] WHT 5pts WHT:3 BLK:7
+
+======================================================================================
+
+Turn 26 - Player 0's move
+Points: 8, Budget: {WHT=3, BLU=1, GRN=2, RED=3, BLK=3}
+Reasoning: We need 15 prestige points as quickly as possible. Currently we have 8 points. The only card that can be purchased in the next few turns to give quick prestige is L2_43 (needs 2 green and 1 black). We already possess a black token, but lack green tokens. Reserve L2_43 for a gold token, keep the black token, then take a green token next turn, and then buy the card using the gold token to substitute the second green and the black token to pay the black requirement. This yields +2 prestige in 3 turns, the fastest route compared to other options. Reserves also deny the opponent access to that high‑value card. Thus we reserve L2_43.
+Action: ReserveCardAction[cardId=L2_43, deckLevel=null, tokensToReturn=null]
+
+======================================================================================
+TURN 26 | Current Player: glm-4.7 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:2 GRN:2 RED:4 BLK:1 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_15] BLU 0pts BLK:3                     | [L1_24] WHT 1pt GRN:4                      |
+    [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         | [L1_39] RED 0pts WHT:3                    
+L2: [L2_52] BLU 3pts BLU:6                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_58] WHT 3pts WHT:6                     | [L2_48] BLU 1pt BLU:2 GRN:3 BLK:3         
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_80] WHT 4pts BLK:7                     |
+    [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3   | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | glm-4.7 (P1) (Current):
+  Score: 8 | Cards: 11                                 |   Score: 9 | Cards: 12
+  Tokens: BLK:1 GLD:1                                  |   Tokens: WHT:1 BLU:2 GRN:2 BLK:2
+  Bonuses: {WHT:3 BLU:1 GRN:2 RED:3 BLK:2}             |   Bonuses: {WHT:2 GRN:1 RED:5 BLK:4}
+  Reserved: [L2_54] WHT 1pt WHT:2 BLU:3 RED:3          |   Reserved: [L3_82] WHT 5pts WHT:3 BLK:7
+            [L2_43] BLK 2pts BLU:1 GRN:4 RED:2         | 
+
+======================================================================================
+
+Turn 26 - Player 1's move
+Points: 9, Budget: {WHT=3, BLU=2, GRN=3, RED=5, BLK=6}
+Reasoning: I have 9 points and my opponent has 8. I cannot win this turn (max available card is 4 points, need 6), but I have a secure path to victory in two turns. Level 3 card L3_80 (4 points, cost 7 Black) is available on the board. With my 4 Black bonuses, I need 3 Black tokens; I currently have 2, so I need exactly 1 more. Purchasing L3_80 will grant me the White bonus, bringing me to 3 White bonuses, which satisfies Noble N10 (3 White, 3 Red, 3 Black) for an additional 3 points, totaling 16 points and the win. I must take tokens to acquire the final Black token. I will take 1 Black, 1 Green, and 1 Blue. This accumulates the necessary Black resource while also hoarding Green and Blue tokens, which my opponent critically needs for their reserved cards L2_43 (needs Green) and L2_54 (needs Blue). This move brings my total tokens to 10, which is legal, and sets up the purchase of L3_80 on my next turn to secure the victory.
+Action: TakeTokensAction[tokens={BLUE=1, GREEN=1, BLACK=1}, tokensToReturn=null]
+
+======================================================================================
+TURN 27 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:1 GRN:1 RED:4 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_15] BLU 0pts BLK:3                     | [L1_24] WHT 1pt GRN:4                      |
+    [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         | [L1_39] RED 0pts WHT:3                    
+L2: [L2_52] BLU 3pts BLU:6                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_58] WHT 3pts WHT:6                     | [L2_48] BLU 1pt BLU:2 GRN:3 BLK:3         
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_80] WHT 4pts BLK:7                     |
+    [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3   | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3  
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | glm-4.7 (P1):
+  Score: 8 | Cards: 11                                 |   Score: 9 | Cards: 12
+  Tokens: BLK:1 GLD:1                                  |   Tokens: WHT:1 BLU:3 GRN:3 BLK:3
+  Bonuses: {WHT:3 BLU:1 GRN:2 RED:3 BLK:2}             |   Bonuses: {WHT:2 GRN:1 RED:5 BLK:4}
+  Reserved: [L2_54] WHT 1pt WHT:2 BLU:3 RED:3          |   Reserved: [L3_82] WHT 5pts WHT:3 BLK:7
+            [L2_43] BLK 2pts BLU:1 GRN:4 RED:2         | 
+
+======================================================================================
+
+Turn 27 - Player 0's move
+Points: 8, Budget: {WHT=3, BLU=1, GRN=2, RED=3, BLK=3, GLD=1}
+Reasoning: We must prevent the opponent from acquiring the 4‑prestige level‑3 card L3_80, which they can buy next turn using 7 black gems (3 black tokens + 4 black bonuses). By reserving L3_80 now we deny them the 4 prestige points and immediately receive an extra gold token (supply available). This protects our lead while keeping options open for future purchases. No immediate purchase or token draw is advantageous given our limited tokens and the need to block the opponent, so the best single action is to reserve that card.
+Action: ReserveCardAction[cardId=L3_80, deckLevel=null, tokensToReturn=null]
+
+======================================================================================
+TURN 27 | Current Player: glm-4.7 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:1 GRN:1 RED:4 GLD:3
+
+[FACE-UP CARDS]
+L1: [L1_15] BLU 0pts BLK:3                     | [L1_24] WHT 1pt GRN:4                      |
+    [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         | [L1_39] RED 0pts WHT:3                    
+L2: [L2_52] BLU 3pts BLU:6                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_58] WHT 3pts WHT:6                     | [L2_48] BLU 1pt BLU:2 GRN:3 BLK:3         
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3   |
+    [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_90] RED 5pts GRN:7 RED:3              
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | glm-4.7 (P1) (Current):
+  Score: 8 | Cards: 11                                 |   Score: 9 | Cards: 12
+  Tokens: BLK:1 GLD:2                                  |   Tokens: WHT:1 BLU:3 GRN:3 BLK:3
+  Bonuses: {WHT:3 BLU:1 GRN:2 RED:3 BLK:2}             |   Bonuses: {WHT:2 GRN:1 RED:5 BLK:4}
+  Reserved: [L2_54] WHT 1pt WHT:2 BLU:3 RED:3          |   Reserved: [L3_82] WHT 5pts WHT:3 BLK:7
+            [L2_43] BLK 2pts BLU:1 GRN:4 RED:2         | 
+            [L3_80] WHT 4pts BLK:7                     | 
+
+======================================================================================
+
+Turn 27 - Player 1's move
+Points: 9, Budget: {WHT=3, BLU=3, GRN=4, RED=5, BLK=7}
+Reasoning: I analyze the board and realize my previous target, L3_80, is reserved by the opponent and unavailable. I have 10 tokens (3 Green) and 9 points. My opponent has 8 points, 2 Green tokens, and reserved card L2_43 (Black bonus). They can afford L2_43 (cost reduces to 2 Green) this turn, which would give them their 3rd Black bonus, fulfilling Noble N10 (3 White, 3 Red, 3 Black) and awarding them 3 points. However, it is my turn first. I have 3 Green tokens and a Green bonus. I can purchase Level 1 card L1_24 (cost 4 Green) for exactly 3 Green tokens. This purchase grants me 1 prestige point and a White bonus, bringing my White bonus total to 3. I already have 5 Red and 4 Black bonuses, so I also fulfill Noble N10. By taking this action, I gain 4 points (1 from card, 3 from Noble) to reach 13 points, and critically, I claim Noble N10 before my opponent can, denying them a massive swing to 13 points. This move also reduces my token count from 10 to 7, keeping me efficient.
+Action: PurchaseCardAction[cardId=L1_24]
+
+======================================================================================
+TURN 28 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:1 GRN:4 RED:4 GLD:3
+
+[FACE-UP CARDS]
+L1: [L1_15] BLU 0pts BLK:3                     | [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         |
+    [L1_39] RED 0pts WHT:3                     | [L1_26] GRN 0pts WHT:1 BLU:1 RED:1 BLK:2  
+L2: [L2_52] BLU 3pts BLU:6                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_58] WHT 3pts WHT:6                     | [L2_48] BLU 1pt BLU:2 GRN:3 BLK:3         
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3   |
+    [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_90] RED 5pts GRN:7 RED:3              
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | glm-4.7 (P1):
+  Score: 8 | Cards: 11                                 |   Score: 13 | Cards: 13
+  Tokens: BLK:1 GLD:2                                  |   Tokens: WHT:1 BLU:3 BLK:3
+  Bonuses: {WHT:3 BLU:1 GRN:2 RED:3 BLK:2}             |   Bonuses: {WHT:3 GRN:1 RED:5 BLK:4}
+  Reserved: [L2_54] WHT 1pt WHT:2 BLU:3 RED:3          |   Reserved: [L3_82] WHT 5pts WHT:3 BLK:7
+            [L2_43] BLK 2pts BLU:1 GRN:4 RED:2         | 
+            [L3_80] WHT 4pts BLK:7                     | 
+
+======================================================================================
+
+Turn 28 - Player 0's move
+Points: 8, Budget: {WHT=3, BLU=1, GRN=2, RED=3, BLK=3, GLD=2}
+Retry attempt 1 for Player 0. Error: Invalid action: Unknown action type: 
+Reasoning: Player 1 has 13 prestige and needs 2 more points, most plausibly by buying L3_83 which requires 2 white tokens. The board only allows taking one white token per turn (you cannot take two same color tokens because there are only 3 available and the rule requires at least 4 for two same color). Taking any other token would only reduce the remaining white supply by one, still leaving the opponent able to acquire a second white token next turn. To decisively block that move, you reserve the L3_83 card, which removes it from the board and gives you an additional gold token without spending any of your current tokens. This action keeps the opponent from gaining the 3 prestige of L3_83 and provides a gold token for future purchases. The simplified rules do not impose a limit on how many reserved cards a player can hold, so reserving L3_83 is legal.
+Action: ReserveCardAction[cardId=L3_83, deckLevel=null, tokensToReturn=null]
+Retry attempt 2 for Player 0. Error: Invalid action: Cannot reserve more than 3 cards.
+Player 0 failed to provide a valid action after 3 retries. Last error: Unexpected error: Received RST_STREAM: Internal error. Skipping turn.
+
+======================================================================================
+TURN 28 | Current Player: glm-4.7 (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:1 GRN:4 RED:4 GLD:3
+
+[FACE-UP CARDS]
+L1: [L1_15] BLU 0pts BLK:3                     | [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         |
+    [L1_39] RED 0pts WHT:3                     | [L1_26] GRN 0pts WHT:1 BLU:1 RED:1 BLK:2  
+L2: [L2_52] BLU 3pts BLU:6                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_58] WHT 3pts WHT:6                     | [L2_48] BLU 1pt BLU:2 GRN:3 BLK:3         
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3   |
+    [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_90] RED 5pts GRN:7 RED:3              
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | glm-4.7 (P1) (Current):
+  Score: 8 | Cards: 11                                 |   Score: 13 | Cards: 13
+  Tokens: BLK:1 GLD:2                                  |   Tokens: WHT:1 BLU:3 BLK:3
+  Bonuses: {WHT:3 BLU:1 GRN:2 RED:3 BLK:2}             |   Bonuses: {WHT:3 GRN:1 RED:5 BLK:4}
+  Reserved: [L2_54] WHT 1pt WHT:2 BLU:3 RED:3          |   Reserved: [L3_82] WHT 5pts WHT:3 BLK:7
+            [L2_43] BLK 2pts BLU:1 GRN:4 RED:2         | 
+            [L3_80] WHT 4pts BLK:7                     | 
+
+======================================================================================
+
+Turn 28 - Player 1's move
+Points: 13, Budget: {WHT=4, BLU=3, GRN=1, RED=5, BLK=7}
+Reasoning: I have 13 points and need 2 more to win. I have a reserved Level 3 card, L3_82, which provides 5 prestige points. The cost is 3 White and 7 Black. I currently have 3 White bonuses and 4 Black bonuses. I also hold 3 Black tokens in my inventory. With my bonuses, the cost reduces to 0 White and 3 Black. I have exactly 3 Black tokens available to pay. Therefore, I can purchase this card immediately for a net cost of 3 Black tokens, gaining 5 points and ending the game with 18 points. This is the winning move.
+Action: PurchaseCardAction[cardId=L3_82]
+
+======================================================================================
+TURN 29 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:1 GRN:4 RED:4 BLK:3 GLD:3
+
+[FACE-UP CARDS]
+L1: [L1_15] BLU 0pts BLK:3                     | [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         |
+    [L1_39] RED 0pts WHT:3                     | [L1_26] GRN 0pts WHT:1 BLU:1 RED:1 BLK:2  
+L2: [L2_52] BLU 3pts BLU:6                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_58] WHT 3pts WHT:6                     | [L2_48] BLU 1pt BLU:2 GRN:3 BLK:3         
+L3: [L3_77] BLU 4pts WHT:6 BLU:3 BLK:3         | [L3_87] RED 3pts WHT:3 BLU:5 GRN:3 BLK:3   |
+    [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_90] RED 5pts GRN:7 RED:3              
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | glm-4.7 (P1):
+  Score: 8 | Cards: 11                                 |   Score: 21 | Cards: 14
+  Tokens: BLK:1 GLD:2                                  |   Tokens: WHT:1 BLU:3
+  Bonuses: {WHT:3 BLU:1 GRN:2 RED:3 BLK:2}             |   Bonuses: {WHT:4 GRN:1 RED:5 BLK:4}
+  Reserved: [L2_54] WHT 1pt WHT:2 BLU:3 RED:3          |   Reserved: None
+            [L2_43] BLK 2pts BLU:1 GRN:4 RED:2         | 
+            [L3_80] WHT 4pts BLK:7                     | 
+
+======================================================================================
+
+--- Game Over ---
+Winner: Player 1 won on points.
+Player 0: 8 points
+Player 1: 21 points
+Game event log closed: logs\20251231_010722.json

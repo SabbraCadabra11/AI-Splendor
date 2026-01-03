@@ -1,0 +1,876 @@
+2025-12-29 00:31:39.079 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Configured Player 0 with: xiaomi/mimo-v2-flash:free (reasoning: high)
+2025-12-29 00:31:39.080 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Configured Player 1 with: deepseek/deepseek-v3.2 (reasoning: high)
+2025-12-29 00:31:39.080 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Semi-Auto Mode: DISABLED
+2025-12-29 00:31:39.081 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Debug Mode: DISABLED
+2025-12-29 00:31:39.316 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - --- Game Started ---
+2025-12-29 00:31:39.333 [com.aisplendor.App.main()] INFO  c.aisplendor.service.GameEventLogger - Game event log created: logs\20251229_003139.json
+2025-12-29 00:31:39.385 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 1 | Current Player: 0
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:4 GRN:4 RED:4 BLK:4 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_38] RED 0pts WHT:2 RED:2               | [L1_2] BLK 0pts WHT:1 BLU:2 GRN:1 RED:1    |
+    [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         | [L1_18] WHT 0pts BLU:1 GRN:2 RED:1 BLK:1  
+L2: [L2_45] BLK 2pts WHT:5                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2        
+L3: [L3_78] BLU 5pts WHT:7 BLU:3               | [L3_84] GRN 4pts BLU:7                     |
+    [L3_82] WHT 5pts WHT:3 BLK:7               | [L3_71] BLK 3pts WHT:3 BLU:3 GRN:5 RED:3  
+
+[PLAYERS]
+Player 0 (Current):                                    | Player 1:
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 0
+  Tokens:                                              |   Tokens: 
+  Bonuses: {}                                          |   Bonuses: {}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+2025-12-29 00:31:39.385 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Turn 1 - Player 0's move
+2025-12-29 00:31:39.385 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {}
+2025-12-29 00:32:20.020 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Reasoning: It's the first turn, and I have no tokens or bonuses. My goal is to build an engine to reach 15 points efficiently. Taking three different tokens provides flexibility to purchase various level 1 cards in future turns. RED appears in all four level 1 cards, making it highly valuable. GREEN and WHITE are each in three level 1 cards, so they are also important. By taking one of each, I maximize my options for buying a card on turn 2. Since I have 0 tokens currently, taking 3 tokens will not exceed the 10-token limit, so no return is needed.
+2025-12-29 00:32:20.021 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={WHITE=1, GREEN=1, RED=1}, tokensToReturn=null]
+2025-12-29 00:32:20.037 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 1 | Current Player: 1
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:4 GRN:3 RED:3 BLK:4 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_38] RED 0pts WHT:2 RED:2               | [L1_2] BLK 0pts WHT:1 BLU:2 GRN:1 RED:1    |
+    [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         | [L1_18] WHT 0pts BLU:1 GRN:2 RED:1 BLK:1  
+L2: [L2_45] BLK 2pts WHT:5                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2        
+L3: [L3_78] BLU 5pts WHT:7 BLU:3               | [L3_84] GRN 4pts BLU:7                     |
+    [L3_82] WHT 5pts WHT:3 BLK:7               | [L3_71] BLK 3pts WHT:3 BLU:3 GRN:5 RED:3  
+
+[PLAYERS]
+Player 0:                                              | Player 1 (Current):
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 0
+  Tokens: WHT:1 GRN:1 RED:1                            |   Tokens: 
+  Bonuses: {}                                          |   Bonuses: {}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+2025-12-29 00:32:20.038 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Turn 1 - Player 1's move
+2025-12-29 00:32:20.038 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {}
+2025-12-29 00:32:31.066 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I am player 1, starting the game. I have no tokens, no cards, and no bonuses. My goal is to build towards purchasing cards efficiently. I need to gather tokens to afford cards. Looking at the face-up cards: Level 1 cards are cheaper and provide bonuses. I should aim to take 3 different colors to maximize token acquisition. The board has tokens: WHITE=3, BLUE=4, GREEN=3, RED=3, BLACK=4, GOLD=5. All colors have at least 3, so I can take any three different colors. I should consider which cards I might want soon. L1_38 (RED bonus, cost 2WHITE+2RED) requires WHITE and RED. L1_2 (BLACK bonus, cost 1WHITE+2BLUE+1GREEN+1RED) requires multiple colors. L1_11 (BLUE bonus, cost 1WHITE+2GREEN+2RED) requires GREEN and RED. L1_18 (WHITE bonus, cost 1BLUE+2GREEN+1RED+1BLACK) requires GREEN, RED, BLACK. I note that many cards require GREEN and RED. Also, nobles require combinations like GREEN+BLUE, RGB, or BLUE+WHITE. Since I have no tokens, I should take tokens that are versatile and needed for multiple cards. Taking WHITE, GREEN, and RED might be good because they appear in many costs. Alternatively, taking BLUE, GREEN, RED is also common. But I should also consider that taking two of the same color might be possible, but since I have no tokens, taking 3 different is better for flexibility. I'll take WHITE, GREEN, and RED because they are used in several cards and nobles. Check token counts: WHITE=3 (after taking 1, will be 2), GREEN=3 (->2), RED=3 (->2). All are available. I have 0 tokens now, after taking 3, I'll have 3 total, well below 10, so no need to return. So, set take_WHITE=1, take_GREEN=1, take_RED=1. Others 0.
+2025-12-29 00:32:31.067 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={WHITE=1, GREEN=1, RED=1}, tokensToReturn=null]
+2025-12-29 00:32:31.068 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 2 | Current Player: 0
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:4 GRN:2 RED:2 BLK:4 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_38] RED 0pts WHT:2 RED:2               | [L1_2] BLK 0pts WHT:1 BLU:2 GRN:1 RED:1    |
+    [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         | [L1_18] WHT 0pts BLU:1 GRN:2 RED:1 BLK:1  
+L2: [L2_45] BLK 2pts WHT:5                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2        
+L3: [L3_78] BLU 5pts WHT:7 BLU:3               | [L3_84] GRN 4pts BLU:7                     |
+    [L3_82] WHT 5pts WHT:3 BLK:7               | [L3_71] BLK 3pts WHT:3 BLU:3 GRN:5 RED:3  
+
+[PLAYERS]
+Player 0 (Current):                                    | Player 1:
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 0
+  Tokens: WHT:1 GRN:1 RED:1                            |   Tokens: WHT:1 GRN:1 RED:1
+  Bonuses: {}                                          |   Bonuses: {}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+2025-12-29 00:32:31.069 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Turn 2 - Player 0's move
+2025-12-29 00:32:31.069 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=1, GRN=1, RED=1}
+2025-12-29 00:34:31.258 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I have one white, one green, and one red token. By taking two blue tokens, I will have enough tokens to purchase card L1_2 on my next turn, which costs one white, two blue, one green, and one red. Purchasing L1_2 gives me a black bonus, which is valuable for reducing costs of future cards that require black tokens, such as L2_65 or L2_55. This action maintains a low token count (5 tokens after taking), so no return is needed. Taking two blue tokens is valid because there are 4 blue tokens available on the board. Other actions, like reserving or taking three different tokens, would delay my ability to purchase a card and gain a bonus.
+2025-12-29 00:34:31.259 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={BLUE=2}, tokensToReturn=null]
+2025-12-29 00:34:31.260 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 2 | Current Player: 1
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:2 GRN:2 RED:2 BLK:4 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_38] RED 0pts WHT:2 RED:2               | [L1_2] BLK 0pts WHT:1 BLU:2 GRN:1 RED:1    |
+    [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         | [L1_18] WHT 0pts BLU:1 GRN:2 RED:1 BLK:1  
+L2: [L2_45] BLK 2pts WHT:5                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2        
+L3: [L3_78] BLU 5pts WHT:7 BLU:3               | [L3_84] GRN 4pts BLU:7                     |
+    [L3_82] WHT 5pts WHT:3 BLK:7               | [L3_71] BLK 3pts WHT:3 BLU:3 GRN:5 RED:3  
+
+[PLAYERS]
+Player 0:                                              | Player 1 (Current):
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 0
+  Tokens: WHT:1 BLU:2 GRN:1 RED:1                      |   Tokens: WHT:1 GRN:1 RED:1
+  Bonuses: {}                                          |   Bonuses: {}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+2025-12-29 00:34:31.261 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Turn 2 - Player 1's move
+2025-12-29 00:34:31.261 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=1, GRN=1, RED=1}
+2025-12-29 00:34:50.371 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I am player 1, on turn 2. My previous turn I took WHITE, GREEN, RED tokens, so now I have 1 WHITE, 1 GREEN, 1 RED. I have 3 tokens total. My goal is to accumulate tokens to purchase a card soon. Looking at the board tokens: WHITE=2, BLUE=2, GREEN=2, RED=2, BLACK=4, GOLD=5. I could take 3 different colors again. I should consider which cards I can afford soon. Currently, I have no bonuses, so I need to pay full cost. The cheapest card is L1_38 (cost 2 WHITE, 2 RED). I have 1 WHITE, 1 RED, so I need 1 more WHITE and 1 more RED to buy it. Alternatively, L1_11 (cost 1 WHITE, 2 GREEN, 2 RED) requires more. L1_18 (cost 1 BLUE, 2 GREEN, 1 RED, 1 BLACK) is more expensive. L1_2 (cost 1 WHITE, 2 BLUE, 1 GREEN, 1 RED) requires BLUE. I think aiming for L1_38 is good because it gives a RED bonus and is cheap. To get closer, I could take WHITE and RED again. But I can only take 3 different colors or 2 of the same if 4+ available. BLACK has 4, so I could take 2 BLACK. However, taking 2 BLACK doesn't help immediately for L1_38. Taking WHITE and RED would require taking a third different color. I could take WHITE, RED, and BLACK or BLUE or GREEN. But I already have GREEN, so maybe take BLUE to diversify. But I should also consider the nobles: N4 requires GREEN+BLUE, N9 requires RGB, N1 requires BLUE+WHITE. Having BLUE could help for nobles. But my immediate goal is to buy a card to start an engine. I think taking WHITE, RED, and BLACK might be good because BLACK is needed for some cards and nobles, and it has 4 available so I could later take 2 if needed. However, if I take WHITE and RED now, I'll have 2 WHITE, 2 RED, 1 GREEN after this turn, and then next turn I could buy L1_38 if I get one more WHITE or RED (but I'd need 2 WHITE and 2 RED total; I'd have 2 WHITE and 2 RED exactly? Wait, cost is 2 WHITE, 2 RED. After this turn if I take WHITE and RED and another color, I'd have 2 WHITE, 2 RED, 1 GREEN, and 1 other. That's exactly enough to buy L1_38! But I need to check: I currently have 1 WHITE, 1 GREEN, 1 RED. If I take 1 WHITE, 1 RED, and 1 BLACK, I'll have 2 WHITE, 1 GREEN, 2 RED, 1 BLACK. That's 2 WHITE and 2 RED, so I can afford L1_38 next turn. That's a good plan. Alternatively, if I take WHITE, RED, and BLUE, I'd have 2 WHITE, 1 GREEN, 2 RED, 1 BLUE, also enough. But taking BLACK might be better because BLACK is used in L1_18 and L2_65 and nobles. But BLUE is also used. However, note that L1_38 gives a RED bonus, which would help for future RED costs. So I'll aim to buy L1_38 next turn. Therefore, I should take WHITE, RED, and a third color that is useful. I'll take BLACK because it has 4 available and is needed for some cards. Check token counts: WHITE=2 (after taking 1 ->1), RED=2 (->1), BLACK=4 (->3). All are available. I currently have 3 tokens, taking 3 more gives 6 total, well below 10, so no need to return. So, set take_WHITE=1, take_RED=1, take_BLACK=1.
+2025-12-29 00:34:50.372 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={WHITE=1, RED=1, BLACK=1}, tokensToReturn=null]
+2025-12-29 00:34:50.372 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 3 | Current Player: 0
+======================================================================================
+
+[BOARD BANK]
+WHT:1 BLU:2 GRN:2 RED:1 BLK:3 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_38] RED 0pts WHT:2 RED:2               | [L1_2] BLK 0pts WHT:1 BLU:2 GRN:1 RED:1    |
+    [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         | [L1_18] WHT 0pts BLU:1 GRN:2 RED:1 BLK:1  
+L2: [L2_45] BLK 2pts WHT:5                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2        
+L3: [L3_78] BLU 5pts WHT:7 BLU:3               | [L3_84] GRN 4pts BLU:7                     |
+    [L3_82] WHT 5pts WHT:3 BLK:7               | [L3_71] BLK 3pts WHT:3 BLU:3 GRN:5 RED:3  
+
+[PLAYERS]
+Player 0 (Current):                                    | Player 1:
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 0
+  Tokens: WHT:1 BLU:2 GRN:1 RED:1                      |   Tokens: WHT:2 GRN:1 RED:2 BLK:1
+  Bonuses: {}                                          |   Bonuses: {}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+2025-12-29 00:34:50.373 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Turn 3 - Player 0's move
+2025-12-29 00:34:50.373 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=1, BLU=2, GRN=1, RED=1}
+2025-12-29 00:35:02.046 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I have exactly the required tokens to purchase card L1_2: WHITE:1, BLUE:2, GREEN:1, RED:1. Purchasing this card gives me a BLACK bonus, which will help reduce costs for future cards like L2_65 or L2_55 that require black tokens. After purchasing, I will have zero tokens, which is manageable as I can take tokens on my next turn. This action efficiently builds my engine and avoids any token waste, aligning with my strategy to reach 15 points as quickly as possible.
+2025-12-29 00:35:02.047 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L1_2]
+2025-12-29 00:35:02.049 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 3 | Current Player: 1
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:4 GRN:3 RED:2 BLK:3 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_38] RED 0pts WHT:2 RED:2               | [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         |
+    [L1_18] WHT 0pts BLU:1 GRN:2 RED:1 BLK:1   | [L1_13] BLU 0pts WHT:1 BLK:2              
+L2: [L2_45] BLK 2pts WHT:5                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2        
+L3: [L3_78] BLU 5pts WHT:7 BLU:3               | [L3_84] GRN 4pts BLU:7                     |
+    [L3_82] WHT 5pts WHT:3 BLK:7               | [L3_71] BLK 3pts WHT:3 BLU:3 GRN:5 RED:3  
+
+[PLAYERS]
+Player 0:                                              | Player 1 (Current):
+  Score: 0 | Cards: 1                                  |   Score: 0 | Cards: 0
+  Tokens:                                              |   Tokens: WHT:2 GRN:1 RED:2 BLK:1
+  Bonuses: {BLK:1}                                     |   Bonuses: {}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+2025-12-29 00:35:02.049 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Turn 3 - Player 1's move
+2025-12-29 00:35:02.051 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=2, GRN=1, RED=2, BLK=1}
+2025-12-29 00:36:21.314 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I am player 1, turn 3. My current tokens: WHITE=2, GREEN=1, RED=2, BLACK=1 (total 6). I have no bonuses or purchased cards yet. From my previous plan, I aimed to purchase L1_38, which costs 2 WHITE and 2 RED, and I now have exactly those tokens. Purchasing this card gives me a RED bonus (first engine piece) and costs no net tokens (spending 4 tokens reduces my total to 2, avoiding risk of exceeding 10). Alternative actions: taking tokens would delay engine building, and I cannot afford other face-up cards yet (e.g., L1_11 needs one more GREEN, L1_13 needs one more BLACK). Reserving is less efficient since I can buy immediately. Thus, purchasing L1_38 is optimal to start gaining bonuses and move toward prestige points.
+2025-12-29 00:36:21.315 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L1_38]
+2025-12-29 00:36:21.316 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 4 | Current Player: 0
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:4 GRN:3 RED:4 BLK:3 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         | [L1_18] WHT 0pts BLU:1 GRN:2 RED:1 BLK:1   |
+    [L1_13] BLU 0pts WHT:1 BLK:2               | [L1_39] RED 0pts WHT:3                    
+L2: [L2_45] BLK 2pts WHT:5                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2        
+L3: [L3_78] BLU 5pts WHT:7 BLU:3               | [L3_84] GRN 4pts BLU:7                     |
+    [L3_82] WHT 5pts WHT:3 BLK:7               | [L3_71] BLK 3pts WHT:3 BLU:3 GRN:5 RED:3  
+
+[PLAYERS]
+Player 0 (Current):                                    | Player 1:
+  Score: 0 | Cards: 1                                  |   Score: 0 | Cards: 1
+  Tokens:                                              |   Tokens: GRN:1 BLK:1
+  Bonuses: {BLK:1}                                     |   Bonuses: {RED:1}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+2025-12-29 00:36:21.316 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Turn 4 - Player 0's move
+2025-12-29 00:36:21.316 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {BLK=1}
+2025-12-29 00:40:03.979 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I currently have no tokens, so I need to take tokens to enable future purchases. My goal is to build on my existing black bonus from L1_2 by acquiring a blue bonus from L1_13, which is cheap and efficient. L1_13 requires one white and one black token (with my black bonus), so I need to take those colors. Since I must take exactly three tokens or two of the same, I'll take three different tokens: white, black, and green. Taking green prepares me for future cards that require green tokens, such as L1_18 or L2_63, and green is valuable for noble requirements. This action sets me up to purchase L1_13 on my next turn, gaining a blue bonus while maintaining a low token count.
+2025-12-29 00:40:03.979 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={WHITE=1, GREEN=1, BLACK=1}, tokensToReturn=null]
+2025-12-29 00:40:03.980 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 4 | Current Player: 1
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:4 GRN:2 RED:4 BLK:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         | [L1_18] WHT 0pts BLU:1 GRN:2 RED:1 BLK:1   |
+    [L1_13] BLU 0pts WHT:1 BLK:2               | [L1_39] RED 0pts WHT:3                    
+L2: [L2_45] BLK 2pts WHT:5                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2        
+L3: [L3_78] BLU 5pts WHT:7 BLU:3               | [L3_84] GRN 4pts BLU:7                     |
+    [L3_82] WHT 5pts WHT:3 BLK:7               | [L3_71] BLK 3pts WHT:3 BLU:3 GRN:5 RED:3  
+
+[PLAYERS]
+Player 0:                                              | Player 1 (Current):
+  Score: 0 | Cards: 1                                  |   Score: 0 | Cards: 1
+  Tokens: WHT:1 GRN:1 BLK:1                            |   Tokens: GRN:1 BLK:1
+  Bonuses: {BLK:1}                                     |   Bonuses: {RED:1}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+2025-12-29 00:40:03.981 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Turn 4 - Player 1's move
+2025-12-29 00:40:03.981 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {GRN=1, RED=1, BLK=1}
+2025-12-29 00:42:15.740 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I am player 1, starting turn 4. Current tokens: GREEN=1, BLACK=1; bonuses: RED=1. Total tokens: 2, well below 10. I need to build towards purchasing a card to increase bonuses and prestige. Analyzing face-up cards: L1_18 (WHITE bonus) is attractive because my RED bonus reduces its cost to 1BLUE, 2GREEN, 1BLACK. I already have GREEN=1 and BLACK=1, so I need 1BLUE and 1GREEN more to afford it. Taking tokens now to gather these will allow me to purchase L1_18 next turn, accelerating my engine. Considering token availability on board: WHITE=3, BLUE=4, GREEN=2, RED=4, BLACK=2. I can take 3 different colors. Taking BLUE, GREEN, and WHITE provides the needed BLUE and GREEN for L1_18, plus WHITE for flexibility toward future cards or nobles. This is more efficient than taking 2 same (e.g., 2 BLUE) which would delay purchase by an extra turn, or reserving which adds a turn. Opponent may purchase L1_13 soon, but blocking via reserve would slow my progress. Taking tokens now optimizes for quick purchase next turn, building my bonuses toward nobles and higher-point cards.
+2025-12-29 00:42:15.740 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={WHITE=1, BLUE=1, GREEN=1}, tokensToReturn=null]
+2025-12-29 00:42:15.740 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 5 | Current Player: 0
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:3 GRN:1 RED:4 BLK:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         | [L1_18] WHT 0pts BLU:1 GRN:2 RED:1 BLK:1   |
+    [L1_13] BLU 0pts WHT:1 BLK:2               | [L1_39] RED 0pts WHT:3                    
+L2: [L2_45] BLK 2pts WHT:5                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2        
+L3: [L3_78] BLU 5pts WHT:7 BLU:3               | [L3_84] GRN 4pts BLU:7                     |
+    [L3_82] WHT 5pts WHT:3 BLK:7               | [L3_71] BLK 3pts WHT:3 BLU:3 GRN:5 RED:3  
+
+[PLAYERS]
+Player 0 (Current):                                    | Player 1:
+  Score: 0 | Cards: 1                                  |   Score: 0 | Cards: 1
+  Tokens: WHT:1 GRN:1 BLK:1                            |   Tokens: WHT:1 BLU:1 GRN:2 BLK:1
+  Bonuses: {BLK:1}                                     |   Bonuses: {RED:1}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+2025-12-29 00:42:15.742 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Turn 5 - Player 0's move
+2025-12-29 00:42:15.742 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=1, GRN=1, BLK=2}
+2025-12-29 00:42:39.603 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I can afford to purchase card L1_13 with my current tokens and bonuses. The cost is WHITE:1 and BLACK:2. My BLACK bonus reduces one BLACK cost, so I need to pay WHITE:1 and BLACK:1. I have exactly WHITE:1 and BLACK:1 tokens, so I can purchase it without any issues. This gives me a BLUE bonus, which builds on my existing BLACK bonus and improves my engine for future cards. Since I can purchase a card now, it's more efficient than taking tokens, as it directly advances my position without wasting turns. After purchase, I'll have zero tokens, which is manageable for the next turn.
+2025-12-29 00:42:39.604 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L1_13]
+2025-12-29 00:42:39.604 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 5 | Current Player: 1
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:3 GRN:1 RED:4 BLK:3 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         | [L1_18] WHT 0pts BLU:1 GRN:2 RED:1 BLK:1   |
+    [L1_39] RED 0pts WHT:3                     | [L1_1] BLK 0pts WHT:1 BLU:1 GRN:1 RED:1   
+L2: [L2_45] BLK 2pts WHT:5                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2        
+L3: [L3_78] BLU 5pts WHT:7 BLU:3               | [L3_84] GRN 4pts BLU:7                     |
+    [L3_82] WHT 5pts WHT:3 BLK:7               | [L3_71] BLK 3pts WHT:3 BLU:3 GRN:5 RED:3  
+
+[PLAYERS]
+Player 0:                                              | Player 1 (Current):
+  Score: 0 | Cards: 2                                  |   Score: 0 | Cards: 1
+  Tokens: GRN:1                                        |   Tokens: WHT:1 BLU:1 GRN:2 BLK:1
+  Bonuses: {BLU:1 BLK:1}                               |   Bonuses: {RED:1}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+2025-12-29 00:42:39.605 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Turn 5 - Player 1's move
+2025-12-29 00:42:39.605 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=1, BLU=1, GRN=2, RED=1, BLK=1}
+2025-12-29 00:42:59.067 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I am player 1, turn 5. Current tokens: WHITE=1, BLUE=1, GREEN=2, RED=0, BLACK=1. Total tokens: 5. Bonuses: RED=1. Previous plan was to take BLUE, GREEN, WHITE to afford L1_18 next turn. I did that last turn? Wait, in my last reasoning I said I would take BLUE, GREEN, WHITE. But the current state shows I have WHITE=1, BLUE=1, GREEN=2, RED=0, BLACK=1. That means I indeed took those tokens last turn (turn 4). Now it's turn 5, and I have the tokens needed to purchase L1_18? Let's verify: L1_18 cost with RED bonus: 1 BLUE, 2 GREEN, 1 BLACK (since RED cost is reduced by 1). I have BLUE=1, GREEN=2, BLACK=1. That's exactly enough! I can purchase L1_18 now. That would give me a WHITE bonus, increasing my bonuses to RED=1, WHITE=1. I should purchase it immediately. That's more efficient than taking tokens. However, I should check if there are any other cards I can afford. L1_39 (cost 3 WHITE) I have WHITE=1, bonus RED=1 not applicable, need 2 more WHITE. L1_1 (cost 1 each) I have bonuses RED=1, so cost reduced to 1 WHITE, 1 BLUE, 1 GREEN, 0 RED, 1 BLACK? Actually, cost is 1 WHITE, 1 BLUE, 1 GREEN, 1 RED. With RED bonus, RED cost becomes 0. So I need WHITE=1, BLUE=1, GREEN=1, BLACK=0. I have WHITE=1, BLUE=1, GREEN=2, BLACK=1. So I can also afford L1_1. That gives BLACK bonus. Which is better? L1_18 gives WHITE bonus, L1_1 gives BLACK bonus. I already have BLACK bonus from opponent? No, I have RED bonus only. Actually, my bonuses are only RED. L1_18 is more expensive in terms of tokens but I have exactly the tokens. Purchasing L1_18 uses my tokens efficiently and gives a WHITE bonus. L1_1 is also affordable but gives a second bonus type. I need to consider future cards and nobles. Nobles: N4 requires GREEN+BLUE, N9 requires RGB, N1 requires BLUE+WHITE. Having WHITE bonus helps for N1 and many cards. Having BLACK bonus helps for some cards but not directly for nobles shown. L1_1 is also cheap and gives a bonus, but note that opponent has already purchased L1_2 (BLACK) and L1_13 (BLUE), so they have BLACK and BLUE bonuses. I might want to diversify. However, purchasing L1_18 now is consistent with my plan and uses my tokens exactly. Also, if I purchase L1_18, I spend tokens: 1 BLUE, 2 GREEN, 1 BLACK. That reduces my tokens to WHITE=1, BLUE=0, GREEN=0, RED=0, BLACK=0. Total tokens become 1, which is low, allowing me to take tokens next turn without risk of exceeding 10. Purchasing L1_1 would spend 1 WHITE, 1 BLUE, 1 GREEN, 0 RED, leaving me with WHITE=0, BLUE=0, GREEN=1, RED=0, BLACK=1. That's also fine. Both are good. But L1_18 has a higher cost in terms of tokens, which means it's a better 'burn' of tokens to free up capacity? Actually, I only have 5 tokens, so not near limit. I think either is fine. However, I should check the board token supply: GREEN only 1 left on board. If I take tokens later, GREEN might be scarce. But that's not immediate. I think I should purchase L1_18 as planned to get WHITE bonus and move toward nobles that require WHITE (N1). Also, L1_18 is a level 1 card with no points, same as L1_1. So no prestige difference. I'll purchase L1_18. So set action_type='PURCHASE_CARD', card_id='L1_18'.
+2025-12-29 00:42:59.067 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens=null, tokensToReturn=null]
+2025-12-29 00:42:59.072 [com.aisplendor.App.main()] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 1 for Player 1. Error: Invalid action: Must select tokens to take.
+2025-12-29 00:43:11.118 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I am player 1, turn 5. My current tokens: WHITE=1, BLUE=1, GREEN=2, BLACK=1 (total 5). I have purchased L1_38 giving RED bonus=1. Last turn's reasoning indicated I intended to take tokens to purchase L1_18 next turn. However, I need to check the current board state. L1_18 is still available (id: L1_18, WHITE bonus, cost: BLUE1, GREEN2, RED1, BLACK1). My bonuses: RED=1 reduces cost by 1 RED, so effective cost: BLUE1, GREEN2, BLACK1 (since RED1 becomes 0). I currently have: BLUE=1, GREEN=2, BLACK=1. That means I can afford L1_18 right now! Let me verify: Required tokens: BLUE 1 (I have 1), GREEN 2 (I have 2), BLACK 1 (I have 1). Yes, I have exactly the tokens needed. Purchasing now would be optimal to gain the WHITE bonus and reduce my token count (spending 4 tokens, leaving me with 1 token total). This accelerates my engine. Alternatively, I could take tokens but that would delay purchase. Also, opponent has purchased two cards (L1_2 and L1_13) and has BLUE and BLACK bonuses, so they may be aiming for nobles or higher cards. I should prioritize buying L1_18 now. However, note that I have 5 tokens total; after purchasing L1_18, I'll have 1 token left, which is fine. No risk of exceeding 10. Therefore, I should purchase L1_18. Action_type: PURCHASE_CARD, card_id: L1_18. But wait, I must double-check the cost: The original cost is BLUE1, GREEN2, RED1, BLACK1. With RED bonus 1, I need to pay BLUE1, GREEN2, BLACK1. I have those tokens exactly. So purchase is possible. No need for gold tokens. I will purchase L1_18.
+2025-12-29 00:43:11.118 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens=null, tokensToReturn=null]
+2025-12-29 00:43:11.119 [com.aisplendor.App.main()] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 2 for Player 1. Error: Invalid action: Must select tokens to take.
+2025-12-29 00:43:31.952 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I am player 1, turn 5. My current tokens: WHITE=1, BLUE=1, GREEN=2, RED=0, BLACK=1 (total 5). I have one RED bonus from purchased L1_38. My previous plan was to take BLUE, GREEN, WHITE to afford L1_18 next turn, but my previous action was invalid because I didn't set token fields correctly. I must now re-evaluate. Goal: purchase L1_18 (WHITE bonus, cost 1 BLUE, 2 GREEN, 1 RED, 1 BLACK). With my RED bonus, I need only 1 BLUE, 2 GREEN, 1 BLACK. I already have GREEN=2 and BLACK=1, so I need 1 BLUE. I also have WHITE=1 which is not needed for L1_18 but could be useful for future. To afford L1_18 next turn, I need 1 more BLUE. However, I could take tokens to get that BLUE now. I can take 3 different colors. Board tokens: WHITE=3, BLUE=3, GREEN=1, RED=4, BLACK=3. GREEN has only 1 token, so I cannot take GREEN as part of 3 different colors because after taking 1 GREEN, it would go to 0, but rule doesn't forbid if at least 1 available? Actually, you can take a color as long as there is at least 1 token available. So I can take GREEN if I take only 1. But taking 3 different colors: I want BLUE, and then two others. I could take BLUE, WHITE, and BLACK, but that would not give me the second GREEN I need? Wait, I already have GREEN=2, which is exactly the requirement for L1_18. So I don't need more GREEN. I need 1 BLUE. So taking BLUE plus two other colors is fine. I could take BLUE, WHITE, and RED (or BLACK). However, note that I currently have 5 tokens. Taking 3 more would bring me to 8, still below 10. So I can take 3 different colors. I should take BLUE to satisfy the missing requirement for L1_18. For the other two, I should choose colors that are useful for future cards or nobles. WHITE is useful for many cards and noble N1. RED is useful for many cards and I have a RED bonus, but I already have 0 RED tokens. BLACK is also useful. I'll take BLUE, WHITE, and RED to diversify. Alternatively, I could take BLUE, WHITE, BLACK. But RED might be more useful because I have a RED bonus, making future RED costs cheaper. However, taking RED doesn't directly help for L1_18 because the RED cost is already covered by bonus. But having RED tokens could help purchase other cards like L1_39 (cost 3 WHITE) not helpful, or L2_65 (cost 2 WHITE, 2 RED, 3 BLACK) requires RED tokens. Since I have a RED bonus, having RED tokens is less critical because I can use bonus instead. Actually, having tokens in colors where I lack bonuses is more important because I need to pay full cost for those. I have no WHITE bonus, so WHITE tokens are valuable. I have no BLUE bonus, so BLUE tokens are valuable. I have no GREEN bonus, so GREEN tokens are valuable (but I already have 2). I have no BLACK bonus, so BLACK tokens are valuable. I have a RED bonus, so RED tokens are less valuable. Therefore, I should prioritize taking WHITE, BLUE, BLACK. But I need to consider availability: GREEN only has 1, so if I take GREEN, I'd have 3 GREEN, which is more than needed for L1_18, but could be used elsewhere. However, taking GREEN would reduce board GREEN to 0, which might be okay. But I think taking WHITE, BLUE, BLACK is better because those are colors where I have no bonuses. Check board counts: WHITE=3, BLUE=3, BLACK=3. All have at least 1. So I can take WHITE, BLUE, BLACK. That gives me: after taking, tokens: WHITE=2, BLUE=2, GREEN=2, BLACK=2, RED=0. Total 8. Then next turn I can purchase L1_18 using 1 BLUE, 2 GREEN, 1 BLACK (I have exactly that). That works perfectly. So I will take WHITE, BLUE, BLACK. Set take_WHITE=1, take_BLUE=1, take_BLACK=1. Others 0. No need to return tokens.
+2025-12-29 00:43:31.953 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={WHITE=1, BLUE=1, BLACK=1}, tokensToReturn=null]
+2025-12-29 00:43:31.954 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 6 | Current Player: 0
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:2 GRN:1 RED:4 BLK:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         | [L1_18] WHT 0pts BLU:1 GRN:2 RED:1 BLK:1   |
+    [L1_39] RED 0pts WHT:3                     | [L1_1] BLK 0pts WHT:1 BLU:1 GRN:1 RED:1   
+L2: [L2_45] BLK 2pts WHT:5                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2        
+L3: [L3_78] BLU 5pts WHT:7 BLU:3               | [L3_84] GRN 4pts BLU:7                     |
+    [L3_82] WHT 5pts WHT:3 BLK:7               | [L3_71] BLK 3pts WHT:3 BLU:3 GRN:5 RED:3  
+
+[PLAYERS]
+Player 0 (Current):                                    | Player 1:
+  Score: 0 | Cards: 2                                  |   Score: 0 | Cards: 1
+  Tokens: GRN:1                                        |   Tokens: WHT:2 BLU:2 GRN:2 BLK:2
+  Bonuses: {BLU:1 BLK:1}                               |   Bonuses: {RED:1}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+2025-12-29 00:43:31.955 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Turn 6 - Player 0's move
+2025-12-29 00:43:31.955 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {BLU=1, GRN=1, BLK=1}
+2025-12-29 00:44:35.082 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I currently have zero tokens, so I need to take tokens to enable future purchases. I cannot purchase any card with my current tokens, as all available cards require tokens I don't have. By taking three different tokens—specifically WHITE, RED, and BLACK—I will have WHITE:1, GREEN:1 (from before), RED:1, and BLACK:1. This allows me to purchase card L1_1 on my next turn, which costs WHITE:1, GREEN:1, and RED:1 (with my BLUE bonus reducing the BLUE cost to zero). Purchasing L1_1 will give me an additional BLACK bonus, increasing my BLACK bonuses to 2, which will significantly reduce costs for future cards like L2_65 or L2_55 that require black tokens. This action builds my engine efficiently and sets me up to acquire point cards soon. I avoid taking two of the same color because it wouldn't allow me to purchase a card immediately, and reserving a card would delay my bonus acquisition.
+2025-12-29 00:44:35.083 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={WHITE=1, RED=1, BLACK=1}, tokensToReturn=null]
+2025-12-29 00:44:35.083 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 6 | Current Player: 1
+======================================================================================
+
+[BOARD BANK]
+WHT:1 BLU:2 GRN:1 RED:3 BLK:1 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         | [L1_18] WHT 0pts BLU:1 GRN:2 RED:1 BLK:1   |
+    [L1_39] RED 0pts WHT:3                     | [L1_1] BLK 0pts WHT:1 BLU:1 GRN:1 RED:1   
+L2: [L2_45] BLK 2pts WHT:5                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2        
+L3: [L3_78] BLU 5pts WHT:7 BLU:3               | [L3_84] GRN 4pts BLU:7                     |
+    [L3_82] WHT 5pts WHT:3 BLK:7               | [L3_71] BLK 3pts WHT:3 BLU:3 GRN:5 RED:3  
+
+[PLAYERS]
+Player 0:                                              | Player 1 (Current):
+  Score: 0 | Cards: 2                                  |   Score: 0 | Cards: 1
+  Tokens: WHT:1 GRN:1 RED:1 BLK:1                      |   Tokens: WHT:2 BLU:2 GRN:2 BLK:2
+  Bonuses: {BLU:1 BLK:1}                               |   Bonuses: {RED:1}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+2025-12-29 00:44:35.083 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Turn 6 - Player 1's move
+2025-12-29 00:44:35.085 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=2, BLU=2, GRN=2, RED=1, BLK=2}
+2025-12-29 00:44:45.595 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I am player 1, turn 6. My current tokens: WHITE=2, BLUE=2, GREEN=2, RED=0, BLACK=2 (total 8). My bonuses: RED=1. I have previously planned to purchase L1_18 (WHITE bonus, cost: BLUE=1, GREEN=2, RED=1, BLACK=1). With my RED bonus, the effective cost is BLUE=1, GREEN=2, BLACK=1 (since RED is covered by bonus). I have exactly those tokens: BLUE=2 (use 1), GREEN=2 (use 2), BLACK=2 (use 1). This purchase is optimal because it adds a WHITE bonus, increasing my engine toward nobles and higher cards. Purchasing now reduces my token count from 8 to 4 (spending 4 tokens), avoiding risk of hitting 10 and allowing me to take more tokens next turn. Alternative actions: taking tokens would push me to 11 if I take 3 (exceeding 10), forcing me to return tokens, which is inefficient. Reserving a card is unnecessary since I can buy immediately. Opponent has purchased two cards and has BLUE and BLACK bonuses, but I need to accelerate my own engine. L1_18 is a key step toward noble N1 (requires WHITE+BLUE) and other cards. Therefore, I will purchase L1_18.
+2025-12-29 00:44:45.595 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L1_18]
+2025-12-29 00:44:45.597 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 7 | Current Player: 0
+======================================================================================
+
+[BOARD BANK]
+WHT:1 BLU:3 GRN:3 RED:3 BLK:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         | [L1_39] RED 0pts WHT:3                     |
+    [L1_1] BLK 0pts WHT:1 BLU:1 GRN:1 RED:1    | [L1_35] RED 0pts WHT:2 GRN:1 BLK:2        
+L2: [L2_45] BLK 2pts WHT:5                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2        
+L3: [L3_78] BLU 5pts WHT:7 BLU:3               | [L3_84] GRN 4pts BLU:7                     |
+    [L3_82] WHT 5pts WHT:3 BLK:7               | [L3_71] BLK 3pts WHT:3 BLU:3 GRN:5 RED:3  
+
+[PLAYERS]
+Player 0 (Current):                                    | Player 1:
+  Score: 0 | Cards: 2                                  |   Score: 0 | Cards: 2
+  Tokens: WHT:1 GRN:1 RED:1 BLK:1                      |   Tokens: WHT:2 BLU:1 BLK:1
+  Bonuses: {BLU:1 BLK:1}                               |   Bonuses: {WHT:1 RED:1}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+2025-12-29 00:44:45.597 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Turn 7 - Player 0's move
+2025-12-29 00:44:45.598 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=1, BLU=1, GRN=1, RED=1, BLK=2}
+2025-12-29 00:45:11.503 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I can purchase card L1_1 with my current tokens and bonuses. The cost is WHITE:1, BLUE:1, GREEN:1, RED:1. My BLUE bonus reduces the BLUE cost to 0, so I only need WHITE:1, GREEN:1, RED:1, which I have (WHITE:1, GREEN:1, RED:1). Purchasing this card gives me a BLACK bonus, increasing my BLACK bonuses to 2, which will significantly reduce costs for future cards that require black tokens, such as L2_65 or L2_55. This action efficiently builds my engine and allows me to gain a bonus without spending additional turns taking tokens. After purchase, I will have one BLACK token left, which can be used for future purchases. Purchasing a card now is better than reserving or taking tokens, as it directly advances my position.
+2025-12-29 00:45:11.504 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L1_1]
+2025-12-29 00:45:11.505 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 7 | Current Player: 1
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:3 GRN:4 RED:4 BLK:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         | [L1_39] RED 0pts WHT:3                     |
+    [L1_35] RED 0pts WHT:2 GRN:1 BLK:2         | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1        
+L2: [L2_45] BLK 2pts WHT:5                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2        
+L3: [L3_78] BLU 5pts WHT:7 BLU:3               | [L3_84] GRN 4pts BLU:7                     |
+    [L3_82] WHT 5pts WHT:3 BLK:7               | [L3_71] BLK 3pts WHT:3 BLU:3 GRN:5 RED:3  
+
+[PLAYERS]
+Player 0:                                              | Player 1 (Current):
+  Score: 0 | Cards: 3                                  |   Score: 0 | Cards: 2
+  Tokens: BLK:1                                        |   Tokens: WHT:2 BLU:1 BLK:1
+  Bonuses: {BLU:1 BLK:2}                               |   Bonuses: {WHT:1 RED:1}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+2025-12-29 00:45:11.505 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Turn 7 - Player 1's move
+2025-12-29 00:45:11.506 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=3, BLU=1, RED=1, BLK=1}
+2025-12-29 00:45:43.626 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I am player 1, turn 7. My current tokens: WHITE=2, BLUE=1, GREEN=0, RED=0, BLACK=1 (total 4). My bonuses: WHITE=1, RED=1. I have purchased L1_38 and L1_18, giving me a RED and WHITE bonus. My score is 0, but I have started building an engine. I need to aim for a card that gives prestige points or moves me toward nobles. Looking at face-up cards: Level 1 cards: L1_11 (BLUE bonus, cost 1 WHITE, 2 GREEN, 2 RED), L1_39 (RED bonus, cost 3 WHITE), L1_35 (RED bonus, cost 2 WHITE, 1 GREEN, 2 BLACK), L1_12 (BLUE bonus, cost 1 BLUE, 3 GREEN, 1 RED). Level 2 cards: L2_45 (BLACK bonus, 2 points, cost 5 WHITE), L2_63 (GREEN bonus, 2 points, cost 5 GREEN), L2_65 (RED bonus, 1 point, cost 2 WHITE, 2 RED, 3 BLACK), L2_55 (WHITE bonus, 2 points, cost 1 GREEN, 4 RED, 2 BLACK). Level 3 cards are expensive and not immediately affordable. I should consider which card I can buy soon. With my bonuses, WHITE and RED costs are reduced by 1 each. I have no GREEN, BLUE, or BLACK bonuses. Let's evaluate affordable cards:
+- L1_39: cost 3 WHITE. With my WHITE bonus, I need 2 WHITE tokens. I have 2 WHITE tokens, so I could buy it now. However, L1_39 gives a RED bonus, which duplicates my existing RED bonus. It gives 0 prestige. Not ideal.
+- L1_11: cost 1 WHITE, 2 GREEN, 2 RED. With bonuses: WHITE reduces to 0, RED reduces to 1. So effective cost: 0 WHITE, 2 GREEN, 1 RED. I have GREEN=0, RED=0. I need 2 GREEN and 1 RED tokens. Not affordable now.
+- L1_35: cost 2 WHITE, 1 GREEN, 2 BLACK. Bonuses: WHITE reduces to 1, RED not needed. Effective cost: 1 WHITE, 1 GREEN, 2 BLACK. I have WHITE=2, GREEN=0, BLACK=1. Need 1 GREEN and 1 BLACK more.
+- L1_12: cost 1 BLUE, 3 GREEN, 1 RED. Bonuses: RED reduces to 0. Effective: 1 BLUE, 3 GREEN, 0 RED. I have BLUE=1, GREEN=0. Need 3 GREEN.
+- L2_65: cost 2 WHITE, 2 RED, 3 BLACK. Bonuses: WHITE reduces to 1, RED reduces to 1. Effective: 1 WHITE, 1 RED, 3 BLACK. I have WHITE=2, RED=0, BLACK=1. Need 1 RED and 2 BLACK.
+- L2_55: cost 1 GREEN, 4 RED, 2 BLACK. Bonuses: RED reduces to 3. Effective: 1 GREEN, 3 RED, 2 BLACK. I have GREEN=0, RED=0, BLACK=1. Need 1 GREEN, 3 RED, 1 BLACK.
+None are immediately affordable. I should take tokens to prepare for a purchase. I have 4 tokens, so I can take up to 3 without exceeding 10. I need to decide which card to target. L1_35 is a RED bonus (duplicate) but costs only 1 WHITE, 1 GREEN, 2 BLACK after bonuses. I already have WHITE=2, BLACK=1, so I need 1 GREEN and 1 BLACK. That seems achievable. Alternatively, L1_11 gives a BLUE bonus, which I lack, and is cheap after bonuses (2 GREEN, 1 RED). I need 2 GREEN and 1 RED. That's also achievable. L2_65 gives 1 point and a RED bonus (duplicate) but requires more BLACK. Considering nobles: N1 requires 4 WHITE and 4 BLUE. I have WHITE bonus 1, but no BLUE bonus. I have 2 WHITE tokens and 1 BLUE token, far from requirement. N4 requires 4 GREEN and 4 BLUE. I have no bonuses in those. N9 requires 3 RED, 3 BLUE, 3 GREEN. I have RED bonus 1, but still far. So nobles are distant. I should focus on gaining points. Level 2 cards give points. L2_45 (2 points, cost 5 WHITE) could be achievable with my WHITE bonus (need 4 WHITE tokens). I have 2 WHITE tokens, so need 2 more WHITE. That's possible. But it's a BLACK bonus, which I don't have. However, points are valuable. L2_63 (2 points, cost 5 GREEN) is harder because I have no GREEN tokens or bonus. L2_55 (2 points, WHITE bonus) is also good but requires many RED and BLACK. Given my current tokens and bonuses, I think targeting L1_11 is smart because it gives a BLUE bonus, which helps toward nobles N1 and N9, and it's cheap. After bonuses, I need 2 GREEN and 1 RED. I currently have GREEN=0, RED=0. I can take tokens to get those. I could take GREEN, RED, and another color. I have 4 tokens, taking 3 gives 7 total. Board tokens: WHITE=2, BLUE=3, GREEN=4, RED=4, BLACK=2. I can take GREEN and RED, and maybe WHITE or BLUE or BLACK. Since I need 2 GREEN and 1 RED, I could take 2 GREEN if available? But I can only take 2 of the same color if there are 4+ available. GREEN has 4, so I could take 2 GREEN and 1 RED. That would give me exactly what I need for L1_11 next turn. However, I must follow the rules: taking 2 of the same is allowed only if that color has at least 4 tokens. GREEN has 4, so I can take 2 GREEN and 1 RED. That would be a valid TAKE_TOKENS action with take_GREEN=2, take_RED=1. Alternatively, I could take 3 different colors: GREEN, RED, and another. But taking 2 GREEN and 1 RED is more efficient because it gives me exactly the required tokens for L1_11 next turn. I should verify that after taking, I will have enough tokens to buy L1_11. Current tokens: WHITE=2, BLUE=1, GREEN=0, RED=0, BLACK=1. After taking GREEN=2, RED=1, I'll have WHITE=2, BLUE=1, GREEN=2, RED=1, BLACK=1. Total 7. Cost of L1_11 after bonuses: 0 WHITE, 2 GREEN, 1 RED. I'll have exactly 2 GREEN and 1 RED, so I can purchase it next turn. That's perfect. I should also consider opponent: they have BLUE and BLACK bonuses, and might target similar cards. But L1_11 is a BLUE bonus, which they already have, so maybe less attractive. However, they might still take it for points or to block. But I should act quickly. Therefore, I will take 2 GREEN and 1 RED. Set take_GREEN=2, take_RED=1. No need to return tokens.
+2025-12-29 00:45:43.627 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={GREEN=2, RED=1}, tokensToReturn=null]
+2025-12-29 00:45:43.628 [com.aisplendor.App.main()] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 1 for Player 1. Error: Invalid action: For taking 3 tokens, they must be of 3 different colors.
+2025-12-29 00:46:08.097 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I am player 1, turn 7. Current tokens: WHITE=2, BLUE=1, GREEN=0, RED=0, BLACK=1 (total 4). Bonuses: WHITE=1, RED=1. I have purchased L1_38 and L1_18. My token count is low (4), so I can take tokens without risk of exceeding 10. I need to plan my next purchase to build engine and gain prestige. Face-up cards: L1_11 (BLUE bonus, cost 1WHITE, 2GREEN, 2RED) - with my bonuses, cost reduced by WHITE and RED bonuses, so effective cost: 0WHITE, 2GREEN, 1RED (since I have WHITE=1 and RED=1 bonuses). I have no GREEN tokens, 0 RED tokens, and 0 GREEN bonuses. I need 2GREEN and 1RED tokens. L1_39 (RED bonus, cost 3WHITE) - effective cost after WHITE bonus: 2WHITE. I have 2 WHITE tokens, so I can afford it now! But L1_39 gives a RED bonus, which is redundant with my existing RED bonus, and 0 prestige points. However, buying it would consume tokens productively and give an extra bonus for future RED-heavy cards like L2_65. But it's low priority. L1_35 (RED bonus, cost 2WHITE, 1GREEN, 2BLACK) - effective cost after WHITE and RED bonuses: 1WHITE, 1GREEN, 2BLACK. I have WHITE=2 tokens, GREEN=0, BLACK=1. Not affordable now. L1_12 (BLUE bonus, cost 1BLUE, 3GREEN, 1RED) - effective after RED bonus: 1BLUE, 3GREEN, 0RED. I have BLUE=1 token, GREEN=0. Not affordable. L2 cards: L2_45 (2 prestige, BLACK bonus, cost 5WHITE) - effective after WHITE bonus: 4WHITE. I have 2 WHITE tokens, need 2 more. L2_63 (2 prestige, GREEN bonus, cost 5GREEN) - too expensive. L2_65 (1 prestige, RED bonus, cost 2WHITE, 2RED, 3BLACK) - effective after WHITE and RED bonuses: 1WHITE, 1RED, 3BLACK. I have WHITE=2 tokens, RED=0, BLACK=1. Need more. L2_55 (2 prestige, WHITE bonus, cost 1GREEN, 4RED, 2BLACK) - effective after RED bonus: 1GREEN, 3RED, 2BLACK. Not affordable. Nobles: N4 (GREEN+BLUE each 4), N9 (RGB each 3), N1 (BLUE+WHITE each 4). I have WHITE=1 bonus, RED=1 bonus. To aim for N1, I need 4 WHITE and 4 BLUE bonuses. I have 1 WHITE, 0 BLUE bonuses. So I need more WHITE and BLUE bonuses. Purchasing L1_11 gives a BLUE bonus, which is good. But I need tokens for it. Alternatively, I could reserve a good card. But taking tokens now to build towards L1_11 seems reasonable. I need 2GREEN and 1RED tokens. Board tokens: WHITE=2, BLUE=3, GREEN=4, RED=4, BLACK=2. I can take 3 different colors. I'll take GREEN (2), RED (1), and maybe WHITE or BLUE or BLACK. I should take GREEN and RED to directly meet L1_11's requirements. Third color could be BLUE to help for future BLUE needs or WHITE for N1. I choose BLUE because I need BLUE bonuses. So take GREEN=1, RED=1, BLUE=1. That gives me after: tokens: WHITE=2, BLUE=2, GREEN=1, RED=1, BLACK=1 (total 7). Then next turn I can purchase L1_11 using: cost 1WHITE, 2GREEN, 2RED; with bonuses WHITE and RED, I need 0WHITE, 2GREEN, 1RED. I'll have GREEN=1 and RED=1, so I'll need one more GREEN. That's close. Alternatively, I could take 2 GREEN tokens (since GREEN has 4 on board, I can take 2 same if 4+ available). That would be more efficient: take 2 GREEN and 1 RED? But rules: take exactly 2 of same color only if 4+ available, and then only that color set to 2, others 0. So I could take 2 GREEN, but then I must take only GREEN tokens, not a third color. That would give me 2 GREEN tokens, but I also need RED token. So I'd need another turn to get RED. So better to take 3 different: GREEN, RED, BLUE. That's fine. Another option: take 2 RED? RED has 4, so I could take 2 RED tokens. But I need 1 RED for L1_11 after bonuses, so 2 RED is overkill. But I could take 2 RED and then next turn take GREEN and something else. But that's slower. So I'll take GREEN, RED, BLUE. Ensure token counts: GREEN=4 -> after 1 =3, RED=4->3, BLUE=3->2. All available. My total tokens will be 4+3=7, no need to return. So set take_GREEN=1, take_RED=1, take_BLUE=1.
+2025-12-29 00:46:08.099 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={BLUE=1, GREEN=1, RED=1}, tokensToReturn=null]
+2025-12-29 00:46:08.101 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 8 | Current Player: 0
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:2 GRN:3 RED:3 BLK:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         | [L1_39] RED 0pts WHT:3                     |
+    [L1_35] RED 0pts WHT:2 GRN:1 BLK:2         | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1        
+L2: [L2_45] BLK 2pts WHT:5                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2        
+L3: [L3_78] BLU 5pts WHT:7 BLU:3               | [L3_84] GRN 4pts BLU:7                     |
+    [L3_82] WHT 5pts WHT:3 BLK:7               | [L3_71] BLK 3pts WHT:3 BLU:3 GRN:5 RED:3  
+
+[PLAYERS]
+Player 0 (Current):                                    | Player 1:
+  Score: 0 | Cards: 3                                  |   Score: 0 | Cards: 2
+  Tokens: BLK:1                                        |   Tokens: WHT:2 BLU:2 GRN:1 RED:1 BLK:1
+  Bonuses: {BLU:1 BLK:2}                               |   Bonuses: {WHT:1 RED:1}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+2025-12-29 00:46:08.101 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Turn 8 - Player 0's move
+2025-12-29 00:46:08.102 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {BLU=1, BLK=3}
+2025-12-29 00:49:42.380 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I currently have only one BLACK token and no other tokens, so I need to take tokens to enable future purchases. My strategy is to build on my existing bonuses (BLUE:1, BLACK:2) by acquiring a RED bonus from L1_35, which costs WHITE:2 and GREEN:1 after bonuses. To obtain these tokens efficiently, I take three different tokens: WHITE, GREEN, and RED. This gives me a variety of colors, and on my next turn, I can take another three tokens including WHITE to reach WHITE:2 and GREEN:1, allowing me to purchase L1_35. The RED bonus from L1_35 will reduce costs for point cards like L2_55 or L2_65, helping me transition to point scoring. This approach avoids token waste and aligns with my engine-building strategy.
+2025-12-29 00:49:42.380 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={WHITE=1, GREEN=1, RED=1}, tokensToReturn=null]
+2025-12-29 00:49:42.381 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 8 | Current Player: 1
+======================================================================================
+
+[BOARD BANK]
+WHT:1 BLU:2 GRN:2 RED:2 BLK:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         | [L1_39] RED 0pts WHT:3                     |
+    [L1_35] RED 0pts WHT:2 GRN:1 BLK:2         | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1        
+L2: [L2_45] BLK 2pts WHT:5                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2        
+L3: [L3_78] BLU 5pts WHT:7 BLU:3               | [L3_84] GRN 4pts BLU:7                     |
+    [L3_82] WHT 5pts WHT:3 BLK:7               | [L3_71] BLK 3pts WHT:3 BLU:3 GRN:5 RED:3  
+
+[PLAYERS]
+Player 0:                                              | Player 1 (Current):
+  Score: 0 | Cards: 3                                  |   Score: 0 | Cards: 2
+  Tokens: WHT:1 GRN:1 RED:1 BLK:1                      |   Tokens: WHT:2 BLU:2 GRN:1 RED:1 BLK:1
+  Bonuses: {BLU:1 BLK:2}                               |   Bonuses: {WHT:1 RED:1}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+2025-12-29 00:49:42.382 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Turn 8 - Player 1's move
+2025-12-29 00:49:42.382 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=3, BLU=2, GRN=1, RED=2, BLK=1}
+2025-12-29 00:52:03.857 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I am player 1, turn 8. Current tokens: WHITE=2, BLUE=2, GREEN=1, RED=1, BLACK=1 (total 7). Bonuses: WHITE=1, RED=1. I can afford L1_39 (redundant RED bonus, 0 prestige) but prefer to build toward L1_11 (BLUE bonus) which requires 1 more GREEN token. Taking tokens now allows me to afford L1_11 next turn. I can take 3 different colors. Choosing GREEN to meet L1_11 requirement, WHITE and BLUE to support noble N1 (needs WHITE+BLUE bonuses) and future purchases. This brings my token total to 10 (max allowed), no need to return. Purchasing L1_11 next turn will reduce tokens and give a BLUE bonus, accelerating engine toward nobles and prestige points.
+2025-12-29 00:52:03.857 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={WHITE=1, BLUE=1, GREEN=1}, tokensToReturn=null]
+2025-12-29 00:52:03.857 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 9 | Current Player: 0
+======================================================================================
+
+[BOARD BANK]
+BLU:1 GRN:1 RED:2 BLK:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         | [L1_39] RED 0pts WHT:3                     |
+    [L1_35] RED 0pts WHT:2 GRN:1 BLK:2         | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1        
+L2: [L2_45] BLK 2pts WHT:5                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2        
+L3: [L3_78] BLU 5pts WHT:7 BLU:3               | [L3_84] GRN 4pts BLU:7                     |
+    [L3_82] WHT 5pts WHT:3 BLK:7               | [L3_71] BLK 3pts WHT:3 BLU:3 GRN:5 RED:3  
+
+[PLAYERS]
+Player 0 (Current):                                    | Player 1:
+  Score: 0 | Cards: 3                                  |   Score: 0 | Cards: 2
+  Tokens: WHT:1 GRN:1 RED:1 BLK:1                      |   Tokens: WHT:3 BLU:3 GRN:2 RED:1 BLK:1
+  Bonuses: {BLU:1 BLK:2}                               |   Bonuses: {WHT:1 RED:1}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+2025-12-29 00:52:03.857 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Turn 9 - Player 0's move
+2025-12-29 00:52:03.857 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=1, BLU=1, GRN=1, RED=1, BLK=3}
+2025-12-29 00:52:50.895 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I cannot purchase any card with my current tokens because I lack sufficient tokens for any affordable card. Specifically, for L1_35, I need one more WHITE token, but WHITE is not available on the board. Therefore, I will reserve L1_35 to secure it and gain a gold token. This allows me to purchase it next turn using my current WHITE, GREEN, and the gold token as WHITE. This efficiently builds my engine by adding a RED bonus, which will help in acquiring point cards like L2_65 or L2_55.
+2025-12-29 00:52:50.895 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Action: ReserveCardAction[cardId=L1_35, deckLevel=null, tokensToReturn=null]
+2025-12-29 00:52:50.900 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 9 | Current Player: 1
+======================================================================================
+
+[BOARD BANK]
+BLU:1 GRN:1 RED:2 BLK:2 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         | [L1_39] RED 0pts WHT:3                     |
+    [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         | [L1_6] BLK 0pts WHT:2 GRN:2               
+L2: [L2_45] BLK 2pts WHT:5                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2        
+L3: [L3_78] BLU 5pts WHT:7 BLU:3               | [L3_84] GRN 4pts BLU:7                     |
+    [L3_82] WHT 5pts WHT:3 BLK:7               | [L3_71] BLK 3pts WHT:3 BLU:3 GRN:5 RED:3  
+
+[PLAYERS]
+Player 0:                                              | Player 1 (Current):
+  Score: 0 | Cards: 3                                  |   Score: 0 | Cards: 2
+  Tokens: WHT:1 GRN:1 RED:1 BLK:1 GLD:1                |   Tokens: WHT:3 BLU:3 GRN:2 RED:1 BLK:1
+  Bonuses: {BLU:1 BLK:2}                               |   Bonuses: {WHT:1 RED:1}
+  Reserved: [L1_35] RED 0pts WHT:2 GRN:1 BLK:2         |   Reserved: None
+
+======================================================================================
+
+2025-12-29 00:52:50.900 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Turn 9 - Player 1's move
+2025-12-29 00:52:50.901 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=4, BLU=3, GRN=2, RED=2, BLK=1}
+2025-12-29 00:53:01.899 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I am player 1, turn 9. Current tokens: WHITE=3, BLUE=3, GREEN=2, RED=1, BLACK=1 (total 10). Bonuses: WHITE=1, RED=1. I have previously planned to purchase L1_11 (BLUE bonus, cost 1WHITE, 2GREEN, 2RED). With my bonuses (WHITE=1, RED=1), effective cost is 0WHITE, 2GREEN, 1RED. I have exactly GREEN=2 and RED=1 tokens. This purchase is optimal because it adds a BLUE bonus, which is crucial for noble N1 (requires BLUE+WHITE bonuses) and future cards. Purchasing now reduces my token count from 10 to 7 (spending 2GREEN and 1RED), freeing capacity for future token acquisition. Alternative actions: Taking tokens would exceed 10 and require returning tokens, which is inefficient. Reserving is unnecessary as I can buy immediately. Opponent has 3 purchased cards and a reserve; I need to accelerate my engine. L1_11 gives me a BLUE bonus, bringing my bonuses to WHITE=1, RED=1, BLUE=1, moving closer to noble N1 (needs 4 WHITE, 4 BLUE) and other nobles. After purchase, I'll have tokens: WHITE=3, BLUE=3, GREEN=0, RED=0, BLACK=1 (total 7). Next turn I can take tokens or purchase another card like L1_39 (cost 3WHITE, but with WHITE bonus cost 2WHITE) which I could afford with WHITE=3 tokens, though low value. Better to plan for higher-point cards. Therefore, I will purchase L1_11.
+2025-12-29 00:53:01.900 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L1_11]
+2025-12-29 00:53:01.900 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 10 | Current Player: 0
+======================================================================================
+
+[BOARD BANK]
+BLU:1 GRN:3 RED:3 BLK:2 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_39] RED 0pts WHT:3                     | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_6] BLK 0pts WHT:2 GRN:2                | [L1_36] RED 0pts WHT:1 RED:1 BLK:3        
+L2: [L2_45] BLK 2pts WHT:5                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2        
+L3: [L3_78] BLU 5pts WHT:7 BLU:3               | [L3_84] GRN 4pts BLU:7                     |
+    [L3_82] WHT 5pts WHT:3 BLK:7               | [L3_71] BLK 3pts WHT:3 BLU:3 GRN:5 RED:3  
+
+[PLAYERS]
+Player 0 (Current):                                    | Player 1:
+  Score: 0 | Cards: 3                                  |   Score: 0 | Cards: 3
+  Tokens: WHT:1 GRN:1 RED:1 BLK:1 GLD:1                |   Tokens: WHT:3 BLU:3 BLK:1
+  Bonuses: {BLU:1 BLK:2}                               |   Bonuses: {WHT:1 BLU:1 RED:1}
+  Reserved: [L1_35] RED 0pts WHT:2 GRN:1 BLK:2         |   Reserved: None
+
+======================================================================================
+
+2025-12-29 00:53:01.900 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Turn 10 - Player 0's move
+2025-12-29 00:53:01.900 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=1, BLU=1, GRN=1, RED=1, BLK=3, GLD=1}
+2025-12-29 00:54:04.492 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I can purchase card L1_36 with my current tokens and bonuses. The cost is WHITE:1, RED:1, BLACK:3. My BLACK bonus of 2 reduces the BLACK cost to 1, so I need to pay WHITE:1, RED:1, and BLACK:1. I have exactly these tokens (WHITE:1, RED:1, BLACK:1). Purchasing this card gives me a RED bonus, which will help reduce costs for future cards like L2_65 or L2_55 that require RED tokens. This action uses my tokens efficiently without spending my gold token, preserving it for future flexibility. After purchase, I will have GREEN:1 and GOLD:1 tokens, which can be used for subsequent turns. Purchasing a card now advances my engine and is better than taking tokens or reserving, as it directly improves my position.
+2025-12-29 00:54:04.492 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L1_36]
+2025-12-29 00:54:04.494 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 10 | Current Player: 1
+======================================================================================
+
+[BOARD BANK]
+WHT:1 BLU:1 GRN:3 RED:4 BLK:3 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_39] RED 0pts WHT:3                     | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_6] BLK 0pts WHT:2 GRN:2                | [L1_19] WHT 0pts BLU:2 GRN:2 BLK:1        
+L2: [L2_45] BLK 2pts WHT:5                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2        
+L3: [L3_78] BLU 5pts WHT:7 BLU:3               | [L3_84] GRN 4pts BLU:7                     |
+    [L3_82] WHT 5pts WHT:3 BLK:7               | [L3_71] BLK 3pts WHT:3 BLU:3 GRN:5 RED:3  
+
+[PLAYERS]
+Player 0:                                              | Player 1 (Current):
+  Score: 0 | Cards: 4                                  |   Score: 0 | Cards: 3
+  Tokens: GRN:1 GLD:1                                  |   Tokens: WHT:3 BLU:3 BLK:1
+  Bonuses: {BLU:1 RED:1 BLK:2}                         |   Bonuses: {WHT:1 BLU:1 RED:1}
+  Reserved: [L1_35] RED 0pts WHT:2 GRN:1 BLK:2         |   Reserved: None
+
+======================================================================================
+
+2025-12-29 00:54:04.494 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Turn 10 - Player 1's move
+2025-12-29 00:54:04.494 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=4, BLU=4, RED=1, BLK=1}
+2025-12-29 00:56:28.887 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I am player 1, turn 10. Current tokens: WHITE=3, BLUE=3, GREEN=0, RED=0, BLACK=1 (total 7). Bonuses: WHITE=1, BLUE=1, RED=1. My immediate goal is to gain prestige points. L2_45 (2 prestige, BLACK bonus, cost 5 WHITE) is attractive because with my WHITE bonus=1, I need only 4 WHITE tokens. I currently have 3 WHITE, so I need 1 more. By taking WHITE now, I can purchase L2_45 next turn, gaining 2 points and a new bonus. I also take GREEN and BLACK to diversify my tokens for future cards (e.g., L1_19 requires GREEN and BLACK). Taking 3 tokens (WHITE, GREEN, BLACK) brings my total to 10, which is the maximum, but next turn I will spend 4 WHITE to buy L2_45, freeing up capacity. This move is efficient and progresses my engine toward points and nobles.
+2025-12-29 00:56:28.887 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={WHITE=1, GREEN=1, BLACK=1}, tokensToReturn=null]
+2025-12-29 00:56:28.887 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 11 | Current Player: 0
+======================================================================================
+
+[BOARD BANK]
+BLU:1 GRN:2 RED:4 BLK:2 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_39] RED 0pts WHT:3                     | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_6] BLK 0pts WHT:2 GRN:2                | [L1_19] WHT 0pts BLU:2 GRN:2 BLK:1        
+L2: [L2_45] BLK 2pts WHT:5                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2        
+L3: [L3_78] BLU 5pts WHT:7 BLU:3               | [L3_84] GRN 4pts BLU:7                     |
+    [L3_82] WHT 5pts WHT:3 BLK:7               | [L3_71] BLK 3pts WHT:3 BLU:3 GRN:5 RED:3  
+
+[PLAYERS]
+Player 0 (Current):                                    | Player 1:
+  Score: 0 | Cards: 4                                  |   Score: 0 | Cards: 3
+  Tokens: GRN:1 GLD:1                                  |   Tokens: WHT:4 BLU:3 GRN:1 BLK:2
+  Bonuses: {BLU:1 RED:1 BLK:2}                         |   Bonuses: {WHT:1 BLU:1 RED:1}
+  Reserved: [L1_35] RED 0pts WHT:2 GRN:1 BLK:2         |   Reserved: None
+
+======================================================================================
+
+2025-12-29 00:56:28.887 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Turn 11 - Player 0's move
+2025-12-29 00:56:28.887 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {BLU=1, GRN=1, RED=1, BLK=2, GLD=1}
+2025-12-29 00:57:39.248 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I cannot purchase any card with my current tokens (WHITE:0, BLUE:0, GREEN:1, RED:0, BLACK:0, GOLD:1) because all affordable cards require tokens I lack, particularly WHITE tokens which are unavailable on the board. Reserving L1_19 secures a card that provides a WHITE bonus, which I currently don't have, and will help reduce future costs for cards requiring WHITE tokens. It also gives me a gold token, increasing my flexibility. This action aligns with my engine-building strategy and prepares me for future purchases while preventing my opponent from easily acquiring this card.
+2025-12-29 00:57:39.248 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Action: ReserveCardAction[cardId=L1_19, deckLevel=null, tokensToReturn=null]
+2025-12-29 00:57:39.248 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 11 | Current Player: 1
+======================================================================================
+
+[BOARD BANK]
+BLU:1 GRN:2 RED:4 BLK:2 GLD:3
+
+[FACE-UP CARDS]
+L1: [L1_39] RED 0pts WHT:3                     | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_6] BLK 0pts WHT:2 GRN:2                | [L1_17] WHT 0pts BLU:1 GRN:1 RED:1 BLK:1  
+L2: [L2_45] BLK 2pts WHT:5                     | [L2_63] GRN 2pts GRN:5                     |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2        
+L3: [L3_78] BLU 5pts WHT:7 BLU:3               | [L3_84] GRN 4pts BLU:7                     |
+    [L3_82] WHT 5pts WHT:3 BLK:7               | [L3_71] BLK 3pts WHT:3 BLU:3 GRN:5 RED:3  
+
+[PLAYERS]
+Player 0:                                              | Player 1 (Current):
+  Score: 0 | Cards: 4                                  |   Score: 0 | Cards: 3
+  Tokens: GRN:1 GLD:2                                  |   Tokens: WHT:4 BLU:3 GRN:1 BLK:2
+  Bonuses: {BLU:1 RED:1 BLK:2}                         |   Bonuses: {WHT:1 BLU:1 RED:1}
+  Reserved: [L1_35] RED 0pts WHT:2 GRN:1 BLK:2         |   Reserved: None
+            [L1_19] WHT 0pts BLU:2 GRN:2 BLK:1         | 
+
+======================================================================================
+
+2025-12-29 00:57:39.248 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Turn 11 - Player 1's move
+2025-12-29 00:57:39.248 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=5, BLU=4, GRN=1, RED=1, BLK=2}
+2025-12-29 00:57:48.019 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I am player 1, turn 11. Current tokens: WHITE=4, BLUE=3, GREEN=1, RED=0, BLACK=2 (total 10). Bonuses: WHITE=1, BLUE=1, RED=1. I have previously planned to purchase L2_45 (2 prestige, BLACK bonus, cost 5 WHITE). With my WHITE bonus=1, effective cost is 4 WHITE tokens. I currently have WHITE=4 tokens, exactly enough. Purchasing now is optimal because:
+1. Gains 2 prestige points, moving me from 0 to 2 points.
+2. Adds a BLACK bonus, which complements my bonuses (WHITE, BLUE, RED) and helps with future purchases and nobles.
+3. Reduces token count from 10 to 6 (spending 4 WHITE tokens), freeing capacity to take more tokens next turn.
+4. Avoids taking tokens while at 10, which would require returning tokens, wasting a turn.
+5. Alternative actions: Taking tokens would exceed 10 and force returns; reserving is unnecessary since I can buy a valuable card now. L2_45 is the most affordable high-point card on board. Other cards: L2_63 (5 GREEN) too expensive, L2_65 (needs RED, BLACK) not affordable, L2_55 (needs RED, BLACK, GREEN) not affordable. L1 cards are low value and would not progress points as much. Therefore, I will purchase L2_45.
+2025-12-29 00:57:48.024 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L2_45]
+2025-12-29 00:57:48.025 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 12 | Current Player: 0
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:1 GRN:2 RED:4 BLK:2 GLD:3
+
+[FACE-UP CARDS]
+L1: [L1_39] RED 0pts WHT:3                     | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_6] BLK 0pts WHT:2 GRN:2                | [L1_17] WHT 0pts BLU:1 GRN:1 RED:1 BLK:1  
+L2: [L2_63] GRN 2pts GRN:5                     | [L2_65] RED 1pt WHT:2 RED:2 BLK:3          |
+    [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_64] GRN 3pts GRN:6                    
+L3: [L3_78] BLU 5pts WHT:7 BLU:3               | [L3_84] GRN 4pts BLU:7                     |
+    [L3_82] WHT 5pts WHT:3 BLK:7               | [L3_71] BLK 3pts WHT:3 BLU:3 GRN:5 RED:3  
+
+[PLAYERS]
+Player 0 (Current):                                    | Player 1:
+  Score: 0 | Cards: 4                                  |   Score: 2 | Cards: 4
+  Tokens: GRN:1 GLD:2                                  |   Tokens: BLU:3 GRN:1 BLK:2
+  Bonuses: {BLU:1 RED:1 BLK:2}                         |   Bonuses: {WHT:1 BLU:1 RED:1 BLK:1}
+  Reserved: [L1_35] RED 0pts WHT:2 GRN:1 BLK:2         |   Reserved: None
+            [L1_19] WHT 0pts BLU:2 GRN:2 BLK:1         | 
+
+======================================================================================
+
+2025-12-29 00:57:48.030 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Turn 12 - Player 0's move
+2025-12-29 00:57:48.030 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {BLU=1, GRN=1, RED=1, BLK=2, GLD=2}
+2025-12-29 00:58:34.700 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I can purchase card L1_17 from the face-up cards using my current tokens and bonuses. The cost is BLUE:1, GREEN:1, RED:1, BLACK:1. My bonuses reduce this cost: BLUE bonus (1) reduces BLUE to 0, and BLACK bonus (2) reduces BLACK to 0, so I only need to pay GREEN:1 and RED:1. I have GREEN:1, so I use that, and I use one GOLD token as RED. This action gives me a WHITE bonus, which I currently lack, and it uses only one of my two GOLD tokens, leaving me with one GOLD token for future flexibility. Purchasing this card now is efficient because it builds my engine by adding a new bonus color without wasting tokens, and it prevents my opponent from easily acquiring this card. Compared to purchasing my reserved cards (L1_35 or L1_19), which would require both GOLD tokens and leave me with no tokens, this option preserves resources and aligns with my strategy to transition into point scoring.
+2025-12-29 00:58:34.700 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L1_17]
+2025-12-29 00:58:34.702 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 12 | Current Player: 1
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:1 GRN:3 RED:4 BLK:2 GLD:3
+
+[FACE-UP CARDS]
+L1: [L1_39] RED 0pts WHT:3                     | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_6] BLK 0pts WHT:2 GRN:2                | [L1_14] BLU 0pts GRN:2 BLK:2              
+L2: [L2_63] GRN 2pts GRN:5                     | [L2_65] RED 1pt WHT:2 RED:2 BLK:3          |
+    [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_64] GRN 3pts GRN:6                    
+L3: [L3_78] BLU 5pts WHT:7 BLU:3               | [L3_84] GRN 4pts BLU:7                     |
+    [L3_82] WHT 5pts WHT:3 BLK:7               | [L3_71] BLK 3pts WHT:3 BLU:3 GRN:5 RED:3  
+
+[PLAYERS]
+Player 0:                                              | Player 1 (Current):
+  Score: 0 | Cards: 5                                  |   Score: 2 | Cards: 4
+  Tokens: GLD:2                                        |   Tokens: BLU:3 GRN:1 BLK:2
+  Bonuses: {WHT:1 BLU:1 RED:1 BLK:2}                   |   Bonuses: {WHT:1 BLU:1 RED:1 BLK:1}
+  Reserved: [L1_35] RED 0pts WHT:2 GRN:1 BLK:2         |   Reserved: None
+            [L1_19] WHT 0pts BLU:2 GRN:2 BLK:1         | 
+
+======================================================================================
+
+2025-12-29 00:58:34.702 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Turn 12 - Player 1's move
+2025-12-29 00:58:34.702 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Points: 2, Budget: {WHT=1, BLU=4, GRN=1, RED=1, BLK=3}
+2025-12-29 00:59:14.380 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I am player 1, turn 12. Current tokens: WHITE=0, BLUE=3, GREEN=1, RED=0, BLACK=2 (total 6). Bonuses: WHITE=1, BLUE=1, RED=1, BLACK=1. Score: 2. I have just purchased L2_45 last turn, spending 4 WHITE tokens, leaving me with 6 tokens. My current token total is 6, well below the 10 limit, so I can take tokens without returning. I need to evaluate affordable cards and plan towards nobles and more prestige. Face-up cards: L1_39 (RED bonus, cost 3 WHITE) - effective cost after WHITE bonus: 2 WHITE. I have 0 WHITE tokens, so not affordable. L1_12 (BLUE bonus, cost 1 BLUE, 3 GREEN, 1 RED) - after RED bonus: 1 BLUE, 3 GREEN, 0 RED. I have BLUE=3 tokens, GREEN=1, so need 2 more GREEN. L1_6 (BLACK bonus, cost 2 WHITE, 2 GREEN) - after WHITE bonus: 1 WHITE, 2 GREEN. I have 0 WHITE, 1 GREEN. Not affordable. L1_14 (BLUE bonus, cost 2 GREEN, 2 BLACK) - I have GREEN=1, BLACK=2, need 1 more GREEN. L2_63 (GREEN bonus, 2 prestige, cost 5 GREEN) - too expensive. L2_65 (RED bonus, 1 prestige, cost 2 WHITE, 2 RED, 3 BLACK) - after WHITE and RED bonuses: 1 WHITE, 1 RED, 3 BLACK. I have WHITE=0, RED=0, BLACK=2, not close. L2_55 (WHITE bonus, 2 prestige, cost 1 GREEN, 4 RED, 2 BLACK) - after RED bonus: 1 GREEN, 3 RED, 2 BLACK. I have GREEN=1, RED=0, BLACK=2, need 3 RED. L2_64 (GREEN bonus, 3 prestige, cost 6 GREEN) - too expensive. L3 cards: expensive but I should consider long-term. I have bonuses in all colors except GREEN (WHITE=1, BLUE=1, RED=1, BLACK=1). To aim for nobles: N1 requires 4 BLUE and 4 WHITE bonuses. I currently have BLUE=1, WHITE=1, so need 3 more of each. N4 requires 4 GREEN and 4 BLUE bonuses, I have BLUE=1, GREEN=0, far away. N9 requires 3 RED, 3 BLUE, 3 GREEN bonuses; I have RED=1, BLUE=1, GREEN=0. So I should focus on increasing WHITE and BLUE bonuses for N1, and also consider RED and GREEN for other nobles. I can purchase L1_14 (BLUE bonus) if I get 1 more GREEN token. That card costs 2 GREEN, 2 BLACK; I have GREEN=1, BLACK=2, so I need 1 GREEN. Alternatively, L1_12 gives BLUE bonus but needs 3 GREEN, which is further. L1_6 gives BLACK bonus, but I already have BLACK=1 bonus, and it needs WHITE and GREEN. Not efficient. L1_39 gives RED bonus, but I already have RED=1, and it needs WHITE tokens. Since I have 0 WHITE, I should also consider taking WHITE tokens to enable future purchases. Best plan: take tokens to afford L1_14 next turn. I need 1 GREEN token. I should also take WHITE (for future) and maybe RED or BLUE. Since I have 6 tokens, I can take 3 different colors. Board tokens: WHITE=4, BLUE=1, GREEN=3, RED=4, BLACK=2. I can take WHITE, GREEN, and RED (all available). Taking WHITE helps for N1 and future WHITE-heavy cards (L3_78, L3_82). Taking GREEN helps for L1_14. Taking RED helps for L2_55 and L2_65. Alternatively, take BLUE but only 1 left on board; taking it would deplete BLUE to 0, which might be fine but not critical. I prefer to take WHITE, GREEN, RED. That gives me after: tokens: WHITE=1, BLUE=3, GREEN=2, RED=1, BLACK=2 (total 9). Next turn, I can purchase L1_14 using 2 GREEN and 2 BLACK (I'll have exactly 2 GREEN and 2 BLACK after taking). That purchase will give me another BLUE bonus, bringing my BLUE bonus to 2, closer to N1. It also costs 0 prestige but improves engine. After purchase, I'll spend 2 GREEN and 2 BLACK, leaving tokens: WHITE=1, BLUE=3, GREEN=0, RED=1, BLACK=0 (total 5). That's good. Alternative: take 2 GREEN tokens (since GREEN has 3 on board, need 4+ to take 2 same, so cannot). So only 3 different colors. I'll take WHITE, GREEN, RED. This aligns with my strategy to build towards nobles and affordable cards. I could also consider reserving a high-point card, but my token count is low, and I can afford a card now. Reserving might slow me down. So action: TAKE_TOKENS with take_WHITE=1, take_GREEN=1, take_RED=1.
+2025-12-29 00:59:14.380 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={WHITE=1, GREEN=1, RED=1}, tokensToReturn=null]
+2025-12-29 00:59:14.382 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 13 | Current Player: 0
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:1 GRN:2 RED:3 BLK:2 GLD:3
+
+[FACE-UP CARDS]
+L1: [L1_39] RED 0pts WHT:3                     | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_6] BLK 0pts WHT:2 GRN:2                | [L1_14] BLU 0pts GRN:2 BLK:2              
+L2: [L2_63] GRN 2pts GRN:5                     | [L2_65] RED 1pt WHT:2 RED:2 BLK:3          |
+    [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         | [L2_64] GRN 3pts GRN:6                    
+L3: [L3_78] BLU 5pts WHT:7 BLU:3               | [L3_84] GRN 4pts BLU:7                     |
+    [L3_82] WHT 5pts WHT:3 BLK:7               | [L3_71] BLK 3pts WHT:3 BLU:3 GRN:5 RED:3  
+
+[PLAYERS]
+Player 0 (Current):                                    | Player 1:
+  Score: 0 | Cards: 5                                  |   Score: 2 | Cards: 4
+  Tokens: GLD:2                                        |   Tokens: WHT:1 BLU:3 GRN:2 RED:1 BLK:2
+  Bonuses: {WHT:1 BLU:1 RED:1 BLK:2}                   |   Bonuses: {WHT:1 BLU:1 RED:1 BLK:1}
+  Reserved: [L1_35] RED 0pts WHT:2 GRN:1 BLK:2         |   Reserved: None
+            [L1_19] WHT 0pts BLU:2 GRN:2 BLK:1         | 
+
+======================================================================================
+
+2025-12-29 00:59:14.383 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Turn 13 - Player 0's move
+2025-12-29 00:59:14.383 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=1, BLU=1, RED=1, BLK=2, GLD=2}
+2025-12-29 01:00:44.156 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I have two gold tokens and no other tokens, so I cannot purchase any card that requires multiple colored tokens without using my gold. Opponent has enough tokens (WHITE:1, RED:1, BLACK:2) to purchase L2_65 immediately, which would give them 1 point and a RED bonus, strengthening their position. To prevent this, I will reserve L2_65, securing it for myself and gaining an additional gold token. This action blocks opponent from scoring points and aligns with my strategy to deny them valuable cards while building my resources for future purchases. After reserving, I will have three gold tokens, which I can use when I take tokens on future turns to purchase point cards or build my engine.
+2025-12-29 01:00:44.156 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Action: ReserveCardAction[cardId=L2_65, deckLevel=null, tokensToReturn=null]
+2025-12-29 01:00:44.156 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 13 | Current Player: 1
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:1 GRN:2 RED:3 BLK:2 GLD:2
+
+[FACE-UP CARDS]
+L1: [L1_39] RED 0pts WHT:3                     | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_6] BLK 0pts WHT:2 GRN:2                | [L1_14] BLU 0pts GRN:2 BLK:2              
+L2: [L2_63] GRN 2pts GRN:5                     | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         |
+    [L2_64] GRN 3pts GRN:6                     | [L2_67] RED 2pts WHT:1 BLU:4 GRN:2        
+L3: [L3_78] BLU 5pts WHT:7 BLU:3               | [L3_84] GRN 4pts BLU:7                     |
+    [L3_82] WHT 5pts WHT:3 BLK:7               | [L3_71] BLK 3pts WHT:3 BLU:3 GRN:5 RED:3  
+
+[PLAYERS]
+Player 0:                                              | Player 1 (Current):
+  Score: 0 | Cards: 5                                  |   Score: 2 | Cards: 4
+  Tokens: GLD:3                                        |   Tokens: WHT:1 BLU:3 GRN:2 RED:1 BLK:2
+  Bonuses: {WHT:1 BLU:1 RED:1 BLK:2}                   |   Bonuses: {WHT:1 BLU:1 RED:1 BLK:1}
+  Reserved: [L1_35] RED 0pts WHT:2 GRN:1 BLK:2         |   Reserved: None
+            [L1_19] WHT 0pts BLU:2 GRN:2 BLK:1         | 
+            [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | 
+
+======================================================================================
+
+2025-12-29 01:00:44.156 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Turn 13 - Player 1's move
+2025-12-29 01:00:44.156 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Points: 2, Budget: {WHT=2, BLU=4, GRN=2, RED=2, BLK=3}
+2025-12-29 01:04:30.188 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Current tokens: WHITE=1, BLUE=3, GREEN=2, RED=1, BLACK=2 (total 9). Bonuses: WHITE=1, BLUE=1, RED=1, BLACK=1. Score: 2. Affordable cards: L1_6 (0 prestige, BLACK bonus), L1_14 (0 prestige, BLUE bonus), and L2_67 (2 prestige, RED bonus). L2_67 is the best choice because it provides immediate prestige points, advancing my score to 4, and increases my RED bonus to 2, aiding toward noble N9. After applying bonuses, the effective cost is 0 WHITE, 3 BLUE, 2 GREEN, which I can pay exactly with my current tokens. Purchasing now reduces my token count to 4, avoiding the need to return tokens if I were to take more. Alternative actions like taking tokens would exceed the 10-token limit and require inefficient returns, while reserving is unnecessary. Thus, purchasing L2_67 is optimal.
+2025-12-29 01:04:30.188 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L2_67]
+2025-12-29 01:04:30.188 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 14 | Current Player: 0
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:4 GRN:4 RED:3 BLK:2 GLD:2
+
+[FACE-UP CARDS]
+L1: [L1_39] RED 0pts WHT:3                     | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_6] BLK 0pts WHT:2 GRN:2                | [L1_14] BLU 0pts GRN:2 BLK:2              
+L2: [L2_63] GRN 2pts GRN:5                     | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         |
+    [L2_64] GRN 3pts GRN:6                     | [L2_46] BLK 3pts BLK:6                    
+L3: [L3_78] BLU 5pts WHT:7 BLU:3               | [L3_84] GRN 4pts BLU:7                     |
+    [L3_82] WHT 5pts WHT:3 BLK:7               | [L3_71] BLK 3pts WHT:3 BLU:3 GRN:5 RED:3  
+
+[PLAYERS]
+Player 0 (Current):                                    | Player 1:
+  Score: 0 | Cards: 5                                  |   Score: 4 | Cards: 5
+  Tokens: GLD:3                                        |   Tokens: WHT:1 RED:1 BLK:2
+  Bonuses: {WHT:1 BLU:1 RED:1 BLK:2}                   |   Bonuses: {WHT:1 BLU:1 RED:2 BLK:1}
+  Reserved: [L1_35] RED 0pts WHT:2 GRN:1 BLK:2         |   Reserved: None
+            [L1_19] WHT 0pts BLU:2 GRN:2 BLK:1         | 
+            [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | 
+
+======================================================================================
+
+2025-12-29 01:04:30.188 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Turn 14 - Player 0's move
+2025-12-29 01:04:30.188 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=1, BLU=1, RED=1, BLK=2, GLD=3}
+2025-12-29 01:06:00.323 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I have 3 gold tokens and no colored tokens. Purchasing my reserved card L2_65 is the most efficient action because it gives me 1 prestige point and increases my RED bonus to 2, helping me score points and build my engine. The cost after bonuses is 1 WHITE, 1 RED, and 1 BLACK, which I can cover with my 3 gold tokens. This action advances my score immediately, which is crucial since the opponent already has 4 points. Other options, like reserving or taking tokens, would not give me points and would delay my scoring. Purchasing a point card now aligns with my strategy to reach 15 points efficiently while blocking the opponent from gaining advantages.
+2025-12-29 01:06:00.323 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L2_65]
+2025-12-29 01:06:00.325 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 14 | Current Player: 1
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:4 GRN:4 RED:3 BLK:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_39] RED 0pts WHT:3                     | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_6] BLK 0pts WHT:2 GRN:2                | [L1_14] BLU 0pts GRN:2 BLK:2              
+L2: [L2_63] GRN 2pts GRN:5                     | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         |
+    [L2_64] GRN 3pts GRN:6                     | [L2_46] BLK 3pts BLK:6                    
+L3: [L3_78] BLU 5pts WHT:7 BLU:3               | [L3_84] GRN 4pts BLU:7                     |
+    [L3_82] WHT 5pts WHT:3 BLK:7               | [L3_71] BLK 3pts WHT:3 BLU:3 GRN:5 RED:3  
+
+[PLAYERS]
+Player 0:                                              | Player 1 (Current):
+  Score: 1 | Cards: 6                                  |   Score: 4 | Cards: 5
+  Tokens:                                              |   Tokens: WHT:1 RED:1 BLK:2
+  Bonuses: {WHT:1 BLU:1 RED:2 BLK:2}                   |   Bonuses: {WHT:1 BLU:1 RED:2 BLK:1}
+  Reserved: [L1_35] RED 0pts WHT:2 GRN:1 BLK:2         |   Reserved: None
+            [L1_19] WHT 0pts BLU:2 GRN:2 BLK:1         | 
+
+======================================================================================
+
+2025-12-29 01:06:00.325 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Turn 14 - Player 1's move
+2025-12-29 01:06:00.325 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Points: 4, Budget: {WHT=2, BLU=1, RED=3, BLK=3}
+2025-12-29 01:11:18.188 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I am player 1, turn 14. Current tokens: WHITE=1, BLUE=0, GREEN=0, RED=1, BLACK=2 (total 4). Bonuses: WHITE=1, BLUE=1, RED=2, BLACK=1. Score: 4. No cards are immediately affordable. I need to gather tokens to purchase a valuable card. L2_55 (2 prestige, WHITE bonus) is a strong target: after applying bonuses (RED=2, BLACK=1), the effective cost is 1 GREEN, 2 RED, 1 BLACK. I currently have GREEN=0, RED=1, BLACK=2, so I need 1 GREEN and 1 RED to afford it. Taking 3 different tokens (WHITE, GREEN, RED) provides exactly the needed GREEN and RED, plus a WHITE token which is useful for future purchases and nobles (N1 requires WHITE bonuses). Board tokens are sufficient: WHITE=3, GREEN=4, RED=3. This move sets me up to purchase L2_55 next turn, gaining 2 prestige points and a WHITE bonus, advancing my score to 6 and progressing toward noble N1. Alternative actions like reserving or taking 2 tokens of one color would delay this purchase. Therefore, TAKE_TOKENS is optimal.
+2025-12-29 01:11:18.188 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={WHITE=1, GREEN=1, RED=1}, tokensToReturn=null]
+2025-12-29 01:11:18.188 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 15 | Current Player: 0
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:4 GRN:3 RED:2 BLK:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_39] RED 0pts WHT:3                     | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_6] BLK 0pts WHT:2 GRN:2                | [L1_14] BLU 0pts GRN:2 BLK:2              
+L2: [L2_63] GRN 2pts GRN:5                     | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2         |
+    [L2_64] GRN 3pts GRN:6                     | [L2_46] BLK 3pts BLK:6                    
+L3: [L3_78] BLU 5pts WHT:7 BLU:3               | [L3_84] GRN 4pts BLU:7                     |
+    [L3_82] WHT 5pts WHT:3 BLK:7               | [L3_71] BLK 3pts WHT:3 BLU:3 GRN:5 RED:3  
+
+[PLAYERS]
+Player 0 (Current):                                    | Player 1:
+  Score: 1 | Cards: 6                                  |   Score: 4 | Cards: 5
+  Tokens:                                              |   Tokens: WHT:2 GRN:1 RED:2 BLK:2
+  Bonuses: {WHT:1 BLU:1 RED:2 BLK:2}                   |   Bonuses: {WHT:1 BLU:1 RED:2 BLK:1}
+  Reserved: [L1_35] RED 0pts WHT:2 GRN:1 BLK:2         |   Reserved: None
+            [L1_19] WHT 0pts BLU:2 GRN:2 BLK:1         | 
+
+======================================================================================
+
+2025-12-29 01:11:18.188 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Turn 15 - Player 0's move
+2025-12-29 01:11:18.188 [com.aisplendor.App.main()] INFO  com.aisplendor.engine.GameSimulator - Points: 1, Budget: {WHT=1, BLU=1, RED=2, BLK=2}

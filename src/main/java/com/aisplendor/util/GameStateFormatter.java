@@ -12,10 +12,12 @@ public class GameStateFormatter {
     private static final int PLAYER_COLUMN_WIDTH = 55;
     private static final int CARD_WIDTH = 42; // Based on longest card: [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3
 
-    public static String format(GameState state) {
+    public static String format(GameState state, List<String> modelNames) {
         StringBuilder sb = new StringBuilder();
         sb.append("\n======================================================================================\n");
-        sb.append(String.format("TURN %d | Current Player: %d\n", state.turnNumber(), state.currentPlayerIndex()));
+        String currentModel = extractModelName(modelNames.get(state.currentPlayerIndex()));
+        sb.append(String.format("TURN %d | Current Player: %s (P%d)\n", state.turnNumber(), currentModel,
+                state.currentPlayerIndex()));
         sb.append("======================================================================================\n");
 
         // Board Section
@@ -32,7 +34,7 @@ public class GameStateFormatter {
 
         // Players Section - side by side
         sb.append("\n[PLAYERS]\n");
-        sb.append(formatPlayersSideBySide(state));
+        sb.append(formatPlayersSideBySide(state, modelNames));
         sb.append("\n======================================================================================\n");
         return sb.toString();
     }
@@ -87,23 +89,25 @@ public class GameStateFormatter {
         };
     }
 
-    private static String formatPlayersSideBySide(GameState state) {
+    private static String formatPlayersSideBySide(GameState state, List<String> modelNames) {
         List<Player> players = state.players();
         if (players.size() != 2) {
             // Fall back to vertical format for non-2-player games
-            return formatPlayersVertical(state);
+            return formatPlayersVertical(state, modelNames);
         }
 
         Player p0 = players.get(0);
         Player p1 = players.get(1);
         boolean p0Current = state.currentPlayerIndex() == 0;
         boolean p1Current = state.currentPlayerIndex() == 1;
+        String model0 = extractModelName(modelNames.get(0));
+        String model1 = extractModelName(modelNames.get(1));
 
         StringBuilder sb = new StringBuilder();
 
         // Header row
-        String h0 = String.format("Player %d%s:", p0.id(), p0Current ? " (Current)" : "");
-        String h1 = String.format("Player %d%s:", p1.id(), p1Current ? " (Current)" : "");
+        String h0 = String.format("%s (P%d)%s:", model0, p0.id(), p0Current ? " (Current)" : "");
+        String h1 = String.format("%s (P%d)%s:", model1, p1.id(), p1Current ? " (Current)" : "");
         sb.append(formatTwoColumns(h0, h1));
 
         // Score & Cards row
@@ -163,11 +167,12 @@ public class GameStateFormatter {
         return paddedLeft + "| " + right + "\n";
     }
 
-    private static String formatPlayersVertical(GameState state) {
+    private static String formatPlayersVertical(GameState state, List<String> modelNames) {
         StringBuilder sb = new StringBuilder();
         for (Player p : state.players()) {
             boolean isCurrent = state.players().indexOf(p) == state.currentPlayerIndex();
-            sb.append(String.format("Player %d%s:\n", p.id(), isCurrent ? " (Current)" : ""));
+            String modelName = extractModelName(modelNames.get(p.id()));
+            sb.append(String.format("%s (P%d)%s:\n", modelName, p.id(), isCurrent ? " (Current)" : ""));
             sb.append(String.format("  Score: %d | Cards: %d\n", p.score(), p.purchasedCards().size()));
             sb.append(String.format("  Tokens: %s\n", formatTokenBankCompact(p.tokens())));
             sb.append(String.format("  Bonuses: %s\n", formatBonusesCompact(p.bonuses())));
@@ -256,5 +261,17 @@ public class GameStateFormatter {
         return cost.entrySet().stream()
                 .map(e -> String.format("%s:%d", formatColorShort(e.getKey()), e.getValue()))
                 .collect(Collectors.joining(" "));
+    }
+
+    /**
+     * Extracts the model name from a full model path.
+     * E.g., "anthropic/claude-haiku-4.5" -> "claude-haiku-4.5"
+     */
+    private static String extractModelName(String fullModelPath) {
+        if (fullModelPath == null || fullModelPath.isEmpty()) {
+            return "Unknown";
+        }
+        int slashIndex = fullModelPath.lastIndexOf('/');
+        return slashIndex >= 0 ? fullModelPath.substring(slashIndex + 1) : fullModelPath;
     }
 }

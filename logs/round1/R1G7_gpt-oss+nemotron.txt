@@ -1,0 +1,1957 @@
+2025-12-30 21:18:41.825 [main] INFO  com.aisplendor.engine.GameSimulator - Configured Player 0 with: openai/gpt-oss-20b (reasoning: high)
+2025-12-30 21:18:41.825 [main] INFO  com.aisplendor.engine.GameSimulator - Configured Player 1 with: nvidia/nemotron-3-nano-30b-a3b:free (reasoning: high)
+2025-12-30 21:18:41.825 [main] INFO  com.aisplendor.engine.GameSimulator - Semi-Auto Mode: DISABLED
+2025-12-30 21:18:41.825 [main] INFO  com.aisplendor.engine.GameSimulator - Debug Mode: DISABLED
+2025-12-30 21:18:42.087 [main] INFO  com.aisplendor.engine.GameSimulator - --- Game Started ---
+2025-12-30 21:18:42.103 [main] INFO  c.aisplendor.service.GameEventLogger - Game event log created: logs\20251230_211841.json
+2025-12-30 21:18:42.149 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 1 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:4 GRN:4 RED:4 BLK:4 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_13] BLU 0pts WHT:1 BLK:2               | [L1_28] GRN 0pts WHT:1 BLU:3 GRN:1         |
+    [L1_31] GRN 0pts RED:3                     | [L1_27] GRN 0pts BLU:1 RED:2 BLK:2        
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_41] BLK 1pt WHT:3 BLU:2 GRN:2         
+L3: [L3_78] BLU 5pts WHT:7 BLU:3               | [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   |
+    [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_73] BLK 4pts GRN:3 RED:6 BLK:3        
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | nemotron-3-nano-30b-a3b:free (P1):
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 0
+  Tokens:                                              |   Tokens: 
+  Bonuses: {}                                          |   Bonuses: {}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+2025-12-30 21:18:42.149 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 1 - Player 0's move
+2025-12-30 21:18:42.149 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {}
+2025-12-30 21:21:33.898 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: We reserve the high‐prestige card L3_78 to immediately obtain a gold token and remove a valuable card from the board, blocking the opponent. This establishes a quick path to 15 prestige: the gold token allows us to purchase L3_78 with one fewer token, and acquiring the blue bonus from L1_13 later will reduce its Blue cost further, enabling the 5‑point card to be bought with only eight tokens. Reserving now maximises early advantage and expedites progress toward the target.
+2025-12-30 21:21:33.899 [main] INFO  com.aisplendor.engine.GameSimulator - Action: ReserveCardAction[cardId=L3_78, deckLevel=null, tokensToReturn=null]
+2025-12-30 21:21:33.917 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 1 | Current Player: nemotron-3-nano-30b-a3b:free (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:4 GRN:4 RED:4 BLK:4 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_13] BLU 0pts WHT:1 BLK:2               | [L1_28] GRN 0pts WHT:1 BLU:3 GRN:1         |
+    [L1_31] GRN 0pts RED:3                     | [L1_27] GRN 0pts BLU:1 RED:2 BLK:2        
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_41] BLK 1pt WHT:3 BLU:2 GRN:2         
+L3: [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_74] BLK 5pts RED:7 BLK:3              
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | nemotron-3-nano-30b-a3b:free (P1) (Current):
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 0
+  Tokens: GLD:1                                        |   Tokens: 
+  Bonuses: {}                                          |   Bonuses: {}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: None
+
+======================================================================================
+
+2025-12-30 21:21:33.917 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 1 - Player 1's move
+2025-12-30 21:21:33.917 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {}
+2025-12-30 21:21:42.969 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I am player 1 with only 1 gold token and no other tokens. No face-up card can be purchased with the current resources because all costs require combinations of tokens that I do not possess, even with the gold wildcard. Reserving a card would only give me another gold token, which still would not enable a purchase this turn. Therefore the optimal move is to acquire tokens to build a flexible hand for the next turn. Taking three different colors maximizes future purchasing options while keeping my total token count well below the 10‑token limit, so I will not need to return any tokens. I choose WHITE, BLUE, and GREEN because these colors appear in the cheapest and most abundant cards (e.g., L1_13, L1_28, L2_62) and together with my existing gold token give me the ability to pay most upcoming costs. This token acquisition follows the TAKE_TOKENS rule of exactly three different colors and does not exceed the token supply on the board.
+2025-12-30 21:21:42.969 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={WHITE=1, BLUE=1, GREEN=1}, tokensToReturn=null]
+2025-12-30 21:21:42.977 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 2 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:3 GRN:3 RED:4 BLK:4 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_13] BLU 0pts WHT:1 BLK:2               | [L1_28] GRN 0pts WHT:1 BLU:3 GRN:1         |
+    [L1_31] GRN 0pts RED:3                     | [L1_27] GRN 0pts BLU:1 RED:2 BLK:2        
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_41] BLK 1pt WHT:3 BLU:2 GRN:2         
+L3: [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_74] BLK 5pts RED:7 BLK:3              
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | nemotron-3-nano-30b-a3b:free (P1):
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 0
+  Tokens: GLD:1                                        |   Tokens: WHT:1 BLU:1 GRN:1
+  Bonuses: {}                                          |   Bonuses: {}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: None
+
+======================================================================================
+
+2025-12-30 21:21:42.977 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 2 - Player 0's move
+2025-12-30 21:21:42.978 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {GLD=1}
+2025-12-30 21:22:31.179 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: We reserve the 5‑point L3_74 card to block the opponent and get an extra gold token. This preserves board value and gives us a gold that can be used later for high‑cost cards. We keep 2 reserved cards (L3_78 and L3_74). No tokens are taken this turn.
+2025-12-30 21:22:31.179 [main] INFO  com.aisplendor.engine.GameSimulator - Action: ReserveCardAction[cardId=L3_74, deckLevel=null, tokensToReturn=null]
+2025-12-30 21:22:31.179 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 2 | Current Player: nemotron-3-nano-30b-a3b:free (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:3 GRN:3 RED:4 BLK:4 GLD:3
+
+[FACE-UP CARDS]
+L1: [L1_13] BLU 0pts WHT:1 BLK:2               | [L1_28] GRN 0pts WHT:1 BLU:3 GRN:1         |
+    [L1_31] GRN 0pts RED:3                     | [L1_27] GRN 0pts BLU:1 RED:2 BLK:2        
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_41] BLK 1pt WHT:3 BLU:2 GRN:2         
+L3: [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_88] RED 4pts GRN:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | nemotron-3-nano-30b-a3b:free (P1) (Current):
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 0
+  Tokens: GLD:2                                        |   Tokens: WHT:1 BLU:1 GRN:1
+  Bonuses: {}                                          |   Bonuses: {}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: None
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+
+======================================================================================
+
+2025-12-30 21:22:31.179 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 2 - Player 1's move
+2025-12-30 21:22:31.179 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=1, BLU=1, GRN=1}
+2025-12-30 21:23:52.435 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Current player 1 holds only white, blue, and green tokens (1 each). No visible card can be purchased with this hand because all costs require additional tokens or a gold wildcard that we do not possess. The optimal short‑term goal is to begin building toward a prestige card that can be bought as soon as possible while also increasing flexibility for future turns. The cheapest prestige card we can eventually afford is L2_41 (1 prestige point) which requires WHITE3, BLUE2, and GREEN2. We already have one of each of these colors; by taking one additional white, one additional blue, and one additional green we move to WHITE2, BLUE2, GREEN2—bringing us to the required BLUE2 and GREEN2 and leaving only one more white needed. This take keeps the total token count at 6 (well below the 10‑token limit), so no tokens need to be returned. It also preserves the ability to acquire red or black later for other cards and nobles. Therefore the best action is to TAKE_TOKENS and claim one white, one blue, and one green token.
+2025-12-30 21:23:52.436 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={WHITE=1, BLUE=1, GREEN=1}, tokensToReturn=null]
+2025-12-30 21:23:52.437 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 3 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:2 GRN:2 RED:4 BLK:4 GLD:3
+
+[FACE-UP CARDS]
+L1: [L1_13] BLU 0pts WHT:1 BLK:2               | [L1_28] GRN 0pts WHT:1 BLU:3 GRN:1         |
+    [L1_31] GRN 0pts RED:3                     | [L1_27] GRN 0pts BLU:1 RED:2 BLK:2        
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_41] BLK 1pt WHT:3 BLU:2 GRN:2         
+L3: [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_88] RED 4pts GRN:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | nemotron-3-nano-30b-a3b:free (P1):
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 0
+  Tokens: GLD:2                                        |   Tokens: WHT:2 BLU:2 GRN:2
+  Bonuses: {}                                          |   Bonuses: {}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: None
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+
+======================================================================================
+
+2025-12-30 21:23:52.437 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 3 - Player 0's move
+2025-12-30 21:23:52.437 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {GLD=2}
+2025-12-30 21:25:38.355 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: ...…...……..…………..…….……...
+2025-12-30 21:25:38.355 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={GREEN=957}, tokensToReturn={WHITE=59234, BLUE=26}]
+2025-12-30 21:25:38.355 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 1 for Player 0. Error: Invalid action: Invalid token count. Must take 3 different or 2 matching tokens.
+2025-12-30 21:26:16.269 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: We currently have 2 gold tokens and no other colored tokens. To purchase cards in the next turn, we need colored tokens. L1_13 is a low‑cost card that costs 1 white and 2 black, but we can substitute the 2 black with our gold tokens, giving us a blue bonus. Therefore, we should take 3 different colored tokens: white, blue, and green. This brings our total tokens to 5, well below the 10‑token limit, and sets up the purchase of L1_13 on the following turn.
+2025-12-30 21:26:16.269 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={WHITE=1, BLUE=1, GREEN=1}, tokensToReturn=null]
+2025-12-30 21:26:16.270 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 3 | Current Player: nemotron-3-nano-30b-a3b:free (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:1 BLU:1 GRN:1 RED:4 BLK:4 GLD:3
+
+[FACE-UP CARDS]
+L1: [L1_13] BLU 0pts WHT:1 BLK:2               | [L1_28] GRN 0pts WHT:1 BLU:3 GRN:1         |
+    [L1_31] GRN 0pts RED:3                     | [L1_27] GRN 0pts BLU:1 RED:2 BLK:2        
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_41] BLK 1pt WHT:3 BLU:2 GRN:2         
+L3: [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_88] RED 4pts GRN:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | nemotron-3-nano-30b-a3b:free (P1) (Current):
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 0
+  Tokens: WHT:1 BLU:1 GRN:1 GLD:2                      |   Tokens: WHT:2 BLU:2 GRN:2
+  Bonuses: {}                                          |   Bonuses: {}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: None
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+
+======================================================================================
+
+2025-12-30 21:26:16.270 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 3 - Player 1's move
+2025-12-30 21:26:16.270 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=2, BLU=2, GRN=2}
+2025-12-30 21:26:51.627 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Current player 1 holds 2 white, 2 blue, 2 green tokens (6 total). To purchase the Level‑2 prestige card L2_41 next turn we need at least 3 white tokens while still keeping 2 blue and 2 green. The only white token left on the board can be taken this turn. Taking one white, one blue, and one green satisfies the TAKE_TOKENS rule (3 different colors), keeps the total token count at 9 (well below the 10‑token limit), and does not require any returns. This gives us exactly 3 white, 3 blue, 3 green, providing the needed white token plus extra blue and green for future flexibility and also denying the opponent the last copies of those colors. With this hand we can afford L2_41 (cost WHITE3 BLUE2 GREEN2) on the following turn and gain 1 prestige point toward the 15‑point goal.
+2025-12-30 21:26:51.627 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={WHITE=1, BLUE=1, GREEN=1}, tokensToReturn=null]
+2025-12-30 21:26:51.632 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 4 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+RED:4 BLK:4 GLD:3
+
+[FACE-UP CARDS]
+L1: [L1_13] BLU 0pts WHT:1 BLK:2               | [L1_28] GRN 0pts WHT:1 BLU:3 GRN:1         |
+    [L1_31] GRN 0pts RED:3                     | [L1_27] GRN 0pts BLU:1 RED:2 BLK:2        
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_41] BLK 1pt WHT:3 BLU:2 GRN:2         
+L3: [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_88] RED 4pts GRN:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | nemotron-3-nano-30b-a3b:free (P1):
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 0
+  Tokens: WHT:1 BLU:1 GRN:1 GLD:2                      |   Tokens: WHT:3 BLU:3 GRN:3
+  Bonuses: {}                                          |   Bonuses: {}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: None
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+
+======================================================================================
+
+2025-12-30 21:26:51.632 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 4 - Player 0's move
+2025-12-30 21:26:51.632 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=1, BLU=1, GRN=1, GLD=2}
+2025-12-30 21:29:29.676 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: We only have 2 gold tokens and 1 of each of white, blue, and green. The only tokens we can use are exactly those. We can purchase either L1_13 (cost W1 BL2) or L1_28 (cost W1 B3 G1). Both require 2 gold tokens. L1_28 is currently on the board and would give an opponent a green bonus if they bought it next turn. By purchasing it we block the opponent and also gain a green bonus for our future purchases. L1_13 would give a blue bonus but doesn't block a card the opponent might buy. Therefore, purchasing L1_28 is the more advantageous, efficient play. We pay 1 white, 1 green, and 2 gold (replacing the 2 missing blue tokens). This uses all our tokens and leaves us with no tokens or gold, but we gain the board advantage. Thus the correct action is to purchase L1_28.
+2025-12-30 21:29:29.676 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L1_28]
+2025-12-30 21:29:29.680 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 4 | Current Player: nemotron-3-nano-30b-a3b:free (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:1 BLU:1 GRN:1 RED:4 BLK:4 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_13] BLU 0pts WHT:1 BLK:2               | [L1_31] GRN 0pts RED:3                     |
+    [L1_27] GRN 0pts BLU:1 RED:2 BLK:2         | [L1_16] BLU 1pt RED:4                     
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_41] BLK 1pt WHT:3 BLU:2 GRN:2         
+L3: [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_88] RED 4pts GRN:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | nemotron-3-nano-30b-a3b:free (P1) (Current):
+  Score: 0 | Cards: 1                                  |   Score: 0 | Cards: 0
+  Tokens:                                              |   Tokens: WHT:3 BLU:3 GRN:3
+  Bonuses: {GRN:1}                                     |   Bonuses: {}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: None
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+
+======================================================================================
+
+2025-12-30 21:29:29.681 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 4 - Player 1's move
+2025-12-30 21:29:29.681 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=3, BLU=3, GRN=3}
+2025-12-30 21:29:46.572 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Current hand contains exactly 3 WHITE, 3 BLUE, and 3 GREEN tokens. The Level‑2 prestige card L2_41 costs WHITE3, BLUE2, GREEN2, which I already satisfy. Moreover, I hold a GREEN bonus token that would reduce the GREEN requirement by 1, making the purchase even easier. Playing L2_41 grants 1 prestige point, brings me closer to the 15‑point victory condition, and also provides a BLACK gem bonus for future turns. There is no need to acquire additional tokens this turn, as doing so would force a return and waste a turn. Therefore the optimal move is to purchase L2_41 directly.
+2025-12-30 21:29:46.573 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L2_41]
+2025-12-30 21:29:46.574 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 5 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:3 GRN:3 RED:4 BLK:4 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_13] BLU 0pts WHT:1 BLK:2               | [L1_31] GRN 0pts RED:3                     |
+    [L1_27] GRN 0pts BLU:1 RED:2 BLK:2         | [L1_16] BLU 1pt RED:4                     
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_50] BLU 2pts WHT:2 RED:1 BLK:4        
+L3: [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   |
+    [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_88] RED 4pts GRN:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | nemotron-3-nano-30b-a3b:free (P1):
+  Score: 0 | Cards: 1                                  |   Score: 1 | Cards: 1
+  Tokens:                                              |   Tokens: BLU:1 GRN:1
+  Bonuses: {GRN:1}                                     |   Bonuses: {BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: None
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+
+======================================================================================
+
+2025-12-30 21:29:46.574 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 5 - Player 0's move
+2025-12-30 21:29:46.575 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {GRN=1}
+2025-12-30 21:30:45.002 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: We have no tokens and no prestige yet. To generate tokens that can be used soon, we need a gold token. The only way to get a gold token is by reserving a card. Reserving L3_79 (a 3‑prestige card) removes a high‑value card from the board and grants us 1 gold token. We want to preserve our low‑cost cards (especially L1_13 for a blue bonus and L1_16 for a prestige) for later purchases. Thus we reserve the highest remaining board card, L3_79. This action also keeps the board free of an attractive card for the opponent, reducing their options. We are not taking any tokens this turn, so all take tokens are set to 0.
+2025-12-30 21:30:45.003 [main] INFO  com.aisplendor.engine.GameSimulator - Action: ReserveCardAction[cardId=L3_79, deckLevel=null, tokensToReturn=null]
+2025-12-30 21:30:45.003 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 5 | Current Player: nemotron-3-nano-30b-a3b:free (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:3 GRN:3 RED:4 BLK:4 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_13] BLU 0pts WHT:1 BLK:2               | [L1_31] GRN 0pts RED:3                     |
+    [L1_27] GRN 0pts BLU:1 RED:2 BLK:2         | [L1_16] BLU 1pt RED:4                     
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_50] BLU 2pts WHT:2 RED:1 BLK:4        
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         |
+    [L3_88] RED 4pts GRN:7                     | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | nemotron-3-nano-30b-a3b:free (P1) (Current):
+  Score: 0 | Cards: 1                                  |   Score: 1 | Cards: 1
+  Tokens: GLD:1                                        |   Tokens: BLU:1 GRN:1
+  Bonuses: {GRN:1}                                     |   Bonuses: {BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: None
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+            [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | 
+
+======================================================================================
+
+2025-12-30 21:30:45.004 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 5 - Player 1's move
+2025-12-30 21:30:45.004 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 1, Budget: {BLU=1, GRN=1, BLK=1}
+2025-12-30 21:31:23.884 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Current player 1 has 2 tokens (BLUE 1, GREEN 1) and no tokens of WHITE, RED, or BLACK. The only way to make immediate progress toward prestige points is to acquire a color that is required for any purchasable prestige card. RED tokens are needed for the Level‑1 prestige card L1_16 (cost RED4, 1 prestige point) and also appear in several Level‑2 and Level‑3 prestige cards. Because the board holds 4 RED tokens, we can legally take exactly 2 RED tokens in a single TAKE_TOKENS action, gaining 2 RED tokens in one turn. This raises the total token count to 4 (WHITE0, BLUE1, GREEN1, RED2), well below the 10‑token limit, so no tokens need to be returned. Gaining RED tokens directly moves us toward being able to purchase L1_16 next turn for an additional prestige point, and also provides the RED resources needed for other higher‑value cards such as L2_65 and L2_50. Acquiring RED now therefore provides the most direct path to increasing prestige points while preserving flexibility for future purchases.
+2025-12-30 21:31:23.885 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={RED=2}, tokensToReturn=null]
+2025-12-30 21:31:23.885 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 6 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:3 GRN:3 RED:2 BLK:4 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_13] BLU 0pts WHT:1 BLK:2               | [L1_31] GRN 0pts RED:3                     |
+    [L1_27] GRN 0pts BLU:1 RED:2 BLK:2         | [L1_16] BLU 1pt RED:4                     
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_50] BLU 2pts WHT:2 RED:1 BLK:4        
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         |
+    [L3_88] RED 4pts GRN:7                     | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | nemotron-3-nano-30b-a3b:free (P1):
+  Score: 0 | Cards: 1                                  |   Score: 1 | Cards: 1
+  Tokens: GLD:1                                        |   Tokens: BLU:1 GRN:1 RED:2
+  Bonuses: {GRN:1}                                     |   Bonuses: {BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: None
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+            [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | 
+
+======================================================================================
+
+2025-12-30 21:31:23.885 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 6 - Player 0's move
+2025-12-30 21:31:23.885 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {GRN=1, GLD=1}
+2025-12-30 21:32:48.923 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: We currently have one gold token and no colored tokens, making it impossible to purchase any card today. Our goal is to acquire a card that gives a bonus while using the fewest tokens and preserving our gold token for future play. L1_13 (cost 1 white + 2 black) is a good candidate: it provides a blue bonus and requires only one white and two black tokens, one of which can be replaced by the gold token we already have. To be able to purchase it next turn, we need at least one white and one black token. The TAKE_TOKENS action allows taking three tokens of different colors, so we take one white, one black, and one blue token. Taking the blue token also gives us a blue token remaining after the purchase, which will be useful for future blue‑heavy cards. No tokens need to be returned as we will not exceed the 10‑token limit.
+2025-12-30 21:32:48.923 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={WHITE=1, BLUE=1, BLACK=1}, tokensToReturn=null]
+2025-12-30 21:32:48.923 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 6 | Current Player: nemotron-3-nano-30b-a3b:free (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:2 GRN:3 RED:2 BLK:3 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_13] BLU 0pts WHT:1 BLK:2               | [L1_31] GRN 0pts RED:3                     |
+    [L1_27] GRN 0pts BLU:1 RED:2 BLK:2         | [L1_16] BLU 1pt RED:4                     
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_50] BLU 2pts WHT:2 RED:1 BLK:4        
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         |
+    [L3_88] RED 4pts GRN:7                     | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | nemotron-3-nano-30b-a3b:free (P1) (Current):
+  Score: 0 | Cards: 1                                  |   Score: 1 | Cards: 1
+  Tokens: WHT:1 BLU:1 BLK:1 GLD:1                      |   Tokens: BLU:1 GRN:1 RED:2
+  Bonuses: {GRN:1}                                     |   Bonuses: {BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: None
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+            [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | 
+
+======================================================================================
+
+2025-12-30 21:32:48.923 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 6 - Player 1's move
+2025-12-30 21:32:48.923 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 1, Budget: {BLU=1, GRN=1, RED=2, BLK=1}
+2025-12-30 21:33:03.787 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 1 for Player 1. Error: Unexpected error: Received RST_STREAM: Internal error
+2025-12-30 21:33:31.858 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Current token inventory is WHITE=0, BLUE=1, GREEN=1, RED=2, BLACK=0. No visible card can be purchased with this hand, and none of the face‑up prestige cards are affordable yet. The immediate objective is to move toward a purchasable prestige card that can be bought as soon as possible while also acquiring resources for longer‑term plays. The most accessible prestige card for me is L1_16 (1 prestige point) which requires RED4; I currently have RED2, so I need two more RED tokens. Additionally, acquiring a WHITE and a BLACK token now will open the possibility of purchasing L1_13 (which needs WHITE1 and BLACK2) and will start building the BLACK resource required for several higher‑value Level‑2 and Level‑3 cards. Because a TAKE_TOKENS action must involve exactly three different colors, I select WHITE, RED, and BLACK, each taken once. This raises my token count from 4 to 7, well below the 10‑token limit, so no tokens need to be returned. The move maximizes progress toward the RED4 requirement, introduces WHITE and BLACK for future purchases, and keeps flexibility for subsequent turns.
+2025-12-30 21:33:31.858 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={WHITE=1, RED=1, BLACK=1}, tokensToReturn=null]
+2025-12-30 21:33:31.859 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 7 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:2 GRN:3 RED:1 BLK:2 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_13] BLU 0pts WHT:1 BLK:2               | [L1_31] GRN 0pts RED:3                     |
+    [L1_27] GRN 0pts BLU:1 RED:2 BLK:2         | [L1_16] BLU 1pt RED:4                     
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_50] BLU 2pts WHT:2 RED:1 BLK:4        
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         |
+    [L3_88] RED 4pts GRN:7                     | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | nemotron-3-nano-30b-a3b:free (P1):
+  Score: 0 | Cards: 1                                  |   Score: 1 | Cards: 1
+  Tokens: WHT:1 BLU:1 BLK:1 GLD:1                      |   Tokens: WHT:1 BLU:1 GRN:1 RED:3 BLK:1
+  Bonuses: {GRN:1}                                     |   Bonuses: {BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: None
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+            [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | 
+
+======================================================================================
+
+2025-12-30 21:33:31.859 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 7 - Player 0's move
+2025-12-30 21:33:31.859 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=1, BLU=1, GRN=1, BLK=1, GLD=1}
+2025-12-30 21:34:17.675 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: We currently hold 1 white, 1 blue, 1 black, and 1 gold token. Among the face‑up cards, the only one that we can afford with this token set is L1_13, which costs 1 white + 2 black. We have 1 white, 1 black and 1 gold; the gold token can replace the missing second black. Buying L1_13 gives us a blue bonus and positions us to acquire higher‑prestige reserved cards later while keeping the board advantageous for the opponent. No other card is affordable this turn, so we should purchase L1_13.
+2025-12-30 21:34:17.676 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L1_13]
+2025-12-30 21:34:17.678 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 7 | Current Player: nemotron-3-nano-30b-a3b:free (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:2 GRN:3 RED:1 BLK:3 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_31] GRN 0pts RED:3                     | [L1_27] GRN 0pts BLU:1 RED:2 BLK:2         |
+    [L1_16] BLU 1pt RED:4                      | [L1_40] RED 1pt WHT:4                     
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_50] BLU 2pts WHT:2 RED:1 BLK:4        
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         |
+    [L3_88] RED 4pts GRN:7                     | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | nemotron-3-nano-30b-a3b:free (P1) (Current):
+  Score: 0 | Cards: 2                                  |   Score: 1 | Cards: 1
+  Tokens: BLU:1                                        |   Tokens: WHT:1 BLU:1 GRN:1 RED:3 BLK:1
+  Bonuses: {BLU:1 GRN:1}                               |   Bonuses: {BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: None
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+            [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | 
+
+======================================================================================
+
+2025-12-30 21:34:17.678 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 7 - Player 1's move
+2025-12-30 21:34:17.678 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 1, Budget: {WHT=1, BLU=1, GRN=1, RED=3, BLK=2}
+2025-12-30 21:34:55.306 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Current token inventory is WHITE1, BLUE1, GREEN1, RED3, BLACK1 (total 7 tokens). No visible prestige card can be purchased for points this turn, and the only affordable non-prestige cards would not advance the 15-point goal as effectively as building resources. The immediate priority is to obtain the missing RED token needed to afford L1_16 (cost RED4, 1 prestige point) while also increasing WHITE and BLACK counts, which are scarce and required for higher-value Level‑2/3 prestige cards. Taking one WHITE, one BLACK, and the single available RED token satisfies the TAKE_TOKENS rule (3 different colors), raises the total token count from 7 to exactly 10, so no tokens need to be returned. This move gives RED4 for a future purchase of L1_16, adds an extra WHITE and an extra BLACK for upcoming engine development, and does not waste a turn on low‑value purchases.
+2025-12-30 21:34:55.306 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={WHITE=1, RED=1, BLACK=1}, tokensToReturn=null]
+2025-12-30 21:34:55.306 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 8 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:2 GRN:3 BLK:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_31] GRN 0pts RED:3                     | [L1_27] GRN 0pts BLU:1 RED:2 BLK:2         |
+    [L1_16] BLU 1pt RED:4                      | [L1_40] RED 1pt WHT:4                     
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_50] BLU 2pts WHT:2 RED:1 BLK:4        
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         |
+    [L3_88] RED 4pts GRN:7                     | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | nemotron-3-nano-30b-a3b:free (P1):
+  Score: 0 | Cards: 2                                  |   Score: 1 | Cards: 1
+  Tokens: BLU:1                                        |   Tokens: WHT:2 BLU:1 GRN:1 RED:4 BLK:2
+  Bonuses: {BLU:1 GRN:1}                               |   Bonuses: {BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: None
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+            [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | 
+
+======================================================================================
+
+2025-12-30 21:34:55.306 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 8 - Player 0's move
+2025-12-30 21:34:55.306 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {BLU=2, GRN=1}
+2025-12-30 21:35:46.338 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: We currently can purchase no card: all face‑up cards need red tokens which are not available in the bank and we have no gold to use as a wildcard. With three reservations already in hand, we cannot reserve another card to get a gold token. Therefore the only legal action is to take tokens. We have no tokens of the colors WHITE, GREEN or BLACK, and the available colors in the bank are WHITE, GREEN and BLACK (each has at least one token). Taking one of each gives us a token distribution that maximises our future purchase options (we now have 1 white, 1 green, 1 black and the 1 blue we already hold).  This action keeps us within the 10‑token limit and sets up potential future purchases, even though none are currently affordable.
+2025-12-30 21:35:46.338 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={WHITE=1, GREEN=1, BLACK=1}, tokensToReturn=null]
+2025-12-30 21:35:46.338 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 8 | Current Player: nemotron-3-nano-30b-a3b:free (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:1 BLU:2 GRN:2 BLK:1 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_31] GRN 0pts RED:3                     | [L1_27] GRN 0pts BLU:1 RED:2 BLK:2         |
+    [L1_16] BLU 1pt RED:4                      | [L1_40] RED 1pt WHT:4                     
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_50] BLU 2pts WHT:2 RED:1 BLK:4        
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         |
+    [L3_88] RED 4pts GRN:7                     | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | nemotron-3-nano-30b-a3b:free (P1) (Current):
+  Score: 0 | Cards: 2                                  |   Score: 1 | Cards: 1
+  Tokens: WHT:1 BLU:1 GRN:1 BLK:1                      |   Tokens: WHT:2 BLU:1 GRN:1 RED:4 BLK:2
+  Bonuses: {BLU:1 GRN:1}                               |   Bonuses: {BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: None
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+            [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | 
+
+======================================================================================
+
+2025-12-30 21:35:46.338 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 8 - Player 1's move
+2025-12-30 21:35:46.338 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 1, Budget: {WHT=2, BLU=1, GRN=1, RED=4, BLK=3}
+2025-12-30 21:36:02.335 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Current token inventory is exactly at the 10‑token cap (WHITE2, BLUE1, GREEN1, RED4, BLACK2). Any TAKE_TOKENS action would require taking either 3 different colors or 2 of the same color, which would push the total above 10, forcing us to return an equal number of tokens and resulting in no net gain of usable resources. Since the only prestigious card we can afford with the resources we already hold is L1_16 (cost RED4, 1 prestige point), we can purchase it directly without any token transaction. Purchasing L1_16 will increase our score from 1 to 2, moving us closer to the 15‑point victory condition while preserving our token pool for future turns. No other visible prestige card is affordable, and reserving a card would not yield immediate points. Therefore the optimal move is to PURCHASE_CARD L1_16.
+2025-12-30 21:36:02.335 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L1_16]
+2025-12-30 21:36:02.336 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 9 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:1 BLU:2 GRN:2 RED:4 BLK:1 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_31] GRN 0pts RED:3                     | [L1_27] GRN 0pts BLU:1 RED:2 BLK:2         |
+    [L1_40] RED 1pt WHT:4                      | [L1_23] WHT 0pts BLU:3                    
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_50] BLU 2pts WHT:2 RED:1 BLK:4        
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         |
+    [L3_88] RED 4pts GRN:7                     | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | nemotron-3-nano-30b-a3b:free (P1):
+  Score: 0 | Cards: 2                                  |   Score: 2 | Cards: 2
+  Tokens: WHT:1 BLU:1 GRN:1 BLK:1                      |   Tokens: WHT:2 BLU:1 GRN:1 BLK:2
+  Bonuses: {BLU:1 GRN:1}                               |   Bonuses: {BLU:1 BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: None
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+            [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | 
+
+======================================================================================
+
+2025-12-30 21:36:02.336 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 9 - Player 0's move
+2025-12-30 21:36:02.336 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=1, BLU=2, GRN=2, BLK=1}
+2025-12-30 21:36:54.356 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: We have a full reserve of 3 cards, so we cannot reserve again, and no face-up card is affordable with our current tokens. The only legal action is to take tokens. To plan for future purchases, we want to acquire red and green tokens, which will allow us to buy the 2‑prestige L2_44 card eventually (cost 5 green, 3 red with our green bonus, resulting in a 4 green, 3 red requirement). Since the board only offers one white and one blue token, we cannot reach 4 white tokens needed for L1_40. We also add a black token to keep token variety; a black token is useful for other future combinations. We take 1 RED, 1 GREEN, and 1 BLACK, which keeps the total token count under the limit of 10. No tokens are returned because we do not exceed the maximum.
+2025-12-30 21:36:54.356 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={GREEN=1, RED=1, BLACK=1}, tokensToReturn=null]
+2025-12-30 21:36:54.357 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 9 | Current Player: nemotron-3-nano-30b-a3b:free (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:1 BLU:2 GRN:1 RED:3 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_31] GRN 0pts RED:3                     | [L1_27] GRN 0pts BLU:1 RED:2 BLK:2         |
+    [L1_40] RED 1pt WHT:4                      | [L1_23] WHT 0pts BLU:3                    
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_50] BLU 2pts WHT:2 RED:1 BLK:4        
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         |
+    [L3_88] RED 4pts GRN:7                     | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | nemotron-3-nano-30b-a3b:free (P1) (Current):
+  Score: 0 | Cards: 2                                  |   Score: 2 | Cards: 2
+  Tokens: WHT:1 BLU:1 GRN:2 RED:1 BLK:2                |   Tokens: WHT:2 BLU:1 GRN:1 BLK:2
+  Bonuses: {BLU:1 GRN:1}                               |   Bonuses: {BLU:1 BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: None
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+            [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | 
+
+======================================================================================
+
+2025-12-30 21:36:54.357 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 9 - Player 1's move
+2025-12-30 21:36:54.357 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 2, Budget: {WHT=2, BLU=2, GRN=1, BLK=3}
+2025-12-30 21:37:43.584 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Current token inventory is WHITE2, BLUE1, GREEN1, RED0, BLACK2 (total 6 tokens). The board provides 1 WHITE, 2 BLUE, 1 GREEN, 3 RED, 0 BLACK, and 5 GOLD tokens. No visible prestige card can be purchased this turn because all affordable cards still lack required RED or other resources. The most critical shortage is RED tokens – we need 2 RED to eventually buy L2_65 (1 prestige point, provides a RED discount) and other high‑value cards. Taking exactly 3 different‑color tokens is mandatory, and we must increase our RED count first.
+
+The optimal 3‑color set is WHITE, BLUE, and RED because:
+- RED gives us the first RED token we lack.
+- WHITE adds a needed resource for future purchases such as L1_40 (cost WHITE4) and helps reach later white requirements.
+- BLUE is versatile; it brings us to 2 BLUE tokens (plus our existing BLUE discount) which may enable purchasing L1_27 later for a GREEN discount.
+- Taking WHITE, BLUE, RED does not exceed the 10‑token limit (new totals become WHITE3, BLUE2, GREEN1, RED1, BLACK2 = 9 tokens), so no tokens need to be returned.
+
+Other combinations either miss RED or give us a GREEN token that is less urgent. Therefore the best action is to TAKE_TOKENS with one WHITE, one BLUE, and one RED token, and no returns.
+
+The result is:
+- action_type = "TAKE_TOKENS"
+- take_WHITE = 1, take_BLUE = 1, take_RED = 1, other take_* = 0
+- all return_* = 0 (no overflow)
+- no card purchase or deck draw this turn.
+2025-12-30 21:37:43.584 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={WHITE=1, BLUE=1, RED=1}, tokensToReturn=null]
+2025-12-30 21:37:43.585 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 10 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+BLU:1 GRN:1 RED:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_31] GRN 0pts RED:3                     | [L1_27] GRN 0pts BLU:1 RED:2 BLK:2         |
+    [L1_40] RED 1pt WHT:4                      | [L1_23] WHT 0pts BLU:3                    
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_50] BLU 2pts WHT:2 RED:1 BLK:4        
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         |
+    [L3_88] RED 4pts GRN:7                     | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | nemotron-3-nano-30b-a3b:free (P1):
+  Score: 0 | Cards: 2                                  |   Score: 2 | Cards: 2
+  Tokens: WHT:1 BLU:1 GRN:2 RED:1 BLK:2                |   Tokens: WHT:3 BLU:2 GRN:1 RED:1 BLK:2
+  Bonuses: {BLU:1 GRN:1}                               |   Bonuses: {BLU:1 BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: None
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+            [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | 
+
+======================================================================================
+
+2025-12-30 21:37:43.585 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 10 - Player 0's move
+2025-12-30 21:37:43.585 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=1, BLU=2, GRN=3, RED=1, BLK=2}
+2025-12-30 21:38:21.955 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: We have 3 reserved cards already, so we cannot reserve more. None of the face‑up cards can be purchased with our current tokens (1 WHITE, 1 BLUE, 2 GREEN, 1 RED, 2 BLACK, 0 GOLD). The bank only holds 1 BLUE, 1 GREEN, and 2 RED tokens, so the only legal move is to take three tokens of different colors. The optimal choice is to take one BLUE, one GREEN, and one RED, which brings our total token count to 10 and gives us valuable RED and GREEN tokens for future purchases. No tokens need to be returned.
+2025-12-30 21:38:21.955 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={BLUE=1, GREEN=1, RED=1}, tokensToReturn=null]
+2025-12-30 21:38:21.955 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 10 | Current Player: nemotron-3-nano-30b-a3b:free (P1)
+======================================================================================
+
+[BOARD BANK]
+RED:1 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_31] GRN 0pts RED:3                     | [L1_27] GRN 0pts BLU:1 RED:2 BLK:2         |
+    [L1_40] RED 1pt WHT:4                      | [L1_23] WHT 0pts BLU:3                    
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_50] BLU 2pts WHT:2 RED:1 BLK:4        
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         |
+    [L3_88] RED 4pts GRN:7                     | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | nemotron-3-nano-30b-a3b:free (P1) (Current):
+  Score: 0 | Cards: 2                                  |   Score: 2 | Cards: 2
+  Tokens: WHT:1 BLU:2 GRN:3 RED:2 BLK:2                |   Tokens: WHT:3 BLU:2 GRN:1 RED:1 BLK:2
+  Bonuses: {BLU:1 GRN:1}                               |   Bonuses: {BLU:1 BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: None
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+            [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | 
+
+======================================================================================
+
+2025-12-30 21:38:21.955 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 10 - Player 1's move
+2025-12-30 21:38:21.955 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 2, Budget: {WHT=3, BLU=3, GRN=1, RED=1, BLK=3}
+2025-12-30 21:38:49.492 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Current token inventory is WHITE3, BLUE2, GREEN1, RED1, BLACK2 (total 9), well below the 10‑token cap, but the board supplies only a single RED token and no other colors. The TAKE_TOKENS action cannot be executed because it requires either three different colors or a double of a color that has at least four tokens on the board, which is impossible here. Purchasing any prestige card is also impossible: all prestige cards that grant points require resources we do not have enough of (e.g., WHITE4 for L1_40, RED2+BLACK3 for L2_65, etc.), and the only affordable development card L1_23 gives no immediate prestige points. The optimal way to advance toward the 15‑point goal is to secure a high‑value prestige card now for future purchase. Reserving L1_40, which is visible and worth 1 prestige point, will give us a gold token (which can later serve as a WHITE resource) and keep the card out of the opponent’s reach. With our existing WHITE3 and the forthcoming gold token, we will be able to purchase L1_40 next turn for its 1 prestige point, directly increasing our score without any token overflow concerns. Therefore the best action this turn is to RESERVE_CARD L1_40.
+2025-12-30 21:38:49.492 [main] INFO  com.aisplendor.engine.GameSimulator - Action: ReserveCardAction[cardId=L1_40, deckLevel=null, tokensToReturn=null]
+2025-12-30 21:38:49.495 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 11 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+RED:1 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_31] GRN 0pts RED:3                     | [L1_27] GRN 0pts BLU:1 RED:2 BLK:2         |
+    [L1_23] WHT 0pts BLU:3                     | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1        
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_50] BLU 2pts WHT:2 RED:1 BLK:4        
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         |
+    [L3_88] RED 4pts GRN:7                     | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | nemotron-3-nano-30b-a3b:free (P1):
+  Score: 0 | Cards: 2                                  |   Score: 2 | Cards: 2
+  Tokens: WHT:1 BLU:2 GRN:3 RED:2 BLK:2                |   Tokens: WHT:3 BLU:2 GRN:1 RED:1 BLK:2 GLD:1
+  Bonuses: {BLU:1 GRN:1}                               |   Bonuses: {BLU:1 BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: [L1_40] RED 1pt WHT:4
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+            [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | 
+
+======================================================================================
+
+2025-12-30 21:38:49.496 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 11 - Player 0's move
+2025-12-30 21:38:49.496 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=1, BLU=3, GRN=4, RED=2, BLK=2}
+2025-12-30 21:40:11.063 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: We currently have tokens: 1 WHITE, 2 BLUE, 3 GREEN, 2 RED, 2 BLACK and no gold. Among the visible Level‑1 cards, we can afford L1_31 (cost 3 RED), L1_27 (cost 1 BLUE + 2 RED + 2 BLACK which reduces to 0 BLUE + 2 RED + 2 BLACK after our 1 BLUE bonus), L1_23 (cost 3 BLUE which reduces to 2 BLUE after the bonus), and L1_12 (cost 1 BLUE + 3 GREEN + 1 RED which reduces to 0 BLUE + 2 GREEN + 1 RED). The card L1_27 is the best choice because it is the only one that gives a GREEN bonus, which is essential for future high‑prestige purchases, and it can be bought with the tokens we currently have. Buying L1_27 also leaves us with two BLUE tokens, so we may buy L1_23 on the next turn if it remains available. Moreover, by purchasing L1_27 now we secure the GREEN gem before the opponent can act, aligning with our goal of reaching 15 prestige points as quickly as possible.
+2025-12-30 21:40:11.063 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L1_27]
+2025-12-30 21:40:11.065 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 11 | Current Player: nemotron-3-nano-30b-a3b:free (P1)
+======================================================================================
+
+[BOARD BANK]
+RED:3 BLK:2 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_31] GRN 0pts RED:3                     | [L1_23] WHT 0pts BLU:3                     |
+    [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         | [L1_30] GRN 0pts BLU:2 RED:2              
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_50] BLU 2pts WHT:2 RED:1 BLK:4        
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         |
+    [L3_88] RED 4pts GRN:7                     | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | nemotron-3-nano-30b-a3b:free (P1) (Current):
+  Score: 0 | Cards: 3                                  |   Score: 2 | Cards: 2
+  Tokens: WHT:1 BLU:2 GRN:3                            |   Tokens: WHT:3 BLU:2 GRN:1 RED:1 BLK:2 GLD:1
+  Bonuses: {BLU:1 GRN:2}                               |   Bonuses: {BLU:1 BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: [L1_40] RED 1pt WHT:4
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+            [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | 
+
+======================================================================================
+
+2025-12-30 21:40:11.065 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 11 - Player 1's move
+2025-12-30 21:40:11.065 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 2, Budget: {WHT=3, BLU=3, GRN=1, RED=1, BLK=3, GLD=1}
+2025-12-30 21:40:51.262 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I currently have exactly 10 tokens (WHITE3, BLUE2, GREEN1, RED1, BLACK2, GOLD1) and am at the token cap, so taking any tokens would force me to return an equal number and provide no net gain. The only prestige‑point cards visible on the board are the Level‑2 cards; the highest‑value ones are L2_44 (2 pts), L2_62 (2 pts), L2_50 (2 pts) and L2_65 (1 pt). Checking affordability with my discounts (BLUE:1, BLACK:1) and the ability of a GOLD token to substitute any colour, I can afford L2_50: its cost is WHITE2, RED1, BLACK4, which after the BLACK discount becomes WHITE2, RED1, BLACK3. I can pay this with 2 WHITE, 1 RED, 2 BLACK and use the GOLD token as the third BLACK, spending 6 tokens total. After the purchase I would retain WHITE1, BLUE2, GREEN1 (4 tokens total) and my score would rise from 2 to 4 prestige points, moving me closer to the 15‑point goal while removing a valuable card from the board. No other visible prestige card can be bought this turn, and reserving a card would not immediately increase my score. Therefore the optimal move is to PURCHASE_CARD L2_50.
+2025-12-30 21:40:51.262 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L2_50]
+2025-12-30 21:40:51.262 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 12 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 RED:4 BLK:4 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_31] GRN 0pts RED:3                     | [L1_23] WHT 0pts BLU:3                     |
+    [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         | [L1_30] GRN 0pts BLU:2 RED:2              
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_63] GRN 2pts GRN:5                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         |
+    [L3_88] RED 4pts GRN:7                     | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | nemotron-3-nano-30b-a3b:free (P1):
+  Score: 0 | Cards: 3                                  |   Score: 4 | Cards: 3
+  Tokens: WHT:1 BLU:2 GRN:3                            |   Tokens: WHT:1 BLU:2 GRN:1
+  Bonuses: {BLU:1 GRN:2}                               |   Bonuses: {BLU:2 BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: [L1_40] RED 1pt WHT:4
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+            [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | 
+
+======================================================================================
+
+2025-12-30 21:40:51.262 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 12 - Player 0's move
+2025-12-30 21:40:51.262 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=1, BLU=3, GRN=5}
+2025-12-30 21:41:26.043 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Our current token stack is 1 white token, 2 blue tokens, and 3 green tokens, with bonuses of 1 blue and 2 green. Among the face‑up cards, the only level‑2 card we can afford without needing more tokens is L2_63, which costs 5 green gems. With our 2 green bonus the cost reduces to 3 green gems, exactly the number of green tokens we possess. Purchasing L2_63 gives us 2 prestige points and a new green bonus, boosting future discounts. No other card on the board affords us prestige at this turn, and we cannot reserve or obtain a gold token (we already have 3 reserved cards). Therefore the optimal move is to buy L2_63.
+2025-12-30 21:41:26.043 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L2_63]
+2025-12-30 21:41:26.043 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 12 | Current Player: nemotron-3-nano-30b-a3b:free (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 GRN:3 RED:4 BLK:4 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_31] GRN 0pts RED:3                     | [L1_23] WHT 0pts BLU:3                     |
+    [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         | [L1_30] GRN 0pts BLU:2 RED:2              
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_64] GRN 3pts GRN:6                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         |
+    [L3_88] RED 4pts GRN:7                     | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | nemotron-3-nano-30b-a3b:free (P1) (Current):
+  Score: 2 | Cards: 4                                  |   Score: 4 | Cards: 3
+  Tokens: WHT:1 BLU:2                                  |   Tokens: WHT:1 BLU:2 GRN:1
+  Bonuses: {BLU:1 GRN:3}                               |   Bonuses: {BLU:2 BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: [L1_40] RED 1pt WHT:4
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+            [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | 
+
+======================================================================================
+
+2025-12-30 21:41:26.043 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 12 - Player 1's move
+2025-12-30 21:41:26.045 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 4, Budget: {WHT=1, BLU=4, GRN=1, BLK=1}
+2025-12-30 21:42:24.142 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Current token inventory is WHITE1, BLUE2, GREEN1, RED0, BLACK0 (total 4 tokens). No prestige‑point card can be afforded this turn, and none of the visible prestige cards become purchasable with the existing resources. The most valuable near‑term goal is to move toward a 3‑point card (L2_64) which requires three GREEN‑equivalent payments after the GREEN discount. We already have one GREEN token; we need two more. Taking a set that includes GREEN also gives us other scarce colors (WHITE and RED) that are needed for other high‑value cards such as L2_65 and for future engine development. The board supplies sufficient tokens of WHITE, GREEN and RED, so we can legally take exactly one of each (3 different colors). This raises our GREEN count from 1 to 2 (still one short of the 3 needed for L2_64) while also increasing WHITE to 2 (meeting the WHITE requirement for L2_65) and giving us our first RED token (useful for several prestige purchases). The move stays well below the 10‑token cap (new total 7), so no tokens need to be returned. Taking WHITE‑GREEN‑RED is therefore the most resource‑efficient TAKE_TOKENS option, accelerating the path to a 3‑point purchase while also improving our hand for subsequent turns.
+2025-12-30 21:42:24.142 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={WHITE=1, GREEN=1, RED=1}, tokensToReturn=null]
+2025-12-30 21:42:24.143 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 13 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:1 GRN:2 RED:3 BLK:4 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_31] GRN 0pts RED:3                     | [L1_23] WHT 0pts BLU:3                     |
+    [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         | [L1_30] GRN 0pts BLU:2 RED:2              
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_64] GRN 3pts GRN:6                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         |
+    [L3_88] RED 4pts GRN:7                     | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | nemotron-3-nano-30b-a3b:free (P1):
+  Score: 2 | Cards: 4                                  |   Score: 4 | Cards: 3
+  Tokens: WHT:1 BLU:2                                  |   Tokens: WHT:2 BLU:2 GRN:2 RED:1
+  Bonuses: {BLU:1 GRN:3}                               |   Bonuses: {BLU:2 BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: [L1_40] RED 1pt WHT:4
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+            [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | 
+
+======================================================================================
+
+2025-12-30 21:42:24.143 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 13 - Player 0's move
+2025-12-30 21:42:24.143 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 2, Budget: {WHT=1, BLU=3, GRN=3}
+2025-12-30 21:44:56.784 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: We cannot reserve more cards (reserve capacity is full), and no higher‑prestige card is available for purchase with our current tokens (the only face‑up card we can afford is L1_23, costing 3 BLUE gems).  We have 2 BLUE tokens and a TRUE BLUE bonus from L1_13, allowing us to purchase L1_23. This card grants a WHITE bonus, expanding our future discount options, and uses our only two BLUE tokens without exceeding any limits.  Since taking tokens would not enable any immediate card purchase (no card costs are meetable with 1 W and 2 B), buying L1_23 is the most efficient move toward accumulating prestige points.
+2025-12-30 21:44:56.784 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L1_23]
+2025-12-30 21:44:56.784 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 13 | Current Player: nemotron-3-nano-30b-a3b:free (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:1 BLU:2 GRN:2 RED:3 BLK:4 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_31] GRN 0pts RED:3                     | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_30] GRN 0pts BLU:2 RED:2               | [L1_37] RED 0pts BLU:2 GRN:1              
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_64] GRN 3pts GRN:6                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         |
+    [L3_88] RED 4pts GRN:7                     | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | nemotron-3-nano-30b-a3b:free (P1) (Current):
+  Score: 2 | Cards: 5                                  |   Score: 4 | Cards: 3
+  Tokens: WHT:1                                        |   Tokens: WHT:2 BLU:2 GRN:2 RED:1
+  Bonuses: {WHT:1 BLU:1 GRN:3}                         |   Bonuses: {BLU:2 BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: [L1_40] RED 1pt WHT:4
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+            [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | 
+
+======================================================================================
+
+2025-12-30 21:44:56.784 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 13 - Player 1's move
+2025-12-30 21:44:56.784 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 4, Budget: {WHT=2, BLU=4, GRN=2, RED=1, BLK=1}
+2025-12-30 21:45:15.484 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Current token inventory is 7 (WHITE2, BLUE2, GREEN2, RED1, BLACK0). The board has limited RED tokens (3) and we only have 1 RED, which is a bottleneck for several high‑value prestige cards (e.g., L2_65, L2_44) and for purchasing the reserved L1_40 later. We also need more WHITE tokens to eventually buy L1_40 (cost WHITE4) and to increase flexibility. Taking exactly three different‑color tokens is the only legal TAKE_TOKENS option that does not force a return, and the optimal set is RED, WHITE, and BLUE: it raises RED from 1→2 (addressing the shortage), WHITE from 2→3 (progress toward L1_40), and BLUE from 2→3 (maintaining our BLUE discount). This brings the total token count to exactly 10, so no tokens need to be returned. No prestige‑point card is affordable this turn, and reserving a card would not yield immediate points. Therefore the best move is to take one WHITE, one BLUE, and one RED token.
+2025-12-30 21:45:15.484 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={WHITE=1, BLUE=1, RED=1}, tokensToReturn=null]
+2025-12-30 21:45:15.484 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 14 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+BLU:1 GRN:2 RED:2 BLK:4 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_31] GRN 0pts RED:3                     | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_30] GRN 0pts BLU:2 RED:2               | [L1_37] RED 0pts BLU:2 GRN:1              
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_64] GRN 3pts GRN:6                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         |
+    [L3_88] RED 4pts GRN:7                     | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | nemotron-3-nano-30b-a3b:free (P1):
+  Score: 2 | Cards: 5                                  |   Score: 4 | Cards: 3
+  Tokens: WHT:1                                        |   Tokens: WHT:3 BLU:3 GRN:2 RED:2
+  Bonuses: {WHT:1 BLU:1 GRN:3}                         |   Bonuses: {BLU:2 BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: [L1_40] RED 1pt WHT:4
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+            [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | 
+
+======================================================================================
+
+2025-12-30 21:45:15.484 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 14 - Player 0's move
+2025-12-30 21:45:15.484 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 2, Budget: {WHT=2, BLU=1, GRN=3}
+2025-12-30 21:47:40.141 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: We have accumulated two green tokens and a gold token (from earlier token taking). The card L2_64 costs 6 green gems. With our three existing green bonuses the requirement drops to 3 green gems. We can substitute two green tokens and the gold token as a replacement for one green gem, meeting the required 3 green gems. This purchase gives us 3 prestige points and a new green bonus, which maximizes our progress toward the 15‑point goal. No other face‑up card can be afforded with our current tokens, and we cannot reserve more cards. Therefore buying L2_64 is the optimal action.
+2025-12-30 21:47:40.142 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L2_64]
+2025-12-30 21:47:40.142 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 1 for Player 0. Error: Invalid action: Insufficient tokens to purchase card L2_64
+2025-12-30 21:49:07.133 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Our current hand has only 1 white token and no other gems, while we have a full reserve of 3 cards, so we cannot reserve more. None of the face‑up cards are affordable with our tokens. The optimal short–term plan is to build a green‑heavy stack in order to buy the high‑prestige Level‑2 card L2_64 (3 prestige).  L2_64 costs 6 green and 3 red gems, but with our 3‑green bonus the green cost drops to 2 and we still need 3 red gems.  We can reduce the red requirement to 2 by first buying L1_37, which gives a RED bonus and only requires 1 BLUE gem (after our existing BLUE bonus).  Therefore we need at least one BLUE token to buy L1_37 on the next turn.  To support both plans we take 1 GREEN, 1 BLUE, and 1 RED token this turn—this satisfies the rule of taking three different colored tokens, keeps our total under the limit of 10, and positions us to buy L1_37 next turn and later L2_64 with the required green and red tokens.
+2025-12-30 21:49:07.133 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={BLUE=1, GREEN=1, RED=1}, tokensToReturn=null]
+2025-12-30 21:49:07.135 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 14 | Current Player: nemotron-3-nano-30b-a3b:free (P1)
+======================================================================================
+
+[BOARD BANK]
+GRN:1 RED:1 BLK:4 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_31] GRN 0pts RED:3                     | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_30] GRN 0pts BLU:2 RED:2               | [L1_37] RED 0pts BLU:2 GRN:1              
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_64] GRN 3pts GRN:6                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         |
+    [L3_88] RED 4pts GRN:7                     | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | nemotron-3-nano-30b-a3b:free (P1) (Current):
+  Score: 2 | Cards: 5                                  |   Score: 4 | Cards: 3
+  Tokens: WHT:1 BLU:1 GRN:1 RED:1                      |   Tokens: WHT:3 BLU:3 GRN:2 RED:2
+  Bonuses: {WHT:1 BLU:1 GRN:3}                         |   Bonuses: {BLU:2 BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: [L1_40] RED 1pt WHT:4
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+            [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | 
+
+======================================================================================
+
+2025-12-30 21:49:07.135 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 14 - Player 1's move
+2025-12-30 21:49:07.135 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 4, Budget: {WHT=3, BLU=5, GRN=2, RED=2, BLK=1}
+2025-12-30 21:50:14.512 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Current token inventory is WHITE1, BLUE1, GREEN1, RED1, BLACK0 (total 4). The board supplies only GREEN1, RED1, and BLACK4. To make progress toward the nearest high‑value prestige card (L2_65), which requires WHITE2, RED2, and BLACK3, we need to increase both RED and BLACK counts. Taking exactly three tokens is mandatory. The only color we can double is BLACK (board has 4), allowing us to take 2 BLACK plus a single of another color. Choosing RED as the third token gives us +1 RED (raising RED from 1 to 2, satisfying the RED2 requirement of L2_65) and +2 BLACK (raising BLACK from 0 to 2, getting closer to the needed 3). This yields a token total of 7, well under the 10‑token cap, so no returns are required. No visible prestige‑point card can be afforded this turn, and reserving a card would not provide immediate points. Therefore the optimal action is to TAKE_TOKENS with 2 BLACK and 1 RED.
+2025-12-30 21:50:14.512 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={RED=1, BLACK=2}, tokensToReturn=null]
+2025-12-30 21:50:14.512 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 1 for Player 1. Error: Invalid action: For taking 3 tokens, they must be of 3 different colors.
+2025-12-30 21:51:03.695 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I have exactly 10 tokens and cannot take any more without triggering a return, which would be wasteful. The only affordable cards are low‑cost Level‑1 developments. L1_37 costs BLUE2 and GREEN1; after applying my BLUE discount (1) and GREEN discount (3) the effective cost is just 1 BLUE token. I can afford this, spending only a single token and reducing my total from 10 to 9, avoiding any overflow. Purchasing L1_37 also gives me a RED gem, providing the first RED discount I lack – a critical resource for many high‑value prestige cards (e.g., L2_65, L2_44, and the reserved L3_74). This move advances my engine toward the 15‑point goal while blocking the card from the opponent, and it does not require any token returns.
+2025-12-30 21:51:03.695 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L1_37]
+2025-12-30 21:51:03.695 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 15 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+GRN:2 RED:1 BLK:4 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_31] GRN 0pts RED:3                     | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_30] GRN 0pts BLU:2 RED:2               | [L1_5] BLK 0pts GRN:2 RED:1               
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_64] GRN 3pts GRN:6                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         |
+    [L3_88] RED 4pts GRN:7                     | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | nemotron-3-nano-30b-a3b:free (P1):
+  Score: 2 | Cards: 5                                  |   Score: 4 | Cards: 4
+  Tokens: WHT:1 BLU:1 GRN:1 RED:1                      |   Tokens: WHT:3 BLU:3 GRN:1 RED:2
+  Bonuses: {WHT:1 BLU:1 GRN:3}                         |   Bonuses: {BLU:2 RED:1 BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: [L1_40] RED 1pt WHT:4
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+            [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | 
+
+======================================================================================
+
+2025-12-30 21:51:03.695 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 15 - Player 0's move
+2025-12-30 21:51:03.695 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 2, Budget: {WHT=2, BLU=2, GRN=4, RED=1}
+2025-12-30 21:53:55.053 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: We cannot reserve any additional cards (we already have 3 reserved cards) and we have no gold tokens to acquire. The only cards we can purchase with our current tokens (1W,1B,1G,1R) are L1_12 or L1_5, both of which require a single red token. Purchasing either would use our sole red token, after which we would be unable to buy any other card that requires red and we would essentially be stuck. Instead, the most flexible move is to take the remaining tokens from the board: one green, one red, and one black (three different colors are available: GREEN 2, RED 1, BLACK 4). This leaves us with 1W,1B,2G,2R,1Blk, preserving the red token for a future discount and giving us a more balanced token stack. No tokens need to be returned, and this action is legal given the board state.
+2025-12-30 21:53:55.053 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={GREEN=1, RED=1, BLACK=1}, tokensToReturn=null]
+2025-12-30 21:53:55.054 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 15 | Current Player: nemotron-3-nano-30b-a3b:free (P1)
+======================================================================================
+
+[BOARD BANK]
+GRN:1 BLK:3 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_31] GRN 0pts RED:3                     | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_30] GRN 0pts BLU:2 RED:2               | [L1_5] BLK 0pts GRN:2 RED:1               
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_64] GRN 3pts GRN:6                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         |
+    [L3_88] RED 4pts GRN:7                     | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | nemotron-3-nano-30b-a3b:free (P1) (Current):
+  Score: 2 | Cards: 5                                  |   Score: 4 | Cards: 4
+  Tokens: WHT:1 BLU:1 GRN:2 RED:2 BLK:1                |   Tokens: WHT:3 BLU:3 GRN:1 RED:2
+  Bonuses: {WHT:1 BLU:1 GRN:3}                         |   Bonuses: {BLU:2 RED:1 BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: [L1_40] RED 1pt WHT:4
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+            [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | 
+
+======================================================================================
+
+2025-12-30 21:53:55.054 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 15 - Player 1's move
+2025-12-30 21:53:55.055 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 4, Budget: {WHT=3, BLU=5, GRN=1, RED=3, BLK=1}
+2025-12-30 21:55:16.827 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: The board currently contains tokens of only GREEN and BLACK, but the TAKE_TOKENS action requires either three different colors or a double of a color with at least four tokens on the board. Since neither condition is met, taking tokens is impossible. The player already has three reserved cards, which means no additional card can be reserved without exceeding the reservation limit. Therefore the only legal action that directly advances the game state is to purchase an affordable development card. After applying discounts (GREEN discount 3 eliminates the GREEN cost of 2), L1_5 only requires 1 RED token, which the player possesses (RED2). Purchasing L1_5 spends a single RED token, stays well below the 10‑token cap, and adds a BLACK bonus gem, increasing the player’s BLACK discount from 1 to 2. This strengthens future purchasing power for high‑value prestige cards that rely on BLACK, making L1_5 the optimal move. Consequently the action type is PURCHASE_CARD with card_id set to "L1_5", and all token and return fields are set to zero because no tokens are taken or returned.
+
+action_type: "PURCHASE_CARD"
+card_id: "L1_5"
+All take_* fields: 0
+All return_* fields: 0
+2025-12-30 21:55:16.827 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L1_5]
+2025-12-30 21:55:16.827 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 1 for Player 1. Error: Invalid action: Insufficient tokens to purchase card L1_5
+2025-12-30 21:55:33.461 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: We examine all visible cards that can be afforded with our current discounts (WHITE‑1, BLUE‑2, GREEN‑3). After applying discounts, the only Level‑2 card we can pay is L2_62, whose cost is BLUE5 GREEN3. With a BLUE discount of 2 we need 3 BLUE tokens, and we currently hold exactly three BLUE tokens. Paying this cost spends all our BLUEs, gives us one GREEN bonus gem (raising our GREEN discount from 3 to 4), and awards 2 prestige points, increasing our score from 4 to 6. This is the highest‑value immediate gain available, and it does not require any token returns or exceed the 10‑token limit. All other purchasable cards are either more expensive or give no prestige points. Therefore the optimal action is to PURCHASE_CARD L2_62.
+2025-12-30 21:55:33.461 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L2_62]
+2025-12-30 21:55:33.461 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 2 for Player 1. Error: Invalid action: Insufficient tokens to purchase card L2_62
+2025-12-30 21:56:19.481 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: The board only shows GREEN and BLACK tokens, so we cannot legally take three different colors (need three colors) nor take two of a single color (requires 4+ of that color). Therefore TAKE_TOKENS is impossible. RESERVE_CARD would only give a gold token without immediate points, while PURCHASE_CARD can be executed now. Among the visible Level‑1 cards, L1_30 costs BLUE2 and RED2; after applying our BLUE discount (1) and GREEN discount (3) the effective cost is 1 BLUE and 2 RED, which we exactly hold (BLUE1, RED2). Buying L1_30 will increase the GREEN discount from 3 to 4, making the Level‑2 prestige card L2_64 (3 points) affordable on the next turn (its cost becomes 2 GREEN after discount, which we will have). This yields the highest immediate point gain possible this turn and moves us toward the 15‑point goal while blocking the card from the opponent. Thus the optimal action is to PURCHASE_CARD L1_30. No tokens are taken, so all take_* and return_* fields are set to 0.
+2025-12-30 21:56:19.481 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L1_30]
+2025-12-30 21:56:19.481 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 16 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+GRN:1 RED:1 BLK:3 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_31] GRN 0pts RED:3                     | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_5] BLK 0pts GRN:2 RED:1                | [L1_34] RED 0pts WHT:2 BLU:1 GRN:1 BLK:1  
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_64] GRN 3pts GRN:6                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         |
+    [L3_88] RED 4pts GRN:7                     | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | nemotron-3-nano-30b-a3b:free (P1):
+  Score: 2 | Cards: 5                                  |   Score: 4 | Cards: 5
+  Tokens: WHT:1 BLU:1 GRN:2 RED:2 BLK:1                |   Tokens: WHT:3 BLU:3 GRN:1 RED:1
+  Bonuses: {WHT:1 BLU:1 GRN:3}                         |   Bonuses: {BLU:2 GRN:1 RED:1 BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: [L1_40] RED 1pt WHT:4
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+            [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | 
+
+======================================================================================
+
+2025-12-30 21:56:19.481 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 16 - Player 0's move
+2025-12-30 21:56:19.481 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 2, Budget: {WHT=2, BLU=2, GRN=5, RED=2, BLK=1}
+2025-12-30 22:06:53.176 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: We currently have 1W, 1B, 2G, 2R, 1Blk tokens and bonuses G3, B1, W1. Face‑up Level‑1 cards L1_31, L1_12, L1_5, L1_34. Only L1_5 is affordable with 1R token. Buying L1_5 gives a BLACK bonus and preserves the 1R token for future purchases (L2_62 uses 2 B tokens after a BLACK bonus). This also removes a potential bonus card (L1_5) from the board, limiting opponent’s options. No other card is affordable now. Taking tokens would waste a turn and give no immediate purchase possibility. Thus the optimal action is to buy L1_5.
+2025-12-30 22:06:53.176 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L1_5]
+2025-12-30 22:06:53.177 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 16 | Current Player: nemotron-3-nano-30b-a3b:free (P1)
+======================================================================================
+
+[BOARD BANK]
+GRN:1 RED:2 BLK:3 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_31] GRN 0pts RED:3                     | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_34] RED 0pts WHT:2 BLU:1 GRN:1 BLK:1   | [L1_2] BLK 0pts WHT:1 BLU:2 GRN:1 RED:1   
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_64] GRN 3pts GRN:6                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         |
+    [L3_88] RED 4pts GRN:7                     | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | nemotron-3-nano-30b-a3b:free (P1) (Current):
+  Score: 2 | Cards: 6                                  |   Score: 4 | Cards: 5
+  Tokens: WHT:1 BLU:1 GRN:2 RED:1 BLK:1                |   Tokens: WHT:3 BLU:3 GRN:1 RED:1
+  Bonuses: {WHT:1 BLU:1 GRN:3 BLK:1}                   |   Bonuses: {BLU:2 GRN:1 RED:1 BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: [L1_40] RED 1pt WHT:4
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+            [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | 
+
+======================================================================================
+
+2025-12-30 22:06:53.177 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 16 - Player 1's move
+2025-12-30 22:06:53.177 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 4, Budget: {WHT=3, BLU=5, GRN=2, RED=2, BLK=1}
+2025-12-30 22:07:51.058 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Current token inventory is WHITE3, BLUE3, GREEN1, RED1, BLACK0, GOLD0 (total 8). Board tokens are GREEN1, RED2, BLACK3, GOLD5, so the only legal TAKE_TOKENS move is to take exactly one token each of three different colors. To afford the Level‑2 prestige card L2_62 (2 prestige points) next turn we need 2 GREEN tokens after discounts (cost after discounts: GREEN2) while we already have the required 3 BLUE tokens. Taking GREEN, RED, and BLACK gives us a second GREEN token and also adds a RED and a BLACK token, which are both scarce resources for future purchases. This raises the total token count from 8 to 11, so we must return one token; we return a surplus WHITE token to keep all 3 BLUE tokens intact. After the return we will have WHITE2, BLUE3, GREEN2, RED2, BLACK1 (total 10), which is exactly enough to purchase L2_62 (cost: BLUE3 + GREEN2) and earn 2 prestige points while gaining a GREEN discount for later turns. No other visible prestige card can be bought this turn, and reserving a card would not yield immediate points. Therefore the optimal action is to TAKE_TOKENS with take_GREEN=1, take_RED=1, take_BLACK=1 and return one WHITE token.
+2025-12-30 22:07:51.058 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={GREEN=1, RED=1, BLACK=1}, tokensToReturn={WHITE=1}]
+2025-12-30 22:07:51.060 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 17 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:1 RED:1 BLK:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_31] GRN 0pts RED:3                     | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_34] RED 0pts WHT:2 BLU:1 GRN:1 BLK:1   | [L1_2] BLK 0pts WHT:1 BLU:2 GRN:1 RED:1   
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_64] GRN 3pts GRN:6                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         |
+    [L3_88] RED 4pts GRN:7                     | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | nemotron-3-nano-30b-a3b:free (P1):
+  Score: 2 | Cards: 6                                  |   Score: 4 | Cards: 5
+  Tokens: WHT:1 BLU:1 GRN:2 RED:1 BLK:1                |   Tokens: WHT:2 BLU:3 GRN:2 RED:2 BLK:1
+  Bonuses: {WHT:1 BLU:1 GRN:3 BLK:1}                   |   Bonuses: {BLU:2 GRN:1 RED:1 BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: [L1_40] RED 1pt WHT:4
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+            [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | 
+
+======================================================================================
+
+2025-12-30 22:07:51.060 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 17 - Player 0's move
+2025-12-30 22:07:51.060 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 2, Budget: {WHT=2, BLU=2, GRN=5, RED=1, BLK=2}
+2025-12-30 22:08:16.113 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: We examined the board state and discovered that our three reserved cards cannot be afforded given the current token supply (no more BLUE or RED gems will be available).  No Level‑2 prestige card is reachable with the tokens we hold.  The only Level‑1 card that can be bought without using our lone RED token and that grants a useful new bonus is L1_34, which costs a single WHITE gem.  Purchasing it consumes the sole WHITE token we possess, adds a RED bonus, and preserves our remaining RED token for future purchases.  This move maximally advances our economy and keeps future options open, making it the optimal action right now.
+2025-12-30 22:08:16.113 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L1_34]
+2025-12-30 22:08:16.113 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 17 | Current Player: nemotron-3-nano-30b-a3b:free (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 RED:1 BLK:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_31] GRN 0pts RED:3                     | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_2] BLK 0pts WHT:1 BLU:2 GRN:1 RED:1    | [L1_25] GRN 0pts WHT:1 BLU:1 RED:1 BLK:1  
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_64] GRN 3pts GRN:6                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         |
+    [L3_88] RED 4pts GRN:7                     | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | nemotron-3-nano-30b-a3b:free (P1) (Current):
+  Score: 2 | Cards: 7                                  |   Score: 4 | Cards: 5
+  Tokens: BLU:1 GRN:2 RED:1 BLK:1                      |   Tokens: WHT:2 BLU:3 GRN:2 RED:2 BLK:1
+  Bonuses: {WHT:1 BLU:1 GRN:3 RED:1 BLK:1}             |   Bonuses: {BLU:2 GRN:1 RED:1 BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: [L1_40] RED 1pt WHT:4
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+            [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | 
+
+======================================================================================
+
+2025-12-30 22:08:16.113 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 17 - Player 1's move
+2025-12-30 22:08:16.113 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 4, Budget: {WHT=2, BLU=5, GRN=3, RED=3, BLK=2}
+2025-12-30 22:08:41.633 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Current token inventory is 5 (0 WHITE, 1 BLUE, 2 GREEN, 1 RED, 1 BLACK). The only affordable actions this turn are free Level‑1 purchases because all visible Level‑2 and Level‑3 prestige cards require more tokens than we possess after discounts. Among the visible Level‑1 cards, L1_25 costs 1 WHITE, 1 BLUE, 1 RED, and 1 BLACK. After applying our discounts (WHITE‑1, BLUE‑1, GREEN‑3, RED‑1, BLACK‑1) each of those costs becomes 0, meaning we can purchase L1_25 without spending any tokens. Buying L1_25 grants a GREEN bonus gem, raising our GREEN discount from 3 to 4. With a GREEN discount of 4, the Level‑2 prestige card L2_64 (cost 6 GREEN) will require only 2 GREEN tokens after discount. We already hold exactly 2 GREEN tokens, so next turn we will be able to purchase L2_64 for 3 prestige points, a high‑value move that also blocks the opponent from claiming it. Purchasing now yields immediate engine growth, costs no tokens, keeps us well below the 10‑token limit, and therefore generates no need for token returns. Hence the optimal action is to PURCHASE_CARD L1_25.
+2025-12-30 22:08:41.633 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L1_25]
+2025-12-30 22:08:41.636 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 18 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 RED:1 BLK:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_31] GRN 0pts RED:3                     | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_2] BLK 0pts WHT:1 BLU:2 GRN:1 RED:1    | [L1_22] WHT 0pts BLU:2 BLK:2              
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_64] GRN 3pts GRN:6                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         |
+    [L3_88] RED 4pts GRN:7                     | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | nemotron-3-nano-30b-a3b:free (P1):
+  Score: 2 | Cards: 7                                  |   Score: 4 | Cards: 6
+  Tokens: BLU:1 GRN:2 RED:1 BLK:1                      |   Tokens: WHT:1 BLU:3 GRN:2 RED:2 BLK:1
+  Bonuses: {WHT:1 BLU:1 GRN:3 RED:1 BLK:1}             |   Bonuses: {BLU:2 GRN:2 RED:1 BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: [L1_40] RED 1pt WHT:4
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+            [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | 
+
+======================================================================================
+
+2025-12-30 22:08:41.636 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 18 - Player 0's move
+2025-12-30 22:08:41.636 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 2, Budget: {WHT=1, BLU=2, GRN=5, RED=2, BLK=2}
+2025-12-30 22:10:11.613 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Current tokens: 0W,1B,2G,1R,1Bk. Bonuses: W1,B1,G3,R1,Bk1. The only face‑up level‑1 card that can be taken freely and gives a bonus that will not help future purchases is L1_12; it only adds a BLUE bonus, but we have no BLUE tokens available. The only remaining way to accumulate prestige quickly is to buy the level‑2 card L2_44 (2 prestige) which costs 2 GREEN and 2 RED after discounts, and to later buy L2_65 (1 prestige) which uses a small amount of BLUE and BLACK tokens. We currently have only 1 RED token, so we cannot buy L2_44 yet. The only way to acquire the required RED token is to take tokens from the board. The board offers one RED, one BLACK, and three WHITE tokens – we can take a set of three different colors satisfying the token‑taking rule. Taking 1 WHITE, 1 RED, and 1 BLACK increases our token supply to 8 and gives us the necessary RED token for L2_44. After that, we can purchase L2_44 next turn, using the new RED token and two GREEN tokens we already hold. This strategy maximises the prestige points we can obtain per turn and moves us closer to the 15‑point goal. Therefore the best immediate action is to TAKE_TOKENS.
+
+2025-12-30 22:10:11.613 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={WHITE=1, RED=1, BLACK=1}, tokensToReturn=null]
+2025-12-30 22:10:11.613 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 18 | Current Player: nemotron-3-nano-30b-a3b:free (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLK:1 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_31] GRN 0pts RED:3                     | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_2] BLK 0pts WHT:1 BLU:2 GRN:1 RED:1    | [L1_22] WHT 0pts BLU:2 BLK:2              
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_62] GRN 2pts BLU:5 GRN:3               |
+    [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_64] GRN 3pts GRN:6                    
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         |
+    [L3_88] RED 4pts GRN:7                     | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | nemotron-3-nano-30b-a3b:free (P1) (Current):
+  Score: 2 | Cards: 7                                  |   Score: 4 | Cards: 6
+  Tokens: WHT:1 BLU:1 GRN:2 RED:2 BLK:2                |   Tokens: WHT:1 BLU:3 GRN:2 RED:2 BLK:1
+  Bonuses: {WHT:1 BLU:1 GRN:3 RED:1 BLK:1}             |   Bonuses: {BLU:2 GRN:2 RED:1 BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: [L1_40] RED 1pt WHT:4
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+            [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | 
+
+======================================================================================
+
+2025-12-30 22:10:11.613 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 18 - Player 1's move
+2025-12-30 22:10:11.613 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 4, Budget: {WHT=1, BLU=5, GRN=4, RED=3, BLK=2}
+2025-12-30 22:10:26.513 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Take token action is not possible because the board only shows WHITE and BLACK tokens (two colors) and neither color has 4 or more tokens, so we cannot take three different colors nor take two of the same color. Therefore the only viable actions are RESERVE_CARD or PURCHASE_CARD. Purchasing a card gives immediate prestige points and can also improve discounts for future turns. Among the visible cards, L2_62 (a Level‑2 prestige card worth 2 points) is affordable: after applying our discounts (BLUE 2, GREEN 2) its cost becomes 3 BLUE and 1 GREEN, which we can pay exactly with our current tokens (we have 3 BLUE and 2 GREEN). Paying this cost will not exceed the 10‑token limit and will leave us with 5 tokens remaining. The purchase also grants a GREEN bonus gem, raising our GREEN discount from 2 to 3, which will help us acquire higher‑value Level‑2 and Level‑3 cards later. No other visible prestige card can be bought this turn for more points, and reserving a card would only give a gold token without immediate points. Hence the optimal move is to purchase L2_62.
+
+Action chosen: PURCHASE_CARD with card_id "L2_62". No tokens are taken, so all take_* fields are 0 and no returns are needed.
+2025-12-30 22:10:26.513 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L2_62]
+2025-12-30 22:10:26.513 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 19 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:3 GRN:1 BLK:1 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_31] GRN 0pts RED:3                     | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_2] BLK 0pts WHT:1 BLU:2 GRN:1 RED:1    | [L1_22] WHT 0pts BLU:2 BLK:2              
+L2: [L2_44] BLK 2pts GRN:5 RED:3               | [L2_65] RED 1pt WHT:2 RED:2 BLK:3          |
+    [L2_64] GRN 3pts GRN:6                     | [L2_47] BLU 1pt BLU:2 GRN:2 RED:3         
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         |
+    [L3_88] RED 4pts GRN:7                     | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | nemotron-3-nano-30b-a3b:free (P1):
+  Score: 2 | Cards: 7                                  |   Score: 6 | Cards: 7
+  Tokens: WHT:1 BLU:1 GRN:2 RED:2 BLK:2                |   Tokens: WHT:1 GRN:1 RED:2 BLK:1
+  Bonuses: {WHT:1 BLU:1 GRN:3 RED:1 BLK:1}             |   Bonuses: {BLU:2 GRN:3 RED:1 BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: [L1_40] RED 1pt WHT:4
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+            [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | 
+
+======================================================================================
+
+2025-12-30 22:10:26.513 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 19 - Player 0's move
+2025-12-30 22:10:26.513 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 2, Budget: {WHT=2, BLU=2, GRN=5, RED=3, BLK=3}
+2025-12-30 22:11:02.074 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: We have 1 white, 1 blue, 2 green, 2 red and 2 black tokens. Our bonuses are W1, B1, G3, R1, Bk1. The only Level‑2 card with affordable costs and the highest prestige points is L2_44: cost {GREEN:5, RED:3}.  After discounts, it requires 5‑3=2 green tokens and 3‑1=2 red tokens, which is exactly what we have. Buying L2_44 will give us 2 prestige points and a black bonus (black bonus rises to 2). It removes a valuable card from the board, limiting opponent options, and uses only 4 tokens out of our 8, keeping us well below the 10‑token limit. No other card on the board can provide a higher point gain in a single turn, and we cannot reserve any more cards. Thus purchasing L2_44 is the most efficient move. No tokens are taken or returned this turn.
+2025-12-30 22:11:02.074 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L2_44]
+2025-12-30 22:11:02.074 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 19 | Current Player: nemotron-3-nano-30b-a3b:free (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:3 GRN:3 RED:2 BLK:1 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_31] GRN 0pts RED:3                     | [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         |
+    [L1_2] BLK 0pts WHT:1 BLU:2 GRN:1 RED:1    | [L1_22] WHT 0pts BLU:2 BLK:2              
+L2: [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_64] GRN 3pts GRN:6                     |
+    [L2_47] BLU 1pt BLU:2 GRN:2 RED:3          | [L2_56] WHT 2pts RED:5 BLK:3              
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         |
+    [L3_88] RED 4pts GRN:7                     | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | nemotron-3-nano-30b-a3b:free (P1) (Current):
+  Score: 4 | Cards: 8                                  |   Score: 6 | Cards: 7
+  Tokens: WHT:1 BLU:1 BLK:2                            |   Tokens: WHT:1 GRN:1 RED:2 BLK:1
+  Bonuses: {WHT:1 BLU:1 GRN:3 RED:1 BLK:2}             |   Bonuses: {BLU:2 GRN:3 RED:1 BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: [L1_40] RED 1pt WHT:4
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+            [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | 
+
+======================================================================================
+
+2025-12-30 22:11:02.074 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 19 - Player 1's move
+2025-12-30 22:11:02.074 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 6, Budget: {WHT=1, BLU=2, GRN=4, RED=3, BLK=2}
+2025-12-30 22:11:41.563 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Current token inventory is WHITE1, BLUE1, GREEN1, RED2, BLACK1 (total 6). Discounts are WHITE1, BLUE2, GREEN3, RED1, BLACK2. Several level‑1 cards are free, and level‑2 cards L2_65 and L2_47 are affordable for 1 prestige point each. However, the only card that can create a 3‑point opportunity next turn is L1_31: it costs exactly the 2 RED tokens we hold, and after purchase we will receive a GREEN token and increase the GREEN discount from 3 to 4. With a GREEN discount of 4, the Level‑2 prestige card L2_64 (3 points) will become affordable on the following turn (effective cost 2 GREEN, which we will have). This sequence yields 3 points in two turns (1.5 per turn) and also blocks the opponent, who also has the required RED tokens to take L1_31 on their next turn. Therefore the optimal action is to purchase L1_31 now, which requires no token take and does not trigger any return.
+
+Consequently, the action is PURCHASE_CARD with card_id "L1_31". No tokens are taken, so all take_* fields are 0 and no returns are needed.
+2025-12-30 22:11:41.564 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L1_31]
+2025-12-30 22:11:41.564 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 20 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:3 GRN:3 RED:4 BLK:1 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         | [L1_2] BLK 0pts WHT:1 BLU:2 GRN:1 RED:1    |
+    [L1_22] WHT 0pts BLU:2 BLK:2               | [L1_18] WHT 0pts BLU:1 GRN:2 RED:1 BLK:1  
+L2: [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_64] GRN 3pts GRN:6                     |
+    [L2_47] BLU 1pt BLU:2 GRN:2 RED:3          | [L2_56] WHT 2pts RED:5 BLK:3              
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         |
+    [L3_88] RED 4pts GRN:7                     | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | nemotron-3-nano-30b-a3b:free (P1):
+  Score: 4 | Cards: 8                                  |   Score: 6 | Cards: 8
+  Tokens: WHT:1 BLU:1 BLK:2                            |   Tokens: WHT:1 GRN:1 BLK:1
+  Bonuses: {WHT:1 BLU:1 GRN:3 RED:1 BLK:2}             |   Bonuses: {BLU:2 GRN:4 RED:1 BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: [L1_40] RED 1pt WHT:4
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+            [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | 
+
+======================================================================================
+
+2025-12-30 22:11:41.564 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 20 - Player 0's move
+2025-12-30 22:11:41.565 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 4, Budget: {WHT=2, BLU=2, GRN=3, RED=1, BLK=4}
+2025-12-30 22:12:42.616 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 1 for Player 0. Error: Invalid action: Unknown action type: 
+2025-12-30 22:13:38.649 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: ...
+2025-12-30 22:13:38.649 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={WHITE=1, BLUE=1, RED=1}, tokensToReturn=null]
+2025-12-30 22:13:38.649 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 20 | Current Player: nemotron-3-nano-30b-a3b:free (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:1 BLU:2 GRN:3 RED:3 BLK:1 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         | [L1_2] BLK 0pts WHT:1 BLU:2 GRN:1 RED:1    |
+    [L1_22] WHT 0pts BLU:2 BLK:2               | [L1_18] WHT 0pts BLU:1 GRN:2 RED:1 BLK:1  
+L2: [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_64] GRN 3pts GRN:6                     |
+    [L2_47] BLU 1pt BLU:2 GRN:2 RED:3          | [L2_56] WHT 2pts RED:5 BLK:3              
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         |
+    [L3_88] RED 4pts GRN:7                     | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | nemotron-3-nano-30b-a3b:free (P1) (Current):
+  Score: 4 | Cards: 8                                  |   Score: 6 | Cards: 8
+  Tokens: WHT:2 BLU:2 RED:1 BLK:2                      |   Tokens: WHT:1 GRN:1 BLK:1
+  Bonuses: {WHT:1 BLU:1 GRN:3 RED:1 BLK:2}             |   Bonuses: {BLU:2 GRN:4 RED:1 BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: [L1_40] RED 1pt WHT:4
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+            [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | 
+
+======================================================================================
+
+2025-12-30 22:13:38.649 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 20 - Player 1's move
+2025-12-30 22:13:38.649 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 6, Budget: {WHT=1, BLU=2, GRN=5, RED=1, BLK=2}
+2025-12-30 22:14:29.955 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Current token counts are WHITE2, BLUE2, GREEN0, RED1, BLACK2 (total 7). The only legal TAKE_TOKENS move is to take exactly one token of three different colors. The board provides WHITE1, BLUE2, BLACK1, among others. Taking WHITE, BLUE, and BLACK satisfies the 3‑different‑colors rule and raises our token pool to WHITE3, BLUE3, BLACK3, GREEN0, RED1 (total 10) without exceeding the 10‑token limit. This exactly meets the requirement of noble N6 (WHITE3, BLUE3, BLACK3), which is worth 3 prestige points and can be claimed automatically after the token take. No other immediate purchase yields more than 1 point, and reserving a card would not give points this turn. Therefore the optimal action is to take one WHITE, one BLUE, and one BLACK token, triggering the N6 noble for +3 points while keeping the token count at the maximum allowed.
+2025-12-30 22:14:29.955 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={WHITE=1, BLUE=1, BLACK=1}, tokensToReturn=null]
+2025-12-30 22:14:29.956 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 21 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+BLU:1 GRN:3 RED:3 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         | [L1_2] BLK 0pts WHT:1 BLU:2 GRN:1 RED:1    |
+    [L1_22] WHT 0pts BLU:2 BLK:2               | [L1_18] WHT 0pts BLU:1 GRN:2 RED:1 BLK:1  
+L2: [L2_65] RED 1pt WHT:2 RED:2 BLK:3          | [L2_64] GRN 3pts GRN:6                     |
+    [L2_47] BLU 1pt BLU:2 GRN:2 RED:3          | [L2_56] WHT 2pts RED:5 BLK:3              
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         |
+    [L3_88] RED 4pts GRN:7                     | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | nemotron-3-nano-30b-a3b:free (P1):
+  Score: 4 | Cards: 8                                  |   Score: 6 | Cards: 8
+  Tokens: WHT:2 BLU:2 RED:1 BLK:2                      |   Tokens: WHT:2 BLU:1 GRN:1 BLK:2
+  Bonuses: {WHT:1 BLU:1 GRN:3 RED:1 BLK:2}             |   Bonuses: {BLU:2 GRN:4 RED:1 BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: [L1_40] RED 1pt WHT:4
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+            [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | 
+
+======================================================================================
+
+2025-12-30 22:14:29.956 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 21 - Player 0's move
+2025-12-30 22:14:29.956 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 4, Budget: {WHT=3, BLU=3, GRN=3, RED=2, BLK=4}
+2025-12-30 22:15:17.488 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: ,
+2025-12-30 22:15:17.488 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={RED=858}, tokensToReturn={WHITE=23, BLUE=1, GREEN=26}]
+2025-12-30 22:15:17.488 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 1 for Player 0. Error: Invalid action: Invalid token count. Must take 3 different or 2 matching tokens.
+2025-12-30 22:15:32.451 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: We have valid tokens available on board: 0 white, 1 blue, 3 green, 2 red? if……..…f…… …..…….…??? …?……..???…???… .
+2025-12-30 22:15:32.452 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens=null, tokensToReturn={WHITE=627, GREEN=10}]
+2025-12-30 22:15:32.452 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 2 for Player 0. Error: Invalid action: Must select tokens to take.
+2025-12-30 22:16:27.973 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: After evaluating the board and our tokens and bonuses, the only prestige card that is affordable with our current tokens is L2_65. Purchasing it gives +1 prestige and a RED bonus, and removes it from the board so our opponent cannot buy it next turn. Other available actions would give no prestige or require tokens that might be better saved for later, so we purchase L2_65 now.
+2025-12-30 22:16:27.973 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L2_65]
+2025-12-30 22:16:27.974 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 21 | Current Player: nemotron-3-nano-30b-a3b:free (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:1 BLU:1 GRN:3 RED:4 BLK:1 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         | [L1_2] BLK 0pts WHT:1 BLU:2 GRN:1 RED:1    |
+    [L1_22] WHT 0pts BLU:2 BLK:2               | [L1_18] WHT 0pts BLU:1 GRN:2 RED:1 BLK:1  
+L2: [L2_64] GRN 3pts GRN:6                     | [L2_47] BLU 1pt BLU:2 GRN:2 RED:3          |
+    [L2_56] WHT 2pts RED:5 BLK:3               | [L2_68] RED 2pts WHT:3 BLK:5              
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         |
+    [L3_88] RED 4pts GRN:7                     | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | nemotron-3-nano-30b-a3b:free (P1) (Current):
+  Score: 5 | Cards: 9                                  |   Score: 6 | Cards: 8
+  Tokens: WHT:1 BLU:2 BLK:1                            |   Tokens: WHT:2 BLU:1 GRN:1 BLK:2
+  Bonuses: {WHT:1 BLU:1 GRN:3 RED:2 BLK:2}             |   Bonuses: {BLU:2 GRN:4 RED:1 BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: [L1_40] RED 1pt WHT:4
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+            [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | 
+
+======================================================================================
+
+2025-12-30 22:16:27.974 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 21 - Player 1's move
+2025-12-30 22:16:27.975 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 6, Budget: {WHT=2, BLU=3, GRN=5, RED=1, BLK=3}
+2025-12-30 22:16:57.024 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 1 for Player 1. Error: Invalid action: Unknown action type: 
+2025-12-30 22:17:22.040 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Current token inventory is WHITE3, BLUE3, GREEN0, RED1, BLACK2 (total 9). Board tokens are WHITE1, BLUE1, GREEN3, RED4, BLACK1, GOLD5. The only legal TAKE_TOKENS moves are three different colors or two of the same color (only RED has ≥4). Taking three different colors lets us add one token of each chosen color; taking two REDs would also be legal but does not help us reach any noble. Our current tokens already satisfy WHITE≥3 and BLUE≥3, but we lack one BLACK to meet noble N6 (requirement WHITE3, BLUE3, BLACK3) which is worth 3 prestige points. By taking GREEN, RED, and BLACK (one of each) we raise our token pool to 12, exceeding the 10‑token limit, so we must return exactly two tokens. We return the GREEN we just took and one of the two REDs we now possess, leaving us with WHITE3, BLUE3, RED1, BLACK3 – precisely the noble N6 requirement. This action grants the 3‑point noble immediately, giving the biggest single‑turn prestige boost available. No visible prestige card can be bought this turn for more than 1 point, and purchasing any card would yield fewer points than claiming N6. Therefore the optimal move is to TAKE_TOKENS with take_GREEN=1, take_RED=1, take_BLACK=1 and return_GREEN=1, return_RED=1 to stay at 10 tokens while completing the noble.
+2025-12-30 22:17:22.040 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={GREEN=1, RED=1, BLACK=1}, tokensToReturn={GREEN=1, RED=1}]
+2025-12-30 22:17:22.041 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 22 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:1 BLU:1 GRN:3 RED:4 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         | [L1_2] BLK 0pts WHT:1 BLU:2 GRN:1 RED:1    |
+    [L1_22] WHT 0pts BLU:2 BLK:2               | [L1_18] WHT 0pts BLU:1 GRN:2 RED:1 BLK:1  
+L2: [L2_64] GRN 3pts GRN:6                     | [L2_47] BLU 1pt BLU:2 GRN:2 RED:3          |
+    [L2_56] WHT 2pts RED:5 BLK:3               | [L2_68] RED 2pts WHT:3 BLK:5              
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         |
+    [L3_88] RED 4pts GRN:7                     | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | nemotron-3-nano-30b-a3b:free (P1):
+  Score: 5 | Cards: 9                                  |   Score: 6 | Cards: 8
+  Tokens: WHT:1 BLU:2 BLK:1                            |   Tokens: WHT:2 BLU:1 GRN:1 BLK:3
+  Bonuses: {WHT:1 BLU:1 GRN:3 RED:2 BLK:2}             |   Bonuses: {BLU:2 GRN:4 RED:1 BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: [L1_40] RED 1pt WHT:4
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+            [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | 
+
+======================================================================================
+
+2025-12-30 22:17:22.041 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 22 - Player 0's move
+2025-12-30 22:17:22.041 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 5, Budget: {WHT=2, BLU=3, GRN=3, RED=2, BLK=3}
+2025-12-30 22:18:49.858 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Current tokens: 1 white, 2 blue, 0 green, 0 red, 1 black. We want to acquire a prestige point quickly. The only low‑cost card that gives prestige is L2_47 requiring 1 red token after discounts. The board has 4 red tokens, so we can afford to take them. Since we have 4 tokens, taking 3 new tokens keeps us safe below the 10‑token limit. By taking 1 red, 1 green, and 1 blue we obtain the required red for L2_47 and also 1 green and 1 blue which keep future costs low. After this take we will have 7 tokens; the next turn we can purchase L2_47, paying 1 red and 1 blue, gaining 1 prestige and a blue bonus. This is the most efficient path to progress while maintaining a healthy token count. No need to reserve or purchase a free card on this turn because free cards give no prestige.
+2025-12-30 22:18:49.858 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={BLUE=1, GREEN=1, RED=1}, tokensToReturn=null]
+2025-12-30 22:18:49.858 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 22 | Current Player: nemotron-3-nano-30b-a3b:free (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:1 GRN:2 RED:3 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         | [L1_2] BLK 0pts WHT:1 BLU:2 GRN:1 RED:1    |
+    [L1_22] WHT 0pts BLU:2 BLK:2               | [L1_18] WHT 0pts BLU:1 GRN:2 RED:1 BLK:1  
+L2: [L2_64] GRN 3pts GRN:6                     | [L2_47] BLU 1pt BLU:2 GRN:2 RED:3          |
+    [L2_56] WHT 2pts RED:5 BLK:3               | [L2_68] RED 2pts WHT:3 BLK:5              
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         |
+    [L3_88] RED 4pts GRN:7                     | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | nemotron-3-nano-30b-a3b:free (P1) (Current):
+  Score: 5 | Cards: 9                                  |   Score: 6 | Cards: 8
+  Tokens: WHT:1 BLU:3 GRN:1 RED:1 BLK:1                |   Tokens: WHT:2 BLU:1 GRN:1 BLK:3
+  Bonuses: {WHT:1 BLU:1 GRN:3 RED:2 BLK:2}             |   Bonuses: {BLU:2 GRN:4 RED:1 BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: [L1_40] RED 1pt WHT:4
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+            [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | 
+
+======================================================================================
+
+2025-12-30 22:18:49.858 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 22 - Player 1's move
+2025-12-30 22:18:49.858 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 6, Budget: {WHT=2, BLU=3, GRN=5, RED=1, BLK=4}
+2025-12-30 22:19:34.368 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Current token inventory is WHITE1, BLUE3, GREEN1, RED1, BLACK1 (total 7). The only visible prestige cards that can be bought this turn are the free Level‑1 cards (L1_12, L1_18) and the Level‑2 card L2_47, which costs 1 BLUE and 1 RED after applying discounts. L2_47 is the only card that yields points (1 prestige point) and also provides a BLUE bonus gem, increasing the BLUE discount from 1 to 2 for future purchases. All other visible Level‑2 and Level‑3 cards require more tokens than we can afford, and none of the available nobles can be completed because there are no BLUE or WHITE tokens on the board to increase beyond the current limits. Therefore the optimal single action is to purchase L2_47, which costs exactly the tokens we hold, does not exceed the 10‑token limit, and gives immediate points while strengthening our discounts for later turns.
+2025-12-30 22:19:34.369 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L2_47]
+2025-12-30 22:19:34.369 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 1 for Player 1. Error: Invalid action: Insufficient tokens to purchase card L2_47
+2025-12-30 22:21:01.800 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Current token inventory is WHITE2, BLUE1, GREEN1, RED0, BLACK3 (total 7). The board supplies WHITE1, GREEN2, RED3 (and GOLD5). No Level‑2 or Level‑3 prestige cards are affordable now, and all visible Level‑1 cards are worth 0 prestige points. The only way to gain points this turn would be to claim a noble, but none of the available nobles (N4, N1, N6) can be satisfied with the tokens we can obtain this turn. The most valuable future move is to purchase L2_64 (3 prestige points) on the next turn; it requires exactly 2 GREEN tokens after discount. We currently have only 1 GREEN token, so we must acquire one more. The only legal TAKE_TOKENS move that adds a GREEN token is to take one WHITE, one GREEN, and one RED (three different colors, all available on the board). This raises our GREEN count to 2, putting us exactly at the 10‑token limit (no returns needed) and setting us up to buy L2_64 next turn for 3 points. Purchasing a card now would yield 0 points, and reserving a card would only give a gold token without immediate benefit. Therefore the optimal action is to TAKE_TOKENS with WHITE, GREEN, and RED, achieving the described setup.
+2025-12-30 22:21:01.800 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={WHITE=1, GREEN=1, RED=1}, tokensToReturn=null]
+2025-12-30 22:21:01.801 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 23 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+GRN:1 RED:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         | [L1_2] BLK 0pts WHT:1 BLU:2 GRN:1 RED:1    |
+    [L1_22] WHT 0pts BLU:2 BLK:2               | [L1_18] WHT 0pts BLU:1 GRN:2 RED:1 BLK:1  
+L2: [L2_64] GRN 3pts GRN:6                     | [L2_47] BLU 1pt BLU:2 GRN:2 RED:3          |
+    [L2_56] WHT 2pts RED:5 BLK:3               | [L2_68] RED 2pts WHT:3 BLK:5              
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         |
+    [L3_88] RED 4pts GRN:7                     | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | nemotron-3-nano-30b-a3b:free (P1):
+  Score: 5 | Cards: 9                                  |   Score: 6 | Cards: 8
+  Tokens: WHT:1 BLU:3 GRN:1 RED:1 BLK:1                |   Tokens: WHT:3 BLU:1 GRN:2 RED:1 BLK:3
+  Bonuses: {WHT:1 BLU:1 GRN:3 RED:2 BLK:2}             |   Bonuses: {BLU:2 GRN:4 RED:1 BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: [L1_40] RED 1pt WHT:4
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+            [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | 
+
+======================================================================================
+
+2025-12-30 22:21:01.801 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 23 - Player 0's move
+2025-12-30 22:21:01.801 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 5, Budget: {WHT=2, BLU=4, GRN=4, RED=3, BLK=3}
+2025-12-30 22:23:15.911 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: We have 1W,3B,1G,1R,1Bk tokens and bonuses W1 B1 G3 R2 Bk2. The only face‑up card that offers prestige is L2_47, costing {BLUE:2, GREEN:2, RED:3}. After discounts the cost reduces to 1 BLUE and 1 RED, which we can pay with our existing tokens. No other card on the board or in our reserved cards is affordable for prestige or tokens cannot be taken, so purchasing L2_47 is the optimal move. It gives us 1 prestige point and improves our BLUE bonus for future buys.
+2025-12-30 22:23:15.911 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L2_47]
+2025-12-30 22:23:15.912 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 23 | Current Player: nemotron-3-nano-30b-a3b:free (P1)
+======================================================================================
+
+[BOARD BANK]
+BLU:1 GRN:1 RED:3 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         | [L1_2] BLK 0pts WHT:1 BLU:2 GRN:1 RED:1    |
+    [L1_22] WHT 0pts BLU:2 BLK:2               | [L1_18] WHT 0pts BLU:1 GRN:2 RED:1 BLK:1  
+L2: [L2_64] GRN 3pts GRN:6                     | [L2_56] WHT 2pts RED:5 BLK:3               |
+    [L2_68] RED 2pts WHT:3 BLK:5               | [L2_49] BLU 2pts WHT:5 BLU:3              
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         |
+    [L3_88] RED 4pts GRN:7                     | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | nemotron-3-nano-30b-a3b:free (P1) (Current):
+  Score: 6 | Cards: 10                                 |   Score: 6 | Cards: 8
+  Tokens: WHT:1 BLU:2 GRN:1 BLK:1                      |   Tokens: WHT:3 BLU:1 GRN:2 RED:1 BLK:3
+  Bonuses: {WHT:1 BLU:2 GRN:3 RED:2 BLK:2}             |   Bonuses: {BLU:2 GRN:4 RED:1 BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: [L1_40] RED 1pt WHT:4
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+            [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | 
+
+======================================================================================
+
+2025-12-30 22:23:15.912 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 23 - Player 1's move
+2025-12-30 22:23:15.912 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 6, Budget: {WHT=3, BLU=3, GRN=6, RED=2, BLK=4}
+2025-12-30 22:24:03.294 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: The board supplies only BLUE, GREEN, RED tokens. Taking three different colors would only add tokens but does not bring us close to any noble (N1, N4, N6) nor enable an immediate prestige purchase, and no Level‑2 or Level‑3 card is currently affordable. All visible Level‑1 cards are free thanks to our existing discounts, but purchasing a card that provides a WHITE‑gem bonus will raise our WHITE discount from 1 to 2, bringing several upcoming high‑value cards (e.g., L2_68, L3_73, L3_72) closer to affordability. L1_22 is a free Level‑1 card with a WHITE bonus, so buying it improves our future scoring potential without exceeding the 10‑token limit. Therefore the optimal move is to purchase L1_22, gaining a WHITE discount increase for future turns while avoiding any token take or return.
+2025-12-30 22:24:03.294 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L1_22]
+2025-12-30 22:24:03.294 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 24 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+BLU:1 GRN:1 RED:3 BLK:1 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         | [L1_2] BLK 0pts WHT:1 BLU:2 GRN:1 RED:1    |
+    [L1_18] WHT 0pts BLU:1 GRN:2 RED:1 BLK:1   | [L1_11] BLU 0pts WHT:1 GRN:2 RED:2        
+L2: [L2_64] GRN 3pts GRN:6                     | [L2_56] WHT 2pts RED:5 BLK:3               |
+    [L2_68] RED 2pts WHT:3 BLK:5               | [L2_49] BLU 2pts WHT:5 BLU:3              
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         |
+    [L3_88] RED 4pts GRN:7                     | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | nemotron-3-nano-30b-a3b:free (P1):
+  Score: 6 | Cards: 10                                 |   Score: 6 | Cards: 9
+  Tokens: WHT:1 BLU:2 GRN:1 BLK:1                      |   Tokens: WHT:3 BLU:1 GRN:2 RED:1 BLK:2
+  Bonuses: {WHT:1 BLU:2 GRN:3 RED:2 BLK:2}             |   Bonuses: {WHT:1 BLU:2 GRN:4 RED:1 BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: [L1_40] RED 1pt WHT:4
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+            [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | 
+
+======================================================================================
+
+2025-12-30 22:24:03.294 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 24 - Player 0's move
+2025-12-30 22:24:03.295 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 6, Budget: {WHT=2, BLU=4, GRN=4, RED=2, BLK=3}
+2025-12-30 22:24:53.484 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: We need to maximize our prestige progress. The only prestige cards available with significant points are the level‑2 cards, especially L2_64 which offers 3 prestige. We cannot buy it now because we only have 1 green token but the card requires 6 green minus our 3 green bonuses = 3 green tokens. We cannot take 3 green tokens in one go because the game rule says only 2 tokens of the same color can be taken if at least 4 are available. The obvious strategic move is to reserve the card. Reserving L2_64 removes the 3‑prestige card from the board, gives us a gold token (the board has gold tokens available), and prevents the opponent from grabbing it next turn. We cannot purchase or take tokens this turn that would give prestige, so reserving is the most efficient path. In the next turn we will take the needed green tokens and use the gold token to purchase the card for 3 prestige, lifting us toward 15 as quickly as possible.
+2025-12-30 22:24:53.484 [main] INFO  com.aisplendor.engine.GameSimulator - Action: ReserveCardAction[cardId=L2_64, deckLevel=null, tokensToReturn=null]
+2025-12-30 22:24:53.484 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 1 for Player 0. Error: Invalid action: Cannot reserve more than 3 cards.
+2025-12-30 22:25:44.121 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: We have 5 tokens and 3 reserved cards, so we cannot reserve another card. The only viable actions are to take tokens or buy a free card. Free cards exist (L1_12, L1_2, L1_18, L1_11) but buying one now would consume a turn that could be used to collect tokens needed for upcoming prestige cards. The most efficient path is to acquire the small colored tokens that will allow us to purchase the high‑prestige Level‑2 cards on subsequent turns. Specifically, we need 1 red token to buy L2_47, 1 green token toward the 3 required for L2_64, and an additional blue token for future purchases or to keep our token count low. Taking 1 red, 1 green, and 1 blue keeps the total token count at 8 (<10) and sets up the next two turns to buy L2_47 (+1 prestige) and L2_64 (+3 prestige) in rapid succession. Thus we take 1 red, 1 green, and 1 blue token and return none. The board supplies 1 blue, 1 green, and 3 red tokens, and taking these 3 satisfies the token‑taking rule. No reservation or purchase action is taken this turn.
+2025-12-30 22:25:44.121 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={BLUE=1, GREEN=1, RED=1}, tokensToReturn=null]
+2025-12-30 22:25:44.122 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 24 | Current Player: nemotron-3-nano-30b-a3b:free (P1)
+======================================================================================
+
+[BOARD BANK]
+RED:2 BLK:1 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         | [L1_2] BLK 0pts WHT:1 BLU:2 GRN:1 RED:1    |
+    [L1_18] WHT 0pts BLU:1 GRN:2 RED:1 BLK:1   | [L1_11] BLU 0pts WHT:1 GRN:2 RED:2        
+L2: [L2_64] GRN 3pts GRN:6                     | [L2_56] WHT 2pts RED:5 BLK:3               |
+    [L2_68] RED 2pts WHT:3 BLK:5               | [L2_49] BLU 2pts WHT:5 BLU:3              
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         |
+    [L3_88] RED 4pts GRN:7                     | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | nemotron-3-nano-30b-a3b:free (P1) (Current):
+  Score: 6 | Cards: 10                                 |   Score: 6 | Cards: 9
+  Tokens: WHT:1 BLU:3 GRN:2 RED:1 BLK:1                |   Tokens: WHT:3 BLU:1 GRN:2 RED:1 BLK:2
+  Bonuses: {WHT:1 BLU:2 GRN:3 RED:2 BLK:2}             |   Bonuses: {WHT:1 BLU:2 GRN:4 RED:1 BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: [L1_40] RED 1pt WHT:4
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+            [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | 
+
+======================================================================================
+
+2025-12-30 22:25:44.122 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 24 - Player 1's move
+2025-12-30 22:25:44.122 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 6, Budget: {WHT=4, BLU=3, GRN=6, RED=2, BLK=3}
+2025-12-30 22:26:42.885 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: We cannot claim any noble or purchase a prestige card this turn because none of the noble requirements can be met with the tokens available on the board, and all visible prestige cards are too costly to afford given our current token composition and discounts. The only viable way to advance toward 15 prestige points is to set up future purchases by acquiring a free level‑1 card that provides a useful gem. All level‑1 cards are free, but L1_18 is the best choice because it gives a WHITE token, raising our WHITE discount from 1 to 2. This increase will help us satisfy WHITE‑heavy noble requirements (N1 and N6) and lower the effective cost of many higher‑value cards (including future prestige cards). Therefore the optimal action is to purchase L1_18. No tokens need to be taken this turn, so all take_* fields are 0, and no returns are required.
+2025-12-30 22:26:42.886 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L1_18]
+2025-12-30 22:26:42.886 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 25 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+RED:2 BLK:1 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         | [L1_2] BLK 0pts WHT:1 BLU:2 GRN:1 RED:1    |
+    [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         | [L1_26] GRN 0pts WHT:1 BLU:1 RED:1 BLK:2  
+L2: [L2_64] GRN 3pts GRN:6                     | [L2_56] WHT 2pts RED:5 BLK:3               |
+    [L2_68] RED 2pts WHT:3 BLK:5               | [L2_49] BLU 2pts WHT:5 BLU:3              
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         |
+    [L3_88] RED 4pts GRN:7                     | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | nemotron-3-nano-30b-a3b:free (P1):
+  Score: 6 | Cards: 10                                 |   Score: 6 | Cards: 10
+  Tokens: WHT:1 BLU:3 GRN:2 RED:1 BLK:1                |   Tokens: WHT:3 BLU:1 GRN:2 RED:1 BLK:2
+  Bonuses: {WHT:1 BLU:2 GRN:3 RED:2 BLK:2}             |   Bonuses: {WHT:2 BLU:2 GRN:4 RED:1 BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: [L1_40] RED 1pt WHT:4
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+            [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | 
+
+======================================================================================
+
+2025-12-30 22:26:42.887 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 25 - Player 0's move
+2025-12-30 22:26:42.887 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 6, Budget: {WHT=2, BLU=5, GRN=5, RED=3, BLK=3}
+2025-12-30 22:28:50.574 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: We cannot take tokens as the board only has RED and BLACK tokens, insufficient for a 3‑color or 4+ same‑color grab. No Level‑2/3 card is affordable with our current tokens. All Level‑1 cards are free; buying one that gives a GREEN bonus (L1_26) will raise our GREEN bonus from 3 to 4, allowing us to purchase the 3‑prestige card L2_64 in the next turn using the two GREEN tokens we currently hold. After that we can buy two BLUE cards (L1_12 and L1_11) to reach B4, which triggers the noble N4 for +3 prestige. This sequence gives us the maximum prestige possible from the available actions – 6 base + 3 (L2_64) + 3 (N4) = 12. Therefore the optimal next move is to purchase L1_26. No tokens are taken or returned in this action.
+2025-12-30 22:28:50.574 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L1_26]
+2025-12-30 22:28:50.574 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 25 | Current Player: nemotron-3-nano-30b-a3b:free (P1)
+======================================================================================
+
+[BOARD BANK]
+RED:2 BLK:1 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         | [L1_2] BLK 0pts WHT:1 BLU:2 GRN:1 RED:1    |
+    [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         | [L1_6] BLK 0pts WHT:2 GRN:2               
+L2: [L2_64] GRN 3pts GRN:6                     | [L2_56] WHT 2pts RED:5 BLK:3               |
+    [L2_68] RED 2pts WHT:3 BLK:5               | [L2_49] BLU 2pts WHT:5 BLU:3              
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         |
+    [L3_88] RED 4pts GRN:7                     | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | nemotron-3-nano-30b-a3b:free (P1) (Current):
+  Score: 6 | Cards: 11                                 |   Score: 6 | Cards: 10
+  Tokens: WHT:1 BLU:3 GRN:2 RED:1 BLK:1                |   Tokens: WHT:3 BLU:1 GRN:2 RED:1 BLK:2
+  Bonuses: {WHT:1 BLU:2 GRN:4 RED:2 BLK:2}             |   Bonuses: {WHT:2 BLU:2 GRN:4 RED:1 BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: [L1_40] RED 1pt WHT:4
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+            [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | 
+
+======================================================================================
+
+2025-12-30 22:28:50.574 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 25 - Player 1's move
+2025-12-30 22:28:50.574 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 6, Budget: {WHT=5, BLU=3, GRN=6, RED=2, BLK=3}
+2025-12-30 22:29:07.556 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Current token pool is WHITE1, BLUE3, GREEN2, RED1, BLACK2 (total 7). Board tokens are only RED2, BLACK1, and GOLD5, so the only legal TAKE_TOKENS move would be to take three different colors (e.g., GOLD, RED, BLACK), which would bring the total token count to 12 and require discarding two tokens. Neither of those options helps us meet any noble (we lack enough WHITE and BLUE to satisfy N6) and would not let us claim a noble this turn. The most valuable immediate source of prestige points is the Level‑2 card L2_64, which is worth 3 prestige points. Its base cost is 6 GREEN gems; our GREEN discount is 4, reducing the effective cost to 2 GREEN gems. We currently hold exactly 2 GREEN tokens, so we can afford L2_64 this turn and gain 3 points, raising our score from 6 to 9. No other visible prestige card can be purchased for more than 1 point, and reserving a card would give only a gold token without immediate points. Therefore the optimal action is to PURCHASE_CARD L2_64 with no token take or return.
+
+Action type: PURCHASE_CARD
+Card ID: L2_64
+No tokens are taken or returned.
+2025-12-30 22:29:07.556 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L2_64]
+2025-12-30 22:29:07.556 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 26 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+GRN:2 RED:2 BLK:1 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         | [L1_2] BLK 0pts WHT:1 BLU:2 GRN:1 RED:1    |
+    [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         | [L1_6] BLK 0pts WHT:2 GRN:2               
+L2: [L2_56] WHT 2pts RED:5 BLK:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_49] BLU 2pts WHT:5 BLU:3               | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2        
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         |
+    [L3_88] RED 4pts GRN:7                     | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | nemotron-3-nano-30b-a3b:free (P1):
+  Score: 6 | Cards: 11                                 |   Score: 9 | Cards: 11
+  Tokens: WHT:1 BLU:3 GRN:2 RED:1 BLK:1                |   Tokens: WHT:3 BLU:1 RED:1 BLK:2
+  Bonuses: {WHT:1 BLU:2 GRN:4 RED:2 BLK:2}             |   Bonuses: {WHT:2 BLU:2 GRN:5 RED:1 BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: [L1_40] RED 1pt WHT:4
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+            [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | 
+
+======================================================================================
+
+2025-12-30 22:29:07.556 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 26 - Player 0's move
+2025-12-30 22:29:07.556 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 6, Budget: {WHT=2, BLU=5, GRN=6, RED=3, BLK=3}
+2025-12-30 22:30:27.944 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: We have 8 tokens (W1,B3,G2,R1,Bk1). The board offers 2 green, 2 red, 1 black tokens. We need to gather tokens to afford L2_55 (needs 2 red) and then L3_88 (needs 3 green). Since we can only take 3 tokens at a time and we only have 3 colors available, we will take 1 green, 1 red, and 1 black token. This will bring our token total to 11, so we must return 1 token. Returning a white token preserves useful colored tokens needed for future purchases. This action blocks the opponent’s token‑gathering opportunities, as after we take the black token the board will have no black tokens, leaving the opponent with only two colors to take and thus no legal token move. This positions us to buy L2_55 next turn with the two red tokens we will have, and then L3_88 with the three green tokens we will have. This is the most efficient progression toward 15 prestige points and helps prevent the opponent from easily acquiring the same cards.
+2025-12-30 22:30:27.945 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={GREEN=1, RED=1, BLACK=1}, tokensToReturn={WHITE=1}]
+2025-12-30 22:30:27.945 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 26 | Current Player: nemotron-3-nano-30b-a3b:free (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:1 GRN:1 RED:1 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         | [L1_2] BLK 0pts WHT:1 BLU:2 GRN:1 RED:1    |
+    [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         | [L1_6] BLK 0pts WHT:2 GRN:2               
+L2: [L2_56] WHT 2pts RED:5 BLK:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_49] BLU 2pts WHT:5 BLU:3               | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2        
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         |
+    [L3_88] RED 4pts GRN:7                     | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | nemotron-3-nano-30b-a3b:free (P1) (Current):
+  Score: 6 | Cards: 11                                 |   Score: 9 | Cards: 11
+  Tokens: BLU:3 GRN:3 RED:2 BLK:2                      |   Tokens: WHT:3 BLU:1 RED:1 BLK:2
+  Bonuses: {WHT:1 BLU:2 GRN:4 RED:2 BLK:2}             |   Bonuses: {WHT:2 BLU:2 GRN:5 RED:1 BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: [L1_40] RED 1pt WHT:4
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+            [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | 
+
+======================================================================================
+
+2025-12-30 22:30:27.945 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 26 - Player 1's move
+2025-12-30 22:30:27.945 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 9, Budget: {WHT=5, BLU=3, GRN=5, RED=2, BLK=3}
+2025-12-30 22:30:48.167 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Current token inventory is WHITE0, BLUE3, GREEN3, RED2, BLACK2, GOLD0 (10 tokens total). No noble can be claimed this turn because none of the available nobles (N4, N1, N6) can be satisfied with these tokens. Purchasing a prestige card is the only way to gain points directly. Among visible prestige cards, L3_88 (Level‑3, prestige 4) costs GREEN7, which after the GREEN discount of 5 reduces to an effective cost of 2 GREEN tokens. We hold 3 GREEN tokens, so we can afford it immediately, spending 2 GREEN and raising our score from 9 to 13—closer to the 15‑point goal than any other option. All other Level‑2 and Level‑3 cards either require tokens we lack or are too expensive. Therefore the optimal move is to purchase L3_88; no tokens need to be taken or returned.
+2025-12-30 22:30:48.167 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L3_88]
+2025-12-30 22:30:48.167 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 1 for Player 1. Error: Invalid action: Insufficient tokens to purchase card L3_88
+2025-12-30 22:31:32.209 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Current token inventory is WHITE3, BLUE1, GREEN0, RED1, BLACK2 (total 7). Board tokens available are WHITE1, GREEN1, RED1, and GOLD5. Since no BLUE or BLACK tokens are on the board, the only legal TAKE_TOKENS move is to take three different colored tokens from the available colors. Taking WHITE, RED, and GREEN adds exactly one token of each, raising our RED count from 1 to 2, which together with our existing WHITE3, BLUE1, and BLACK2 meets the discounted cost of the Level‑3 prestige card L3_83 (3 WHITE, 1 BLUE, 2 RED, 2 BLACK). After the take we will have exactly 10 tokens (no returns needed). This sets us up to purchase L3_83 on the next turn for 3 prestige points, the highest single‑turn gain currently achievable. Therefore the optimal action this turn is to TAKE_TOKENS with WHITE, RED, and GREEN, without any returns.
+2025-12-30 22:31:32.209 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={WHITE=1, GREEN=1, RED=1}, tokensToReturn=null]
+2025-12-30 22:31:32.210 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 27 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         | [L1_2] BLK 0pts WHT:1 BLU:2 GRN:1 RED:1    |
+    [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         | [L1_6] BLK 0pts WHT:2 GRN:2               
+L2: [L2_56] WHT 2pts RED:5 BLK:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_49] BLU 2pts WHT:5 BLU:3               | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2        
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         |
+    [L3_88] RED 4pts GRN:7                     | [L3_72] BLK 4pts RED:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | nemotron-3-nano-30b-a3b:free (P1):
+  Score: 6 | Cards: 11                                 |   Score: 9 | Cards: 11
+  Tokens: BLU:3 GRN:3 RED:2 BLK:2                      |   Tokens: WHT:4 BLU:1 GRN:1 RED:2 BLK:2
+  Bonuses: {WHT:1 BLU:2 GRN:4 RED:2 BLK:2}             |   Bonuses: {WHT:2 BLU:2 GRN:5 RED:1 BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: [L1_40] RED 1pt WHT:4
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+            [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | 
+
+======================================================================================
+
+2025-12-30 22:31:32.210 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 27 - Player 0's move
+2025-12-30 22:31:32.210 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 6, Budget: {WHT=1, BLU=5, GRN=7, RED=4, BLK=4}
+2025-12-30 22:33:43.589 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Step‑by‑step analysis:
+1. Available tokens on the board: all zero colors, only gold available. Therefore TAKE_TOKENS is impossible.
+2. Reserved cards: 3 (max reach). RESERVE_CARD is impossible.
+3. We must PURCHASE a card we can afford. Current tokens: \{WHITE:0, BLUE:3, GREEN:3, RED:2, BLACK:2\}.
+   Bonuses: \{WHITE:1, BLUE:2, GREEN:4, RED:2, BLACK:2\}.
+4. Evaluate face‑up cards:
+   - L1_12, L1_2, L1_11: after bonuses, all required tokens are zero – free, but provide no prestige.
+   - L2_55: cost {GREEN:1, RED:4, BLACK:2}. After bonuses, needs {GREEN:0, RED:2, BLACK:0}. We have 2 red tokens – affordable.
+   - L3_88: cost {GREEN:7}. After bonuses, needs 7-4 = 3 GREEN tokens. We have exactly 3 G tokens – affordable.
+   - All other cards require more tokens than we possess.
+5. Between the two prestige cards, L3_88 gives +4 prestige and consumes 3 GREEN tokens; L2_55 gives +2 prestige and consumes 2 RED tokens.
+6. Purchasing L3_88 maximizes prestige gain on this turn and leaves us with 7 tokens (below the 10‑token limit), so no need to return tokens.
+7. After buying L3_88, our score becomes 10. The opponent (score 9) can currently buy L2_49 for +2, moving to 11. We then have the option to buy L2_55 for another +2, ending with 12 vs 11. This is the best achievable advantage with the available resources.
+8. Therefore the optimal action is to PURCHASE the card L3_88.
+2025-12-30 22:33:43.589 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L3_88]
+2025-12-30 22:33:43.589 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 27 | Current Player: nemotron-3-nano-30b-a3b:free (P1)
+======================================================================================
+
+[BOARD BANK]
+GRN:3 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         | [L1_2] BLK 0pts WHT:1 BLU:2 GRN:1 RED:1    |
+    [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         | [L1_6] BLK 0pts WHT:2 GRN:2               
+L2: [L2_56] WHT 2pts RED:5 BLK:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_49] BLU 2pts WHT:5 BLU:3               | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2        
+L3: [L3_83] GRN 3pts WHT:5 BLU:3 RED:3 BLK:3   | [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         |
+    [L3_72] BLK 4pts RED:7                     | [L3_84] GRN 4pts BLU:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | nemotron-3-nano-30b-a3b:free (P1) (Current):
+  Score: 10 | Cards: 12                                |   Score: 9 | Cards: 11
+  Tokens: BLU:3 RED:2 BLK:2                            |   Tokens: WHT:4 BLU:1 GRN:1 RED:2 BLK:2
+  Bonuses: {WHT:1 BLU:2 GRN:4 RED:3 BLK:2}             |   Bonuses: {WHT:2 BLU:2 GRN:5 RED:1 BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: [L1_40] RED 1pt WHT:4
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+            [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | 
+
+======================================================================================
+
+2025-12-30 22:33:43.589 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 27 - Player 1's move
+2025-12-30 22:33:43.589 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 9, Budget: {WHT=6, BLU=3, GRN=6, RED=3, BLK=3}
+2025-12-30 22:34:20.484 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: The board only shows GREEN and GOLD tokens; we cannot take three different colors nor a legal set of two identical non‑GOLD tokens. No noble can be satisfied this turn and no prestige card is affordable without additional tokens. The only cards we can purchase for points are the visible Level‑2 cards. L2_55 costs, after discounts, exactly 1 RED gem, which we have in surplus, and it grants a WHITE‑gem bonus that will raise our WHITE discount from 1 to 2, making many future high‑value cards (including later prestige cards) cheaper. Purchasing L2_55 therefore gives us immediate 2 prestige points, moves our score to 12, and improves our discount for upcoming turns. This is the highest‑value action available now. 
+2025-12-30 22:34:20.484 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L2_55]
+2025-12-30 22:34:20.484 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 1 for Player 1. Error: Invalid action: Insufficient tokens to purchase card L2_55
+2025-12-30 22:34:36.827 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: We have 10 tokens and no legal TAKE_TOKENS move that would help us claim a noble (all nobles need at least 4 BLUE, which the board does not provide). Reserving a card would only give a gold token without immediate prestige. The only affordable prestige cards are L2_49 (2 points) and L3_83 (3 points). Calculating effective costs with our discounts (WHITE 2, BLUE 2, GREEN 5, RED 1, BLACK 1) shows L3_83 costs 3 WHITE, 1 BLUE, 2 RED, 2 BLACK after discounts. Our current token pool (WHITE 4, BLUE 1, RED 2, BLACK 2) exactly matches this cost, so we can purchase L3_83 this turn for 3 prestige points, raising our score from 9 to 12. This is the highest single‑turn gain available and also adds a GREEN gem to our permanent discounts for future turns. Therefore the optimal action is to PURCHASE_CARD L3_83 with no token take or return.
+2025-12-30 22:34:36.827 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L3_83]
+2025-12-30 22:34:36.827 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 28 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:1 GRN:3 RED:2 BLK:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         | [L1_2] BLK 0pts WHT:1 BLU:2 GRN:1 RED:1    |
+    [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         | [L1_6] BLK 0pts WHT:2 GRN:2               
+L2: [L2_56] WHT 2pts RED:5 BLK:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_49] BLU 2pts WHT:5 BLU:3               | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2        
+L3: [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_72] BLK 4pts RED:7                     |
+    [L3_84] GRN 4pts BLU:7                     | [L3_85] GRN 4pts WHT:3 BLU:6 GRN:3        
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | nemotron-3-nano-30b-a3b:free (P1):
+  Score: 10 | Cards: 12                                |   Score: 12 | Cards: 12
+  Tokens: BLU:3 RED:2 BLK:2                            |   Tokens: WHT:1 GRN:1
+  Bonuses: {WHT:1 BLU:2 GRN:4 RED:3 BLK:2}             |   Bonuses: {WHT:2 BLU:2 GRN:6 RED:1 BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: [L1_40] RED 1pt WHT:4
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+            [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3   | 
+
+======================================================================================
+
+2025-12-30 22:34:36.827 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 28 - Player 0's move
+2025-12-30 22:34:36.827 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 10, Budget: {WHT=1, BLU=5, GRN=4, RED=5, BLK=4}
+2025-12-30 22:37:48.858 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: We only have 7 tokens and need 5 more prestige points to reach 15. The only card we can buy instantly that gives 3 prestige is the reserved level‑3 card L3_79, which costs 1 blue, 2 red, and 1 black tokens that we have. After buying it, we reach 13 prestige points and keep 2 blue, 0 red, 1 black tokens. The next most efficient way to gain the remaining 2 points is to buy L2_55, which costs just 1 red token. We can take that red token on our next turn, then purchase L2_55 for +2 prestige. This plan uses only two future turns and gives an advantage over any path that involves buying free cards or gathering bonuses for nobles. No tokens are taken or returned this turn.
+2025-12-30 22:37:48.858 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L3_79]
+2025-12-30 22:37:48.858 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 28 | Current Player: nemotron-3-nano-30b-a3b:free (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:2 GRN:3 RED:4 BLK:3 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         | [L1_2] BLK 0pts WHT:1 BLU:2 GRN:1 RED:1    |
+    [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         | [L1_6] BLK 0pts WHT:2 GRN:2               
+L2: [L2_56] WHT 2pts RED:5 BLK:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_49] BLU 2pts WHT:5 BLU:3               | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2        
+L3: [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_72] BLK 4pts RED:7                     |
+    [L3_84] GRN 4pts BLU:7                     | [L3_85] GRN 4pts WHT:3 BLU:6 GRN:3        
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | nemotron-3-nano-30b-a3b:free (P1) (Current):
+  Score: 13 | Cards: 13                                |   Score: 12 | Cards: 12
+  Tokens: BLU:2 BLK:1                                  |   Tokens: WHT:1 GRN:1
+  Bonuses: {WHT:2 BLU:2 GRN:4 RED:3 BLK:2}             |   Bonuses: {WHT:2 BLU:2 GRN:6 RED:1 BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: [L1_40] RED 1pt WHT:4
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+
+======================================================================================
+
+2025-12-30 22:37:48.858 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 28 - Player 1's move
+2025-12-30 22:37:48.858 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 12, Budget: {WHT=3, BLU=2, GRN=7, RED=1, BLK=1}
+2025-12-30 22:38:30.985 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: We currently have 13 prestige points and need only 2 more to win. The only cards that can give us points this turn are prestige cards, but none can be afforded with our present token pool (we lack the required RED token for L2_55 and have insufficient tokens for any other prestige card). No noble can be satisfied in a single token‑take, so the only way to gain points immediately is to set up a purchase that will yield 2 prestige points on the next turn. L2_55 costs 1 RED token after applying our discounts and is worth 2 prestige points; acquiring a single RED token will let us buy it and reach 15 points. The cheapest and most direct way to obtain a RED token this turn is to take exactly 2 RED tokens from the board (the board has 4 RED available). This move adds only 2 tokens, stays well below the 10‑token limit, and does not require any returns. Taking 2 RED tokens gives us the needed token while preserving all other tokens for future use. Therefore the optimal action is to TAKE_TOKENS with take_RED=2 and no returns.
+2025-12-30 22:38:30.985 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={RED=2}, tokensToReturn=null]
+2025-12-30 22:38:30.985 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 29 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:2 GRN:3 RED:2 BLK:3 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         | [L1_2] BLK 0pts WHT:1 BLU:2 GRN:1 RED:1    |
+    [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         | [L1_6] BLK 0pts WHT:2 GRN:2               
+L2: [L2_56] WHT 2pts RED:5 BLK:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_49] BLU 2pts WHT:5 BLU:3               | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2        
+L3: [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_72] BLK 4pts RED:7                     |
+    [L3_84] GRN 4pts BLU:7                     | [L3_85] GRN 4pts WHT:3 BLU:6 GRN:3        
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | nemotron-3-nano-30b-a3b:free (P1):
+  Score: 13 | Cards: 13                                |   Score: 12 | Cards: 12
+  Tokens: BLU:2 BLK:1                                  |   Tokens: WHT:1 GRN:1 RED:2
+  Bonuses: {WHT:2 BLU:2 GRN:4 RED:3 BLK:2}             |   Bonuses: {WHT:2 BLU:2 GRN:6 RED:1 BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: [L1_40] RED 1pt WHT:4
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+
+======================================================================================
+
+2025-12-30 22:38:30.985 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 29 - Player 0's move
+2025-12-30 22:38:30.985 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 13, Budget: {WHT=2, BLU=4, GRN=4, RED=3, BLK=3}
+2025-12-30 22:39:03.109 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: We are currently at 13 prestige points, only 2 away from the target. The most efficient next move is to acquire a single RED token, which will enable us to purchase the $L2_55$ card on our next turn for 2 prestige points. To follow the allowed token‑taking rule, we take three different colored tokens: 1 RED, 1 GREEN, and 1 WHITE. These tokens keep us under the 10‑token limit (our total will be 6) and give us the necessary RED token to buy $L2_55$ while also providing useful colored tokens that could be held if needed. No tokens need to be discarded, and we do not need to reserve a card or purchase a free card at this point since the upcoming purchase with the RED token is the fastest path to 15 points. Thus we take 1 RED, 1 GREEN, and 1 WHITE token.
+2025-12-30 22:39:03.109 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={WHITE=1, GREEN=1, RED=1}, tokensToReturn=null]
+2025-12-30 22:39:03.110 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 29 | Current Player: nemotron-3-nano-30b-a3b:free (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:2 BLU:2 GRN:2 RED:1 BLK:3 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         | [L1_2] BLK 0pts WHT:1 BLU:2 GRN:1 RED:1    |
+    [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         | [L1_6] BLK 0pts WHT:2 GRN:2               
+L2: [L2_56] WHT 2pts RED:5 BLK:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_49] BLU 2pts WHT:5 BLU:3               | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2        
+L3: [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_72] BLK 4pts RED:7                     |
+    [L3_84] GRN 4pts BLU:7                     | [L3_85] GRN 4pts WHT:3 BLU:6 GRN:3        
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | nemotron-3-nano-30b-a3b:free (P1) (Current):
+  Score: 13 | Cards: 13                                |   Score: 12 | Cards: 12
+  Tokens: WHT:1 BLU:2 GRN:1 RED:1 BLK:1                |   Tokens: WHT:1 GRN:1 RED:2
+  Bonuses: {WHT:2 BLU:2 GRN:4 RED:3 BLK:2}             |   Bonuses: {WHT:2 BLU:2 GRN:6 RED:1 BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: [L1_40] RED 1pt WHT:4
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+
+======================================================================================
+
+2025-12-30 22:39:03.110 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 29 - Player 1's move
+2025-12-30 22:39:03.110 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 12, Budget: {WHT=3, BLU=2, GRN=7, RED=3, BLK=1}
+2025-12-30 22:39:28.652 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: We have 12 prestige points and need 3 more to win. The only prestige cards we can afford right now are the Level‑2 cards, all worth 2 points, so a direct purchase cannot give us the 3 points needed this turn. The highest‑value card we could buy later is the Level‑3 card L3_73, which is worth 4 points and would immediately bring us to 16 points (≥15). After discounts our discounts (WHITE 2, BLUE 2, GREEN 4, RED 3, BLACK 1) reduce L3_73’s cost to 3 RED and 2 BLACK gems. We currently hold 2 RED and 1 BLACK, so we need exactly one more RED and one more BLACK. The board provides 1 RED and 3 BLACK, so we can take one RED, one BLACK, and one additional token of a different color. Taking RED, BLACK, and WHITE gives us the required 3 RED and 2 BLACK while keeping the total token count at 10 (no returns needed). This sets us up to purchase L3_73 on the next turn for 4 points and win the game. Therefore the optimal move is to TAKE_TOKENS with RED=1, BLACK=1, WHITE=1 and no returns.
+2025-12-30 22:39:28.652 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={WHITE=1, RED=1, BLACK=1}, tokensToReturn=null]
+2025-12-30 22:39:28.653 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 30 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:1 BLU:2 GRN:2 BLK:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         | [L1_2] BLK 0pts WHT:1 BLU:2 GRN:1 RED:1    |
+    [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         | [L1_6] BLK 0pts WHT:2 GRN:2               
+L2: [L2_56] WHT 2pts RED:5 BLK:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_49] BLU 2pts WHT:5 BLU:3               | [L2_55] WHT 2pts GRN:1 RED:4 BLK:2        
+L3: [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_72] BLK 4pts RED:7                     |
+    [L3_84] GRN 4pts BLU:7                     | [L3_85] GRN 4pts WHT:3 BLU:6 GRN:3        
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | nemotron-3-nano-30b-a3b:free (P1):
+  Score: 13 | Cards: 13                                |   Score: 12 | Cards: 12
+  Tokens: WHT:1 BLU:2 GRN:1 RED:1 BLK:1                |   Tokens: WHT:2 GRN:1 RED:3 BLK:1
+  Bonuses: {WHT:2 BLU:2 GRN:4 RED:3 BLK:2}             |   Bonuses: {WHT:2 BLU:2 GRN:6 RED:1 BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: [L1_40] RED 1pt WHT:4
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+
+======================================================================================
+
+2025-12-30 22:39:28.653 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 30 - Player 0's move
+2025-12-30 22:39:28.653 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 13, Budget: {WHT=3, BLU=4, GRN=5, RED=4, BLK=3}
+2025-12-30 22:39:51.945 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: We have 13 prestige points and tokens {WHITE:1, BLUE:2, GREEN:1, RED:1, BLACK:1}. The face‑up card L2_55 costs GREEN1, RED4, BLACK2, which our bonuses reduce to requiring only 1 RED token. We possess that token, so buying L2_55 adds 2 prestige, bringing us to the winning total of 15. No other card can be afforded for more prestige, and no noble is attainable this turn. Thus the optimal action is to purchase L2_55.
+2025-12-30 22:39:51.945 [main] INFO  com.aisplendor.engine.GameSimulator - Action: PurchaseCardAction[cardId=L2_55]
+2025-12-30 22:39:51.946 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 30 | Current Player: nemotron-3-nano-30b-a3b:free (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:1 BLU:2 GRN:2 RED:1 BLK:2 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         | [L1_2] BLK 0pts WHT:1 BLU:2 GRN:1 RED:1    |
+    [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         | [L1_6] BLK 0pts WHT:2 GRN:2               
+L2: [L2_56] WHT 2pts RED:5 BLK:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_49] BLU 2pts WHT:5 BLU:3               | [L2_66] RED 1pt BLU:3 RED:2 BLK:3         
+L3: [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_72] BLK 4pts RED:7                     |
+    [L3_84] GRN 4pts BLU:7                     | [L3_85] GRN 4pts WHT:3 BLU:6 GRN:3        
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | nemotron-3-nano-30b-a3b:free (P1) (Current):
+  Score: 15 | Cards: 14                                |   Score: 12 | Cards: 12
+  Tokens: WHT:1 BLU:2 GRN:1 BLK:1                      |   Tokens: WHT:2 GRN:1 RED:3 BLK:1
+  Bonuses: {WHT:3 BLU:2 GRN:4 RED:3 BLK:2}             |   Bonuses: {WHT:2 BLU:2 GRN:6 RED:1 BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: [L1_40] RED 1pt WHT:4
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+
+======================================================================================
+
+2025-12-30 22:39:51.946 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 30 - Player 1's move
+2025-12-30 22:39:51.946 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 12, Budget: {WHT=4, BLU=2, GRN=7, RED=4, BLK=2}
+2025-12-30 22:40:52.735 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: Current token pool is WHITE2, BLUE0, GREEN1, RED3, BLACK1 (total 7). No prestige card can be afforded now, and none of the available nobles can be satisfied because all require at least 3 BLUE tokens. The only viable path to gain points this turn is to set up a purchase that will give us 2 prestige points next turn. L2_55 is the only level‑2 prestige card we can soon afford; its cost is GREEN1, RED4, BLACK2 and it is worth 2 points. By taking exactly one RED, one BLACK, and one BLUE token we will have WHITE2, BLUE1, GREEN1, RED4, BLACK2 – precisely the tokens needed for L2_55 and we stay at exactly 10 tokens, so no returns are required. This move also adds a much‑needed BLUE token, advancing us toward the 3‑ or 4‑BLUE requirement of any noble for future turns. No other three‑color combination gives us a complete cost for any affordable prestige card while also providing a useful BLUE token. Therefore the optimal action is to TAKE_TOKENS with RED, BLUE, and BLACK, without any returns.
+2025-12-30 22:40:52.735 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={BLUE=1, RED=1, BLACK=1}, tokensToReturn=null]
+2025-12-30 22:40:52.736 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 31 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:1 BLU:1 GRN:2 BLK:1 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_12] BLU 0pts BLU:1 GRN:3 RED:1         | [L1_2] BLK 0pts WHT:1 BLU:2 GRN:1 RED:1    |
+    [L1_11] BLU 0pts WHT:1 GRN:2 RED:2         | [L1_6] BLK 0pts WHT:2 GRN:2               
+L2: [L2_56] WHT 2pts RED:5 BLK:3               | [L2_68] RED 2pts WHT:3 BLK:5               |
+    [L2_49] BLU 2pts WHT:5 BLU:3               | [L2_66] RED 1pt BLU:3 RED:2 BLK:3         
+L3: [L3_73] BLK 4pts GRN:3 RED:6 BLK:3         | [L3_72] BLK 4pts RED:7                     |
+    [L3_84] GRN 4pts BLU:7                     | [L3_85] GRN 4pts WHT:3 BLU:6 GRN:3        
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | nemotron-3-nano-30b-a3b:free (P1):
+  Score: 15 | Cards: 14                                |   Score: 12 | Cards: 12
+  Tokens: WHT:1 BLU:2 GRN:1 BLK:1                      |   Tokens: WHT:2 BLU:1 GRN:1 RED:4 BLK:2
+  Bonuses: {WHT:3 BLU:2 GRN:4 RED:3 BLK:2}             |   Bonuses: {WHT:2 BLU:2 GRN:6 RED:1 BLK:1}
+  Reserved: [L3_78] BLU 5pts WHT:7 BLU:3               |   Reserved: [L1_40] RED 1pt WHT:4
+            [L3_74] BLK 5pts RED:7 BLK:3               | 
+
+======================================================================================
+
+2025-12-30 22:40:52.736 [main] INFO  com.aisplendor.engine.GameSimulator - --- Game Over ---
+2025-12-30 22:40:52.736 [main] INFO  com.aisplendor.engine.GameSimulator - Winner: Player 0 won on points.
+2025-12-30 22:40:52.736 [main] INFO  com.aisplendor.engine.GameSimulator - Player 0: 15 points
+2025-12-30 22:40:52.736 [main] INFO  com.aisplendor.engine.GameSimulator - Player 1: 12 points
+2025-12-30 22:40:52.740 [main] INFO  c.aisplendor.service.GameEventLogger - Game event log closed: logs\20251230_211841.json

@@ -40,14 +40,16 @@ public class GameSimulator {
         this.debugMode = debugMode;
     }
 
-    public static void initializeGame() {
+    public static void initializeGame(Path propertiesFile) {
         String apiKey = System.getenv("OPENROUTER_API_KEY");
         if (apiKey == null || apiKey.isBlank()) {
             logger.error("OPENROUTER_API_KEY environment variable is not set.");
             return;
         }
 
-        GameConfig config = new GameConfig();
+        GameConfig config = (propertiesFile != null)
+                ? new GameConfig(propertiesFile)
+                : new GameConfig();
         String model0 = config.getPlayer0Model();
         String model1 = config.getPlayer1Model();
         ReasoningConfig reasoning0 = config.getPlayerReasoning(0);
@@ -172,7 +174,7 @@ public class GameSimulator {
 
             while (!state.isGameOver()) {
                 Player currentPlayer = state.players().get(state.currentPlayerIndex());
-                logger.info(GameStateFormatter.format(state));
+                logger.info(GameStateFormatter.format(state, List.of(model0, model1)));
                 logger.info("Turn {} - Player {}'s move", state.turnNumber(), currentPlayer.id());
                 logger.info("Points: {}, Budget: {}", currentPlayer.score(),
                         GameStateFormatter.formatBudget(currentPlayer));
@@ -331,7 +333,7 @@ public class GameSimulator {
                         state.players().get(0).score(), state.players().get(1).score());
             }
 
-            logger.info(GameStateFormatter.format(state));
+            logger.info(GameStateFormatter.format(state, List.of(model0, model1)));
             logger.info("--- Game Over ---");
             logger.info("Winner: {}", state.winnerReason());
 

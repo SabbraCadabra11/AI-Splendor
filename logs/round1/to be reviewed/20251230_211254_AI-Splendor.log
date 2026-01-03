@@ -1,0 +1,151 @@
+2025-12-30 21:12:54.579 [main] INFO  com.aisplendor.engine.GameSimulator - Configured Player 0 with: openai/gpt-oss-20b (reasoning: high)
+2025-12-30 21:12:54.579 [main] INFO  com.aisplendor.engine.GameSimulator - Configured Player 1 with: nvidia/nemotron-3-nano-30b-a3b (reasoning: high)
+2025-12-30 21:12:54.579 [main] INFO  com.aisplendor.engine.GameSimulator - Semi-Auto Mode: DISABLED
+2025-12-30 21:12:54.579 [main] INFO  com.aisplendor.engine.GameSimulator - Debug Mode: DISABLED
+2025-12-30 21:12:54.857 [main] INFO  com.aisplendor.engine.GameSimulator - --- Game Started ---
+2025-12-30 21:12:54.879 [main] INFO  c.aisplendor.service.GameEventLogger - Game event log created: logs\20251230_211254.json
+2025-12-30 21:12:54.933 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 1 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:4 BLU:4 GRN:4 RED:4 BLK:4 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_17] WHT 0pts BLU:1 GRN:1 RED:1 BLK:1   | [L1_24] WHT 1pt GRN:4                      |
+    [L1_37] RED 0pts BLU:2 GRN:1               | [L1_28] GRN 0pts WHT:1 BLU:3 GRN:1        
+L2: [L2_63] GRN 2pts GRN:5                     | [L2_52] BLU 3pts BLU:6                     |
+    [L2_51] BLU 2pts BLU:5                     | [L2_65] RED 1pt WHT:2 RED:2 BLK:3         
+L3: [L3_74] BLK 5pts RED:7 BLK:3               | [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   |
+    [L3_86] GRN 5pts BLU:7 GRN:3               | [L3_84] GRN 4pts BLU:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | nemotron-3-nano-30b-a3b (P1):
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 0
+  Tokens:                                              |   Tokens: 
+  Bonuses: {}                                          |   Bonuses: {}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+2025-12-30 21:12:54.933 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 1 - Player 0's move
+2025-12-30 21:12:54.934 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {}
+2025-12-30 21:13:09.079 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I start with no tokens and no cards. No purchase is possible this turn because the lowest cost level‑1 card still requires 4 GREEN tokens or 4 different tokens. To acquire tokens efficiently, I’ll take 1 token of three different colors (WHITE, BLUE, GREEN) which is a valid "TAKE_TOKENS" move and gives me a diversified token set for future purchases. I have only 3 tokens after this turn and no need to return any. I’m not reserving or buying any card this turn, so I leave card_id empty and deck_level empty.
+2025-12-30 21:13:09.079 [main] INFO  com.aisplendor.engine.GameSimulator - Action: TakeTokensAction[tokens={WHITE=1, BLUE=1, GREEN=1}, tokensToReturn=null]
+2025-12-30 21:13:09.101 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 1 | Current Player: nemotron-3-nano-30b-a3b (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:3 GRN:3 RED:4 BLK:4 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_17] WHT 0pts BLU:1 GRN:1 RED:1 BLK:1   | [L1_24] WHT 1pt GRN:4                      |
+    [L1_37] RED 0pts BLU:2 GRN:1               | [L1_28] GRN 0pts WHT:1 BLU:3 GRN:1        
+L2: [L2_63] GRN 2pts GRN:5                     | [L2_52] BLU 3pts BLU:6                     |
+    [L2_51] BLU 2pts BLU:5                     | [L2_65] RED 1pt WHT:2 RED:2 BLK:3         
+L3: [L3_74] BLK 5pts RED:7 BLK:3               | [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   |
+    [L3_86] GRN 5pts BLU:7 GRN:3               | [L3_84] GRN 4pts BLU:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | nemotron-3-nano-30b-a3b (P1) (Current):
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 0
+  Tokens: WHT:1 BLU:1 GRN:1                            |   Tokens: 
+  Bonuses: {}                                          |   Bonuses: {}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+2025-12-30 21:13:09.101 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 1 - Player 1's move
+2025-12-30 21:13:09.101 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {}
+2025-12-30 21:13:09.168 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 1 for Player 1. Error: Unexpected error: API request failed with status 404: {"error":{"message":"No endpoints found matching your data policy (Paid model training). Configure: https://openrouter.ai/settings/privacy","code":404}}
+2025-12-30 21:13:09.212 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 2 for Player 1. Error: Unexpected error: API request failed with status 404: {"error":{"message":"No endpoints found matching your data policy (Paid model training). Configure: https://openrouter.ai/settings/privacy","code":404}}
+2025-12-30 21:13:09.243 [main] ERROR com.aisplendor.engine.GameSimulator - Player 1 failed to provide a valid action after 3 retries. Last error: Unexpected error: API request failed with status 404: {"error":{"message":"No endpoints found matching your data policy (Paid model training). Configure: https://openrouter.ai/settings/privacy","code":404}}. Skipping turn.
+2025-12-30 21:13:09.243 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 2 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:3 GRN:3 RED:4 BLK:4 GLD:5
+
+[FACE-UP CARDS]
+L1: [L1_17] WHT 0pts BLU:1 GRN:1 RED:1 BLK:1   | [L1_24] WHT 1pt GRN:4                      |
+    [L1_37] RED 0pts BLU:2 GRN:1               | [L1_28] GRN 0pts WHT:1 BLU:3 GRN:1        
+L2: [L2_63] GRN 2pts GRN:5                     | [L2_52] BLU 3pts BLU:6                     |
+    [L2_51] BLU 2pts BLU:5                     | [L2_65] RED 1pt WHT:2 RED:2 BLK:3         
+L3: [L3_74] BLK 5pts RED:7 BLK:3               | [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   |
+    [L3_86] GRN 5pts BLU:7 GRN:3               | [L3_84] GRN 4pts BLU:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | nemotron-3-nano-30b-a3b (P1):
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 0
+  Tokens: WHT:1 BLU:1 GRN:1                            |   Tokens: 
+  Bonuses: {}                                          |   Bonuses: {}
+  Reserved: None                                       |   Reserved: None
+
+======================================================================================
+
+2025-12-30 21:13:09.243 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 2 - Player 0's move
+2025-12-30 21:13:09.245 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=1, BLU=1, GRN=1}
+2025-12-30 21:14:01.053 [main] INFO  com.aisplendor.engine.GameSimulator - Reasoning: I can’t afford any of the face‑up cards yet; the only Level‑1 card that gives prestige is L1_24, but it costs 4 GREEN tokens and I only have 1. Instead of wasting turns rapidly gathering more GREEN tokens, I reserve L1_24 right away. This gives me a gold token to substitute one GREEN later, and it removes the card from the board, so my opponent cannot buy or reserve the only Level‑1 prestige card for a short time. I’ll later collect GREEN tokens in separate turns, and as soon as I have 3 GREENs and the gold token I can purchase L1_24 on my next turn.
+2025-12-30 21:14:01.054 [main] INFO  com.aisplendor.engine.GameSimulator - Action: ReserveCardAction[cardId=L1_24, deckLevel=null, tokensToReturn=null]
+2025-12-30 21:14:01.056 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 2 | Current Player: nemotron-3-nano-30b-a3b (P1)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:3 GRN:3 RED:4 BLK:4 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_17] WHT 0pts BLU:1 GRN:1 RED:1 BLK:1   | [L1_37] RED 0pts BLU:2 GRN:1               |
+    [L1_28] GRN 0pts WHT:1 BLU:3 GRN:1         | [L1_31] GRN 0pts RED:3                    
+L2: [L2_63] GRN 2pts GRN:5                     | [L2_52] BLU 3pts BLU:6                     |
+    [L2_51] BLU 2pts BLU:5                     | [L2_65] RED 1pt WHT:2 RED:2 BLK:3         
+L3: [L3_74] BLK 5pts RED:7 BLK:3               | [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   |
+    [L3_86] GRN 5pts BLU:7 GRN:3               | [L3_84] GRN 4pts BLU:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0):                                      | nemotron-3-nano-30b-a3b (P1) (Current):
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 0
+  Tokens: WHT:1 BLU:1 GRN:1 GLD:1                      |   Tokens: 
+  Bonuses: {}                                          |   Bonuses: {}
+  Reserved: [L1_24] WHT 1pt GRN:4                      |   Reserved: None
+
+======================================================================================
+
+2025-12-30 21:14:01.057 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 2 - Player 1's move
+2025-12-30 21:14:01.057 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {}
+2025-12-30 21:14:01.246 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 1 for Player 1. Error: Unexpected error: API request failed with status 404: {"error":{"message":"No endpoints found matching your data policy (Paid model training). Configure: https://openrouter.ai/settings/privacy","code":404}}
+2025-12-30 21:14:01.277 [main] WARN  com.aisplendor.engine.GameSimulator - Retry attempt 2 for Player 1. Error: Unexpected error: API request failed with status 404: {"error":{"message":"No endpoints found matching your data policy (Paid model training). Configure: https://openrouter.ai/settings/privacy","code":404}}
+2025-12-30 21:14:01.313 [main] ERROR com.aisplendor.engine.GameSimulator - Player 1 failed to provide a valid action after 3 retries. Last error: Unexpected error: API request failed with status 404: {"error":{"message":"No endpoints found matching your data policy (Paid model training). Configure: https://openrouter.ai/settings/privacy","code":404}}. Skipping turn.
+2025-12-30 21:14:01.314 [main] INFO  com.aisplendor.engine.GameSimulator - 
+======================================================================================
+TURN 3 | Current Player: gpt-oss-20b (P0)
+======================================================================================
+
+[BOARD BANK]
+WHT:3 BLU:3 GRN:3 RED:4 BLK:4 GLD:4
+
+[FACE-UP CARDS]
+L1: [L1_17] WHT 0pts BLU:1 GRN:1 RED:1 BLK:1   | [L1_37] RED 0pts BLU:2 GRN:1               |
+    [L1_28] GRN 0pts WHT:1 BLU:3 GRN:1         | [L1_31] GRN 0pts RED:3                    
+L2: [L2_63] GRN 2pts GRN:5                     | [L2_52] BLU 3pts BLU:6                     |
+    [L2_51] BLU 2pts BLU:5                     | [L2_65] RED 1pt WHT:2 RED:2 BLK:3         
+L3: [L3_74] BLK 5pts RED:7 BLK:3               | [L3_75] BLU 3pts WHT:3 GRN:3 RED:3 BLK:5   |
+    [L3_86] GRN 5pts BLU:7 GRN:3               | [L3_84] GRN 4pts BLU:7                    
+
+[PLAYERS]
+gpt-oss-20b (P0) (Current):                            | nemotron-3-nano-30b-a3b (P1):
+  Score: 0 | Cards: 0                                  |   Score: 0 | Cards: 0
+  Tokens: WHT:1 BLU:1 GRN:1 GLD:1                      |   Tokens: 
+  Bonuses: {}                                          |   Bonuses: {}
+  Reserved: [L1_24] WHT 1pt GRN:4                      |   Reserved: None
+
+======================================================================================
+
+2025-12-30 21:14:01.314 [main] INFO  com.aisplendor.engine.GameSimulator - Turn 3 - Player 0's move
+2025-12-30 21:14:01.314 [main] INFO  com.aisplendor.engine.GameSimulator - Points: 0, Budget: {WHT=1, BLU=1, GRN=1, GLD=1}
