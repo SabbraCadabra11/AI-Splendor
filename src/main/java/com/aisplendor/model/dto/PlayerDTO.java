@@ -11,7 +11,8 @@ import java.util.Map;
 
 /**
  * DTO for Player to be sent to LLMs.
- * Reasoning history is conditionally included - only for the current player.
+ * Reasoning history is excluded from this DTO — it is included separately
+ * in the system prompt to avoid duplication.
  */
 public record PlayerDTO(
         int id,
@@ -20,36 +21,17 @@ public record PlayerDTO(
         List<DevelopmentCard> reservedCards,
         List<NobleTile> visitedNobles,
         int score,
-        Map<Color, Integer> bonuses,
-        List<String> reasoningHistory) {
+        Map<Color, Integer> bonuses) {
 
     /**
-     * Creates a PlayerDTO from a Player, including reasoning history.
-     * Use this for the current player who should see their own history.
-     *
-     * @param player The full player state.
-     * @return A DTO with reasoning history included.
-     */
-    public static PlayerDTO fromPlayerWithHistory(Player player) {
-        return new PlayerDTO(
-                player.id(),
-                player.tokens(),
-                player.purchasedCards(),
-                player.reservedCards(),
-                player.visitedNobles(),
-                player.score(),
-                player.bonuses(),
-                player.reasoningHistory());
-    }
-
-    /**
-     * Creates a PlayerDTO from a Player, excluding reasoning history.
-     * Use this for opponent players whose reasoning should be private.
+     * Creates a PlayerDTO from a Player.
+     * Reasoning history is intentionally excluded — it is managed
+     * by PromptService and included in the system prompt instead.
      *
      * @param player The full player state.
      * @return A DTO without reasoning history.
      */
-    public static PlayerDTO fromPlayerWithoutHistory(Player player) {
+    public static PlayerDTO fromPlayer(Player player) {
         return new PlayerDTO(
                 player.id(),
                 player.tokens(),
@@ -57,7 +39,6 @@ public record PlayerDTO(
                 player.reservedCards(),
                 player.visitedNobles(),
                 player.score(),
-                player.bonuses(),
-                null);
+                player.bonuses());
     }
 }

@@ -1,0 +1,2 @@
+You are now playing the first leg of a {stage} match.
+**Tiebreaker rule**: If both players finish with equal aggregate points, the player who purchased fewer cards across both legs advances.

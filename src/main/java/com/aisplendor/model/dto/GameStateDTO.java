@@ -7,9 +7,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * DTO for GameState to be sent to LLMs.
- * Excludes sensitive information like deck contents and opponent reasoning
- * history.
+ * DTO for GameState used in NDJSON logging.
+ * Excludes sensitive information like deck contents.
+ * Note: This DTO is no longer sent directly to LLMs — the compact text
+ * format from CompactStateSerializer is used instead.
  */
 public record GameStateDTO(
         BoardDTO board,
@@ -19,24 +20,17 @@ public record GameStateDTO(
 
     /**
      * Creates a GameStateDTO from a GameState.
-     * Includes reasoning history only for the current player.
+     * Reasoning history is excluded from all players — it is managed
+     * separately in the system prompt.
      *
      * @param state The full game state.
-     * @return A sanitized DTO for LLM consumption.
+     * @return A sanitized DTO.
      */
     public static GameStateDTO fromGameState(GameState state) {
-        int currentPlayerIndex = state.currentPlayerIndex();
         List<PlayerDTO> playerDTOs = new ArrayList<>();
 
-        for (int i = 0; i < state.players().size(); i++) {
-            Player player = state.players().get(i);
-            if (i == currentPlayerIndex) {
-                // Include reasoning history for the current player
-                playerDTOs.add(PlayerDTO.fromPlayerWithHistory(player));
-            } else {
-                // Exclude reasoning history for opponents
-                playerDTOs.add(PlayerDTO.fromPlayerWithoutHistory(player));
-            }
+        for (Player player : state.players()) {
+            playerDTOs.add(PlayerDTO.fromPlayer(player));
         }
 
         return new GameStateDTO(

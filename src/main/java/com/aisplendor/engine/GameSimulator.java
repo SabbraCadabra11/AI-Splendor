@@ -1,9 +1,14 @@
 package com.aisplendor.engine;
 
+import com.aisplendor.config.DynamicReasoningConfig;
 import com.aisplendor.config.GameConfig;
-import com.aisplendor.config.ReasoningConfig;
+import com.aisplendor.config.StageConfig;
 import com.aisplendor.model.*;
 import com.aisplendor.model.action.AgentResponse;
+import com.aisplendor.model.action.GameAction;
+import com.aisplendor.model.action.PurchaseCardAction;
+import com.aisplendor.model.action.ReserveCardAction;
+import com.aisplendor.model.action.TakeTokensAction;
 import com.aisplendor.model.event.*;
 import com.aisplendor.service.GameEventLogger;
 import com.aisplendor.service.GameLogReader;
@@ -29,15 +34,23 @@ public class GameSimulator {
     private final PromptService promptService;
     private final boolean semiAuto;
     private final boolean debugMode;
+    private final StageConfig stageConfig;
+    private final int memorySize0;
+    private final int memorySize1;
 
     public GameSimulator(String apiKey, String model0, String model1,
-            ReasoningConfig reasoning0, ReasoningConfig reasoning1, boolean semiAuto, boolean debugMode) {
+            DynamicReasoningConfig dynamicReasoning0, DynamicReasoningConfig dynamicReasoning1,
+            boolean semiAuto, boolean debugMode,
+            StageConfig stageConfig, int memorySize0, int memorySize1, String promptCachingSetting) {
         this.engine = new GameEngine();
-        this.llmService0 = new OpenRouterService(apiKey, model0, reasoning0, debugMode);
-        this.llmService1 = new OpenRouterService(apiKey, model1, reasoning1, debugMode);
+        this.llmService0 = new OpenRouterService(apiKey, model0, dynamicReasoning0, debugMode, promptCachingSetting);
+        this.llmService1 = new OpenRouterService(apiKey, model1, dynamicReasoning1, debugMode, promptCachingSetting);
         this.promptService = new PromptService();
         this.semiAuto = semiAuto;
         this.debugMode = debugMode;
+        this.stageConfig = stageConfig;
+        this.memorySize0 = memorySize0;
+        this.memorySize1 = memorySize1;
     }
 
     public static void initializeGame(Path propertiesFile) {
@@ -52,23 +65,35 @@ public class GameSimulator {
                 : new GameConfig();
         String model0 = config.getPlayer0Model();
         String model1 = config.getPlayer1Model();
-        ReasoningConfig reasoning0 = config.getPlayerReasoning(0);
-        ReasoningConfig reasoning1 = config.getPlayerReasoning(1);
+        DynamicReasoningConfig dynamicReasoning0 = config.getDynamicReasoningConfig(0);
+        DynamicReasoningConfig dynamicReasoning1 = config.getDynamicReasoningConfig(1);
         boolean semiAuto = config.isSemiAuto();
         boolean debugMode = config.isDebugMode();
+        StageConfig stageConfig = config.getStageConfig();
+        int memorySize0 = config.getPlayerMemorySize(0);
+        int memorySize1 = config.getPlayerMemorySize(1);
+        String promptCachingSetting = config.getPromptCachingSetting();
 
-        logger.info("Configured Player 0 with: {} (reasoning: {})", model0,
-                reasoning0.enabled() ? reasoning0.effort() : "disabled");
-        logger.info("Configured Player 1 with: {} (reasoning: {})", model1,
-                reasoning1.enabled() ? reasoning1.effort() : "disabled");
+        logger.info("Configured Player 0 with: {} (reasoning: {}, memory: {})", model0,
+                dynamicReasoning0, memorySize0);
+        logger.info("Configured Player 1 with: {} (reasoning: {}, memory: {})", model1,
+                dynamicReasoning1, memorySize1);
         logger.info("Semi-Auto Mode: {}", (semiAuto ? "ENABLED" : "DISABLED"));
         logger.info("Debug Mode: {}", (debugMode ? "ENABLED" : "DISABLED"));
+        logger.info("Prompt Caching: {}", promptCachingSetting);
+        if (stageConfig.hasStage()) {
+            logger.info("Stage: {} Leg {}", stageConfig.stage(), stageConfig.leg());
+            if (stageConfig.isSecondLeg()) {
+                logger.info("First Leg Result: {} - {}", stageConfig.player0FirstLegScore(),
+                        stageConfig.player1FirstLegScore());
+            }
+        }
 
         // Generate unique game ID based on timestamp (matches logback format)
         String gameId = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss"));
 
-        GameSimulator simulator = new GameSimulator(apiKey, model0, model1, reasoning0, reasoning1, semiAuto,
-                debugMode);
+        GameSimulator simulator = new GameSimulator(apiKey, model0, model1, dynamicReasoning0, dynamicReasoning1,
+                semiAuto, debugMode, stageConfig, memorySize0, memorySize1, promptCachingSetting);
         GameState state = setupInitialState();
 
         simulator.run(state, gameId, model0, model1);
@@ -100,10 +125,15 @@ public class GameSimulator {
 
             // Load config for reasoning settings (models are overridden from log)
             GameConfig config = new GameConfig();
-            ReasoningConfig reasoning0 = config.getPlayerReasoning(0);
-            ReasoningConfig reasoning1 = config.getPlayerReasoning(1);
+            DynamicReasoningConfig dynamicReasoning0 = config.getDynamicReasoningConfig(0);
+            DynamicReasoningConfig dynamicReasoning1 = config.getDynamicReasoningConfig(1);
             boolean semiAuto = config.isSemiAuto();
             boolean debugMode = config.isDebugMode();
+            // Note: Stage config is not preserved in resume - use none()
+            StageConfig stageConfig = config.getStageConfig();
+            int memorySize0 = config.getPlayerMemorySize(0);
+            int memorySize1 = config.getPlayerMemorySize(1);
+            String promptCachingSetting = config.getPromptCachingSetting();
 
             // Generate new game ID with resume suffix
             String newGameId = resumeData.originalGameId() + "_resumed_"
@@ -113,10 +143,14 @@ public class GameSimulator {
                     apiKey,
                     resumeData.player0Model(),
                     resumeData.player1Model(),
-                    reasoning0,
-                    reasoning1,
+                    dynamicReasoning0,
+                    dynamicReasoning1,
                     semiAuto,
-                    debugMode);
+                    debugMode,
+                    stageConfig,
+                    memorySize0,
+                    memorySize1,
+                    promptCachingSetting);
 
             simulator.run(resumeData.resumeState(), newGameId,
                     resumeData.player0Model(), resumeData.player1Model());
@@ -202,7 +236,8 @@ public class GameSimulator {
                     }
                 }
 
-                String systemPrompt = promptService.getSystemPrompt(currentPlayer.reasoningHistory());
+                String systemPrompt = promptService.getSystemPrompt(currentPlayer.reasoningHistory(), stageConfig,
+                        state.currentPlayerIndex());
                 OpenRouterService currentLlm = (state.currentPlayerIndex() == 0) ? llmService0 : llmService1;
 
                 final int MAX_LOGIC_RETRIES = 3;
@@ -211,6 +246,7 @@ public class GameSimulator {
 
                 AgentResponse response = null;
                 String lastError = null;
+                String lastResponse = null; // Track previous response for retry feedback
                 boolean validAction = false;
 
                 for (int attempt = 0; attempt < MAX_LOGIC_RETRIES && !validAction; attempt++) {
@@ -219,6 +255,7 @@ public class GameSimulator {
 
                     while (!validAction) { // Network retry loop
                         try {
+                            String retryContext = null;
                             if (attempt > 0 && backoff == INITIAL_BACKOFF_MS) {
                                 // Only log retry on first network attempt of a new logic retry
                                 logger.warn("Retry attempt {} for Player {}. Error: {}", attempt, currentPlayer.id(),
@@ -226,16 +263,12 @@ public class GameSimulator {
                                 // Log retry event
                                 eventLogger.log(new RetryEvent(
                                         Instant.now(), currentPlayer.id(), attempt, lastError));
-                                String retryPrompt = promptService.getRetryPrompt(lastError);
-                                response = currentLlm.getNextMove(state, systemPrompt + "\n\n" + retryPrompt);
-                            } else if (backoff > INITIAL_BACKOFF_MS) {
-                                // Network retry - use same prompt as before
-                                response = currentLlm.getNextMove(state,
-                                        attempt > 0 ? systemPrompt + "\n\n" + promptService.getRetryPrompt(lastError)
-                                                : systemPrompt);
-                            } else {
-                                response = currentLlm.getNextMove(state, systemPrompt);
+                                retryContext = promptService.getRetryPrompt(lastError, lastResponse);
+                            } else if (backoff > INITIAL_BACKOFF_MS && attempt > 0) {
+                                // Network retry on a logic retry - keep the retry context
+                                retryContext = promptService.getRetryPrompt(lastError, lastResponse);
                             }
+                            response = currentLlm.getNextMove(state, systemPrompt, retryContext);
 
                             logger.info("Reasoning: {}", response.reasoning());
                             logger.info("Action: {}", response.action());
@@ -252,9 +285,14 @@ public class GameSimulator {
                                     Instant.now(), currentPlayer.id(), response.action(), true));
                         } catch (IllegalArgumentException e) {
                             lastError = "Invalid action: " + e.getMessage();
+                            // Capture the failed response for retry feedback
+                            if (response != null) {
+                                lastResponse = "Reasoning: " + response.reasoning() + "\nAction: " + response.action();
+                            }
                             break; // Logic error - exit to outer loop for retry
                         } catch (com.fasterxml.jackson.core.JsonParseException e) {
                             lastError = "Malformed JSON response: " + e.getOriginalMessage();
+                            lastResponse = null; // Can't capture response if JSON was malformed
                             break; // Logic error - exit to outer loop for retry
                         } catch (java.net.SocketTimeoutException | java.net.ConnectException e) {
                             // Transient network errors - retry with backoff
@@ -312,10 +350,13 @@ public class GameSimulator {
                     continue;
                 }
 
-                // Update Player Memory
+                // Update Player Memory — compress reasoning to a one-line summary
+                int memorySize = (state.currentPlayerIndex() == 0) ? memorySize0 : memorySize1;
                 List<String> newHistory = new ArrayList<>(currentPlayer.reasoningHistory());
-                newHistory.add(response.reasoning());
-                if (newHistory.size() > 5) {
+                String compressedReasoning = compressReasoning(
+                        state.turnNumber(), response.reasoning(), response.action());
+                newHistory.add(compressedReasoning);
+                if (newHistory.size() > memorySize) {
                     newHistory.remove(0);
                 }
                 Player updatedCurrentPlayer = new Player(
@@ -357,5 +398,91 @@ public class GameSimulator {
         } catch (Exception e) {
             logger.error("An error occurred during the game simulation:", e);
         }
+    }
+
+    /**
+     * Compresses a full reasoning string into a structured one-liner for the memory window.
+     * Format: "T{turn}: {action_summary} — {rationale extracted from reasoning}"
+     *
+     * @param turnNumber The current turn number
+     * @param reasoning  The full reasoning string from the LLM
+     * @param action     The action that was taken
+     * @return A compressed one-line summary
+     */
+    private static String compressReasoning(int turnNumber, String reasoning, GameAction action) {
+        String actionSummary = summarizeAction(action);
+
+        // Extract the core rationale — take the first sentence or the last sentence
+        // as LLMs tend to put conclusions at the start or end
+        String rationale = extractRationale(reasoning);
+
+        return String.format("T%d: %s — %s", turnNumber, actionSummary, rationale);
+    }
+
+    private static String summarizeAction(GameAction action) {
+        return switch (action) {
+            case TakeTokensAction take -> {
+                if (take.tokens() == null || take.tokens().isEmpty()) {
+                    yield "Took tokens (empty)";
+                }
+                String colors = take.tokens().entrySet().stream()
+                        .filter(e -> e.getValue() > 0)
+                        .map(e -> formatColorShort(e.getKey()) + (e.getValue() > 1 ? "x" + e.getValue() : ""))
+                        .collect(java.util.stream.Collectors.joining("+"));
+                yield "Took " + colors;
+            }
+            case PurchaseCardAction purchase -> "Purchased " + purchase.cardId();
+            case ReserveCardAction reserve -> {
+                if (reserve.cardId() != null) {
+                    yield "Reserved " + reserve.cardId();
+                } else if (reserve.deckLevel() != null) {
+                    yield "Reserved blind from " + reserve.deckLevel();
+                }
+                yield "Reserved card";
+            }
+        };
+    }
+
+    private static String extractRationale(String reasoning) {
+        if (reasoning == null || reasoning.isBlank()) {
+            return "No reasoning provided";
+        }
+
+        // Clean up and take the first meaningful sentence
+        String cleaned = reasoning.strip();
+
+        // Try to find the first sentence
+        int end = -1;
+        for (int i = 0; i < cleaned.length(); i++) {
+            char c = cleaned.charAt(i);
+            if (c == '.' || c == '!' || c == '?') {
+                // Make sure it's not a decimal point (e.g., "4.5")
+                if (c == '.' && i > 0 && i < cleaned.length() - 1
+                        && Character.isDigit(cleaned.charAt(i - 1))
+                        && Character.isDigit(cleaned.charAt(i + 1))) {
+                    continue;
+                }
+                end = i + 1;
+                break;
+            }
+        }
+
+        if (end > 0 && end <= cleaned.length()) {
+            return cleaned.substring(0, end).strip();
+        }
+
+        // No sentence boundary found — take the whole thing
+        return cleaned;
+    }
+
+    private static String formatColorShort(Color color) {
+        return switch (color) {
+            case WHITE -> "WHT";
+            case BLUE -> "BLU";
+            case GREEN -> "GRN";
+            case RED -> "RED";
+            case BLACK -> "BLK";
+            case GOLD -> "GLD";
+        };
     }
 }

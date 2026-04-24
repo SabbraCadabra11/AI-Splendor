@@ -1,0 +1,2 @@
+You are now playing the second leg of a {stage} match. You {result} the first leg {yourScore}:{opponentScore}. You must {requirement} in order to advance.
+**Tiebreaker rule**: If both players finish with equal aggregate points, the player who purchased fewer cards across both legs advances. {tiebreakerStatus}
