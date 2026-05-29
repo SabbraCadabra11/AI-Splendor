@@ -28,7 +28,9 @@ public class GameLogReader {
             String originalGameId,
             String player0Model,
             String player1Model,
-            GameState resumeState) {
+            GameState resumeState,
+            long player0AccumulatedTimeMs,
+            long player1AccumulatedTimeMs) {
     }
 
     public GameLogReader() {
@@ -59,6 +61,9 @@ public class GameLogReader {
         GameState lastSuccessfulTurnState = null;
         GameState pendingStateAfterAction = null;
         boolean lastActionWasSuccessful = false;
+
+        long player0AccumulatedTimeMs = 0L;
+        long player1AccumulatedTimeMs = 0L;
 
         try (BufferedReader reader = Files.newBufferedReader(logFile)) {
             String line;
@@ -98,8 +103,15 @@ public class GameLogReader {
                     boolean success = node.get("success").asBoolean();
                     if (success) {
                         lastActionWasSuccessful = true;
-                        logger.debug("Found successful ActionEvent for player {}",
-                                node.get("playerIndex").asInt());
+                        int playerIndex = node.get("playerIndex").asInt();
+                        long duration = node.has("durationMs") ? node.get("durationMs").asLong() : 0L;
+                        if (playerIndex == 0) {
+                            player0AccumulatedTimeMs += duration;
+                        } else if (playerIndex == 1) {
+                            player1AccumulatedTimeMs += duration;
+                        }
+                        logger.debug("Found successful ActionEvent for player {}, duration: {} ms",
+                                playerIndex, duration);
                     }
                 }
                 // Ignore ReasoningEvent, RetryEvent, GameEndedEvent
@@ -124,6 +136,7 @@ public class GameLogReader {
             throw new IOException("Could not find any TurnStartedEvent to resume from");
         }
 
-        return new ResumeData(originalGameId, player0Model, player1Model, resumeState);
+        return new ResumeData(originalGameId, player0Model, player1Model, resumeState,
+                player0AccumulatedTimeMs, player1AccumulatedTimeMs);
     }
 }

@@ -10,7 +10,15 @@ public record ActionEvent(
         Instant timestamp,
         int playerIndex,
         GameAction action,
-        boolean success) implements GameEvent {
+        boolean success,
+        Long durationMs) implements GameEvent {
+
+    /**
+     * Secondary constructor for backward compatibility.
+     */
+    public ActionEvent(Instant timestamp, int playerIndex, GameAction action, boolean success) {
+        this(timestamp, playerIndex, action, success, null);
+    }
 
     @Override
     public String eventType() {

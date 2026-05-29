@@ -165,11 +165,9 @@ public class OpenRouterService {
         // Build properties map
         Map<String, Object> properties = new LinkedHashMap<>();
 
-        if (!apiReasoningEnabled) {
-            // When API reasoning is disabled, require the reasoning field as the only
-            // source of strategic analysis
-            properties.put("reasoning", Map.of("type", "string"));
-        }
+        // Always require the reasoning field as part of the JSON output schema
+        // to guarantee reasoning visibility across all models and API providers
+        properties.put("reasoning", Map.of("type", "string"));
 
         properties.put("action_type", Map.of("type", "string", "enum",
                 List.of("TAKE_TOKENS", "RESERVE_CARD", "PURCHASE_CARD")));
@@ -192,9 +190,7 @@ public class OpenRouterService {
 
         // Build required fields list
         List<String> required = new ArrayList<>();
-        if (!apiReasoningEnabled) {
-            required.add("reasoning");
-        }
+        required.add("reasoning");
         required.addAll(List.of("action_type",
                 "take_WHITE", "take_BLUE", "take_GREEN", "take_RED", "take_BLACK",
                 "return_WHITE", "return_BLUE", "return_GREEN", "return_RED", "return_BLACK",
@@ -264,20 +260,19 @@ public class OpenRouterService {
 
         JsonNode json = mapper.readTree(content);
 
-        // Determine reasoning text
-        String reasoning;
-        if (apiReasoningEnabled) {
-            // Try to extract from API reasoning_content (available when exclude=false)
+        // Determine reasoning text — prioritize JSON field to always show reasoning
+        String reasoning = json.path("reasoning").asText(null);
+
+        if (reasoning == null || reasoning.isBlank() || reasoning.equals("No reasoning provided.")) {
+            // Fallback to reasoning_content from API if available
             String apiReasoning = message.path("reasoning_content").asText(null);
             if (apiReasoning != null && !apiReasoning.isBlank()) {
                 reasoning = apiReasoning;
+            } else if (apiReasoningEnabled) {
+                reasoning = "(API reasoning enabled — reasoning handled internally)";
             } else {
-                // Reasoning was internal-only (exclude=true) or not available
-                reasoning = json.path("reasoning").asText("(API reasoning enabled — reasoning handled internally)");
+                reasoning = "No reasoning provided.";
             }
-        } else {
-            // Reasoning from the JSON schema field
-            reasoning = json.path("reasoning").asText("No reasoning provided.");
         }
 
         String actionType = json.path("action_type").asText();

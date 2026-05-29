@@ -64,3 +64,6 @@ application-local.properties
 *.tmp
 *.swp
 *~
+
+# Logs
+logs/

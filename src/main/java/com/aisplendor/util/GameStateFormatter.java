@@ -10,7 +10,7 @@ public class GameStateFormatter {
 
     private static final int CARDS_PER_ROW = 2;
     private static final int PLAYER_COLUMN_WIDTH = 55;
-    private static final int CARD_WIDTH = 42; // Based on longest card: [L3_79] WHT 3pts BLU:3 GRN:3 RED:5 BLK:3
+    private static final int CARD_WIDTH = 48; // Based on longest card: [L3_79] WHT (3pts) - [BLU:3 GRN:3 RED:5 BLK:3]
 
     public static String format(GameState state, List<String> modelNames) {
         StringBuilder sb = new StringBuilder();
@@ -25,11 +25,11 @@ public class GameStateFormatter {
         sb.append(formatTokenBankCompact(state.board().availableTokens()));
         sb.append("\n");
 
-        sb.append("\n[FACE-UP CARDS]\n");
+        sb.append("\n[FACE-UP CARDS]");
         for (CardLevel level : CardLevel.values()) {
-            String levelPrefix = getLevelPrefix(level);
+            sb.append("\n--- ").append(level.toString().replace("_", " ")).append(" ---\n");
             List<DevelopmentCard> cards = state.board().faceUpCards().get(level);
-            sb.append(formatCardsCompact(levelPrefix, cards));
+            sb.append(formatCardsCompact(cards));
         }
 
         // Players Section - side by side
@@ -47,21 +47,19 @@ public class GameStateFormatter {
         };
     }
 
-    private static String formatCardsCompact(String levelPrefix, List<DevelopmentCard> cards) {
+    private static String formatCardsCompact(List<DevelopmentCard> cards) {
         StringBuilder sb = new StringBuilder();
+        if (cards == null || cards.isEmpty()) {
+            sb.append("  (brak kart / no cards)\n");
+            return sb.toString();
+        }
 
         for (int i = 0; i < cards.size(); i += CARDS_PER_ROW) {
-            if (i == 0) {
-                sb.append(levelPrefix).append(": ");
-            } else {
-                sb.append("    "); // Indentation for continuation rows
-            }
-
             List<String> rowCards = new ArrayList<>();
             for (int j = i; j < Math.min(i + CARDS_PER_ROW, cards.size()); j++) {
                 DevelopmentCard card = cards.get(j);
                 String pts = card.prestigePoints() == 1 ? "1pt" : card.prestigePoints() + "pts";
-                String cardStr = String.format("[%s] %s %s %s",
+                String cardStr = String.format("[%s] %s (%s) - [%s]",
                         card.id(),
                         formatBonusGemShort(card.bonusGem()),
                         pts,
@@ -70,9 +68,6 @@ public class GameStateFormatter {
                 rowCards.add(String.format("%-" + CARD_WIDTH + "s", cardStr));
             }
             sb.append(String.join(" | ", rowCards));
-            if (i + CARDS_PER_ROW < cards.size()) {
-                sb.append(" |");
-            }
             sb.append("\n");
         }
         return sb.toString();
@@ -147,7 +142,7 @@ public class GameStateFormatter {
             for (int i = 0; i < p.reservedCards().size(); i++) {
                 DevelopmentCard card = p.reservedCards().get(i);
                 String pts = card.prestigePoints() == 1 ? "1pt" : card.prestigePoints() + "pts";
-                String cardStr = String.format("[%s] %s %s %s",
+                String cardStr = String.format("[%s] %s (%s) - [%s]",
                         card.id(),
                         formatBonusGemShort(card.bonusGem()),
                         pts,
@@ -188,7 +183,7 @@ public class GameStateFormatter {
         List<String> cardStrings = p.reservedCards().stream()
                 .map(card -> {
                     String pts = card.prestigePoints() == 1 ? "1pt" : card.prestigePoints() + "pts";
-                    return String.format("[%s] %s %s %s",
+                    return String.format("[%s] %s (%s) - [%s]",
                             card.id(),
                             formatBonusGemShort(card.bonusGem()),
                             pts,

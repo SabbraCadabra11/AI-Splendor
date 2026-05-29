@@ -153,7 +153,8 @@ public class GameSimulator {
                     promptCachingSetting);
 
             simulator.run(resumeData.resumeState(), newGameId,
-                    resumeData.player0Model(), resumeData.player1Model());
+                    resumeData.player0Model(), resumeData.player1Model(),
+                    resumeData.player0AccumulatedTimeMs(), resumeData.player1AccumulatedTimeMs());
 
         } catch (IOException e) {
             logger.error("Failed to resume game from {}: {}", logFile, e.getMessage());
@@ -198,8 +199,15 @@ public class GameSimulator {
     }
 
     public void run(GameState initialState, String gameId, String model0, String model1) {
+        run(initialState, gameId, model0, model1, 0L, 0L);
+    }
+
+    public void run(GameState initialState, String gameId, String model0, String model1,
+            long initialP0TimeMs, long initialP1TimeMs) {
         GameState state = initialState;
         logger.info("--- Game Started ---");
+        long player0TotalTimeMs = initialP0TimeMs;
+        long player1TotalTimeMs = initialP1TimeMs;
 
         try (GameEventLogger eventLogger = new GameEventLogger(gameId)) {
             // Log game start event
@@ -236,6 +244,8 @@ public class GameSimulator {
                     }
                 }
 
+                long moveStartMs = System.currentTimeMillis();
+
                 String systemPrompt = promptService.getSystemPrompt(currentPlayer.reasoningHistory(), stageConfig,
                         state.currentPlayerIndex());
                 OpenRouterService currentLlm = (state.currentPlayerIndex() == 0) ? llmService0 : llmService1;
@@ -248,6 +258,7 @@ public class GameSimulator {
                 String lastError = null;
                 String lastResponse = null; // Track previous response for retry feedback
                 boolean validAction = false;
+                long moveDurationMs = 0L;
 
                 for (int attempt = 0; attempt < MAX_LOGIC_RETRIES && !validAction; attempt++) {
                     long networkWaitStart = System.currentTimeMillis();
@@ -279,10 +290,16 @@ public class GameSimulator {
 
                             engine.validateAction(state, response.action());
                             validAction = true;
+                            moveDurationMs = System.currentTimeMillis() - moveStartMs;
+                            if (state.currentPlayerIndex() == 0) {
+                                player0TotalTimeMs += moveDurationMs;
+                            } else {
+                                player1TotalTimeMs += moveDurationMs;
+                            }
 
                             // Log successful action event
                             eventLogger.log(new ActionEvent(
-                                    Instant.now(), currentPlayer.id(), response.action(), true));
+                                    Instant.now(), currentPlayer.id(), response.action(), true, moveDurationMs));
                         } catch (IllegalArgumentException e) {
                             lastError = "Invalid action: " + e.getMessage();
                             // Capture the failed response for retry feedback
@@ -339,9 +356,15 @@ public class GameSimulator {
                 }
 
                 if (!validAction) {
+                    moveDurationMs = System.currentTimeMillis() - moveStartMs;
+                    if (state.currentPlayerIndex() == 0) {
+                        player0TotalTimeMs += moveDurationMs;
+                    } else {
+                        player1TotalTimeMs += moveDurationMs;
+                    }
                     logger.error(
-                            "Player {} failed to provide a valid action after {} retries. Last error: {}. Skipping turn.",
-                            currentPlayer.id(), MAX_LOGIC_RETRIES, lastError);
+                            "Player {} failed to provide a valid action after {} retries. Last error: {}. Skipping turn. Time taken: {}",
+                            currentPlayer.id(), MAX_LOGIC_RETRIES, lastError, formatDuration(moveDurationMs));
                     // Skip turn by manually advancing the game state
                     int nextPlayerIndex = (state.currentPlayerIndex() + 1) % state.players().size();
                     int nextTurn = (nextPlayerIndex == 0) ? state.turnNumber() + 1 : state.turnNumber();
@@ -370,6 +393,7 @@ public class GameSimulator {
                         state.turnNumber(), state.isGameOver(), state.winnerReason());
 
                 state = engine.applyAction(state, response.action());
+                logger.info("[TIME] Player {}'s move took {}", currentPlayer.id(), formatDuration(moveDurationMs));
                 logger.debug("Applied action. New state summary: P0:{}, P1:{}",
                         state.players().get(0).score(), state.players().get(1).score());
             }
@@ -384,6 +408,10 @@ public class GameSimulator {
                 logger.info("Player {}: {} points", p.id(), p.score());
                 finalScores.put(p.id(), p.score());
             }
+
+            logger.info("--- Execution Time Summary ---");
+            logger.info("Player 0 ({}) total time: {}", model0, formatDuration(player0TotalTimeMs));
+            logger.info("Player 1 ({}) total time: {}", model1, formatDuration(player1TotalTimeMs));
 
             // Determine winner index (null if tie or no clear winner)
             Integer winnerIndex = state.players().stream()
@@ -484,5 +512,12 @@ public class GameSimulator {
             case BLACK -> "BLK";
             case GOLD -> "GLD";
         };
+    }
+
+    private static String formatDuration(long durationMs) {
+        long minutes = (durationMs / 1000) / 60;
+        long seconds = (durationMs / 1000) % 60;
+        long millis = durationMs % 1000;
+        return String.format("%02d:%02d.%03d", minutes, seconds, millis);
     }
 }

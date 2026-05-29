@@ -52,13 +52,18 @@ Edit `src/main/resources/application.properties` to configure the game:
 
 ```properties
 # Player 0 configuration
-player0.model=google/gemini-3-flash-preview
+player0.model=google/gemini-3.5-flash
 player0.reasoning.enabled=true
-player0.reasoning.effort=medium
+player0.reasoning.effort=high
+player0.reasoning.dynamic=true
+player0.reasoning.phases=1-5:medium,6+:high
 
 # Player 1 configuration
-player1.model=x-ai/grok-4.1-fast
-# player1.reasoning.enabled=false (default)
+player1.model=anthropic/claude-opus-4.8
+player1.reasoning.enabled=true
+player1.reasoning.effort=high
+player1.reasoning.dynamic=true
+player1.reasoning.phases=1-5:medium,6+:high
 
 # Game settings
 game.semi-auto=false
@@ -70,7 +75,9 @@ game.semi-auto=false
 |----------|-------------|---------|
 | `playerN.model` | OpenRouter model identifier | `google/gemini-3-flash-preview` (P0), `anthropic/claude-haiku-4.5` (P1) |
 | `playerN.reasoning.enabled` | Enable reasoning mode for the model | `false` |
-| `playerN.reasoning.effort` | Reasoning effort level (`low`, `medium`, `high`) | `medium` |
+| `playerN.reasoning.effort` | Reasoning effort level (`low`, `medium`, `high`). Also acts as the default fallback when `dynamic=true` and no phase matches. | `medium` |
+| `playerN.reasoning.dynamic` | Enable dynamic reasoning effort based on current game turn | `false` |
+| `playerN.reasoning.phases` | Dynamic phases configuration in format `range:effort,range:effort` (e.g. `1-5:medium,6+:high`) | *none* |
 | `game.semi-auto` | Pause between turns for manual inspection | `false` |
 
 ## Usage

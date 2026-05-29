@@ -62,4 +62,27 @@ class JsonSerializationTest {
         assertEquals("I need RED tokens.", deserialized.reasoning());
         assertTrue(deserialized.action() instanceof TakeTokensAction);
     }
+
+    @Test
+    void testActionEventSerialization() throws Exception {
+        ObjectMapper mapperWithTime = new ObjectMapper();
+        mapperWithTime.registerModule(new com.fasterxml.jackson.datatype.jsr310.JavaTimeModule());
+
+        com.aisplendor.model.event.ActionEvent event = new com.aisplendor.model.event.ActionEvent(
+                java.time.Instant.parse("2025-01-01T00:00:00Z"),
+                0,
+                new PurchaseCardAction("c2"),
+                true,
+                1500L
+        );
+        String json = mapperWithTime.writeValueAsString(event);
+        assertTrue(json.contains("\"durationMs\":1500"));
+        assertTrue(json.contains("\"playerIndex\":0"));
+        assertTrue(json.contains("\"success\":true"));
+
+        com.aisplendor.model.event.ActionEvent deserialized = mapperWithTime.readValue(json, com.aisplendor.model.event.ActionEvent.class);
+        assertEquals(1500L, deserialized.durationMs());
+        assertEquals(0, deserialized.playerIndex());
+        assertTrue(deserialized.success());
+    }
 }

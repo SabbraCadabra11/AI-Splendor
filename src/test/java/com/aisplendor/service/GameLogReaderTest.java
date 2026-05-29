@@ -38,6 +38,10 @@ class GameLogReaderTest {
         assertEquals("model-a", resumeData.player0Model());
         assertEquals("model-b", resumeData.player1Model());
 
+        // Verify timing extraction (no durationMs in original log, should default to 0)
+        assertEquals(0L, resumeData.player0AccumulatedTimeMs());
+        assertEquals(0L, resumeData.player1AccumulatedTimeMs());
+
         // Verify we got the state after the successful action (player 1's turn)
         GameState state = resumeData.resumeState();
         assertNotNull(state);
@@ -63,9 +67,34 @@ class GameLogReaderTest {
         GameLogReader reader = new GameLogReader();
         GameLogReader.ResumeData resumeData = reader.parseLogForResume(logFile);
 
+        // Verify timing defaults to 0 when no actions are present
+        assertEquals(0L, resumeData.player0AccumulatedTimeMs());
+        assertEquals(0L, resumeData.player1AccumulatedTimeMs());
+
         // Should fall back to last available TurnStartedEvent
         GameState state = resumeData.resumeState();
         assertNotNull(state);
         assertEquals(0, state.currentPlayerIndex(), "Should resume at player 0's turn (replay)");
+    }
+
+    @Test
+    void parseLogForResume_extractsTimingAndSumsIt() throws IOException {
+        String logContent = """
+                {"timestamp":"2025-01-01T00:00:00Z","gameId":"test_game","player0Model":"model-a","player1Model":"model-b","initialState":{"board":{"availableTokens":{"counts":{}},"faceUpCards":{"LEVEL_1":[],"LEVEL_2":[],"LEVEL_3":[]},"decks":{"LEVEL_1":[],"LEVEL_2":[],"LEVEL_3":[]},"availableNobles":[]},"players":[{"id":0,"tokens":{"counts":{}},"purchasedCards":[],"reservedCards":[],"visitedNobles":[],"score":0,"bonuses":{},"reasoningHistory":[]},{"id":1,"tokens":{"counts":{}},"purchasedCards":[],"reservedCards":[],"visitedNobles":[],"score":0,"bonuses":{},"reasoningHistory":[]}],"currentPlayerIndex":0,"turnNumber":1,"isGameOver":false,"winnerReason":null}}
+                {"timestamp":"2025-01-01T00:00:01Z","turn":1,"playerIndex":0,"gameState":{"board":{"availableTokens":{"counts":{}},"faceUpCards":{"LEVEL_1":[],"LEVEL_2":[],"LEVEL_3":[]},"decks":{"LEVEL_1":[],"LEVEL_2":[],"LEVEL_3":[]},"availableNobles":[]},"players":[{"id":0,"tokens":{"counts":{}},"purchasedCards":[],"reservedCards":[],"visitedNobles":[],"score":0,"bonuses":{},"reasoningHistory":[]},{"id":1,"tokens":{"counts":{}},"purchasedCards":[],"reservedCards":[],"visitedNobles":[],"score":0,"bonuses":{},"reasoningHistory":[]}],"currentPlayerIndex":0,"turnNumber":1,"isGameOver":false,"winnerReason":null}}
+                {"timestamp":"2025-01-01T00:00:02Z","playerIndex":0,"action":{"type":"PURCHASE_CARD","cardId":"c1"},"success":true,"durationMs":1500}
+                {"timestamp":"2025-01-01T00:00:03Z","playerIndex":1,"action":{"type":"PURCHASE_CARD","cardId":"c2"},"success":true,"durationMs":3200}
+                {"timestamp":"2025-01-01T00:00:04Z","playerIndex":0,"action":{"type":"PURCHASE_CARD","cardId":"c3"},"success":true,"durationMs":2500}
+                {"timestamp":"2025-01-01T00:00:05Z","turn":2,"playerIndex":1,"gameState":{"board":{"availableTokens":{"counts":{}},"faceUpCards":{"LEVEL_1":[],"LEVEL_2":[],"LEVEL_3":[]},"decks":{"LEVEL_1":[],"LEVEL_2":[],"LEVEL_3":[]},"availableNobles":[]},"players":[{"id":0,"tokens":{"counts":{}},"purchasedCards":[],"reservedCards":[],"visitedNobles":[],"score":0,"bonuses":{},"reasoningHistory":[]},{"id":1,"tokens":{"counts":{}},"purchasedCards":[],"reservedCards":[],"visitedNobles":[],"score":0,"bonuses":{},"reasoningHistory":[]}],"currentPlayerIndex":1,"turnNumber":2,"isGameOver":false,"winnerReason":null}}
+                """;
+
+        Path logFile = tempDir.resolve("test_game_timing.json");
+        Files.writeString(logFile, logContent);
+
+        GameLogReader reader = new GameLogReader();
+        GameLogReader.ResumeData resumeData = reader.parseLogForResume(logFile);
+
+        assertEquals(4000L, resumeData.player0AccumulatedTimeMs(), "Should sum player 0's times");
+        assertEquals(3200L, resumeData.player1AccumulatedTimeMs(), "Should sum player 1's times");
     }
 }
