@@ -82,6 +82,16 @@ public class GameConfig {
         return Math.max(2, size);
     }
 
+    public double getPlayerInputTokenCost(int playerIndex) {
+        String value = properties.getProperty("player" + playerIndex + ".input.cost", "0.0");
+        return Double.parseDouble(value.trim());
+    }
+
+    public double getPlayerOutputTokenCost(int playerIndex) {
+        String value = properties.getProperty("player" + playerIndex + ".output.cost", "0.0");
+        return Double.parseDouble(value.trim());
+    }
+
     /**
      * Get reasoning configuration for a specific player.
      * Reads from player{N}.reasoning.enabled, player{N}.reasoning.effort,

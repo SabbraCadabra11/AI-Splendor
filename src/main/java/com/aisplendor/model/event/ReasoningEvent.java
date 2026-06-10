@@ -1,5 +1,6 @@
 package com.aisplendor.model.event;
 
+import com.aisplendor.model.TokenUsage;
 import java.time.Instant;
 
 /**
@@ -8,7 +9,8 @@ import java.time.Instant;
 public record ReasoningEvent(
         Instant timestamp,
         int playerIndex,
-        String reasoning) implements GameEvent {
+        String reasoning,
+        TokenUsage tokenUsage) implements GameEvent {
 
     @Override
     public String eventType() {

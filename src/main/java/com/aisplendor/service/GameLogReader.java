@@ -1,6 +1,7 @@
 package com.aisplendor.service;
 
 import com.aisplendor.model.GameState;
+import com.aisplendor.model.TokenUsage;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
@@ -28,9 +29,77 @@ public class GameLogReader {
             String originalGameId,
             String player0Model,
             String player1Model,
+            String player0Name,
+            String player1Name,
             GameState resumeState,
             long player0AccumulatedTimeMs,
-            long player1AccumulatedTimeMs) {
+            long player1AccumulatedTimeMs,
+            double player0InputCost,
+            double player0OutputCost,
+            double player1InputCost,
+            double player1OutputCost,
+            TokenUsage player0AccumulatedTokens,
+            TokenUsage player1AccumulatedTokens) {
+    }
+
+    /**
+     * Inteligentnie mapuje nazwy wyświetlane na techniczne identyfikatory modeli OpenRouter.
+     * Zapewnia to wsteczną kompatybilność ze starymi plikami logów.
+     */
+    public static String resolveModelId(String modelOrDisplayName) {
+        if (modelOrDisplayName == null) {
+            return null;
+        }
+        String name = modelOrDisplayName.trim();
+        // Usuwamy ewentualne końcówki " (P0)" lub " (P1)"
+        if (name.endsWith(" (P0)") || name.endsWith(" (P1)")) {
+            name = name.substring(0, name.length() - 5).trim();
+        }
+        
+        // Jeśli zawiera już "/" (np. "google/gemini-3.5-flash"), jest to poprawny techniczny ID
+        if (name.contains("/")) {
+            return name;
+        }
+        
+        String lower = name.toLowerCase();
+        
+        if (lower.contains("gemma") && lower.contains("31b")) {
+            return "google/gemma-4-31b-it";
+        }
+        if (lower.contains("gemma") && lower.contains("26b")) {
+            return "google/gemma-4-26b-a4b-it";
+        }
+        if (lower.contains("mistral") && lower.contains("medium")) {
+            return "mistralai/mistral-medium-3-5";
+        }
+        if (lower.contains("gemini") && lower.contains("3.5") && lower.contains("flash")) {
+            return "google/gemini-3.5-flash";
+        }
+        if (lower.contains("gemini") && lower.contains("3") && lower.contains("flash")) {
+            return "google/gemini-3-flash-preview";
+        }
+        if (lower.contains("claude") && lower.contains("haiku")) {
+            return "anthropic/claude-haiku-4.5";
+        }
+        if (lower.contains("gpt") && lower.contains("4o") && lower.contains("mini")) {
+            return "openai/gpt-4o-mini";
+        }
+        if (lower.contains("llama") && lower.contains("70b")) {
+            return "meta-llama/llama-3-70b-instruct";
+        }
+        
+        // Szybkie domyślne mapowania na wypadek innych odmian
+        if (lower.contains("gemini")) {
+            return "google/gemini-3.5-flash";
+        }
+        if (lower.contains("claude")) {
+            return "anthropic/claude-haiku-4.5";
+        }
+        if (lower.contains("gpt-4")) {
+            return "openai/gpt-4o-mini";
+        }
+        
+        return name; // Zwracamy jako fallback
     }
 
     public GameLogReader() {
@@ -57,6 +126,16 @@ public class GameLogReader {
         String originalGameId = null;
         String player0Model = null;
         String player1Model = null;
+        String player0Name = null;
+        String player1Name = null;
+
+        double player0InputCost = 0.0;
+        double player0OutputCost = 0.0;
+        double player1InputCost = 0.0;
+        double player1OutputCost = 0.0;
+
+        TokenUsage player0AccumulatedTokens = TokenUsage.zero();
+        TokenUsage player1AccumulatedTokens = TokenUsage.zero();
 
         GameState lastSuccessfulTurnState = null;
         GameState pendingStateAfterAction = null;
@@ -77,10 +156,16 @@ public class GameLogReader {
                 if (node.has("player0Model")) {
                     // GameStartedEvent
                     originalGameId = node.get("gameId").asText();
-                    player0Model = node.get("player0Model").asText();
-                    player1Model = node.get("player1Model").asText();
-                    logger.debug("Found GameStartedEvent: gameId={}, models={}/{}",
-                            originalGameId, player0Model, player1Model);
+                    player0Model = resolveModelId(node.get("player0Model").asText());
+                    player1Model = resolveModelId(node.get("player1Model").asText());
+                    player0Name = node.has("player0Name") ? node.get("player0Name").asText() : node.get("player0Model").asText();
+                    player1Name = node.has("player1Name") ? node.get("player1Name").asText() : node.get("player1Model").asText();
+                    player0InputCost = node.has("player0InputCost") ? node.get("player0InputCost").asDouble(0.0) : 0.0;
+                    player0OutputCost = node.has("player0OutputCost") ? node.get("player0OutputCost").asDouble(0.0) : 0.0;
+                    player1InputCost = node.has("player1InputCost") ? node.get("player1InputCost").asDouble(0.0) : 0.0;
+                    player1OutputCost = node.has("player1OutputCost") ? node.get("player1OutputCost").asDouble(0.0) : 0.0;
+                    logger.debug("Found GameStartedEvent: gameId={}, models={}/{}, names={}/{}",
+                            originalGameId, player0Model, player1Model, player0Name, player1Name);
 
                 } else if (node.has("gameState") && node.has("turn")) {
                     // TurnStartedEvent
@@ -113,8 +198,20 @@ public class GameLogReader {
                         logger.debug("Found successful ActionEvent for player {}, duration: {} ms",
                                 playerIndex, duration);
                     }
+                } else if (node.has("reasoning") && node.has("tokenUsage")) {
+                    // ReasoningEvent
+                    int playerIndex = node.get("playerIndex").asInt();
+                    JsonNode usageNode = node.get("tokenUsage");
+                    long prompt = usageNode.path("promptTokens").asLong(0);
+                    long completion = usageNode.path("completionTokens").asLong(0);
+                    double cost = usageNode.path("cost").asDouble(0.0);
+                    TokenUsage usage = new TokenUsage(prompt, completion, cost);
+                    if (playerIndex == 0) {
+                        player0AccumulatedTokens = player0AccumulatedTokens.add(usage);
+                    } else if (playerIndex == 1) {
+                        player1AccumulatedTokens = player1AccumulatedTokens.add(usage);
+                    }
                 }
-                // Ignore ReasoningEvent, RetryEvent, GameEndedEvent
             }
         }
 
@@ -136,7 +233,9 @@ public class GameLogReader {
             throw new IOException("Could not find any TurnStartedEvent to resume from");
         }
 
-        return new ResumeData(originalGameId, player0Model, player1Model, resumeState,
-                player0AccumulatedTimeMs, player1AccumulatedTimeMs);
+        return new ResumeData(originalGameId, player0Model, player1Model, player0Name, player1Name, resumeState,
+                player0AccumulatedTimeMs, player1AccumulatedTimeMs,
+                player0InputCost, player0OutputCost, player1InputCost, player1OutputCost,
+                player0AccumulatedTokens, player1AccumulatedTokens);
     }
 }

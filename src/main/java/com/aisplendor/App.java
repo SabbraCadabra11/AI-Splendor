@@ -12,8 +12,8 @@ public class App {
             // Properties file path provided as argument
             GameSimulator.initializeGame(Path.of(args[0]));
         } else {
-            // No arguments - use default classpath properties
-            GameSimulator.initializeGame(null);
+            // No arguments - start the web server instead of default CLI initialization
+            SpringApp.main(args);
         }
     }
 }

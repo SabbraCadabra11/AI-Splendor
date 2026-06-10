@@ -1,5 +1,6 @@
 package com.aisplendor.model.event;
 
+import com.aisplendor.model.TokenUsage;
 import java.time.Instant;
 import java.util.Map;
 
@@ -10,7 +11,8 @@ public record GameEndedEvent(
         Instant timestamp,
         Integer winnerIndex,
         String winnerReason,
-        Map<Integer, Integer> finalScores) implements GameEvent {
+        Map<Integer, Integer> finalScores,
+        Map<Integer, TokenUsage> playerUsages) implements GameEvent {
 
     @Override
     public String eventType() {

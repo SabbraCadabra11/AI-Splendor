@@ -1,0 +1,285 @@
+/* AI-Splendor Premium CSS - Terra Theme Micro-Animations */
+
+/* 1. Smooth Active Player Pulse Glow */
+.active-player-pulse-0 {
+    box-shadow: 0 0 15px rgba(112, 92, 48, 0.25);
+    border-color: #705c30 !important;
+    animation: activeGlow0 3s infinite alternate;
+}
+
+.active-player-pulse-1 {
+    box-shadow: 0 0 15px rgba(74, 124, 89, 0.25);
+    border-color: #4a7c59 !important;
+    animation: activeGlow1 3s infinite alternate;
+}
+
+@keyframes activeGlow0 {
+    0% {
+        box-shadow: 0 0 8px rgba(112, 92, 48, 0.15);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(112, 92, 48, 0.35);
+    }
+}
+
+@keyframes activeGlow1 {
+    0% {
+        box-shadow: 0 0 8px rgba(74, 124, 89, 0.15);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(74, 124, 89, 0.35);
+    }
+}
+
+/* 2. Card Entrance Flip Animation */
+.card-flip-entrance {
+    animation: cardEntrance 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    backface-visibility: hidden;
+}
+
+@keyframes cardEntrance {
+    0% {
+        opacity: 0;
+        transform: rotateY(-30deg) translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: rotateY(0deg) translateY(0);
+    }
+}
+
+/* 3. Token Pop-Bounce Animation when changed */
+.token-change-pop {
+    animation: tokenPop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.5) forwards;
+}
+
+@keyframes tokenPop {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.22);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* 4. Elegant Glassmorphism & Soft Shadows for Terra Cards */
+.terra-card-premium {
+    background: rgba(250, 246, 240, 0.95);
+    backdrop-filter: blur(8px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.terra-card-premium:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(46, 50, 48, 0.08);
+}
+
+/* 5. Custom styling for Range input slider */
+#replay-timeline {
+    height: 6px;
+    border-radius: 9999px;
+    background: #eae6de;
+    outline: none;
+    transition: background 0.3s;
+}
+
+#replay-timeline::-webkit-slider-thumb {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #4a7c59;
+    cursor: pointer;
+    transition: transform 0.1s, background 0.3s;
+}
+
+#replay-timeline::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+    background: #2a6038;
+}
+
+/* 6. Dynamic responsive scaling for narrow screens (side-by-side layouts) */
+@media (max-width: 1300px) {
+    aside {
+        width: 14.5rem !important; /* w-58 equivalent */
+        padding: 0.5rem !important;
+    }
+    
+    /* Shrink player gem tokens */
+    aside .w-9.h-9 {
+        width: 1.85rem !important; /* ~w-7.5 */
+        height: 1.85rem !important;
+    }
+    
+    /* Shrink player bonus cards */
+    aside .w-9.h-7 {
+        width: 1.85rem !important;
+        height: 1.5rem !important;
+    }
+    
+    /* Adjust text sizing */
+    aside h2 {
+        font-size: 0.95rem !important;
+    }
+    aside h3 {
+        font-size: 9px !important;
+    }
+    
+    /* Reduce terminal text size */
+    aside .terminal-scroll {
+        font-size: 10px !important;
+        padding: 0.35rem !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    aside {
+        width: 13rem !important; /* w-52 equivalent */
+        padding: 0.35rem !important;
+    }
+    
+    aside .w-9.h-9 {
+        width: 1.65rem !important; /* ~w-6.5 */
+        height: 1.65rem !important;
+    }
+    
+    aside .w-9.h-7 {
+        width: 1.65rem !important;
+        height: 1.35rem !important;
+    }
+}
+
+/* 7. Hover highlighting of card ID in reasoning */
+.card-highlight-active {
+    box-shadow: 0 0 16px 6px rgba(74, 124, 89, 0.8) !important; /* Premium organic green-gold glow */
+    transform: scale(1.08) !important;
+    z-index: 30 !important;
+    border-color: #4a7c59 !important;
+    transition: all 0.2s ease-in-out !important;
+}
+
+.card-highlight-active-green {
+    box-shadow: 0 0 16px 6px rgba(16, 185, 129, 0.85) !important; /* Emerald green glow */
+    transform: scale(1.08) !important;
+    z-index: 30 !important;
+    border-color: #10b981 !important;
+    transition: all 0.2s ease-in-out !important;
+}
+
+.card-highlight-active-blue {
+    box-shadow: 0 0 16px 6px rgba(59, 130, 246, 0.85) !important; /* Sapphire blue glow */
+    transform: scale(1.08) !important;
+    z-index: 30 !important;
+    border-color: #3b82f6 !important;
+    transition: all 0.2s ease-in-out !important;
+}
+
+.card-highlight-active-red {
+    box-shadow: 0 0 16px 6px rgba(239, 68, 68, 0.85) !important; /* Ruby red glow */
+    transform: scale(1.08) !important;
+    z-index: 30 !important;
+    border-color: #ef4444 !important;
+    transition: all 0.2s ease-in-out !important;
+}
+
+.card-highlight-active-black {
+    box-shadow: 0 0 16px 6px rgba(55, 65, 81, 0.85) !important; /* Onyx dark gray glow */
+    transform: scale(1.08) !important;
+    z-index: 30 !important;
+    border-color: #374151 !important;
+    transition: all 0.2s ease-in-out !important;
+}
+
+.card-highlight-active-white {
+    box-shadow: 0 0 16px 6px rgba(220, 225, 235, 0.95) !important; /* Diamond silver-white glow */
+    transform: scale(1.08) !important;
+    z-index: 30 !important;
+    border-color: #cbd5e1 !important;
+    transition: all 0.2s ease-in-out !important;
+}
+
+.reasoning-card-link {
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: underline;
+    padding: 1px 4px;
+    border-radius: 4px;
+    transition: all 0.15s ease-in-out;
+    display: inline-block;
+    border: 1px solid transparent;
+}
+
+/* Color specific background tags for card IDs in reasoning */
+.reasoning-card-green {
+    background-color: rgba(16, 185, 129, 0.15) !important;
+    color: #065f46 !important;
+    border-color: rgba(16, 185, 129, 0.3) !important;
+}
+.reasoning-card-green:hover {
+    background-color: #10b981 !important;
+    color: #ffffff !important;
+}
+
+.reasoning-card-blue {
+    background-color: rgba(59, 130, 246, 0.15) !important;
+    color: #1e3a8a !important;
+    border-color: rgba(59, 130, 246, 0.3) !important;
+}
+.reasoning-card-blue:hover {
+    background-color: #3b82f6 !important;
+    color: #ffffff !important;
+}
+
+.reasoning-card-red {
+    background-color: rgba(239, 68, 68, 0.15) !important;
+    color: #7f1d1d !important;
+    border-color: rgba(239, 68, 68, 0.3) !important;
+}
+.reasoning-card-red:hover {
+    background-color: #ef4444 !important;
+    color: #ffffff !important;
+}
+
+.reasoning-card-black {
+    background-color: rgba(75, 85, 99, 0.2) !important;
+    color: #111827 !important;
+    border-color: rgba(75, 85, 99, 0.35) !important;
+}
+.reasoning-card-black:hover {
+    background-color: #374151 !important;
+    color: #ffffff !important;
+}
+
+.reasoning-card-white {
+    background-color: #ffffff !important;
+    color: #1f2937 !important;
+    border-color: #d1d5db !important;
+}
+.reasoning-card-white:hover {
+    background-color: #f3f4f6 !important;
+    color: #111827 !important;
+}
+
+/* 8. Widescreen optimizations: stretch sidebars, bound center column fluidly */
+@media (min-width: 1280px) {
+    main {
+        justify-content: center !important; /* Center the dashboard layout on ultra-wide screens */
+    }
+
+    aside {
+        flex: 1 1 0% !important;
+        min-width: 288px !important; /* Standard w-72 base */
+        max-width: 680px !important; /* Generous cap for uncompromised reasoning legibility */
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    #center-column {
+        flex: 1.2 1 0% !important; /* Fluid scaling proportional to view width */
+        min-width: 580px !important;
+        max-width: 770px !important; /* Made cards 10% narrower to maintain slender Splendor ratios */
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+}

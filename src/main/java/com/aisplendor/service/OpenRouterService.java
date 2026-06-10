@@ -5,6 +5,7 @@ import com.aisplendor.config.ReasoningConfig;
 import com.aisplendor.model.CardLevel;
 import com.aisplendor.model.Color;
 import com.aisplendor.model.GameState;
+import com.aisplendor.model.TokenUsage;
 import com.aisplendor.model.action.AgentResponse;
 import com.aisplendor.model.action.GameAction;
 import com.aisplendor.model.action.PurchaseCardAction;
@@ -44,35 +45,24 @@ public class OpenRouterService {
     private final DynamicReasoningConfig dynamicReasoningConfig;
     private final boolean debugMode;
     private final String promptCachingSetting;
+    private final double inputTokenCost;
+    private final double outputTokenCost;
     private final ObjectMapper mapper;
     private final HttpClient httpClient;
 
     public OpenRouterService(String apiKey, String model, DynamicReasoningConfig dynamicReasoningConfig,
-            boolean debugMode, String promptCachingSetting) {
+            boolean debugMode, String promptCachingSetting, double inputTokenCost, double outputTokenCost) {
         this.apiKey = apiKey;
         this.model = model;
         this.dynamicReasoningConfig = dynamicReasoningConfig;
         this.debugMode = debugMode;
         this.promptCachingSetting = promptCachingSetting;
+        this.inputTokenCost = inputTokenCost;
+        this.outputTokenCost = outputTokenCost;
         this.mapper = new ObjectMapper();
         this.httpClient = HttpClient.newBuilder()
                 .connectTimeout(Duration.ofSeconds(10))
                 .build();
-    }
-
-    /**
-     * Constructor without prompt caching setting (defaults to "auto").
-     */
-    public OpenRouterService(String apiKey, String model, DynamicReasoningConfig dynamicReasoningConfig,
-            boolean debugMode) {
-        this(apiKey, model, dynamicReasoningConfig, debugMode, "auto");
-    }
-
-    /**
-     * Backward-compatible constructor that wraps a static ReasoningConfig.
-     */
-    public OpenRouterService(String apiKey, String model, ReasoningConfig reasoningConfig, boolean debugMode) {
-        this(apiKey, model, DynamicReasoningConfig.fromStatic(reasoningConfig), debugMode, "auto");
     }
 
     /**
@@ -284,7 +274,18 @@ public class OpenRouterService {
             default -> throw new IllegalArgumentException("Unknown action type: " + actionType);
         };
 
-        return new AgentResponse(reasoning, action);
+        long promptTokens = 0;
+        long completionTokens = 0;
+        double cost = 0.0;
+        JsonNode usageNode = root.path("usage");
+        if (!usageNode.isMissingNode()) {
+            promptTokens = usageNode.path("prompt_tokens").asLong(0);
+            completionTokens = usageNode.path("completion_tokens").asLong(0);
+            cost = (promptTokens / 1_000_000.0) * inputTokenCost + (completionTokens / 1_000_000.0) * outputTokenCost;
+        }
+        TokenUsage tokenUsage = new TokenUsage(promptTokens, completionTokens, cost);
+
+        return new AgentResponse(reasoning, action, tokenUsage);
     }
 
     private TakeTokensAction parseTakeTokensAction(JsonNode json) {

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>AI-Splendor - Multi-Match Configurator</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400..900&amp;family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#2e3230",
+                        "secondary-fixed-dim": "#d4ccbf",
+                        "on-primary-fixed": "#002110",
+                        "tertiary-fixed": "#f8e0a8",
+                        "on-primary-container": "#d8f0de",
+                        "surface-dim": "#dbd7cf",
+                        "surface-container-low": "#f5f1ea",
+                        "surface": "#faf6f0",
+                        "primary-container": "#78a886",
+                        "background": "#faf6f0",
+                        "on-primary-fixed-variant": "#2a6038",
+                        "secondary": "#6b6358",
+                        "primary": "#4a7c59",
+                        "tertiary-fixed-dim": "#dcc48e",
+                        "tertiary": "#705c30",
+                        "on-secondary-fixed": "#1e1a13",
+                        "outline": "#74796e",
+                        "on-tertiary": "#ffffff",
+                        "error": "#b83230",
+                        "on-error-container": "#690005",
+                        "surface-bright": "#faf6f0",
+                        "on-tertiary-fixed-variant": "#554020",
+                        "primary-fixed-dim": "#8ecf9e",
+                        "on-surface-variant": "#4a4e4a",
+                        "surface-container": "#f0ece4",
+                        "tertiary-container": "#c4a66a",
+                        "on-secondary-fixed-variant": "#4a4538",
+                        "secondary-fixed": "#f0e8db",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-container": "#554020",
+                        "error-container": "#ffdad8",
+                        "surface-tint": "#4a7c59",
+                        "on-tertiary-fixed": "#221a05",
+                        "surface-container-highest": "#e4e0d8",
+                        "on-secondary-container": "#5e5548",
+                        "outline-variant": "#c4c8bc",
+                        "on-surface": "#2e3230",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#2e3230",
+                        "inverse-on-surface": "#f5f0e8",
+                        "secondary-container": "#f0e8db",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#c8e8d0",
+                        "surface-container-high": "#eae6de",
+                        "surface-variant": "#e4e0d8",
+                        "on-primary": "#ffffff",
+                        "inverse-primary": "#8ecf9e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Literata", "serif"],
+                        "display": ["Literata", "serif"],
+                        "body": ["Nunito Sans", "sans-serif"],
+                        "label": ["Nunito Sans", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Nunito Sans', sans-serif; }
+        h1, h2, h3, h4, h5, h6, .font-headline { font-family: 'Literata', serif; }
+    </style>
+    <script src="js/configurator.js" defer></script>
+</head>
+<body class="bg-background text-on-background flex h-screen overflow-hidden antialiased">
+
+<!-- SideNavBar -->
+<nav class="bg-surface-container-low dark:bg-stone-900 text-primary h-screen w-64 border-r border-outline-variant/30 flex flex-col gap-2 p-4 h-full shrink-0">
+    <div class="mb-8 px-3">
+        <h1 class="font-headline text-2xl font-bold text-on-background">AI-Splendor</h1>
+        <p class="text-sm text-on-surface-variant mt-1">Engine Web v1.0</p>
+    </div>
+    <button id="add-slot-btn" class="mb-6 w-full bg-primary text-on-primary py-3 px-4 rounded-lg font-medium hover:bg-primary/90 transition-colors flex items-center justify-center gap-2 shadow-sm">
+        <span class="material-symbols-outlined text-[20px]">add</span>
+        New Match Slot
+    </button>
+    <div class="flex flex-col gap-1 flex-1 font-body font-medium text-sm">
+        <a class="bg-primary-container/30 text-on-primary-container rounded-lg px-3 py-2 flex items-center gap-3" href="#">
+            <span class="material-symbols-outlined">sports_esports</span>
+            Match Slots
+        </a>
+        <a class="text-on-surface-variant px-3 py-2 hover:bg-surface-container-highest rounded-lg flex items-center gap-3 transition-colors" href="/game_board.html" target="_blank">
+            <span class="material-symbols-outlined">dashboard</span>
+            Open Board Directly
+        </a>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<main class="flex-1 flex flex-col h-full overflow-hidden bg-background">
+    <!-- Header -->
+    <header class="px-8 py-6 border-b border-outline-variant/30 bg-surface flex justify-between items-center shrink-0 z-10 relative">
+        <div>
+            <h2 class="font-headline text-3xl text-on-background font-semibold">Multi-Match Configuration</h2>
+            <p class="text-on-surface-variant mt-1 text-sm font-body">Configure up to 8 parallel match instances</p>
+        </div>
+        <div class="flex gap-4">
+            <button id="run-simulations-btn" class="px-5 py-2 rounded-lg bg-primary text-on-primary hover:bg-primary/90 transition-colors flex items-center gap-2 text-sm font-medium shadow-sm">
+                <span class="material-symbols-outlined text-[18px]">play_arrow</span>
+                Run All Simulations
+            </button>
+        </div>
+    </header>
+
+    <!-- Content Area with Sidebar -->
+    <div class="flex flex-1 overflow-hidden">
+        <!-- Match Grid -->
+        <div class="flex-1 overflow-y-auto p-8 bg-surface-container-lowest">
+            <div id="slots-grid" class="flex flex-col gap-6 pb-24 max-w-5xl mx-auto">
+                <!-- Slots will be dynamically injected here -->
+            </div>
+        </div>
+
+        <!-- Global Config Sidebar -->
+        <div class="w-80 bg-surface border-l border-outline-variant/30 flex flex-col h-full shrink-0 z-10">
+            <div class="p-5 border-b border-outline-variant/30 bg-surface-container-lowest">
+                <h3 class="font-headline text-lg font-medium text-on-background">Engine Configuration</h3>
+            </div>
+            <div class="p-5 overflow-y-auto flex-1 space-y-8">
+                <!-- API Key Section -->
+                <div class="space-y-4">
+                    <h4 class="text-xs font-bold text-on-surface-variant uppercase tracking-wider border-b border-outline-variant/20 pb-2">Authentication</h4>
+                    <div class="flex flex-col gap-1.5">
+                        <label class="text-sm text-on-background font-medium">OpenRouter API Key (Override)</label>
+                        <input id="api-key-override" type="password" placeholder="sk-or-..." class="w-full bg-surface-container-low border-outline-variant/50 text-on-background rounded-md text-sm focus:ring-primary focus:border-primary">
+                        <span class="text-[10px] text-on-surface-variant">Leave blank to use server environment variable</span>
+                    </div>
+                </div>
+
+                <!-- Environment Toggles -->
+                <div class="space-y-4">
+                    <h4 class="text-xs font-bold text-on-surface-variant uppercase tracking-wider border-b border-outline-variant/20 pb-2">Environment</h4>
+                    <label class="flex items-center justify-between cursor-pointer group">
+                        <span class="text-sm text-on-background group-hover:text-primary transition-colors">Debug Mode</span>
+                        <div class="relative">
+                            <input id="global-debug-mode" checked type="checkbox" class="sr-only peer">
+                            <div class="block bg-surface-variant w-10 h-6 rounded-full peer-checked:bg-primary/20 peer-checked:border peer-checked:border-primary/30 transition-colors"></div>
+                            <div class="dot absolute left-1 top-1 bg-surface w-4 h-4 rounded-full transition-all peer-checked:translate-x-4 peer-checked:bg-primary"></div>
+                        </div>
+                    </label>
+                    <div class="flex flex-col gap-1.5">
+                        <label class="text-sm text-on-background">Prompt Caching</label>
+                        <select id="global-prompt-caching" class="w-full bg-surface-container-low border-outline-variant/50 text-on-background rounded-md text-sm focus:ring-primary focus:border-primary">
+                            <option value="auto" selected>Auto (recommended)</option>
+                            <option value="true">On</option>
+                            <option value="false">Off</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="p-5 border-t border-outline-variant/30 bg-surface-container-lowest flex flex-col gap-3">
+                <button id="export-properties-btn" class="w-full py-2.5 rounded-lg border border-primary/20 text-primary hover:bg-primary-container/20 transition-colors text-sm font-medium flex justify-center items-center gap-2">
+                    <span class="material-symbols-outlined text-[18px]">download</span>
+                    Export properties
+                </button>
+                <button id="reset-all-btn" class="w-full py-2.5 rounded-lg text-error hover:bg-error-container/20 transition-colors text-sm font-medium">
+                    Reset All Slots
+                </button>
+            </div>
+        </div>
+    </div>
+</main>
+
+</body>
+</html>

@@ -97,4 +97,38 @@ class GameLogReaderTest {
         assertEquals(4000L, resumeData.player0AccumulatedTimeMs(), "Should sum player 0's times");
         assertEquals(3200L, resumeData.player1AccumulatedTimeMs(), "Should sum player 1's times");
     }
+
+    @Test
+    void parseLogForResume_extractsTokensAndCosts() throws IOException {
+        String logContent = """
+                {"timestamp":"2025-01-01T00:00:00Z","gameId":"test_game","player0Model":"model-a","player1Model":"model-b","player0InputCost":1.50,"player0OutputCost":2.50,"player1InputCost":0.50,"player1OutputCost":1.00,"initialState":{"board":{"availableTokens":{"counts":{}},"faceUpCards":{"LEVEL_1":[],"LEVEL_2":[],"LEVEL_3":[]},"decks":{"LEVEL_1":[],"LEVEL_2":[],"LEVEL_3":[]},"availableNobles":[]},"players":[{"id":0,"tokens":{"counts":{}},"purchasedCards":[],"reservedCards":[],"visitedNobles":[],"score":0,"bonuses":{},"reasoningHistory":[]},{"id":1,"tokens":{"counts":{}},"purchasedCards":[],"reservedCards":[],"visitedNobles":[],"score":0,"bonuses":{},"reasoningHistory":[]}],"currentPlayerIndex":0,"turnNumber":1,"isGameOver":false,"winnerReason":null}}
+                {"timestamp":"2025-01-01T00:00:01Z","turn":1,"playerIndex":0,"gameState":{"board":{"availableTokens":{"counts":{}},"faceUpCards":{"LEVEL_1":[],"LEVEL_2":[],"LEVEL_3":[]},"decks":{"LEVEL_1":[],"LEVEL_2":[],"LEVEL_3":[]},"availableNobles":[]},"players":[{"id":0,"tokens":{"counts":{}},"purchasedCards":[],"reservedCards":[],"visitedNobles":[],"score":0,"bonuses":{},"reasoningHistory":[]},{"id":1,"tokens":{"counts":{}},"purchasedCards":[],"reservedCards":[],"visitedNobles":[],"score":0,"bonuses":{},"reasoningHistory":[]}],"currentPlayerIndex":0,"turnNumber":1,"isGameOver":false,"winnerReason":null}}
+                {"timestamp":"2025-01-01T00:00:02Z","playerIndex":0,"reasoning":"Test reasoning","tokenUsage":{"promptTokens":1000,"completionTokens":200,"cost":0.002}}
+                {"timestamp":"2025-01-01T00:00:03Z","playerIndex":0,"action":{"type":"PURCHASE_CARD","cardId":"c1"},"success":true,"durationMs":1500}
+                {"timestamp":"2025-01-01T00:00:04Z","playerIndex":1,"reasoning":"Another reasoning","tokenUsage":{"promptTokens":500,"completionTokens":100,"cost":0.00035}}
+                {"timestamp":"2025-01-01T00:00:05Z","playerIndex":1,"action":{"type":"PURCHASE_CARD","cardId":"c2"},"success":true,"durationMs":3200}
+                {"timestamp":"2025-01-01T00:00:06Z","playerIndex":0,"reasoning":"Test reasoning 2","tokenUsage":{"promptTokens":1500,"completionTokens":300,"cost":0.003}}
+                {"timestamp":"2025-01-01T00:00:07Z","playerIndex":0,"action":{"type":"PURCHASE_CARD","cardId":"c3"},"success":true,"durationMs":2500}
+                {"timestamp":"2025-01-01T00:00:08Z","turn":2,"playerIndex":1,"gameState":{"board":{"availableTokens":{"counts":{}},"faceUpCards":{"LEVEL_1":[],"LEVEL_2":[],"LEVEL_3":[]},"decks":{"LEVEL_1":[],"LEVEL_2":[],"LEVEL_3":[]},"availableNobles":[]},"players":[{"id":0,"tokens":{"counts":{}},"purchasedCards":[],"reservedCards":[],"visitedNobles":[],"score":0,"bonuses":{},"reasoningHistory":[]},{"id":1,"tokens":{"counts":{}},"purchasedCards":[],"reservedCards":[],"visitedNobles":[],"score":0,"bonuses":{},"reasoningHistory":[]}],"currentPlayerIndex":1,"turnNumber":2,"isGameOver":false,"winnerReason":null}}
+                """;
+
+        Path logFile = tempDir.resolve("test_game_tokens.json");
+        Files.writeString(logFile, logContent);
+
+        GameLogReader reader = new GameLogReader();
+        GameLogReader.ResumeData resumeData = reader.parseLogForResume(logFile);
+
+        assertEquals(1.50, resumeData.player0InputCost());
+        assertEquals(2.50, resumeData.player0OutputCost());
+        assertEquals(0.50, resumeData.player1InputCost());
+        assertEquals(1.00, resumeData.player1OutputCost());
+
+        assertEquals(2500L, resumeData.player0AccumulatedTokens().promptTokens());
+        assertEquals(500L, resumeData.player0AccumulatedTokens().completionTokens());
+        assertEquals(0.005, resumeData.player0AccumulatedTokens().cost(), 0.000001);
+
+        assertEquals(500L, resumeData.player1AccumulatedTokens().promptTokens());
+        assertEquals(100L, resumeData.player1AccumulatedTokens().completionTokens());
+        assertEquals(0.00035, resumeData.player1AccumulatedTokens().cost(), 0.000001);
+    }
 }

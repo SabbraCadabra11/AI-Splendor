@@ -53,7 +53,7 @@ class JsonSerializationTest {
     @Test
     void testAgentResponseSerialization() throws Exception {
         AgentResponse response = new AgentResponse("I need RED tokens.",
-                new TakeTokensAction(Map.of(Color.RED, 1), null));
+                new TakeTokensAction(Map.of(Color.RED, 1), null), TokenUsage.zero());
         String json = mapper.writeValueAsString(response);
         assertTrue(json.contains("\"reasoning\":\"I need RED tokens.\""));
         assertTrue(json.contains("\"type\":\"TAKE_TOKENS\""));

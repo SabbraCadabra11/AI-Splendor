@@ -24,14 +24,19 @@ public class GameEventLogger implements Closeable {
     private final ObjectMapper objectMapper;
     private final BufferedWriter writer;
     private final Path logPath;
+    private final String gameId;
+    private final GameEventPublisher publisher;
 
     /**
      * Creates a new GameEventLogger that writes to logs/{gameId}.json
      * 
      * @param gameId Unique identifier for this game session
+     * @param publisher The game event publisher (optional, can be null)
      * @throws IOException if the log file cannot be created
      */
-    public GameEventLogger(String gameId) throws IOException {
+    public GameEventLogger(String gameId, GameEventPublisher publisher) throws IOException {
+        this.gameId = gameId;
+        this.publisher = publisher;
         this.objectMapper = new ObjectMapper();
         this.objectMapper.registerModule(new JavaTimeModule());
         this.objectMapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
@@ -55,6 +60,9 @@ public class GameEventLogger implements Closeable {
      * @param event The event to log
      */
     public void log(GameEvent event) {
+        if (publisher != null) {
+            publisher.publish(gameId, event);
+        }
         try {
             String json = objectMapper.writeValueAsString(event);
             writer.write(json);

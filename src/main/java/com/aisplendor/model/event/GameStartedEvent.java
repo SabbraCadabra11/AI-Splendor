@@ -11,6 +11,12 @@ public record GameStartedEvent(
         String gameId,
         String player0Model,
         String player1Model,
+        String player0Name,
+        String player1Name,
+        double player0InputCost,
+        double player0OutputCost,
+        double player1InputCost,
+        double player1OutputCost,
         GameState initialState) implements GameEvent {
 
     @Override
