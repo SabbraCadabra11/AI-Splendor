@@ -121,8 +121,13 @@ public class GameSimulator {
             }
         }
 
-        // Generate unique game ID based on timestamp (matches logback format)
-        String gameId = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss"));
+        // Generate unique game ID based on model slugs, reasoning levels, and timestamp
+        String slug0 = com.aisplendor.util.GameStateFormatter.getModelSlug(model0);
+        String slug1 = com.aisplendor.util.GameStateFormatter.getModelSlug(model1);
+        String r0 = com.aisplendor.util.GameStateFormatter.getReasoningLevelSuffix(dynamicReasoning0);
+        String r1 = com.aisplendor.util.GameStateFormatter.getReasoningLevelSuffix(dynamicReasoning1);
+        String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyMMdd_HHmmss"));
+        String gameId = slug0 + "-" + r0 + "_" + slug1 + "-" + r1 + "-" + timestamp;
 
         GameSimulator simulator = new GameSimulator(apiKey, model0, model1, dynamicReasoning0, dynamicReasoning1,
                 semiAuto, debugMode, stageConfig, memorySize0, memorySize1, promptCachingSetting,
@@ -168,9 +173,13 @@ public class GameSimulator {
             int memorySize1 = config.getPlayerMemorySize(1);
             String promptCachingSetting = config.getPromptCachingSetting();
 
-            // Generate new game ID with resume suffix
-            String newGameId = resumeData.originalGameId() + "_resumed_"
-                    + LocalDateTime.now().format(DateTimeFormatter.ofPattern("HHmmss"));
+            // Generate new game ID with model slugs, reasoning levels, timestamp, and resume suffix
+            String slug0 = com.aisplendor.util.GameStateFormatter.getModelSlug(resumeData.player0Model());
+            String slug1 = com.aisplendor.util.GameStateFormatter.getModelSlug(resumeData.player1Model());
+            String r0 = com.aisplendor.util.GameStateFormatter.getReasoningLevelSuffix(dynamicReasoning0);
+            String r1 = com.aisplendor.util.GameStateFormatter.getReasoningLevelSuffix(dynamicReasoning1);
+            String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyMMdd_HHmmss"));
+            String newGameId = slug0 + "-" + r0 + "_" + slug1 + "-" + r1 + "-" + timestamp + "_resumed";
 
             GameSimulator simulator = new GameSimulator(
                     apiKey,
@@ -247,12 +256,14 @@ public class GameSimulator {
 
     public void run(GameState initialState, String gameId, String model0, String model1,
             long initialP0TimeMs, long initialP1TimeMs, TokenUsage initialP0Tokens, TokenUsage initialP1Tokens) {
+        redirectLogbackFileAppender(gameId + ".log");
         GameState state = initialState;
         logger.info("--- Game Started ---");
         long player0TotalTimeMs = initialP0TimeMs;
         long player1TotalTimeMs = initialP1TimeMs;
         TokenUsage player0Tokens = initialP0Tokens != null ? initialP0Tokens : TokenUsage.zero();
         TokenUsage player1Tokens = initialP1Tokens != null ? initialP1Tokens : TokenUsage.zero();
+        boolean aborted = false;
 
         try (GameEventLogger eventLogger = new GameEventLogger(gameId, this.publisher)) {
             // Log game start event
@@ -261,6 +272,10 @@ public class GameSimulator {
                     player0InputCost, player0OutputCost, player1InputCost, player1OutputCost, state));
 
             while (!state.isGameOver()) {
+                if (Thread.currentThread().isInterrupted()) {
+                    aborted = true;
+                    break;
+                }
                 Player currentPlayer = state.players().get(state.currentPlayerIndex());
                 logger.info(GameStateFormatter.format(state, List.of(model0, model1)));
                 logger.info("Turn {} - Player {}'s move", state.turnNumber(), currentPlayer.id());
@@ -307,10 +322,18 @@ public class GameSimulator {
                 long moveDurationMs = 0L;
 
                 for (int attempt = 0; attempt < MAX_LOGIC_RETRIES && !validAction; attempt++) {
+                    if (Thread.currentThread().isInterrupted()) {
+                        aborted = true;
+                        break;
+                    }
                     long networkWaitStart = System.currentTimeMillis();
                     long backoff = INITIAL_BACKOFF_MS;
 
                     while (!validAction) { // Network retry loop
+                        if (Thread.currentThread().isInterrupted()) {
+                            aborted = true;
+                            break;
+                        }
                         try {
                             String retryContext = null;
                             if (attempt > 0 && backoff == INITIAL_BACKOFF_MS) {
@@ -352,6 +375,11 @@ public class GameSimulator {
                             // Log successful action event
                             eventLogger.log(new ActionEvent(
                                     Instant.now(), currentPlayer.id(), response.action(), true, moveDurationMs));
+                        } catch (InterruptedException e) {
+                            Thread.currentThread().interrupt();
+                            lastError = "Interrupted: " + e.getMessage();
+                            aborted = true;
+                            break;
                         } catch (IllegalArgumentException e) {
                             lastError = "Invalid action: " + e.getMessage();
                             // Capture the failed response for retry feedback
@@ -407,6 +435,10 @@ public class GameSimulator {
                     }
                 }
 
+                if (aborted) {
+                    break;
+                }
+
                 if (!validAction) {
                     moveDurationMs = System.currentTimeMillis() - moveStartMs;
                     if (state.currentPlayerIndex() == 0) {
@@ -425,12 +457,16 @@ public class GameSimulator {
                     continue;
                 }
 
-                // Update Player Memory — compress reasoning to a one-line summary
+                // Update Player Memory — store full reasoning with turn and action context
                 int memorySize = (state.currentPlayerIndex() == 0) ? memorySize0 : memorySize1;
                 List<String> newHistory = new ArrayList<>(currentPlayer.reasoningHistory());
-                String compressedReasoning = compressReasoning(
-                        state.turnNumber(), response.reasoning(), response.action());
-                newHistory.add(compressedReasoning);
+                String actionSummary = summarizeAction(response.action());
+                String reasoningText = (response.reasoning() == null || response.reasoning().isBlank())
+                        ? "No reasoning provided"
+                        : response.reasoning().strip();
+                String fullReasoningEntry = String.format("T%d (%s):\n%s",
+                        state.turnNumber(), actionSummary, reasoningText);
+                newHistory.add(fullReasoningEntry);
                 if (newHistory.size() > memorySize) {
                     newHistory.remove(0);
                 }
@@ -450,64 +486,63 @@ public class GameSimulator {
                         state.players().get(0).score(), state.players().get(1).score());
             }
 
-            logger.info(GameStateFormatter.format(state, List.of(model0, model1)));
-            logger.info("--- Game Over ---");
-            logger.info("Winner: {}", state.winnerReason());
+            if (aborted) {
+                logger.info("--- Game Aborted ---");
 
-            // Build final scores map
-            Map<Integer, Integer> finalScores = new HashMap<>();
-            for (Player p : state.players()) {
-                logger.info("Player {}: {} points", p.id(), p.score());
-                finalScores.put(p.id(), p.score());
+                Map<Integer, Integer> finalScores = new HashMap<>();
+                for (Player p : state.players()) {
+                    finalScores.put(p.id(), p.score());
+                }
+
+                Map<Integer, TokenUsage> playerUsages = new HashMap<>();
+                playerUsages.put(0, player0Tokens);
+                playerUsages.put(1, player1Tokens);
+
+                eventLogger.log(new GameEndedEvent(
+                        Instant.now(), null, "Aborted", finalScores, playerUsages));
+            } else {
+                logger.info(GameStateFormatter.format(state, List.of(model0, model1)));
+                logger.info("--- Game Over ---");
+                logger.info("Winner: {}", state.winnerReason());
+
+                // Build final scores map
+                Map<Integer, Integer> finalScores = new HashMap<>();
+                for (Player p : state.players()) {
+                    logger.info("Player {}: {} points", p.id(), p.score());
+                    finalScores.put(p.id(), p.score());
+                }
+
+                logger.info("--- Execution Time Summary ---");
+                logger.info("Player 0 ({}) total time: {}", model0, formatDuration(player0TotalTimeMs));
+                logger.info("Player 1 ({}) total time: {}", model1, formatDuration(player1TotalTimeMs));
+
+                logger.info("--- Token Usage & Cost Summary ---");
+                logger.info("Player 0 ({}) - Prompt Tokens: {}, Completion Tokens: {}, Estimated Cost: ${}",
+                        model0, player0Tokens.promptTokens(), player0Tokens.completionTokens(), String.format("%.6f", player0Tokens.cost()));
+                logger.info("Player 1 ({}) - Prompt Tokens: {}, Completion Tokens: {}, Estimated Cost: ${}",
+                        model1, player1Tokens.promptTokens(), player1Tokens.completionTokens(), String.format("%.6f", player1Tokens.cost()));
+
+                // Determine winner index (null if tie or no clear winner)
+                Integer winnerIndex = state.players().stream()
+                        .max(Comparator.comparingInt(Player::score))
+                        .map(Player::id)
+                        .orElse(null);
+
+                Map<Integer, TokenUsage> playerUsages = new HashMap<>();
+                playerUsages.put(0, player0Tokens);
+                playerUsages.put(1, player1Tokens);
+
+                // Log game ended event
+                eventLogger.log(new GameEndedEvent(
+                        Instant.now(), winnerIndex, state.winnerReason(), finalScores, playerUsages));
             }
-
-            logger.info("--- Execution Time Summary ---");
-            logger.info("Player 0 ({}) total time: {}", model0, formatDuration(player0TotalTimeMs));
-            logger.info("Player 1 ({}) total time: {}", model1, formatDuration(player1TotalTimeMs));
-
-            logger.info("--- Token Usage & Cost Summary ---");
-            logger.info("Player 0 ({}) - Prompt Tokens: {}, Completion Tokens: {}, Estimated Cost: ${}",
-                    model0, player0Tokens.promptTokens(), player0Tokens.completionTokens(), String.format("%.6f", player0Tokens.cost()));
-            logger.info("Player 1 ({}) - Prompt Tokens: {}, Completion Tokens: {}, Estimated Cost: ${}",
-                    model1, player1Tokens.promptTokens(), player1Tokens.completionTokens(), String.format("%.6f", player1Tokens.cost()));
-
-            // Determine winner index (null if tie or no clear winner)
-            Integer winnerIndex = state.players().stream()
-                    .max(Comparator.comparingInt(Player::score))
-                    .map(Player::id)
-                    .orElse(null);
-
-            Map<Integer, TokenUsage> playerUsages = new HashMap<>();
-            playerUsages.put(0, player0Tokens);
-            playerUsages.put(1, player1Tokens);
-
-            // Log game ended event
-            eventLogger.log(new GameEndedEvent(
-                    Instant.now(), winnerIndex, state.winnerReason(), finalScores, playerUsages));
 
         } catch (Exception e) {
             logger.error("An error occurred during the game simulation:", e);
         }
     }
 
-    /**
-     * Compresses a full reasoning string into a structured one-liner for the memory window.
-     * Format: "T{turn}: {action_summary} — {rationale extracted from reasoning}"
-     *
-     * @param turnNumber The current turn number
-     * @param reasoning  The full reasoning string from the LLM
-     * @param action     The action that was taken
-     * @return A compressed one-line summary
-     */
-    private static String compressReasoning(int turnNumber, String reasoning, GameAction action) {
-        String actionSummary = summarizeAction(action);
 
-        // Extract the core rationale — take the first sentence or the last sentence
-        // as LLMs tend to put conclusions at the start or end
-        String rationale = extractRationale(reasoning);
-
-        return String.format("T%d: %s — %s", turnNumber, actionSummary, rationale);
-    }
 
     private static String summarizeAction(GameAction action) {
         return switch (action) {
@@ -533,37 +568,7 @@ public class GameSimulator {
         };
     }
 
-    private static String extractRationale(String reasoning) {
-        if (reasoning == null || reasoning.isBlank()) {
-            return "No reasoning provided";
-        }
 
-        // Clean up and take the first meaningful sentence
-        String cleaned = reasoning.strip();
-
-        // Try to find the first sentence
-        int end = -1;
-        for (int i = 0; i < cleaned.length(); i++) {
-            char c = cleaned.charAt(i);
-            if (c == '.' || c == '!' || c == '?') {
-                // Make sure it's not a decimal point (e.g., "4.5")
-                if (c == '.' && i > 0 && i < cleaned.length() - 1
-                        && Character.isDigit(cleaned.charAt(i - 1))
-                        && Character.isDigit(cleaned.charAt(i + 1))) {
-                    continue;
-                }
-                end = i + 1;
-                break;
-            }
-        }
-
-        if (end > 0 && end <= cleaned.length()) {
-            return cleaned.substring(0, end).strip();
-        }
-
-        // No sentence boundary found — take the whole thing
-        return cleaned;
-    }
 
     private static String formatColorShort(Color color) {
         return switch (color) {
@@ -581,5 +586,30 @@ public class GameSimulator {
         long seconds = (durationMs / 1000) % 60;
         long millis = durationMs % 1000;
         return String.format("%02d:%02d.%03d", minutes, seconds, millis);
+    }
+
+    private void redirectLogbackFileAppender(String filename) {
+        try {
+            org.slf4j.ILoggerFactory factory = org.slf4j.LoggerFactory.getILoggerFactory();
+            if (factory instanceof ch.qos.logback.classic.LoggerContext context) {
+                ch.qos.logback.classic.Logger rootLogger = context.getLogger(org.slf4j.Logger.ROOT_LOGGER_NAME);
+                ch.qos.logback.core.Appender<ch.qos.logback.classic.spi.ILoggingEvent> appender = rootLogger.getAppender("FILE");
+                if (appender instanceof ch.qos.logback.core.FileAppender<ch.qos.logback.classic.spi.ILoggingEvent> fileAppender) {
+                    fileAppender.stop();
+                    String currentFile = fileAppender.getFile();
+                    if (currentFile != null) {
+                        java.nio.file.Path oldPath = java.nio.file.Path.of(currentFile);
+                        java.nio.file.Path newPath = oldPath.getParent() != null ? oldPath.getParent().resolve(filename) : java.nio.file.Path.of(filename);
+                        fileAppender.setFile(newPath.toString());
+                    } else {
+                        fileAppender.setFile(java.nio.file.Path.of("logs").resolve(filename).toString());
+                    }
+                    fileAppender.start();
+                    logger.info("Redirected logback output to: {}", fileAppender.getFile());
+                }
+            }
+        } catch (Throwable t) {
+            System.err.println("Could not redirect logback file appender: " + t.getMessage());
+        }
     }
 }

@@ -1,0 +1,240 @@
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Splendor Live Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&amp;family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#f0e8db",
+                        "surface": "#faf6f0",
+                        "on-primary-container": "#d8f0de",
+                        "surface-container-high": "#eae6de",
+                        "primary-container": "#78a886",
+                        "primary": "#4a7c59",
+                        "inverse-primary": "#8ecf9e",
+                        "error": "#b83230",
+                        "on-primary-fixed": "#002110",
+                        "secondary-fixed-dim": "#d4ccbf",
+                        "error-container": "#ffdad8",
+                        "surface-container-low": "#f5f1ea",
+                        "tertiary": "#705c30",
+                        "outline-variant": "#c4c8bc",
+                        "on-error-container": "#690005",
+                        "on-primary-fixed-variant": "#2a6038",
+                        "on-background": "#2e3230",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "background": "#faf6f0",
+                        "on-secondary-fixed": "#1e1a13",
+                        "surface-dim": "#dbd7cf",
+                        "on-tertiary-container": "#554020",
+                        "on-tertiary-fixed-variant": "#554020",
+                        "tertiary-fixed-dim": "#dcc48e",
+                        "on-secondary-fixed-variant": "#4a4538",
+                        "on-primary": "#ffffff",
+                        "secondary": "#6b6358",
+                        "tertiary-fixed": "#f8e0a8",
+                        "surface-bright": "#faf6f0",
+                        "primary-fixed-dim": "#8ecf9e",
+                        "on-secondary-container": "#5e5548",
+                        "tertiary-container": "#c4a66a",
+                        "surface-container": "#f0ece4",
+                        "outline": "#74796e",
+                        "on-surface-variant": "#4a4e4a",
+                        "surface-container-highest": "#e4e0d8",
+                        "primary-fixed": "#c8e8d0",
+                        "on-error": "#ffffff",
+                        "surface-tint": "#4a7c59",
+                        "surface-variant": "#e4e0d8",
+                        "secondary-fixed": "#f0e8db",
+                        "inverse-surface": "#2e3230",
+                        "on-surface": "#2e3230",
+                        "on-tertiary-fixed": "#221a05",
+                        "inverse-on-surface": "#f5f0e8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Literata"],
+                        "display": ["Literata"],
+                        "body": ["Nunito Sans"],
+                        "label": ["Nunito Sans"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .terminal-scroll::-webkit-scrollbar {
+            width: 4px;
+        }
+        .terminal-scroll::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .terminal-scroll::-webkit-scrollbar-thumb {
+            background-color: #c4c8bc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body h-screen flex flex-col overflow-hidden text-sm">
+<!-- TopNavBar -->
+<nav class="docked full-width top-0 border-b flex justify-between items-center w-full px-6 py-2 bg-surface border-surface-container-highest shadow-sm">
+<div class="font-['Literata'] text-xl font-bold text-primary">Splendor Live</div>
+<div class="flex items-center gap-4">
+<div id="game-status-label" class="bg-amber-100 text-amber-800 text-[11px] font-bold px-2 py-0.5 rounded border border-amber-300 hidden">CONNECTING</div>
+<div id="turn-display" class="font-['Nunito_Sans'] text-sm font-semibold tracking-tight text-on-surface">Turn 0</div>
+<div id="active-player-display" class="font-['Nunito_Sans'] text-sm font-semibold tracking-tight text-primary">Active: Player 0</div>
+</div>
+</nav>
+<!-- Main Dashboard Layout -->
+<main class="flex flex-1 h-[calc(100vh-3rem)] overflow-hidden">
+<!-- Left Column: Player 0 -->
+<aside class="w-72 border-r border-surface-container-highest bg-surface-container-lowest flex flex-col p-3 overflow-hidden">
+<!-- Header -->
+<div class="flex justify-between items-center mb-2 pb-2 border-b border-surface-container">
+<h2 id="p0-name" class="font-headline font-bold text-lg text-on-background">Player 0</h2>
+<div id="p0-score" class="bg-primary-container text-on-primary-container px-3 py-1 rounded-full font-bold text-xl font-headline">0</div>
+</div>
+<!-- Gems -->
+<div class="mb-3">
+<h3 class="text-xs font-semibold text-outline uppercase tracking-wider mb-1">Gems</h3>
+<div class="flex gap-1 justify-between">
+<div id="p0-gem-GREEN" class="w-10 h-10 rounded-full bg-emerald-700 text-white flex items-center justify-center font-bold border-2 border-surface font-headline">0</div>
+<div id="p0-gem-BLUE" class="w-10 h-10 rounded-full bg-blue-700 text-white flex items-center justify-center font-bold border-2 border-surface font-headline">0</div>
+<div id="p0-gem-RED" class="w-10 h-10 rounded-full bg-red-700 text-white flex items-center justify-center font-bold border-2 border-surface font-headline">0</div>
+<div id="p0-gem-BLACK" class="w-10 h-10 rounded-full bg-stone-700 text-white flex items-center justify-center font-bold border-2 border-surface font-headline">0</div>
+<div id="p0-gem-WHITE" class="w-10 h-10 rounded-full bg-stone-100 text-stone-800 flex items-center justify-center font-bold border-2 border-surface shadow-sm font-headline">0</div>
+<div id="p0-gem-GOLD" class="w-10 h-10 rounded-full bg-amber-400 text-amber-900 flex items-center justify-center font-bold border-2 border-surface font-headline">0</div>
+</div>
+</div>
+<!-- Bonuses -->
+<div class="mb-3">
+<h3 class="text-xs font-semibold text-outline uppercase tracking-wider mb-1">Bonuses</h3>
+<div class="flex gap-1 justify-between">
+<div id="p0-bonus-GREEN" class="w-10 h-8 rounded bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold border border-emerald-200 font-headline">0</div>
+<div id="p0-bonus-BLUE" class="w-10 h-8 rounded bg-blue-100 text-blue-800 flex items-center justify-center font-bold border border-blue-200 font-headline">0</div>
+<div id="p0-bonus-RED" class="w-10 h-8 rounded bg-red-100 text-red-800 flex items-center justify-center font-bold border border-red-200 font-headline">0</div>
+<div id="p0-bonus-BLACK" class="w-10 h-8 rounded bg-stone-200 text-stone-800 flex items-center justify-center font-bold border border-stone-300 font-headline">0</div>
+<div id="p0-bonus-WHITE" class="w-10 h-8 rounded bg-stone-50 text-stone-800 flex items-center justify-center font-bold border border-stone-200 shadow-sm font-headline">0</div>
+</div>
+</div>
+<!-- Reserved -->
+<div class="mb-3">
+<h3 class="text-xs font-semibold text-outline uppercase tracking-wider mb-1">Reserved</h3>
+<div id="p0-reserved-container" class="flex gap-2 min-h-[4rem]">
+<!-- Dynamic reserved cards -->
+</div>
+</div>
+<!-- Reasoning Stream -->
+<div class="flex-1 flex flex-col min-h-0 bg-surface-container rounded-lg border border-surface-variant p-2 overflow-hidden">
+<h3 class="text-xs font-semibold text-outline uppercase tracking-wider mb-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">psychology</span> Reasoning
+</h3>
+<div id="p0-reasoning" class="flex-1 overflow-y-auto terminal-scroll text-xs text-on-surface-variant font-mono space-y-1">
+<p>&gt; Awaiting game start...</p>
+</div>
+</div>
+</aside>
+<!-- Center Column: The Table -->
+<div class="flex-1 flex flex-col p-4 bg-surface gap-4 overflow-hidden">
+<!-- Nobles -->
+<div id="nobles-row" class="flex justify-center gap-4 h-24">
+<!-- Nobles loaded dynamically -->
+</div>
+<!-- Cards -->
+<div class="flex-1 flex flex-col gap-3 justify-center min-h-0">
+<!-- Level 3 -->
+<div id="cards-row-LEVEL_3" class="flex gap-3 h-1/3">
+</div>
+<!-- Level 2 -->
+<div id="cards-row-LEVEL_2" class="flex gap-3 h-1/3">
+</div>
+<!-- Level 1 -->
+<div id="cards-row-LEVEL_1" class="flex gap-3 h-1/3">
+</div>
+</div>
+<!-- Bank -->
+<div class="h-20 bg-surface-container-highest/50 rounded-xl border-2 border-surface-container-highest flex items-center justify-center gap-6 px-8 shadow-md">
+<div class="flex flex-col items-center">
+<div id="bank-gem-GREEN" class="w-10 h-10 rounded-full bg-emerald-700 shadow-lg border-2 border-surface flex items-center justify-center text-white text-base font-bold font-headline">0</div>
+</div>
+<div class="flex flex-col items-center">
+<div id="bank-gem-BLUE" class="w-10 h-10 rounded-full bg-blue-700 shadow-lg border-2 border-surface flex items-center justify-center text-white text-base font-bold font-headline">0</div>
+</div>
+<div class="flex flex-col items-center">
+<div id="bank-gem-RED" class="w-10 h-10 rounded-full bg-red-700 shadow-lg border-2 border-surface flex items-center justify-center text-white text-base font-bold font-headline">0</div>
+</div>
+<div class="flex flex-col items-center">
+<div id="bank-gem-BLACK" class="w-10 h-10 rounded-full bg-stone-700 shadow-lg border-2 border-surface flex items-center justify-center text-white text-base font-bold font-headline">0</div>
+</div>
+<div class="flex flex-col items-center">
+<div id="bank-gem-WHITE" class="w-10 h-10 rounded-full bg-stone-100 shadow-lg border-2 border-surface flex items-center justify-center text-stone-900 text-base font-bold font-headline">0</div>
+</div>
+<div class="w-0.5 h-10 bg-surface-container-highest mx-2 rounded-full"></div>
+<div class="flex flex-col items-center">
+<div id="bank-gem-GOLD" class="w-10 h-10 rounded-full bg-amber-400 shadow-lg border-2 border-surface flex items-center justify-center text-amber-900 text-base font-bold font-headline">0</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Player 1 -->
+<aside class="w-72 border-l border-surface-container-highest bg-surface-container-lowest flex flex-col p-3 overflow-hidden">
+<!-- Header -->
+<div class="flex justify-between items-center mb-2 pb-2 border-b border-surface-container">
+<h2 id="p1-name" class="font-headline font-bold text-lg text-on-background">Player 1</h2>
+<div id="p1-score" class="bg-surface-container text-on-surface px-3 py-1 rounded-full font-bold text-xl font-headline">0</div>
+</div>
+<!-- Gems -->
+<div class="mb-3">
+<h3 class="text-xs font-semibold text-outline uppercase tracking-wider mb-1">Gems</h3>
+<div class="flex gap-1 justify-between">
+<div id="p1-gem-GREEN" class="w-10 h-10 rounded-full bg-emerald-700 text-white flex items-center justify-center font-bold border-2 border-surface font-headline">0</div>
+<div id="p1-gem-BLUE" class="w-10 h-10 rounded-full bg-blue-700 text-white flex items-center justify-center font-bold border-2 border-surface font-headline">0</div>
+<div id="p1-gem-RED" class="w-10 h-10 rounded-full bg-red-700 text-white flex items-center justify-center font-bold border-2 border-surface font-headline">0</div>
+<div id="p1-gem-BLACK" class="w-10 h-10 rounded-full bg-stone-700 text-white flex items-center justify-center font-bold border-2 border-surface font-headline">0</div>
+<div id="p1-gem-WHITE" class="w-10 h-10 rounded-full bg-stone-100 text-stone-800 flex items-center justify-center font-bold border-2 border-surface shadow-sm font-headline">0</div>
+<div id="p1-gem-GOLD" class="w-10 h-10 rounded-full bg-amber-400 text-amber-900 flex items-center justify-center font-bold border-2 border-surface font-headline">0</div>
+</div>
+</div>
+<!-- Bonuses -->
+<div class="mb-3">
+<h3 class="text-xs font-semibold text-outline uppercase tracking-wider mb-1">Bonuses</h3>
+<div class="flex gap-1 justify-between">
+<div id="p1-bonus-GREEN" class="w-10 h-8 rounded bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold border border-emerald-200 font-headline">0</div>
+<div id="p1-bonus-BLUE" class="w-10 h-8 rounded bg-blue-100 text-blue-800 flex items-center justify-center font-bold border border-blue-200 font-headline">0</div>
+<div id="p1-bonus-RED" class="w-10 h-8 rounded bg-red-100 text-red-800 flex items-center justify-center font-bold border border-red-200 font-headline">0</div>
+<div id="p1-bonus-BLACK" class="w-10 h-8 rounded bg-stone-200 text-stone-800 flex items-center justify-center font-bold border border-stone-300 font-headline">0</div>
+<div id="p1-bonus-WHITE" class="w-10 h-8 rounded bg-stone-50 text-stone-800 flex items-center justify-center font-bold border border-stone-200 shadow-sm font-headline">0</div>
+</div>
+</div>
+<!-- Reserved -->
+<div class="mb-3">
+<h3 class="text-xs font-semibold text-outline uppercase tracking-wider mb-1">Reserved</h3>
+<div id="p1-reserved-container" class="flex gap-2 min-h-[4rem]">
+<!-- Dynamic reserved cards -->
+</div>
+</div>
+<!-- Reasoning Stream -->
+<div class="flex-1 flex flex-col min-h-0 bg-surface-container rounded-lg border border-surface-variant p-2 overflow-hidden">
+<h3 class="text-xs font-semibold text-outline uppercase tracking-wider mb-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">psychology</span> REASONING
+</h3>
+<div id="p1-reasoning" class="flex-1 overflow-y-auto terminal-scroll text-xs text-on-surface-variant font-mono space-y-1">
+<p>&gt; Awaiting game start...</p>
+</div>
+</div>
+</aside>
+</main>
+<script src="dashboard.js"></script>
+</body></html>

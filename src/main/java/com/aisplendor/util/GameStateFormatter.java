@@ -269,4 +269,32 @@ public class GameStateFormatter {
         int slashIndex = fullModelPath.lastIndexOf('/');
         return slashIndex >= 0 ? fullModelPath.substring(slashIndex + 1) : fullModelPath;
     }
+
+    /**
+     * Converts a model name/ID to a clean filename slug.
+     * E.g., "anthropic/claude-haiku-4.5" -> "claude-haiku-4.5"
+     * E.g., "google/gemini-3.5-flash:beta" -> "gemini-3.5-flash_beta"
+     */
+    public static String getModelSlug(String model) {
+        if (model == null || model.isBlank()) {
+            return "unknown";
+        }
+        int slashIndex = model.lastIndexOf('/');
+        String name = slashIndex >= 0 ? model.substring(slashIndex + 1) : model;
+        return name.replaceAll("[^a-zA-Z0-9-_.]", "_");
+    }
+
+    /**
+     * Resolves the reasoning level suffix ("low", "medium", "high", "dynamic", or "off") 
+     * based on the DynamicReasoningConfig configuration.
+     */
+    public static String getReasoningLevelSuffix(com.aisplendor.config.DynamicReasoningConfig dynamicConfig) {
+        if (dynamicConfig == null || dynamicConfig.getStaticConfig() == null || !dynamicConfig.getStaticConfig().enabled()) {
+            return "off";
+        }
+        if (dynamicConfig.isDynamic()) {
+            return "dynamic";
+        }
+        return dynamicConfig.getStaticConfig().effort();
+    }
 }

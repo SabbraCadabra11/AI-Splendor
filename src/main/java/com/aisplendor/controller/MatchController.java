@@ -216,4 +216,21 @@ public class MatchController {
                 .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"game.properties\"")
                 .body(propertiesBytes);
     }
+
+    @PostMapping("/matches/{gameId}/abort")
+    public ResponseEntity<?> abortMatch(@PathVariable String gameId) {
+        try {
+            logger.info("REST request to abort match: {}", gameId);
+            boolean success = matchManagerService.abortMatch(gameId);
+            if (success) {
+                return ResponseEntity.ok(Map.of("message", "Match successfully aborted"));
+            } else {
+                return ResponseEntity.badRequest().body(Map.of("error", "Match not running or not found"));
+            }
+        } catch (Exception e) {
+            logger.error("Failed to abort match " + gameId, e);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body(Map.of("error", "Internal server error: " + e.getMessage()));
+        }
+    }
 }

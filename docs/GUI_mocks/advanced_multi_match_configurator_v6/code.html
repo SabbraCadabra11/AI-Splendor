@@ -1,0 +1,389 @@
+<!DOCTYPE html><html lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>AI-Splendor - Multi-Match Configurator</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400..900&amp;family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#2e3230",
+                        "secondary-fixed-dim": "#d4ccbf",
+                        "on-primary-fixed": "#002110",
+                        "tertiary-fixed": "#f8e0a8",
+                        "on-primary-container": "#d8f0de",
+                        "surface-dim": "#dbd7cf",
+                        "surface-container-low": "#f5f1ea",
+                        "surface": "#faf6f0",
+                        "primary-container": "#78a886",
+                        "background": "#faf6f0",
+                        "on-primary-fixed-variant": "#2a6038",
+                        "secondary": "#6b6358",
+                        "primary": "#4a7c59",
+                        "tertiary-fixed-dim": "#dcc48e",
+                        "tertiary": "#705c30",
+                        "on-secondary-fixed": "#1e1a13",
+                        "outline": "#74796e",
+                        "on-tertiary": "#ffffff",
+                        "error": "#b83230",
+                        "on-error-container": "#690005",
+                        "surface-bright": "#faf6f0",
+                        "on-tertiary-fixed-variant": "#554020",
+                        "primary-fixed-dim": "#8ecf9e",
+                        "on-surface-variant": "#4a4e4a",
+                        "surface-container": "#f0ece4",
+                        "tertiary-container": "#c4a66a",
+                        "on-secondary-fixed-variant": "#4a4538",
+                        "secondary-fixed": "#f0e8db",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-container": "#554020",
+                        "error-container": "#ffdad8",
+                        "surface-tint": "#4a7c59",
+                        "on-tertiary-fixed": "#221a05",
+                        "surface-container-highest": "#e4e0d8",
+                        "on-secondary-container": "#5e5548",
+                        "outline-variant": "#c4c8bc",
+                        "on-surface": "#2e3230",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#2e3230",
+                        "inverse-on-surface": "#f5f0e8",
+                        "secondary-container": "#f0e8db",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#c8e8d0",
+                        "surface-container-high": "#eae6de",
+                        "surface-variant": "#e4e0d8",
+                        "on-primary": "#ffffff",
+                        "inverse-primary": "#8ecf9e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Literata", "serif"],
+                        "display": ["Literata", "serif"],
+                        "body": ["Nunito Sans", "sans-serif"],
+                        "label": ["Nunito Sans", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Nunito Sans', sans-serif; }
+        h1, h2, h3, h4, h5, h6, .font-headline { font-family: 'Literata', serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background flex h-screen overflow-hidden antialiased">
+<!-- SideNavBar -->
+<nav class="bg-surface-container-low dark:bg-stone-900 text-primary h-screen w-64 border-r border-outline-variant/30 flat no shadows flex flex-col gap-2 p-4 h-full shrink-0">
+<div class="mb-8 px-3">
+<h1 class="font-headline text-2xl font-bold text-on-background">AI-Splendor</h1>
+<p class="text-sm text-on-surface-variant mt-1">Engine v2.4.0</p>
+</div>
+<button class="mb-6 w-full bg-primary text-on-primary py-3 px-4 rounded-lg font-medium shadow-[0_4px_20px_rgba(46,50,48,0.06)] hover:bg-primary/90 transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">add</span>
+            New Match Slot
+        </button>
+<div class="flex flex-col gap-1 flex-1 font-body font-medium text-sm">
+<a class="text-on-surface-variant px-3 py-2 hover:bg-surface-container-highest rounded-lg flex items-center gap-3 transition-colors" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+                Dashboard
+            </a>
+<a class="bg-primary-container/30 text-on-primary-container rounded-lg px-3 py-2 flex items-center gap-3" href="#">
+<span class="material-symbols-outlined">sports_esports</span>
+                Match Slots
+            </a>
+<a class="text-on-surface-variant px-3 py-2 hover:bg-surface-container-highest rounded-lg flex items-center gap-3 transition-colors" href="#">
+<span class="material-symbols-outlined">history</span>
+                History
+            </a>
+<a class="text-on-surface-variant px-3 py-2 hover:bg-surface-container-highest rounded-lg flex items-center gap-3 transition-colors" href="#">
+<span class="material-symbols-outlined">description</span>
+                Documentation
+            </a>
+<a class="text-on-surface-variant px-3 py-2 hover:bg-surface-container-highest rounded-lg flex items-center gap-3 transition-colors" href="#">
+<span class="material-symbols-outlined">terminal</span>
+                Debug Logs
+            </a>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col h-full overflow-hidden bg-background">
+<!-- Header -->
+<header class="px-8 py-6 border-b border-outline-variant/30 bg-surface flex justify-between items-center shrink-0 z-10 relative">
+<div>
+<h2 class="font-headline text-3xl text-on-background font-semibold">Multi-Match Configuration</h2>
+<p class="text-on-surface-variant mt-1 text-sm font-body">Configure up to 8 parallel match instances</p>
+</div>
+<div class="flex gap-4">
+<button class="px-5 py-2 rounded-lg bg-primary text-on-primary hover:bg-primary/90 transition-colors flex items-center gap-2 text-sm font-medium shadow-[0_4px_20px_rgba(46,50,48,0.06)]">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+                    Run All Simulations
+                </button>
+</div>
+</header>
+<!-- Content Area with Sidebar -->
+<div class="flex flex-1 overflow-hidden">
+<!-- Match Grid -->
+<div class="flex-1 overflow-y-auto p-8 bg-surface-container-lowest">
+<div class="flex flex-col gap-6 pb-24 max-w-5xl mx-auto">
+<!-- Match Card 1 -->
+<div class="bg-surface rounded-xl border border-outline-variant/40 shadow-[0_4px_20px_rgba(46,50,48,0.03)] overflow-hidden flex flex-col w-full">
+<div class="px-5 py-3 border-b border-outline-variant/30 bg-surface-container-low flex justify-between items-center">
+<h3 class="font-headline font-medium text-lg text-on-background">Match Slot #1</h3>
+<span class="px-2.5 py-1 rounded-full bg-primary-container/20 text-on-primary-fixed-variant text-xs font-bold tracking-wide flex items-center">CONFIGURED</span><button class="ml-2 p-1 rounded-full hover:bg-on-surface/5 text-on-surface-variant transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">expand_less</span>
+</button>
+</div>
+<div class="flex flex-col md:flex-row divide-y md:divide-y-0 md:divide-x divide-outline-variant/30 flex-1">
+<!-- Player 0 -->
+<div class="flex-1 p-5 space-y-4">
+<div class="mb-2 flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary shrink-0"></span>
+<input class="w-full bg-transparent border-b border-outline-variant/30 focus:border-primary focus:ring-0 text-sm font-bold text-on-surface-variant uppercase tracking-wider px-0 py-1 transition-colors" placeholder="Enter display name (e.g. Gemini 3 Pro)" type="text" value="PLAYER 0">
+</div>
+<div>
+<label class="block text-xs font-medium text-on-surface-variant mb-1">Model ID</label>
+<input class="w-full bg-surface-container-low border-outline-variant/50 text-on-background rounded-md text-sm focus:ring-primary focus:border-primary" type="text" value="google/gemini-3-pro-preview">
+</div>
+<div class="bg-surface-container-low/50 p-3 rounded-lg border border-outline-variant/20 space-y-3">
+<div class="flex justify-between items-center">
+<span class="text-xs font-medium text-on-surface-variant">Reasoning Thresholds</span>
+</div>
+<div class="space-y-2">
+<div class="grid grid-cols-[1fr_80px_32px] gap-2 mb-1 px-1">
+<span class="text-[10px] text-on-surface-variant uppercase font-bold">Reasoning Effort</span>
+<span class="text-[10px] text-on-surface-variant uppercase font-bold text-center">Start Turn</span>
+<span></span>
+</div>
+<div class="flex items-center gap-2 text-xs">
+<select class="flex-1 bg-surface border-outline-variant/50 text-on-background rounded text-xs py-1 px-2 focus:ring-primary focus:border-primary">
+<option>Off</option>
+<option>Low</option>
+<option selected="">Medium</option>
+<option>High</option>
+<option>xHigh</option>
+</select>
+<input class="w-[80px] bg-surface border-outline-variant/50 text-on-background rounded text-xs py-1 px-2 focus:ring-primary focus:border-primary text-center" min="1" type="number" value="1">
+<button class="text-outline hover:text-error transition-colors p-1"><span class="material-symbols-outlined text-[16px]">close</span></button>
+</div>
+<div class="flex items-center gap-2 text-xs">
+<select class="flex-1 bg-surface border-outline-variant/50 text-on-background rounded text-xs py-1 px-2 focus:ring-primary focus:border-primary">
+<option>Off</option>
+<option>Low</option>
+<option>Medium</option>
+<option selected="">High</option>
+<option>xHigh</option>
+</select>
+<input class="w-[80px] bg-surface border-outline-variant/50 text-on-background rounded text-xs py-1 px-2 focus:ring-primary focus:border-primary text-center" min="1" type="number" value="6">
+<button class="text-outline hover:text-error transition-colors p-1"><span class="material-symbols-outlined text-[16px]">close</span></button>
+</div>
+<button class="w-full py-1 mt-1 border border-dashed border-outline-variant/50 rounded text-[10px] uppercase font-bold text-on-surface-variant hover:text-primary hover:border-primary/50 transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[14px]">add</span> Add Rule
+                                            </button>
+</div>
+</div>
+<div>
+<label class="block text-xs font-medium text-on-surface-variant mb-1">Action Memory Window</label>
+<select class="w-full bg-surface-container-low border-outline-variant/50 text-on-background rounded-md text-sm focus:ring-primary focus:border-primary">
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+<option>6</option>
+<option>7</option>
+<option selected="">8</option>
+<option>9</option>
+<option>10</option>
+</select>
+</div>
+</div>
+<!-- Player 1 -->
+<div class="flex-1 p-5 space-y-4">
+<div class="mb-2 flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary shrink-0"></span>
+<input class="w-full bg-transparent border-b border-outline-variant/30 focus:border-primary focus:ring-0 text-sm font-bold text-on-surface-variant uppercase tracking-wider px-0 py-1 transition-colors" placeholder="Enter display name (e.g. Gemini 3 Pro)" type="text" value="PLAYER 1">
+</div>
+<div>
+<label class="block text-xs font-medium text-on-surface-variant mb-1">Model ID</label>
+<input class="w-full bg-surface-container-low border-outline-variant/50 text-on-background rounded-md text-sm focus:ring-primary focus:border-primary" type="text" value="anthropic/claude-3-opus">
+</div>
+<div class="bg-surface-container-low/50 p-3 rounded-lg border border-outline-variant/20 space-y-3">
+<div class="flex justify-between items-center">
+<span class="text-xs font-medium text-on-surface-variant">Reasoning Thresholds</span>
+</div>
+<div class="space-y-2">
+<div class="grid grid-cols-[1fr_80px_32px] gap-2 mb-1 px-1">
+<span class="text-[10px] text-on-surface-variant uppercase font-bold">Reasoning Effort</span>
+<span class="text-[10px] text-on-surface-variant uppercase font-bold text-center">Start Turn</span>
+<span></span>
+</div>
+<div class="flex items-center gap-2 text-xs">
+<select class="flex-1 bg-surface border-outline-variant/50 text-on-background rounded text-xs py-1 px-2 focus:ring-primary focus:border-primary">
+<option>Off</option>
+<option selected="">Low</option>
+<option>Medium</option>
+<option>High</option>
+<option>xHigh</option>
+</select>
+<input class="w-[80px] bg-surface border-outline-variant/50 text-on-background rounded text-xs py-1 px-2 focus:ring-primary focus:border-primary text-center" min="1" type="number" value="1">
+<button class="text-outline hover:text-error transition-colors p-1"><span class="material-symbols-outlined text-[16px]">close</span></button>
+</div>
+<button class="w-full py-1 mt-1 border border-dashed border-outline-variant/50 rounded text-[10px] uppercase font-bold text-on-surface-variant hover:text-primary hover:border-primary/50 transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[14px]">add</span> Add Rule
+                                            </button>
+</div>
+</div>
+<div>
+<label class="block text-xs font-medium text-on-surface-variant mb-1">Action Memory Window</label>
+<select class="w-full bg-surface-container-low border-outline-variant/50 text-on-background rounded-md text-sm focus:ring-primary focus:border-primary">
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option selected="">5</option>
+<option>6</option>
+<option>7</option>
+<option>8</option>
+<option>9</option>
+<option>10</option>
+</select>
+</div>
+</div>
+</div>
+<div class="p-5 border-t border-outline-variant/30 bg-surface-container-low/20 flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<label class="flex items-center cursor-pointer group gap-3">
+<span class="text-sm font-bold text-on-surface-variant uppercase tracking-wider">Resume INterrupted Game</span>
+<div class="relative">
+<input class="sr-only peer" type="checkbox">
+<div class="block bg-surface-variant w-10 h-6 rounded-full peer-checked:bg-primary/20 peer-checked:border peer-checked:border-primary/30 transition-colors"></div>
+<div class="dot absolute left-1 top-1 bg-surface w-4 h-4 rounded-full transition-all peer-checked:translate-x-4 peer-checked:bg-primary"></div>
+</div>
+</label>
+</div>
+<button class="flex items-center gap-2 px-4 py-2 bg-surface border border-outline-variant/50 rounded-lg text-sm font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-primary transition-all">
+<span class="material-symbols-outlined text-[20px]">upload_file</span>
+        Load State File (.json / .ndjson)
+    </button>
+</div><div class="p-5 border-t border-outline-variant/30 bg-surface-container-low/30 space-y-4">
+<h4 class="text-sm font-bold text-on-surface-variant uppercase tracking-wider">Stage Configuration</h4>
+<div class="flex gap-4 flex-wrap"><div class="grid grid-cols-2 gap-20 w-full">
+<!-- Left Column -->
+<div class="space-y-4">
+<div class="flex gap-4">
+<div class="flex-1">
+<label class="block text-xs font-medium text-on-surface-variant mb-1">Stage</label>
+<select class="w-full bg-surface-container-low border-outline-variant/50 text-on-background rounded-md text-sm focus:ring-primary focus:border-primary">
+<option>Quarter-final</option>
+<option selected="">Semi-final</option>
+<option>Final</option>
+</select>
+</div>
+<div class="flex-1">
+<label class="block text-xs font-medium text-on-surface-variant mb-1">Leg</label>
+<select class="w-full bg-surface-container-low border-outline-variant/50 text-on-background rounded-md text-sm focus:ring-primary focus:border-primary">
+<option>1</option>
+<option selected="">2</option>
+</select>
+</div>
+</div>
+<div class="pt-2">
+<label class="flex items-center cursor-pointer group pb-2 gap-4">
+<span class="text-xs font-medium text-on-surface-variant">Swapped Starting Player</span>
+<div class="relative ml-3">
+<input class="sr-only" type="checkbox">
+<div class="block bg-surface-variant w-10 h-6 rounded-full"></div>
+<div class="dot absolute left-1 top-1 bg-surface w-4 h-4 rounded-full transition"></div>
+</div>
+</label>
+</div>
+</div>
+<!-- Right Column -->
+<div class="space-y-4">
+<div>
+<label class="block text-xs font-medium text-on-surface-variant mb-1">1st Leg Result</label>
+<div class="flex gap-2 items-center">
+<input class="w-full bg-surface-container-low border-outline-variant/50 text-on-background rounded-md text-sm focus:ring-primary focus:border-primary text-center" min="0" type="number" value="12">
+<span class="text-on-surface-variant">:</span>
+<input class="w-full bg-surface-container-low border-outline-variant/50 text-on-background rounded-md text-sm focus:ring-primary focus:border-primary text-center" min="0" type="number" value="15">
+</div>
+</div>
+<div>
+<label class="block text-xs font-medium text-on-surface-variant mb-1">1st Leg Cards Bought (P0 : P1)</label>
+<div class="flex gap-2 items-center">
+<input class="w-full bg-surface-container-low border-outline-variant/50 text-on-background rounded-md text-sm focus:ring-primary focus:border-primary text-center" min="0" type="number" value="0">
+<span class="text-on-surface-variant">:</span>
+<input class="w-full bg-surface-container-low border-outline-variant/50 text-on-background rounded-md text-sm focus:ring-primary focus:border-primary text-center" min="0" type="number" value="0">
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+<!-- Match Card 2 (Empty) -->
+<div class="bg-surface w-full rounded-xl border border-dashed border-outline-variant hover:border-primary/50 hover:bg-surface-container-low/50 transition-colors shadow-sm overflow-hidden flex flex-col justify-center items-center py-16 cursor-pointer group">
+<span class="material-symbols-outlined text-4xl text-outline-variant mb-3 group-hover:text-primary transition-colors">add_circle</span>
+<h3 class="font-headline font-medium text-lg text-on-surface-variant group-hover:text-primary transition-colors">Configure Match Slot #2</h3>
+<p class="text-sm text-outline mt-1">Click to setup models and parameters</p>
+</div>
+</div>
+</div>
+<!-- Global Config Sidebar -->
+<div class="w-80 bg-surface border-l border-outline-variant/30 flex flex-col h-full shrink-0 shadow-[-4px_0_20px_rgba(46,50,48,0.02)] z-10">
+<div class="p-5 border-b border-outline-variant/30 bg-surface-container-lowest">
+<h3 class="font-headline text-lg font-medium text-on-background">Engine Configuration</h3>
+</div>
+<div class="p-5 overflow-y-auto flex-1 space-y-8">
+<!-- Environment Toggles -->
+<div class="space-y-4">
+<h4 class="text-xs font-bold text-on-surface-variant uppercase tracking-wider border-b border-outline-variant/20 pb-2">Environment</h4>
+<label class="flex items-center justify-between cursor-pointer group">
+<span class="text-sm text-on-background group-hover:text-primary transition-colors">Semi-auto Mode</span>
+<div class="relative">
+<input class="sr-only" type="checkbox">
+<div class="block bg-surface-variant w-10 h-6 rounded-full"></div>
+<div class="dot absolute left-1 top-1 bg-surface w-4 h-4 rounded-full transition"></div>
+</div>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<span class="text-sm text-on-background group-hover:text-primary transition-colors">Debug Mode</span>
+<div class="relative">
+<input checked="" class="sr-only" type="checkbox">
+<div class="block bg-primary/20 w-10 h-6 rounded-full border border-primary/30"></div>
+<div class="dot absolute right-1 top-1 bg-primary w-4 h-4 rounded-full transition"></div>
+</div>
+</label>
+<div class="flex flex-col gap-1.5">
+<label class="text-sm text-on-background">Prompt Caching</label>
+<select class="w-full bg-surface-container-low border-outline-variant/50 text-on-background rounded-md text-sm focus:ring-primary focus:border-primary">
+<option selected="">Auto (recommended)</option>
+<option>On</option>
+<option>Off</option>
+</select>
+</div>
+</div>
+</div>
+<div class="p-5 border-t border-outline-variant/30 bg-surface-container-lowest flex flex-col gap-3">
+<button class="w-full py-2.5 rounded-lg border border-primary/20 text-primary hover:bg-primary-container/20 transition-colors text-sm font-medium flex justify-center items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">download</span>
+                        Export properties
+                    </button>
+<button class="w-full py-2.5 rounded-lg text-error hover:bg-error-container/20 transition-colors text-sm font-medium">
+                        Reset All
+                    </button>
+</div>
+</div>
+</div>
+</main>
+
+
+</body></html>

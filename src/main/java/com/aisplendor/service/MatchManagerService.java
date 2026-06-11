@@ -18,6 +18,7 @@ import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -28,6 +29,7 @@ public class MatchManagerService {
     private final GameEventPublisher eventPublisher;
     private final ExecutorService executorService = Executors.newCachedThreadPool();
     private final Map<String, MatchInfo> matches = new ConcurrentHashMap<>();
+    private final Map<String, Future<?>> activeTasks = new ConcurrentHashMap<>();
 
     @Autowired
     public MatchManagerService(GameEventPublisher eventPublisher) {
@@ -41,7 +43,12 @@ public class MatchManagerService {
                                          StageConfig stageConfig, String player0Name, String player1Name,
                                          double player0InputCost, double player0OutputCost,
                                          double player1InputCost, double player1OutputCost) {
-        String gameId = "game_" + System.currentTimeMillis();
+        String slug0 = com.aisplendor.util.GameStateFormatter.getModelSlug(player0Model);
+        String slug1 = com.aisplendor.util.GameStateFormatter.getModelSlug(player1Model);
+        String r0 = com.aisplendor.util.GameStateFormatter.getReasoningLevelSuffix(reasoning0);
+        String r1 = com.aisplendor.util.GameStateFormatter.getReasoningLevelSuffix(reasoning1);
+        String timestamp = java.time.LocalDateTime.now().format(java.time.format.DateTimeFormatter.ofPattern("yyMMdd_HHmmss"));
+        String gameId = slug0 + "-" + r0 + "_" + slug1 + "-" + r1 + "-" + timestamp;
         
         String apiKey = (apiKeyOverride != null && !apiKeyOverride.isBlank()) 
                 ? apiKeyOverride 
@@ -57,7 +64,7 @@ public class MatchManagerService {
         MatchInfo info = new MatchInfo(gameId, displayName0, displayName1, "RUNNING", Instant.now());
         matches.put(gameId, info);
 
-        executorService.submit(() -> {
+        Future<?> future = executorService.submit(() -> {
             try {
                 logger.info("Starting simulation match: {}", gameId);
                 GameSimulator simulator = new GameSimulator(
@@ -74,13 +81,24 @@ public class MatchManagerService {
                 GameState initialState = GameSimulator.setupInitialState();
                 simulator.run(initialState, gameId, displayName0, displayName1);
                 
-                info.setStatus("COMPLETED");
+                synchronized (this) {
+                    if (!"ABORTED".equals(info.getStatus())) {
+                        info.setStatus("COMPLETED");
+                    }
+                }
                 logger.info("Match {} completed successfully", gameId);
             } catch (Exception e) {
-                info.setStatus("FAILED");
+                synchronized (this) {
+                    if (!"ABORTED".equals(info.getStatus())) {
+                        info.setStatus("FAILED");
+                    }
+                }
                 logger.error("Match " + gameId + " failed with error: ", e);
+            } finally {
+                activeTasks.remove(gameId);
             }
         });
+        activeTasks.put(gameId, future);
 
         return gameId;
     }
@@ -104,7 +122,16 @@ public class MatchManagerService {
             GameLogReader reader = new GameLogReader();
             GameLogReader.ResumeData resumeData = reader.parseLogForResume(logFile);
             
-            String newGameId = resumeData.originalGameId() + "_resumed_" + System.currentTimeMillis();
+            GameConfig config = new GameConfig();
+            DynamicReasoningConfig dynamicReasoning0 = config.getDynamicReasoningConfig(0);
+            DynamicReasoningConfig dynamicReasoning1 = config.getDynamicReasoningConfig(1);
+
+            String slug0 = com.aisplendor.util.GameStateFormatter.getModelSlug(resumeData.player0Model());
+            String slug1 = com.aisplendor.util.GameStateFormatter.getModelSlug(resumeData.player1Model());
+            String r0 = com.aisplendor.util.GameStateFormatter.getReasoningLevelSuffix(dynamicReasoning0);
+            String r1 = com.aisplendor.util.GameStateFormatter.getReasoningLevelSuffix(dynamicReasoning1);
+            String timestamp = java.time.LocalDateTime.now().format(java.time.format.DateTimeFormatter.ofPattern("yyMMdd_HHmmss"));
+            String newGameId = slug0 + "-" + r0 + "_" + slug1 + "-" + r1 + "-" + timestamp + "_resumed";
             
             MatchInfo info = new MatchInfo(
                     newGameId, 
@@ -115,14 +142,11 @@ public class MatchManagerService {
             );
             matches.put(newGameId, info);
 
-            executorService.submit(() -> {
+            Future<?> future = executorService.submit(() -> {
                 try {
                     logger.info("Resuming simulation match {} -> {}", resumeData.originalGameId(), newGameId);
                     
                     // Standard config values as per GameSimulator.resumeGame
-                    GameConfig config = new GameConfig();
-                    DynamicReasoningConfig dynamicReasoning0 = config.getDynamicReasoningConfig(0);
-                    DynamicReasoningConfig dynamicReasoning1 = config.getDynamicReasoningConfig(1);
                     boolean debugMode = config.isDebugMode();
                     int memorySize0 = config.getPlayerMemorySize(0);
                     int memorySize1 = config.getPlayerMemorySize(1);
@@ -156,13 +180,24 @@ public class MatchManagerService {
                             resumeData.player1AccumulatedTimeMs()
                     );
 
-                    info.setStatus("COMPLETED");
+                    synchronized (this) {
+                        if (!"ABORTED".equals(info.getStatus())) {
+                            info.setStatus("COMPLETED");
+                        }
+                    }
                     logger.info("Resumed match {} completed successfully", newGameId);
                 } catch (Exception e) {
-                    info.setStatus("FAILED");
+                    synchronized (this) {
+                        if (!"ABORTED".equals(info.getStatus())) {
+                            info.setStatus("FAILED");
+                        }
+                    }
                     logger.error("Resumed match " + newGameId + " failed with error: ", e);
+                } finally {
+                    activeTasks.remove(newGameId);
                 }
             });
+            activeTasks.put(newGameId, future);
 
             return newGameId;
         } catch (IOException e) {
@@ -172,6 +207,30 @@ public class MatchManagerService {
 
     public List<MatchInfo> getMatches() {
         return new ArrayList<>(matches.values());
+    }
+
+    public synchronized boolean abortMatch(String gameId) {
+        MatchInfo info = matches.get(gameId);
+        if (info == null) {
+            logger.warn("Attempted to abort non-existent match: {}", gameId);
+            return false;
+        }
+
+        if (!"RUNNING".equals(info.getStatus())) {
+            logger.warn("Attempted to abort match {} that is not running (status: {})", gameId, info.getStatus());
+            return false;
+        }
+
+        info.setStatus("ABORTED");
+        Future<?> future = activeTasks.remove(gameId);
+        if (future != null) {
+            future.cancel(true);
+            logger.info("Match {} aborted and running task cancelled", gameId);
+            return true;
+        } else {
+            logger.warn("Match {} status is RUNNING but no active task found to cancel", gameId);
+            return true; // still set status to ABORTED
+        }
     }
 
     public List<String> getLogs() {

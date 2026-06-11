@@ -22,10 +22,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Player metadata (display names)
     let playerNames = ["Player 0", "Player 1"];
     let cardIdToColor = {};
+    let cardIdToCardObj = {};
     let processedEventTimestamps = new Set();
 
     // DOM Elements
     const livePulsar = document.getElementById('live-pulsar');
+    const btnAbort = document.getElementById('btn-abort');
     const replayBadge = document.getElementById('replay-badge');
     const replayControlPanel = document.getElementById('replay-control-panel');
     const turnIndicator = document.getElementById('turn-indicator');
@@ -42,6 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Player 0 Elements
     const p0Name = document.getElementById('p0-name');
     const p0Aside = document.getElementById('p0-aside');
+    const p0TopSection = document.getElementById('p0-top-section');
     const p0Score = document.getElementById('p0-score');
     const p0Gems = {
         emerald: document.getElementById('p0-emerald-token'),
@@ -64,6 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Player 1 Elements
     const p1Name = document.getElementById('p1-name');
     const p1Aside = document.getElementById('p1-aside');
+    const p1TopSection = document.getElementById('p1-top-section');
     const p1Score = document.getElementById('p1-score');
     const p1Gems = {
         emerald: document.getElementById('p1-emerald-token'),
@@ -114,6 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalP0Cost = document.getElementById('modal-p0-cost');
     const modalP1Tokens = document.getElementById('modal-p1-tokens');
     const modalP1Cost = document.getElementById('modal-p1-cost');
+    const cardPreviewTooltip = document.getElementById('card-preview-tooltip');
 
     // Parse URL parameters
     const urlParams = new URLSearchParams(window.location.search);
@@ -132,6 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
             await loadReplayData();
         } else if (gameId) {
             livePulsar.classList.remove('hidden');
+            if (btnAbort) btnAbort.classList.remove('hidden');
             await loadLiveHistory();
             connectWebSocket();
         } else {
@@ -159,12 +165,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.log("Received live game event:", gameEvent.eventType);
                 
                 const ts = gameEvent.timestamp;
-                if (ts && processedEventTimestamps.has(ts)) {
-                    console.log("Ignoring duplicate live event from WebSocket:", ts);
+                const type = detectEventType(gameEvent);
+                const key = (ts && type) ? `${ts}_${type}` : ts;
+                if (key && processedEventTimestamps.has(key)) {
+                    console.log("Ignoring duplicate live event from WebSocket:", key);
                     return;
                 }
-                if (ts) {
-                    processedEventTimestamps.add(ts);
+                if (key) {
+                    processedEventTimestamps.add(key);
                 }
                 
                 events.push(gameEvent);
@@ -195,15 +203,121 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 console.log(`Preloaded ${historicalEvents.length} historical events for live game.`);
                 
+                // Clear console messages to start fresh
+                p0ReasoningConsole.innerHTML = '';
+                p1ReasoningConsole.innerHTML = '';
+
+                // Create document fragments to batch appends and avoid layout thrashing
+                const p0Fragment = document.createDocumentFragment();
+                const p1Fragment = document.createDocumentFragment();
+
+                const appendToFragment = (playerIdx, htmlContent, customClass) => {
+                    const p = document.createElement('p');
+                    p.className = customClass || '';
+                    p.innerHTML = htmlContent;
+                    if (playerIdx === 0) {
+                        p0Fragment.appendChild(p);
+                    } else {
+                        p1Fragment.appendChild(p);
+                    }
+                };
+
+                let lastSeenState = null;
+                let activePlayerIdx = 0;
+                let turnNum = 1;
+                let gameEndedEvent = null;
+
                 historicalEvents.forEach(ev => {
                     const ts = ev.timestamp;
-                    if (ts) {
-                        processedEventTimestamps.add(ts);
+                    const type = detectEventType(ev);
+                    const key = (ts && type) ? `${ts}_${type}` : ts;
+                    if (key) {
+                        processedEventTimestamps.add(key);
                     }
                     events.push(ev);
                     currentEventIndex = events.length - 1;
-                    processEventLive(ev);
+
+                    switch (type) {
+                        case "GAME_STARTED":
+                            playerNames = [
+                                ev.player0Name || ev.player0Model || "Player 0",
+                                ev.player1Name || ev.player1Model || "Player 1"
+                            ];
+                            p0Name.textContent = playerNames[0];
+                            p1Name.textContent = playerNames[1];
+                            lastSeenState = ev.initialState;
+                            
+                            // Initialize consoles
+                            const p0Started = document.createElement('p');
+                            p0Started.className = 'text-primary font-bold';
+                            p0Started.textContent = '> Game started';
+                            p0Fragment.appendChild(p0Started);
+
+                            const p1Started = document.createElement('p');
+                            p1Started.className = 'text-primary font-bold';
+                            p1Started.textContent = '> Game started';
+                            p1Fragment.appendChild(p1Started);
+
+                            registerCardsFromState(ev.initialState);
+                            break;
+
+                        case "TURN_STARTED":
+                            const turnNumVal = ev.turnNumber !== undefined ? ev.turnNumber : ev.turn;
+                            const currentIdxVal = ev.currentPlayerIndex !== undefined ? ev.currentPlayerIndex : ev.playerIndex;
+                            turnNum = turnNumVal;
+                            activePlayerIdx = currentIdxVal;
+                            lastSeenState = ev.gameState || ev.state;
+                            
+                            appendToFragment(currentIdxVal, formatTokensAndCards(`\n=== Turn ${turnNumVal} ===`));
+                            registerCardsFromState(ev.gameState || ev.state);
+                            break;
+
+                        case "REASONING":
+                            appendToFragment(ev.playerIndex, formatTokensAndCards(`> ${ev.reasoning}`));
+                            break;
+
+                        case "ACTION":
+                            const actStr = summarizeAction(ev.action);
+                            const dur = ev.durationMs ? `(${formatDurationShort(ev.durationMs)})` : '';
+                            const customClass = ev.playerIndex === 0 ? 'text-tertiary font-bold mt-1 mb-2' : 'text-primary font-bold mt-1 mb-2';
+                            appendToFragment(ev.playerIndex, formatTokensAndCards(`Selected Action: ${actStr} ${dur}`), customClass);
+                            break;
+
+                        case "RETRY":
+                            appendToFragment(ev.playerIndex, formatTokensAndCards(`[RETRY #${ev.attemptNumber}] Error: ${ev.errorMessage}`), 'text-error font-bold');
+                            break;
+
+                        case "GAME_ENDED":
+                            gameEndedEvent = ev;
+                            break;
+                    }
                 });
+
+                // Batch append reasoning fragments
+                p0ReasoningConsole.appendChild(p0Fragment);
+                p1ReasoningConsole.appendChild(p1Fragment);
+
+                // Scroll to bottom once
+                p0ReasoningConsole.scrollTop = p0ReasoningConsole.scrollHeight;
+                p1ReasoningConsole.scrollTop = p1ReasoningConsole.scrollHeight;
+
+                // Render latest board state exactly once
+                if (lastSeenState) {
+                    renderGameState(lastSeenState);
+                }
+
+                // Update turn and active indicators
+                turnIndicator.textContent = `Turn ${turnNum}`;
+                const activePlayer = activePlayerIdx === 0 ? playerNames[0] : playerNames[1];
+                activePlayerIndicator.textContent = `Active: ${activePlayer}`;
+                highlightActivePlayer(activePlayerIdx);
+
+                // Handle game end state
+                if (gameEndedEvent) {
+                    activePlayerIndicator.textContent = `Finished. Winner: ${gameEndedEvent.winnerReason || "Tie"}`;
+                    if (btnAbort) btnAbort.classList.add('hidden');
+                    showEndGameModal(gameEndedEvent);
+                }
             }
         } catch (e) {
             console.warn("No historical log file found or failed to load history, starting clean live view.", e);
@@ -265,6 +379,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             case "GAME_ENDED":
                 activePlayerIndicator.textContent = `Finished. Winner: ${event.winnerReason || "Tie"}`;
+                if (btnAbort) btnAbort.classList.add('hidden');
                 showEndGameModal(event);
                 break;
         }
@@ -401,6 +516,21 @@ document.addEventListener('DOMContentLoaded', () => {
         p0ReasoningConsole.innerHTML = '';
         p1ReasoningConsole.innerHTML = '';
 
+        // DocumentFragment to batch DOM updates
+        const p0Fragment = document.createDocumentFragment();
+        const p1Fragment = document.createDocumentFragment();
+
+        const appendToFragment = (playerIdx, htmlContent, customClass) => {
+            const p = document.createElement('p');
+            p.className = customClass || '';
+            p.innerHTML = htmlContent;
+            if (playerIdx === 0) {
+                p0Fragment.appendChild(p);
+            } else {
+                p1Fragment.appendChild(p);
+            }
+        };
+
         let lastSeenState = null;
         let activePlayerIdx = 0;
         let turnNum = 1;
@@ -418,8 +548,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 p0Name.textContent = playerNames[0];
                 p1Name.textContent = playerNames[1];
                 lastSeenState = ev.initialState;
-                appendReasoningText(0, `> Game started with P0: ${playerNames[0]}`);
-                appendReasoningText(1, `> Game started with P1: ${playerNames[1]}`);
+                appendToFragment(0, formatTokensAndCards(`> Game started with P0: ${playerNames[0]}`));
+                appendToFragment(1, formatTokensAndCards(`> Game started with P1: ${playerNames[1]}`));
             }
             else if (type === "TURN_STARTED") {
                 const turnNumVal = ev.turnNumber !== undefined ? ev.turnNumber : ev.turn;
@@ -427,25 +557,34 @@ document.addEventListener('DOMContentLoaded', () => {
                 turnNum = turnNumVal;
                 activePlayerIdx = currentIdxVal;
                 lastSeenState = ev.gameState || ev.state;
-                appendReasoningText(currentIdxVal, `\n=== Turn ${turnNumVal} ===`);
+                appendToFragment(currentIdxVal, formatTokensAndCards(`\n=== Turn ${turnNumVal} ===`));
             }
             else if (type === "REASONING") {
-                appendReasoningText(ev.playerIndex, `> ${ev.reasoning}`);
+                appendToFragment(ev.playerIndex, formatTokensAndCards(`> ${ev.reasoning}`));
             }
             else if (type === "ACTION") {
                 const actStr = summarizeAction(ev.action);
                 const dur = ev.durationMs ? `(${formatDurationShort(ev.durationMs)})` : '';
-                appendActionText(ev.playerIndex, `Selected Action: ${actStr} ${dur}`);
+                const customClass = ev.playerIndex === 0 ? 'text-tertiary font-bold mt-1 mb-2' : 'text-primary font-bold mt-1 mb-2';
+                appendToFragment(ev.playerIndex, formatTokensAndCards(`Selected Action: ${actStr} ${dur}`), customClass);
             }
             else if (type === "RETRY") {
-                appendReasoningText(ev.playerIndex, `[RETRY #${ev.attemptNumber}] Error: ${ev.errorMessage}`, 'text-error font-bold');
+                appendToFragment(ev.playerIndex, formatTokensAndCards(`[RETRY #${ev.attemptNumber}] Error: ${ev.errorMessage}`), 'text-error font-bold');
             }
             else if (type === "GAME_ENDED") {
-                appendReasoningText(0, `\n=== Game Over ===`);
-                appendReasoningText(1, `\n=== Game Over ===`);
-                appendReasoningText(ev.winnerIndex === 0 ? 0 : 1, `🏆 WinnerDeclared! Reason: ${ev.winnerReason}`, 'text-primary font-bold');
+                appendToFragment(0, formatTokensAndCards(`\n=== Game Over ===`));
+                appendToFragment(1, formatTokensAndCards(`\n=== Game Over ===`));
+                appendToFragment(ev.winnerIndex === 0 ? 0 : 1, formatTokensAndCards(`🏆 WinnerDeclared! Reason: ${ev.winnerReason}`), 'text-primary font-bold');
             }
         }
+
+        // Batch append reasoning fragments
+        p0ReasoningConsole.appendChild(p0Fragment);
+        p1ReasoningConsole.appendChild(p1Fragment);
+
+        // Scroll to bottom once
+        p0ReasoningConsole.scrollTop = p0ReasoningConsole.scrollHeight;
+        p1ReasoningConsole.scrollTop = p1ReasoningConsole.scrollHeight;
 
         // Render current metadata
         turnIndicator.textContent = `Turn ${turnNum}`;
@@ -477,14 +616,18 @@ document.addEventListener('DOMContentLoaded', () => {
             p0Aside.classList.add('active-player-pulse-0');
             p0Aside.classList.remove('opacity-60');
             p1Aside.classList.remove('active-player-pulse-1');
-            p1Aside.classList.add('opacity-60');
+            p1Aside.classList.remove('opacity-60');
+            if (p0TopSection) p0TopSection.classList.remove('opacity-60');
+            if (p1TopSection) p1TopSection.classList.add('opacity-60');
         } else {
             p0Name.parentElement.className = "flex justify-between items-center mb-2 pb-2 border-b border-surface-container transition-all duration-350 opacity-70";
             p1Name.parentElement.className = "flex justify-between items-center mb-2 pb-2 border-b-2 border-primary transition-all duration-350";
             p0Aside.classList.remove('active-player-pulse-0');
-            p0Aside.classList.add('opacity-60');
+            p0Aside.classList.remove('opacity-60');
             p1Aside.classList.add('active-player-pulse-1');
             p1Aside.classList.remove('opacity-60');
+            if (p0TopSection) p0TopSection.classList.add('opacity-60');
+            if (p1TopSection) p1TopSection.classList.remove('opacity-60');
         }
     }
 
@@ -498,6 +641,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const color = card.bonusGem || card.bonusColor;
                     if (color) {
                         cardIdToColor[card.id] = color.toUpperCase();
+                        cardIdToCardObj[card.id] = card;
                     }
                 }
             });
@@ -1229,6 +1373,61 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- CARD PREVIEW TOOLTIP HELPERS ---
+
+    function showCardTooltip(e, card) {
+        if (!cardPreviewTooltip || !card) return;
+        
+        const color = card.bonusGem || card.bonusColor;
+        const points = (card.prestigePoints !== undefined) ? card.prestigePoints : (card.victoryPoints || 0);
+        
+        let costHtml = '';
+        const costs = card.costs || card.cost || {};
+        Object.entries(costs).forEach(([cColor, cCost]) => {
+            if (cCost > 0) {
+                costHtml += `
+                    <div class="text-[8px] sm:text-[10px] px-1 py-0.5 rounded-[3px] border flex items-center gap-0.5 font-bold font-headline shadow-sm leading-none ${getCostBadgeClass(cColor)}">
+                        <div class="w-2.5 h-2.5 sm:w-3 sm:h-3 flex items-center justify-center">${getGemSvg(cColor, 'w-full h-full')}</div>${cCost}
+                    </div>
+                `;
+            }
+        });
+        
+        const headerTextClass = color === 'WHITE' ? 'text-on-background' : 'text-white';
+        const whiteBorderClass = color === 'WHITE' ? ' border-b border-outline-variant/10' : '';
+        
+        cardPreviewTooltip.className = `absolute pointer-events-none z-50 rounded-md border border-outline-variant/30 flex flex-col overflow-hidden shadow-lg w-16 h-20 ${getCardBgClass(color)}`;
+        cardPreviewTooltip.innerHTML = `
+            <div class="${getCardHeaderBgClass(color)} p-1 px-1.5 flex justify-between items-center ${headerTextClass} h-6 relative z-10 ${whiteBorderClass}">
+                <div class="text-xs font-bold leading-none font-headline">${points || ''}</div>
+                <div class="w-3 h-3 flex items-center justify-center">${getGemSvg(color, 'w-full h-full')}</div>
+            </div>
+            <div class="absolute inset-0 top-5 flex items-center justify-center z-0 pointer-events-none mb-4">
+                <div class="font-headline font-bold text-[14px] ${getWatermarkTextClass(color)} select-none" style="opacity: 0.60">${card.id}</div>
+            </div>
+            <div class="mt-auto p-1 flex gap-0.5 z-10 justify-center w-full flex-wrap bg-white/10">
+                ${costHtml}
+            </div>
+        `;
+        
+        updateTooltipPosition(e);
+        cardPreviewTooltip.classList.remove('hidden');
+    }
+    
+    function updateTooltipPosition(e) {
+        if (!cardPreviewTooltip) return;
+        const x = e.pageX;
+        const y = e.pageY;
+        cardPreviewTooltip.style.left = `${x + 12}px`;
+        cardPreviewTooltip.style.top = `${y - 92}px`;
+    }
+    
+    function hideCardTooltip() {
+        if (cardPreviewTooltip) {
+            cardPreviewTooltip.classList.add('hidden');
+        }
+    }
+
     function setupReasoningConsoleHover(consoleEl) {
         if (!consoleEl) return;
         
@@ -1245,7 +1444,20 @@ document.addEventListener('DOMContentLoaded', () => {
                         card.classList.add(highlightClass);
                         card.dataset.appliedHighlight = highlightClass;
                     });
+                    
+                    // Show card preview tooltip
+                    const cardObj = cardIdToCardObj[cardId];
+                    if (cardObj) {
+                        showCardTooltip(e, cardObj);
+                    }
                 }
+            }
+        });
+
+        consoleEl.addEventListener('mousemove', (e) => {
+            const link = e.target.closest('.reasoning-card-link');
+            if (link) {
+                updateTooltipPosition(e);
             }
         });
 
@@ -1263,6 +1475,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         delete card.dataset.appliedHighlight;
                     });
                 }
+                // Hide card preview tooltip
+                hideCardTooltip();
             }
         });
     }
@@ -1275,6 +1489,34 @@ document.addEventListener('DOMContentLoaded', () => {
             return `${minutes} min ${seconds} s`;
         }
         return `${seconds} s`;
+    }
+
+    // Hook up Abort button click
+    if (btnAbort) {
+        btnAbort.addEventListener('click', async () => {
+            if (confirm("Are you sure you want to abort this match?")) {
+                btnAbort.disabled = true;
+                btnAbort.innerHTML = `<span class="material-symbols-outlined text-[14px]">sync</span> Aborting...`;
+                try {
+                    const response = await fetch(`/api/matches/${gameId}/abort`, {
+                        method: 'POST'
+                    });
+                    if (response.ok) {
+                        console.log("Abort request sent successfully.");
+                    } else {
+                        const err = await response.json();
+                        alert(`Failed to abort match: ${err.error || "Unknown error"}`);
+                        btnAbort.disabled = false;
+                        btnAbort.innerHTML = `<span class="material-symbols-outlined text-[14px]">cancel</span> Abort Match`;
+                    }
+                } catch (e) {
+                    console.error("Error sending abort request:", e);
+                    alert(`Connection error: ${e.message}`);
+                    btnAbort.disabled = false;
+                    btnAbort.innerHTML = `<span class="material-symbols-outlined text-[14px]">cancel</span> Abort Match`;
+                }
+            }
+        });
     }
 
     // Run Init

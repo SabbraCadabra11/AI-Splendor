@@ -1,34 +1,14 @@
 /* AI-Splendor Premium CSS - Terra Theme Micro-Animations */
 
-/* 1. Smooth Active Player Pulse Glow */
+/* 1. Smooth Active Player Glow (Static High-Performance, Uses Transition) */
 .active-player-pulse-0 {
-    box-shadow: 0 0 15px rgba(112, 92, 48, 0.25);
+    box-shadow: 0 0 20px rgba(112, 92, 48, 0.3);
     border-color: #705c30 !important;
-    animation: activeGlow0 3s infinite alternate;
 }
 
 .active-player-pulse-1 {
-    box-shadow: 0 0 15px rgba(74, 124, 89, 0.25);
+    box-shadow: 0 0 20px rgba(74, 124, 89, 0.3);
     border-color: #4a7c59 !important;
-    animation: activeGlow1 3s infinite alternate;
-}
-
-@keyframes activeGlow0 {
-    0% {
-        box-shadow: 0 0 8px rgba(112, 92, 48, 0.15);
-    }
-    100% {
-        box-shadow: 0 0 20px rgba(112, 92, 48, 0.35);
-    }
-}
-
-@keyframes activeGlow1 {
-    0% {
-        box-shadow: 0 0 8px rgba(74, 124, 89, 0.15);
-    }
-    100% {
-        box-shadow: 0 0 20px rgba(74, 124, 89, 0.35);
-    }
 }
 
 /* 2. Card Entrance Flip Animation */
