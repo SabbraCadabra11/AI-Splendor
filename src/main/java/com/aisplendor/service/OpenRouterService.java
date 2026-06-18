@@ -12,6 +12,7 @@ import com.aisplendor.model.action.PurchaseCardAction;
 import com.aisplendor.model.action.ReserveCardAction;
 import com.aisplendor.model.action.TakeTokensAction;
 import com.aisplendor.util.CompactStateSerializer;
+import com.aisplendor.exception.ApiException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -128,7 +129,7 @@ public class OpenRouterService {
         HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
 
         if (response.statusCode() != 200) {
-            throw new RuntimeException(
+            throw new ApiException(
                     "API request failed with status " + response.statusCode() + ": "
                             + response.body());
         }
@@ -242,7 +243,11 @@ public class OpenRouterService {
      */
     private AgentResponse parseResponse(String responseBody, boolean apiReasoningEnabled) throws Exception {
         JsonNode root = mapper.readTree(responseBody);
-        JsonNode message = root.path("choices").get(0).path("message");
+        JsonNode choices = root.path("choices");
+        if (choices.isMissingNode() || !choices.isArray() || choices.isEmpty()) {
+            throw new ApiException("API response missing choices: " + responseBody);
+        }
+        JsonNode message = choices.get(0).path("message");
         String content = message.path("content").asText();
 
         // Sanitize any markdown code blocks

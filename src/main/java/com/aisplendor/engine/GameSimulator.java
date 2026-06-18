@@ -14,6 +14,7 @@ import com.aisplendor.service.GameEventLogger;
 import com.aisplendor.service.GameEventPublisher;
 import com.aisplendor.service.GameLogReader;
 import com.aisplendor.service.OpenRouterService;
+import com.aisplendor.exception.ApiException;
 import com.aisplendor.service.PromptService;
 import com.aisplendor.util.GameStateFormatter;
 import org.slf4j.Logger;
@@ -313,6 +314,7 @@ public class GameSimulator {
 
                 final int MAX_LOGIC_RETRIES = 3;
                 final long MAX_NETWORK_WAIT_MS = 10 * 60 * 1000; // 10 minutes for network issues
+                final int MAX_API_RETRIES = 20;
                 final long INITIAL_BACKOFF_MS = 1000;
 
                 AgentResponse response = null;
@@ -320,6 +322,7 @@ public class GameSimulator {
                 String lastResponse = null; // Track previous response for retry feedback
                 boolean validAction = false;
                 long moveDurationMs = 0L;
+                int apiRetries = 0;
 
                 for (int attempt = 0; attempt < MAX_LOGIC_RETRIES && !validAction; attempt++) {
                     if (Thread.currentThread().isInterrupted()) {
@@ -387,10 +390,27 @@ public class GameSimulator {
                                 lastResponse = "Reasoning: " + response.reasoning() + "\nAction: " + response.action();
                             }
                             break; // Logic error - exit to outer loop for retry
-                        } catch (com.fasterxml.jackson.core.JsonParseException e) {
+                        } catch (com.fasterxml.jackson.core.JsonProcessingException e) {
                             lastError = "Malformed JSON response: " + e.getOriginalMessage();
                             lastResponse = null; // Can't capture response if JSON was malformed
                             break; // Logic error - exit to outer loop for retry
+                        } catch (ApiException e) {
+                            apiRetries++;
+                            if (apiRetries >= MAX_API_RETRIES) {
+                                lastError = "API error limit reached (" + MAX_API_RETRIES + "): " + e.getMessage();
+                                aborted = true;
+                                break;
+                            }
+                            logger.warn("API error, retrying {}/{} in {}ms... ({})", apiRetries, MAX_API_RETRIES, backoff, e.getMessage());
+                            try {
+                                Thread.sleep(backoff);
+                            } catch (InterruptedException ie) {
+                                Thread.currentThread().interrupt();
+                                lastError = "Interrupted during API retry";
+                                aborted = true;
+                                break;
+                            }
+                            backoff = Math.min(backoff * 2, 30_000);
                         } catch (java.net.SocketTimeoutException | java.net.ConnectException e) {
                             // Transient network errors - retry with backoff
                             long elapsed = System.currentTimeMillis() - networkWaitStart;

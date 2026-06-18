@@ -363,6 +363,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 highlightActivePlayer(currentIdxVal);
                 registerCardsFromState(event.gameState || event.state);
                 renderGameState(event.gameState || event.state);
+                
+                // Append turn marker to the active player's console
+                appendReasoningText(currentIdxVal, `\n=== Turn ${turnNumVal} ===`);
                 break;
 
             case "REASONING":
@@ -611,8 +614,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function highlightActivePlayer(index) {
         if (index === 0) {
-            p0Name.parentElement.className = "flex justify-between items-center mb-2 pb-2 border-b-2 border-tertiary transition-all duration-350";
-            p1Name.parentElement.className = "flex justify-between items-center mb-2 pb-2 border-b border-surface-container transition-all duration-350 opacity-70";
+            p0Name.parentElement.className = "flex justify-between items-center mb-2 pb-2 border-b-2 border-tertiary transition-all duration-350 gap-2";
+            p1Name.parentElement.className = "flex justify-between items-center mb-2 pb-2 border-b border-surface-container transition-all duration-350 opacity-70 gap-2";
             p0Aside.classList.add('active-player-pulse-0');
             p0Aside.classList.remove('opacity-60');
             p1Aside.classList.remove('active-player-pulse-1');
@@ -620,8 +623,8 @@ document.addEventListener('DOMContentLoaded', () => {
             if (p0TopSection) p0TopSection.classList.remove('opacity-60');
             if (p1TopSection) p1TopSection.classList.add('opacity-60');
         } else {
-            p0Name.parentElement.className = "flex justify-between items-center mb-2 pb-2 border-b border-surface-container transition-all duration-350 opacity-70";
-            p1Name.parentElement.className = "flex justify-between items-center mb-2 pb-2 border-b-2 border-primary transition-all duration-350";
+            p0Name.parentElement.className = "flex justify-between items-center mb-2 pb-2 border-b border-surface-container transition-all duration-350 opacity-70 gap-2";
+            p1Name.parentElement.className = "flex justify-between items-center mb-2 pb-2 border-b-2 border-primary transition-all duration-350 gap-2";
             p0Aside.classList.remove('active-player-pulse-0');
             p0Aside.classList.remove('opacity-60');
             p1Aside.classList.add('active-player-pulse-1');
